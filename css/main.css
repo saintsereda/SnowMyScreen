@@ -24,7 +24,7 @@ body {
 
 /* Navigation */
 .nav {
-  max-width: 1200px;
+  max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding: 1.25rem 0;
@@ -98,7 +98,7 @@ body {
 .hero {
   text-align: center;
   padding: 2rem 1rem;
-  max-width: 900px;
+  max-width: 1280px;
   margin: 0 auto;
   flex: 1;
   display: flex;
