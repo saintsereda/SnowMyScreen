@@ -10,6 +10,10 @@ body {
   background: linear-gradient(180deg, #ffffff, #d7ecff);
   color: #003669;
   padding: 0 1rem;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* Navigation */
@@ -45,6 +49,38 @@ body {
   border-radius: 999px;
   text-decoration: none;
   font-size: 0.9rem;
+}
+
+/* Notification */
+.notification {
+  background: white;
+  border: 1px solid rgba(0, 54, 105, 0.1);
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.3s ease;
+}
+
+.notification.blur {
+  filter: blur(4px);
+  opacity: 0.6;
+}
+
+.notification-icon {
+  font-size: 1.2rem;
+}
+
+.notification-text {
+  font-size: 0.9rem;
+  color: #003669;
+}
+
+.notification-email {
+  font-weight: 500;
 }
 
 /* Hero */
