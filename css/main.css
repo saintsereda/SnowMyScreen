@@ -18,6 +18,8 @@ body {
   padding: 0 1rem;
   min-height: 100vh;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navigation */
@@ -90,9 +92,14 @@ body {
 /* Hero */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   max-width: 900px;
   margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-icon {
@@ -131,12 +138,12 @@ body {
 /* Footer */
 .footer {
   text-align: center;
-  margin-top: 4rem;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
   gap: 2rem;
   opacity: 0.8;
+  margin-top: auto;
 }
 
 .footer a {
