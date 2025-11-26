@@ -1,0 +1,6 @@
+# robots.txt for SnowMyScreen
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://snowmyscreen.com/sitemap.xml
