@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://snowmyscreen.com/sitemap.xml
+Sitemap: https://snowmyscreen.app/sitemap.xml
