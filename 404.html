@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found - SnowMyScreen</title>
+
+  <!-- Google Font (Geist) -->
+  <link href="https://fonts.googleapis.com/css?family=Geist:400,500,600&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .error-content {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: 6rem;
+      font-weight: 600;
+      color: #003669;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .error-title {
+      font-size: 2rem;
+      color: #003669;
+      margin-bottom: 1rem;
+    }
+
+    .error-message {
+      font-size: 1.1rem;
+      color: #003669;
+      opacity: 0.8;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .error-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-link {
+      padding: 0.75rem 1.5rem;
+      background: #003669;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .error-link:hover {
+      background: #004a8c;
+      transform: translateY(-2px);
+    }
+
+    .error-link.secondary {
+      background: transparent;
+      color: #003669;
+      border: 2px solid #003669;
+    }
+
+    .error-link.secondary:hover {
+      background: rgba(0, 54, 105, 0.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="nav-left">
+      <img src="images/v1_3.png" class="logo" alt="logo" />
+      <span class="brand">SnowMyScreen</span>
+    </div>
+
+    <a class="buy-btn" href="index.html">Back to Home</a>
+  </header>
+
+  <!-- Error Content -->
+  <div class="error-content">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-message">
+      Oops! The page you're looking for seems to have drifted away like snowflakes in the wind.
+    </p>
+    <div class="error-links">
+      <a href="index.html" class="error-link">Go Home</a>
+      <a href="privacy.html" class="error-link secondary">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="index.html">Back to Home</a>
+    <a href="privacy.html">Privacy policy</a>
+  </footer>
+
+</body>
+</html>
