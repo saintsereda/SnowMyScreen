@@ -11,15 +11,17 @@ html {
 
 body {
   font-family: Geist, sans-serif;
-  background: linear-gradient(180deg, #ffffff, #d7ecff);
+  background: linear-gradient(180deg, #1a3a52, #2c5f7f);
   background-attachment: fixed;
   background-size: 100% 100%;
-  color: #003669;
+  color: #e0f2ff;
   padding: 0 1rem;
   min-height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Navigation */
@@ -49,6 +51,7 @@ body {
 .brand {
   font-size: 1rem;
   font-weight: 500;
+  color: #e0f2ff;
 }
 
 .buy-btn {
@@ -133,7 +136,8 @@ body {
 
 .subtext {
   font-size: 1rem;
-  opacity: 0.7;
+  color: #b3d9f2;
+  opacity: 0.9;
   margin-bottom: 2rem;
 }
 
@@ -167,20 +171,20 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #003669;
+  color: #e0f2ff;
   text-decoration: none;
   font-size: 0.95rem;
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0, 54, 105, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(224, 242, 255, 0.2);
   transition: all 0.2s ease;
 }
 
 .social-link:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .social-link svg,
@@ -200,7 +204,36 @@ body {
 }
 
 .footer a {
-  color: #003669;
+  color: #b3d9f2;
   text-decoration: none;
   font-size: 0.9rem;
+}
+
+/* Snow Effect */
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1em;
+  user-select: none;
+  pointer-events: none;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
 }
