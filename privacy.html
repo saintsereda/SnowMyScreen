@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy - SnowMyScreen</title>
+  <title data-i18n-title="privacy.pageTitle">Privacy Policy - SnowMyScreen</title>
 
   <!-- Google Font (Geist) -->
   <link href="https://fonts.googleapis.com/css?family=Geist:400,500,600&display=swap" rel="stylesheet">
@@ -67,69 +67,73 @@
       <span class="brand">SnowMyScreen</span>
     </div>
 
-    <a class="buy-btn" href="index.html">Back to Home</a>
+    <div class="nav-right">
+      <button id="language-switcher" class="language-switcher" aria-label="Switch language">English</button>
+      <a class="buy-btn" href="index.html" data-i18n="nav.backToHome">Back to Home</a>
+    </div>
   </header>
 
   <!-- Privacy Policy Content -->
   <div class="privacy-content">
-    <h1>Privacy Policy</h1>
-    <p class="last-updated"><strong>Effective Date: November 26, 2025</strong></p>
+    <h1 data-i18n="privacy.title">Privacy Policy</h1>
+    <p class="last-updated"><strong data-i18n="privacy.effectiveDate">Effective Date: November 26, 2025</strong></p>
 
-    <h2>Introduction</h2>
-    <p>SnowMyScreen is a macOS application that creates beautiful animated snowfall effects on your desktop. Your privacy is important to us, and this policy explains how we handle your information.</p>
+    <h2 data-i18n="privacy.intro.heading">Introduction</h2>
+    <p data-i18n="privacy.intro.text">SnowMyScreen is a macOS application that creates beautiful animated snowfall effects on your desktop. Your privacy is important to us, and this policy explains how we handle your information.</p>
 
-    <h2>The Short Version</h2>
-    <p><strong>We don't collect any data. Period.</strong></p>
-    <p>SnowMyScreen works entirely on your Mac. Nothing you do in the app is tracked, recorded, or sent anywhere. We don't know who you are, how you use the app, or what settings you prefer.</p>
+    <h2 data-i18n="privacy.shortVersion.heading">The Short Version</h2>
+    <p><strong data-i18n="privacy.shortVersion.text1">We don't collect any data. Period.</strong></p>
+    <p data-i18n="privacy.shortVersion.text2">SnowMyScreen works entirely on your Mac. Nothing you do in the app is tracked, recorded, or sent anywhere. We don't know who you are, how you use the app, or what settings you prefer.</p>
 
-    <h2>What We Don't Collect</h2>
-    <ul>
-      <li>No personal information</li>
-      <li>No usage statistics</li>
-      <li>No crash reports</li>
-      <li>No analytics data</li>
-      <li>No device identifiers</li>
-      <li>No location data</li>
-      <li>Nothing. Seriously.</li>
+    <h2 data-i18n="privacy.dontCollect.heading">What We Don't Collect</h2>
+    <ul id="dont-collect-list">
+      <li data-i18n="privacy.dontCollect.items.0">No personal information</li>
+      <li data-i18n="privacy.dontCollect.items.1">No usage statistics</li>
+      <li data-i18n="privacy.dontCollect.items.2">No crash reports</li>
+      <li data-i18n="privacy.dontCollect.items.3">No analytics data</li>
+      <li data-i18n="privacy.dontCollect.items.4">No device identifiers</li>
+      <li data-i18n="privacy.dontCollect.items.5">No location data</li>
+      <li data-i18n="privacy.dontCollect.items.6">Nothing. Seriously.</li>
     </ul>
 
-    <h2>What Stays on Your Mac</h2>
-    <p>The app saves your preferences locally on your device:</p>
-    <ul>
-      <li>Snow intensity and speed</li>
-      <li>Wind direction and strength</li>
-      <li>Snowflake shapes and colors</li>
-      <li>Which displays show snow</li>
-      <li>Language preference</li>
+    <h2 data-i18n="privacy.staysOnMac.heading">What Stays on Your Mac</h2>
+    <p data-i18n="privacy.staysOnMac.intro">The app saves your preferences locally on your device:</p>
+    <ul id="stays-on-mac-list">
+      <li data-i18n="privacy.staysOnMac.items.0">Snow intensity and speed</li>
+      <li data-i18n="privacy.staysOnMac.items.1">Wind direction and strength</li>
+      <li data-i18n="privacy.staysOnMac.items.2">Snowflake shapes and colors</li>
+      <li data-i18n="privacy.staysOnMac.items.3">Which displays show snow</li>
+      <li data-i18n="privacy.staysOnMac.items.4">Language preference</li>
     </ul>
-    <p>These settings are stored in your Mac's standard preferences system and never leave your computer. When you delete the app, these settings are removed.</p>
+    <p data-i18n="privacy.staysOnMac.outro">These settings are stored in your Mac's standard preferences system and never leave your computer. When you delete the app, these settings are removed.</p>
 
-    <h2>Permissions</h2>
-    <p>SnowMyScreen may request permission to launch automatically when you start your Mac. This is optional and only for your convenience. No data is collected through this permission.</p>
+    <h2 data-i18n="privacy.permissions.heading">Permissions</h2>
+    <p data-i18n="privacy.permissions.text">SnowMyScreen may request permission to launch automatically when you start your Mac. This is optional and only for your convenience. No data is collected through this permission.</p>
 
-    <h2>No Internet Required</h2>
-    <p>SnowMyScreen doesn't need an internet connection to work. It doesn't communicate with any servers, ours or anyone else's.</p>
+    <h2 data-i18n="privacy.noInternet.heading">No Internet Required</h2>
+    <p data-i18n="privacy.noInternet.text">SnowMyScreen doesn't need an internet connection to work. It doesn't communicate with any servers, ours or anyone else's.</p>
 
-    <h2>Updates</h2>
-    <p>All updates come through the Mac App Store. Apple handles the update process according to their privacy policy.</p>
+    <h2 data-i18n="privacy.updates.heading">Updates</h2>
+    <p data-i18n="privacy.updates.text">All updates come through the Mac App Store. Apple handles the update process according to their privacy policy.</p>
 
-    <h2>Children</h2>
-    <p>Since we don't collect any information, SnowMyScreen is safe for everyone, including children.</p>
+    <h2 data-i18n="privacy.children.heading">Children</h2>
+    <p data-i18n="privacy.children.text">Since we don't collect any information, SnowMyScreen is safe for everyone, including children.</p>
 
-    <h2>Questions?</h2>
-    <p>If you have questions about this privacy policy, contact us at:</p>
-    <p><strong>Email:</strong> <a href="mailto:hello@andrewsereda.com">hello@andrewsereda.com</a></p>
+    <h2 data-i18n="privacy.questions.heading">Questions?</h2>
+    <p data-i18n="privacy.questions.text">If you have questions about this privacy policy, contact us at:</p>
+    <p><strong data-i18n="privacy.questions.email">Email:</strong> <a href="mailto:hello@andrewsereda.com">hello@andrewsereda.com</a></p>
 
     <hr style="margin: 2rem 0; border: none; border-top: 1px solid #ddd;">
 
-    <p style="font-style: italic; opacity: 0.7; font-size: 0.9rem;">This privacy policy may be updated occasionally. The current version is always available here and in the Mac App Store.</p>
+    <p style="font-style: italic; opacity: 0.7; font-size: 0.9rem;" data-i18n="privacy.footer">This privacy policy may be updated occasionally. The current version is always available here and in the Mac App Store.</p>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
-    <a href="index.html">Back to Home</a>
-    <a href="privacy.html">Privacy policy</a>
+    <a href="index.html" data-i18n="error404.backToHome">Back to Home</a>
+    <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a>
   </footer>
 
+  <script src="js/language.js"></script>
 </body>
 </html>
