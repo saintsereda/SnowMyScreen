@@ -1,0 +1,186 @@
+{
+  "en": {
+    "nav": {
+      "downloadAppStore": "Download on App Store",
+      "backToHome": "Back to Home"
+    },
+    "hero": {
+      "notificationBought": "just bought the app",
+      "title": "Bring your Mac to life with gentle, customizable snowfall",
+      "subtitle": "Available for macOS 14.6+",
+      "ctaButton": "Download on App Store"
+    },
+    "social": {
+      "twitter": "X (Twitter)",
+      "threads": "Threads"
+    },
+    "footer": {
+      "contact": "Contact us",
+      "privacy": "Privacy policy"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "pageTitle": "Privacy Policy - SnowMyScreen",
+      "effectiveDate": "Effective Date: November 26, 2025",
+      "intro": {
+        "heading": "Introduction",
+        "text": "SnowMyScreen is a macOS application that creates beautiful animated snowfall effects on your desktop. Your privacy is important to us, and this policy explains how we handle your information."
+      },
+      "shortVersion": {
+        "heading": "The Short Version",
+        "text1": "We don't collect any data. Period.",
+        "text2": "SnowMyScreen works entirely on your Mac. Nothing you do in the app is tracked, recorded, or sent anywhere. We don't know who you are, how you use the app, or what settings you prefer."
+      },
+      "dontCollect": {
+        "heading": "What We Don't Collect",
+        "items": [
+          "No personal information",
+          "No usage statistics",
+          "No crash reports",
+          "No analytics data",
+          "No device identifiers",
+          "No location data",
+          "Nothing. Seriously."
+        ]
+      },
+      "staysOnMac": {
+        "heading": "What Stays on Your Mac",
+        "intro": "The app saves your preferences locally on your device:",
+        "items": [
+          "Snow intensity and speed",
+          "Wind direction and strength",
+          "Snowflake shapes and colors",
+          "Which displays show snow",
+          "Language preference"
+        ],
+        "outro": "These settings are stored in your Mac's standard preferences system and never leave your computer. When you delete the app, these settings are removed."
+      },
+      "permissions": {
+        "heading": "Permissions",
+        "text": "SnowMyScreen may request permission to launch automatically when you start your Mac. This is optional and only for your convenience. No data is collected through this permission."
+      },
+      "noInternet": {
+        "heading": "No Internet Required",
+        "text": "SnowMyScreen doesn't need an internet connection to work. It doesn't communicate with any servers, ours or anyone else's."
+      },
+      "updates": {
+        "heading": "Updates",
+        "text": "All updates come through the Mac App Store. Apple handles the update process according to their privacy policy."
+      },
+      "children": {
+        "heading": "Children",
+        "text": "Since we don't collect any information, SnowMyScreen is safe for everyone, including children."
+      },
+      "questions": {
+        "heading": "Questions?",
+        "text": "If you have questions about this privacy policy, contact us at:",
+        "email": "Email:"
+      },
+      "footer": "This privacy policy may be updated occasionally. The current version is always available here and in the Mac App Store."
+    },
+    "error404": {
+      "pageTitle": "Page Not Found - SnowMyScreen",
+      "code": "404",
+      "title": "Page Not Found",
+      "message": "Oops! The page you're looking for seems to have drifted away like snowflakes in the wind.",
+      "goHome": "Go Home",
+      "privacyPolicy": "Privacy Policy",
+      "backToHome": "Back to Home"
+    },
+    "meta": {
+      "description": "Bring your Mac to life with gentle, customizable snowfall. Available for macOS 14.6+"
+    }
+  },
+  "pl": {
+    "nav": {
+      "downloadAppStore": "Pobierz z App Store",
+      "backToHome": "Powrót do strony głównej"
+    },
+    "hero": {
+      "notificationBought": "właśnie kupił aplikację",
+      "title": "Tchnij życie w swojego Maca dzięki delikatnemu, konfigurowalnym śnieżycom",
+      "subtitle": "Dostępne dla macOS 14.6+",
+      "ctaButton": "Pobierz z App Store"
+    },
+    "social": {
+      "twitter": "X (Twitter)",
+      "threads": "Threads"
+    },
+    "footer": {
+      "contact": "Skontaktuj się z nami",
+      "privacy": "Polityka prywatności"
+    },
+    "privacy": {
+      "title": "Polityka Prywatności",
+      "pageTitle": "Polityka Prywatności - SnowMyScreen",
+      "effectiveDate": "Data wejścia w życie: 26 listopada 2025",
+      "intro": {
+        "heading": "Wprowadzenie",
+        "text": "SnowMyScreen to aplikacja na macOS, która tworzy piękne animowane efekty śnieżyc na Twoim pulpicie. Twoja prywatność jest dla nas ważna, a ta polityka wyjaśnia, jak postępujemy z Twoimi informacjami."
+      },
+      "shortVersion": {
+        "heading": "Krótka wersja",
+        "text1": "Nie zbieramy żadnych danych. Kropka.",
+        "text2": "SnowMyScreen działa wyłącznie na Twoim Macu. Nic, co robisz w aplikacji, nie jest śledzone, rejestrowane ani wysyłane gdziekolwiek. Nie wiemy, kim jesteś, jak korzystasz z aplikacji ani jakie masz preferencje ustawień."
+      },
+      "dontCollect": {
+        "heading": "Czego nie zbieramy",
+        "items": [
+          "Żadnych danych osobowych",
+          "Żadnych statystyk użycia",
+          "Żadnych raportów o awariach",
+          "Żadnych danych analitycznych",
+          "Żadnych identyfikatorów urządzeń",
+          "Żadnych danych o lokalizacji",
+          "Absolutnie nic. Na serio."
+        ]
+      },
+      "staysOnMac": {
+        "heading": "Co pozostaje na Twoim Macu",
+        "intro": "Aplikacja zapisuje Twoje preferencje lokalnie na Twoim urządzeniu:",
+        "items": [
+          "Intensywność i prędkość śniegu",
+          "Kierunek i siła wiatru",
+          "Kształty i kolory płatków śniegu",
+          "Które ekrany pokazują śnieg",
+          "Preferencje językowe"
+        ],
+        "outro": "Te ustawienia są przechowywane w standardowym systemie preferencji Twojego Maca i nigdy nie opuszczają Twojego komputera. Po usunięciu aplikacji te ustawienia są usuwane."
+      },
+      "permissions": {
+        "heading": "Uprawnienia",
+        "text": "SnowMyScreen może poprosić o pozwolenie na automatyczne uruchamianie przy starcie Maca. Jest to opcjonalne i służy wyłącznie Twojej wygodzie. Żadne dane nie są zbierane poprzez to uprawnienie."
+      },
+      "noInternet": {
+        "heading": "Nie wymaga internetu",
+        "text": "SnowMyScreen nie potrzebuje połączenia z internetem, aby działać. Nie komunikuje się z żadnymi serwerami, naszymi ani cudzymi."
+      },
+      "updates": {
+        "heading": "Aktualizacje",
+        "text": "Wszystkie aktualizacje pochodzą z Mac App Store. Apple obsługuje proces aktualizacji zgodnie ze swoją polityką prywatności."
+      },
+      "children": {
+        "heading": "Dzieci",
+        "text": "Ponieważ nie zbieramy żadnych informacji, SnowMyScreen jest bezpieczny dla każdego, w tym dla dzieci."
+      },
+      "questions": {
+        "heading": "Pytania?",
+        "text": "Jeśli masz pytania dotyczące tej polityki prywatności, skontaktuj się z nami pod adresem:",
+        "email": "E-mail:"
+      },
+      "footer": "Ta polityka prywatności może być od czasu do czasu aktualizowana. Aktualna wersja jest zawsze dostępna tutaj oraz w Mac App Store."
+    },
+    "error404": {
+      "pageTitle": "Strona nie znaleziona - SnowMyScreen",
+      "code": "404",
+      "title": "Strona nie znaleziona",
+      "message": "Ups! Strona, której szukasz, zdaje się odlecieć jak płatki śniegu na wietrze.",
+      "goHome": "Przejdź do strony głównej",
+      "privacyPolicy": "Polityka prywatności",
+      "backToHome": "Powrót do strony głównej"
+    },
+    "meta": {
+      "description": "Tchnij życie w swojego Maca dzięki delikatnemu, konfigurowalnym śnieżycom. Dostępne dla macOS 14.6+"
+    }
+  }
+}

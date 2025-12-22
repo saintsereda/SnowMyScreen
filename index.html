@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SnowMyScreen</title>
+  <meta name="description" content="Bring your Mac to life with gentle, customizable snowfall. Available for macOS 14.6+" />
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -42,7 +43,10 @@
       <span class="brand">SnowMyScreen</span>
     </div>
 
-    <a class="buy-btn" href="https://apps.apple.com/us/app/snowmyscreen/id6755106853?mt=12" target="_blank" rel="noopener noreferrer">Download on App Store</a>
+    <div class="nav-right">
+      <button id="language-switcher" class="language-switcher" aria-label="Switch language">English</button>
+      <a class="buy-btn" href="https://apps.apple.com/us/app/snowmyscreen/id6755106853?mt=12" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadAppStore">Download on App Store</a>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -51,30 +55,30 @@
     <div class="notification" id="notification">
       <span class="notification-icon">⚡</span>
       <span class="notification-text">
-        <span class="notification-email" id="notification-email">an***da@gmail.com</span> just bought the app
+        <span class="notification-email" id="notification-email">an***da@gmail.com</span> <span data-i18n="hero.notificationBought">just bought the app</span>
       </span>
     </div>
 
     <img src="images/icon.png" class="hero-icon" alt="app icon">
 
-    <h1 class="hero-title">
+    <h1 class="hero-title" data-i18n="hero.title">
       Bring your Mac to life with gentle, customizable snowfall
     </h1>
 
-    <p class="subtext">Available for macOS 14.6+</p>
+    <p class="subtext" data-i18n="hero.subtitle">Available for macOS 14.6+</p>
 
-    <a class="cta" href="https://apps.apple.com/us/app/snowmyscreen/id6755106853?mt=12" target="_blank" rel="noopener noreferrer">
+    <a class="cta" href="https://apps.apple.com/us/app/snowmyscreen/id6755106853?mt=12" target="_blank" rel="noopener noreferrer" data-i18n="hero.ctaButton">
       Download on App Store
     </a>
 
     <div class="social-links">
       <a href="https://x.com/andrew_sereda" target="_blank" rel="noopener noreferrer" class="social-link">
         <img src="images/icons/x.svg" width="20" height="20" alt="X icon">
-        X (Twitter)
+        <span data-i18n="social.twitter">X (Twitter)</span>
       </a>
       <a href="https://www.threads.com/@saintsereda" target="_blank" rel="noopener noreferrer" class="social-link">
         <img src="images/icons/threads.svg" width="20" height="20" alt="Threads icon">
-        Threads
+        <span data-i18n="social.threads">Threads</span>
       </a>
     </div>
 
@@ -82,10 +86,11 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <a href="mailto:hello@andrewsereda.com">Contact us</a>
-    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:hello@andrewsereda.com" data-i18n="footer.contact">Contact us</a>
+    <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a>
   </footer>
 
+  <script src="js/language.js"></script>
   <script src="js/notifications.js"></script>
   <script src="js/snow.js"></script>
 </body>

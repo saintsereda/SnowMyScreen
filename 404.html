@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Page Not Found - SnowMyScreen</title>
+  <title data-i18n-title="error404.pageTitle">Page Not Found - SnowMyScreen</title>
 
   <!-- Google Font (Geist) -->
   <link href="https://fonts.googleapis.com/css?family=Geist:400,500,600&display=swap" rel="stylesheet">
@@ -83,27 +83,31 @@
       <span class="brand">SnowMyScreen</span>
     </div>
 
-    <a class="buy-btn" href="index.html">Back to Home</a>
+    <div class="nav-right">
+      <button id="language-switcher" class="language-switcher" aria-label="Switch language">English</button>
+      <a class="buy-btn" href="index.html" data-i18n="error404.backToHome">Back to Home</a>
+    </div>
   </header>
 
   <!-- Error Content -->
   <div class="error-content">
-    <div class="error-code">404</div>
-    <h1 class="error-title">Page Not Found</h1>
-    <p class="error-message">
+    <div class="error-code" data-i18n="error404.code">404</div>
+    <h1 class="error-title" data-i18n="error404.title">Page Not Found</h1>
+    <p class="error-message" data-i18n="error404.message">
       Oops! The page you're looking for seems to have drifted away like snowflakes in the wind.
     </p>
     <div class="error-links">
-      <a href="index.html" class="error-link">Go Home</a>
-      <a href="privacy.html" class="error-link secondary">Privacy Policy</a>
+      <a href="index.html" class="error-link" data-i18n="error404.goHome">Go Home</a>
+      <a href="privacy.html" class="error-link secondary" data-i18n="error404.privacyPolicy">Privacy Policy</a>
     </div>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
-    <a href="index.html">Back to Home</a>
-    <a href="privacy.html">Privacy policy</a>
+    <a href="index.html" data-i18n="error404.backToHome">Back to Home</a>
+    <a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a>
   </footer>
 
+  <script src="js/language.js"></script>
 </body>
 </html>
