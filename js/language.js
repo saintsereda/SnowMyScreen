@@ -137,7 +137,7 @@ function switchLanguage(lang) {
 function updateLanguageSwitcher() {
   const switcher = document.getElementById('language-switcher');
   if (switcher) {
-    switcher.textContent = currentLanguage === 'en' ? 'Polski' : 'English';
+    switcher.textContent = currentLanguage === 'en' ? 'PL' : 'EN';
     switcher.setAttribute('aria-label', currentLanguage === 'en' ? 'Switch to Polish' : 'Przełącz na angielski');
   }
 }
