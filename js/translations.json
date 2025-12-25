@@ -89,6 +89,20 @@
     },
     "meta": {
       "description": "Bring your Mac to life with gentle, customizable snowfall. Available for macOS 14.6+"
+    },
+    "go": {
+      "redirecting": "Redirecting to App Store...",
+      "redirectMessage": "You will be redirected automatically in a moment.",
+      "fallbackLink": "If you are not redirected, tap here",
+      "openInSafari": "Open in Safari to continue",
+      "instructionText": "Tap the menu (⋯) then Open in browser",
+      "step1": "Tap the three dots (⋯) in the top right corner",
+      "step2": "Select \"Open in browser\" or \"Open in Safari\"",
+      "step3": "You'll be sent to the App Store automatically",
+      "openAppStore": "Open App Store",
+      "copyLink": "Copy link",
+      "helperText": "After opening in Safari, you will be sent to the App Store automatically",
+      "note": "TikTok blocks App Store links in its built-in browser"
     }
   },
   "pl": {
@@ -181,6 +195,20 @@
     },
     "meta": {
       "description": "Ożyw swojego Maca delikatnym, konfigurowalnym opadem śniegu. Dostępne dla macOS 14.6+"
+    },
+    "go": {
+      "redirecting": "Przekierowywanie do App Store...",
+      "redirectMessage": "Zostaniesz przekierowany automatycznie za chwilę.",
+      "fallbackLink": "Jeśli nie zostaniesz przekierowany, kliknij tutaj",
+      "openInSafari": "Otwórz w Safari, aby kontynuować",
+      "instructionText": "Dotknij menu (⋯) a następnie Otwórz w przeglądarce",
+      "step1": "Dotknij trzech kropek (⋯) w prawym górnym rogu",
+      "step2": "Wybierz \"Otwórz w przeglądarce\" lub \"Otwórz w Safari\"",
+      "step3": "Zostaniesz automatycznie przekierowany do App Store",
+      "openAppStore": "Otwórz App Store",
+      "copyLink": "Kopiuj link",
+      "helperText": "Po otwarciu w Safari zostaniesz automatycznie przekierowany do App Store",
+      "note": "TikTok blokuje linki do App Store w swojej wbudowanej przeglądarce"
     }
   }
 }
