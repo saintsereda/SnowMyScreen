@@ -152,38 +152,6 @@
       margin-bottom: 1rem;
     }
 
-    .go-note {
-      font-size: 0.8rem;
-      color: #003669;
-      opacity: 0.6;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 8px;
-      line-height: 1.4;
-    }
-
-    .go-toast {
-      position: fixed;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #003669;
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 1000;
-      max-width: 90%;
-      text-align: center;
-    }
-
-    .go-toast.show {
-      opacity: 1;
-    }
-
     .redirect-container {
       display: none;
     }
@@ -250,7 +218,7 @@
 
     <h1 class="go-headline" data-i18n="go.openInSafari">Open in Safari to continue</h1>
 
-    <p class="go-instruction" data-i18n="go.instructionText">Tap the menu (⋯) then Open in browser</p>
+    <p class="go-instruction" data-i18n="go.instructionText">TikTok blocks App Store links in its built-in browser</p>
 
     <div class="go-steps">
       <div class="go-step">
@@ -268,21 +236,13 @@
     </div>
 
     <div class="go-buttons">
-      <a class="go-button" id="appstore-button" href="https://apps.apple.com/us/app/snowmyscreen/id6755106853" target="_blank" rel="noopener noreferrer" data-i18n="go.openAppStore">
-        Open App Store
-      </a>
       <button class="go-button secondary" id="copy-button" data-i18n="go.copyLink">
         Copy link
       </button>
     </div>
 
     <p class="go-helper-text" data-i18n="go.helperText">After opening in Safari, you will be sent to the App Store automatically</p>
-
-    <p class="go-note" data-i18n="go.note">TikTok blocks App Store links in its built-in browser</p>
   </div>
-
-  <!-- Toast notification -->
-  <div class="go-toast" id="toast"></div>
 
   <!-- i18n -->
   <script src="js/language.js"></script>
@@ -353,17 +313,6 @@
         return isSafari && isIOS;
       }
 
-      // Show toast message
-      function showToast(message, duration = 5000) {
-        const toast = document.getElementById('toast');
-        toast.textContent = message;
-        toast.classList.add('show');
-
-        setTimeout(() => {
-          toast.classList.remove('show');
-        }, duration);
-      }
-
       // Copy to clipboard functionality
       function copyToClipboard(text) {
         // Try modern clipboard API first
@@ -371,7 +320,6 @@
           navigator.clipboard.writeText(text)
             .then(() => {
               analytics.trackEvent('copy_link_success', { method: 'clipboard_api' });
-              showToast('Link copied to clipboard!');
             })
             .catch(() => {
               // Fallback to older method
@@ -396,7 +344,6 @@
         try {
           document.execCommand('copy');
           analytics.trackEvent('copy_link_success', { method: 'execCommand' });
-          showToast('Link copied to clipboard!');
         } catch (err) {
           // If all else fails, show the URL so user can manually copy
           analytics.trackEvent('copy_link_failed', {});
@@ -445,12 +392,10 @@
         const redirectContainer = document.getElementById('redirect-container');
         const interstitialContainer = document.getElementById('interstitial-container');
         const copyButton = document.getElementById('copy-button');
-        const appStoreButton = document.getElementById('appstore-button');
         const fallbackLink = document.getElementById('fallback-link');
 
         // Update URLs with query parameters
         const appStoreURL = appendQueryParams(APP_STORE_URL);
-        if (appStoreButton) appStoreButton.href = appStoreURL;
         if (fallbackLink) fallbackLink.href = appStoreURL;
 
         if (isTikTok) {
@@ -459,23 +404,11 @@
 
           interstitialContainer.classList.add('active');
 
-          // Show toast message
-          setTimeout(() => {
-            showToast('Open this page in Safari to continue to the App Store');
-          }, 500);
-
           // Copy button click handler
           if (copyButton) {
             copyButton.addEventListener('click', () => {
               analytics.trackEvent('copy_link_click', {});
               copyToClipboard(currentURL);
-            });
-          }
-
-          // Track App Store button clicks
-          if (appStoreButton) {
-            appStoreButton.addEventListener('click', () => {
-              analytics.trackEvent('appstore_button_click', { environment: 'tiktok_inapp' });
             });
           }
 
