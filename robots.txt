@@ -1,6 +1,6 @@
-# robots.txt for SnowMyScreen
 User-agent: *
 Allow: /
+Disallow: /content/
+Disallow: /scripts/
 
-# Sitemap location
 Sitemap: https://snowmyscreen.app/sitemap.xml

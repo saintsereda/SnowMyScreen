@@ -21,7 +21,8 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Navigation */
@@ -260,3 +261,6 @@ body {
     padding: 0.4rem 0.875rem;
   }
 }
+
+:focus-visible { outline: 3px solid #107bac; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

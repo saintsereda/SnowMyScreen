@@ -1,0 +1,244 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "other_label": "Українська",
+  "skip": "Skip to content",
+  "nav": [
+    "Effects",
+    "Features",
+    "FAQ",
+    "Blog"
+  ],
+  "download": "Get it on the Mac App Store",
+  "short_cta": "Get the app",
+  "title": "Mac Desktop Effects: Snow, Rain & More | SnowMyScreen",
+  "description": "Add snow, rain, autumn leaves, petals and fireflies to your Mac desktop. Customize seasonal overlays, import your own images and decorate with festive lights.",
+  "hero": "Mac desktop effects.\nA different season.",
+  "intro": "Snow, rain, falling leaves, drifting petals and summer fireflies. Bring a little of the outside to your Mac with desktop effects you can make your own.",
+  "compat": "For macOS 14.6 and later",
+  "preview_label": "Choose an atmosphere",
+  "pause": "Pause motion",
+  "play": "Resume motion",
+  "preview_note": "Choose an effect to preview. Your own wallpaper stays just as it is.",
+  "preview_name": "Make room for a little wonder.",
+  "preview_detail": "Same desktop. A new atmosphere.",
+  "effects_kicker": "Six ways to set the scene",
+  "effects_title": "More than a snow day.",
+  "effects_intro": "Choose a seasonal effect, or bring your own artwork. Change the intensity, size, speed and wind to find a look that feels right.",
+  "themes": [
+    [
+      "snow",
+      "Winter snow",
+      "Soft flakes, gentle drift and a little winter magic. Choose from built-in snowflake shapes.",
+      "❄"
+    ],
+    [
+      "rain",
+      "Rain",
+      "From a light drizzle to a steady shower. Tune the wind, drop size and intensity.",
+      "↘"
+    ],
+    [
+      "leaves",
+      "Autumn leaves",
+      "Amber and crimson leaves tumble across your desktop with a breeze you control.",
+      "🍂"
+    ],
+    [
+      "petals",
+      "Spring petals",
+      "Blush-colored petals float through your workspace for a softer change of season.",
+      "✿"
+    ],
+    [
+      "fireflies",
+      "Summer fireflies",
+      "Warm points of light wander across the screen, bringing a summer evening indoors.",
+      "✦"
+    ],
+    [
+      "custom",
+      "Your own images",
+      "Import PNG artwork and let it fall like snow, tumble like leaves or move like rain.",
+      "＋"
+    ]
+  ],
+  "features_kicker": "Small details. Your atmosphere.",
+  "features_title": "Make it feel like your desktop.",
+  "features": [
+    [
+      "Keep your wallpaper",
+      "The effects are transparent overlays. Keep the desktop background you already love."
+    ],
+    [
+      "Choose where it appears",
+      "Show the animation over open windows or on the desktop behind them. Use the full screen or a 150-point strip at the top."
+    ],
+    [
+      "Tune the motion",
+      "Adjust intensity, particle size, speed and wind. Snow, leaves and petals also have drifting controls."
+    ],
+    [
+      "Add a little light",
+      "Decorate the menu bar, Dock or both with garlands. Pick colors, bulb shapes and steady, twinkle, wave or chase animation."
+    ],
+    [
+      "Make it your own",
+      "Add up to 10 PNG images, select or mix them and choose a motion style. Transparent backgrounds work best."
+    ],
+    [
+      "Stay in your flow",
+      "Click through the overlays to use your Mac. Control the effects from the menu bar and optionally launch at login."
+    ]
+  ],
+  "steps_title": "A change of season in three steps.",
+  "steps": [
+    [
+      "Install and open",
+      "Download the Mac app and find its icon in the menu bar."
+    ],
+    [
+      "Choose your effect",
+      "Open settings, enable Weather effects and choose snow, rain, leaves, petals, fireflies or custom images."
+    ],
+    [
+      "Find your balance",
+      "Adjust motion and placement. Add lights, or keep it subtle with a desktop-only effect."
+    ]
+  ],
+  "faq_title": "A few things you might be wondering.",
+  "faq_kicker": "Questions, answered",
+  "faq": [
+    [
+      "What is SnowMyScreen?",
+      "SnowMyScreen is a macOS menu bar app that adds animated effects to your desktop: snow, rain, autumn leaves, spring petals, summer fireflies and custom PNG images. It also includes decorative lights for the menu bar and Dock."
+    ],
+    [
+      "Is it a live wallpaper or a screensaver?",
+      "It is a desktop overlay. Your existing wallpaper stays in place, and the animation can appear behind or over open windows while you use your Mac. It does not replace the macOS screensaver."
+    ],
+    [
+      "Does it work with multiple displays?",
+      "Yes. The app creates an overlay for each connected screen and updates the overlays when the display setup changes."
+    ],
+    [
+      "Can I still click my apps and desktop?",
+      "Yes. The overlay windows ignore mouse events, so you can click through them and use your Mac normally. Desktop only mode places the effects behind your windows."
+    ],
+    [
+      "Can I use my own images?",
+      "Yes. Import up to 10 PNG images, each up to 5 MB and 1024 × 1024 pixels. Choose one or mix several. Custom images can move like snow, leaves or rain."
+    ],
+    [
+      "Can I add Christmas lights without snowfall?",
+      "Yes. Weather effects and garlands have separate controls. Put lights on the menu bar, Dock or both, and choose a palette, shape and animation."
+    ],
+    [
+      "Does the rain effect include sound?",
+      "The current app provides visual effects. It does not include rain audio, music, weather forecasts or a live weather feed."
+    ],
+    [
+      "Which Macs are supported?",
+      "The app target requires macOS 14.6 or later. Check the current Mac App Store listing for the requirements of the available release before downloading. It is a Mac app, not an iPhone or iPad app."
+    ],
+    [
+      "Does it need an internet connection?",
+      "Effects, settings and custom images work locally on your Mac. Downloading or updating through the Mac App Store requires internet access."
+    ],
+    [
+      "How do I turn the effects off?",
+      "Use the menu bar controls to disable weather effects or lights, or quit the app. Launch-at-login behavior is a separate setting."
+    ]
+  ],
+  "blog_kicker": "The desktop journal",
+  "blog_title": "A little inspiration for your workspace.",
+  "article_title": "How to Add Snow to Your Mac Desktop (and Other Seasonal Effects)",
+  "article_meta_title": "How to Add Snow to Your Mac Desktop | SnowMyScreen",
+  "article_description": "Learn how to add falling snow to your Mac desktop, adjust the overlay and switch to rain, leaves, petals or fireflies without changing your wallpaper.",
+  "article_summary": "A practical guide to desktop overlays, seasonal effects and finding a setup that stays out of your way.",
+  "article_label": "Mac desktop guide",
+  "read": "Read the guide",
+  "all_posts": "All articles",
+  "minutes": "6 minute read",
+  "published": "October 5, 2026",
+  "blog_meta_title": "Mac Desktop Guides & Seasonal Effects | SnowMyScreen",
+  "blog_description": "Practical guides to Mac desktop customization: snow and rain overlays, seasonal effects, decorative lights and custom images.",
+  "blog_intro": "Practical guides to giving your Mac a little more atmosphere. Start with the basics, then make the setup your own.",
+  "cta_title": "A small change. A different feeling.",
+  "cta_text": "Give your Mac a season of its own. Start with snow, then see where the mood takes you.",
+  "footer_line": "Seasonal desktop effects, made for Mac.",
+  "privacy": "Privacy policy",
+  "support": "Support",
+  "contact": "Contact Andrew",
+  "author": "By Andrew Sereda, developer of SnowMyScreen",
+  "support_title": "SnowMyScreen Support & Setup for Mac",
+  "support_description": "Get help with SnowMyScreen on Mac: menu bar controls, themes, overlays, PNG imports and contacting the developer.",
+  "support_intro": "Start with the menu bar icon. The settings window is where you choose themes, adjust motion, import images and control decorative lights.",
+  "support_sections": [
+    [
+      "Getting started",
+      "Download through the Mac App Store, launch the app and open its menu bar icon. In settings, enable Weather effects and choose a theme. You do not need to keep the settings window open."
+    ],
+    [
+      "I cannot see an effect",
+      "Check that Weather effects is enabled and the app is running. Try Full screen and Over the content placement. Desktop only effects sit behind your windows, so a maximized window can hide them. Increase intensity if the effect is too subtle."
+    ],
+    [
+      "Importing custom artwork",
+      "Choose Add your image and import a PNG. The limit is 10 images, with a maximum of 5 MB and 1024 × 1024 pixels per image. Transparent backgrounds give clean edges. Choose motion like snow, leaves or rain."
+    ],
+    [
+      "Controlling lights separately",
+      "Open the garland settings and choose the menu bar, Dock or both. Garlands and weather effects are independent, so you can use lights on their own."
+    ],
+    [
+      "Turning off automatic launch",
+      "Use the launch-at-login setting to choose whether the app opens when you sign in. Quit the app from its menu bar controls."
+    ],
+    [
+      "Contact the developer",
+      "Email hello@andrewsereda.com with your macOS version, app version, display setup and the steps that reproduce the problem. Avoid attaching personal or sensitive content."
+    ]
+  ],
+  "picker_title": "Choose an effect",
+  "picker_intro": "What would make this moment feel a little different?",
+  "picker_footer": "Your wallpaper and open windows stay just as they are.",
+  "folder_labels": [
+    "Notes",
+    "Projects",
+    "Photos"
+  ],
+  "device_alt": "Display frame for seasonal effect videos.",
+  "screen_label": "Seasonal effect video preview",
+  "desktop_label": "Desktop",
+  "desktop_time": "Mon 9:41",
+  "desktop_menu": [
+    "File",
+    "Edit",
+    "View"
+  ],
+  "hero_line": "Mac desktop effects.",
+  "hero_phrases": [
+    {
+      "text": "Winter snow.",
+      "icon": "❄️"
+    },
+    {
+      "text": "Rain.",
+      "icon": "🌧️"
+    },
+    {
+      "text": "Autumn leaves.",
+      "icon": "🍂"
+    },
+    {
+      "text": "Spring petals.",
+      "icon": "🌸"
+    },
+    {
+      "text": "Summer fireflies.",
+      "icon": "✨"
+    }
+  ],
+  "cookie_settings": "Cookie settings"
+}

@@ -2,32 +2,22 @@
 let translations = {};
 let currentLanguage = 'en';
 
-// Detect user's country/language
+// Detect a supported language from an explicit preference or browser language.
 function detectUserLanguage() {
   // Check if user has already set a preference
-  const savedLanguage = localStorage.getItem('snowmyscreen-language');
-  if (savedLanguage) {
+  let savedLanguage;
+  try { savedLanguage = localStorage.getItem('snowmyscreen-language'); } catch (_) { /* Storage may be unavailable. */ }
+  if (savedLanguage === 'en' || savedLanguage === 'uk') {
     return savedLanguage;
   }
 
-  // Try to detect if user is from Poland
+  // Location and timezone do not determine a user's language.
   try {
     // Check browser language
     const browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang && browserLang.toLowerCase().startsWith('pl')) {
-      return 'pl';
-    }
-
-    // Check timezone (Poland uses Europe/Warsaw)
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    if (timezone === 'Europe/Warsaw') {
-      return 'pl';
-    }
-
-    // Additional check: use locale to detect Polish users
     const locale = new Intl.Locale(browserLang || 'en');
-    if (locale.language === 'pl') {
-      return 'pl';
+    if (locale.language === 'uk') {
+      return 'uk';
     }
   } catch (error) {
     console.log('Language detection error:', error);
@@ -40,7 +30,8 @@ function detectUserLanguage() {
 // Load translations from JSON file
 async function loadTranslations() {
   try {
-    const response = await fetch('js/translations.json');
+    const response = await fetch('/js/translations.json');
+    if (!response.ok) return false;
     translations = await response.json();
     return true;
   } catch (error) {
@@ -102,8 +93,8 @@ function applyTranslations() {
 
   // Update meta description
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) {
-    metaDesc.setAttribute('content', getTranslation('meta.description'));
+  if (metaDesc && metaDesc.hasAttribute('data-i18n-meta')) {
+    metaDesc.setAttribute('content', getTranslation(metaDesc.getAttribute('data-i18n-meta')));
   }
 
   // Update Open Graph meta tags
@@ -112,8 +103,8 @@ function applyTranslations() {
   const twitterTitle = document.querySelector('meta[name="twitter:title"]');
   const twitterDesc = document.querySelector('meta[name="twitter:description"]');
 
-  if (ogDesc) ogDesc.setAttribute('content', getTranslation('meta.description'));
-  if (twitterDesc) twitterDesc.setAttribute('content', getTranslation('meta.description'));
+  if (ogDesc && metaDesc?.hasAttribute('data-i18n-meta')) ogDesc.setAttribute('content', metaDesc.content);
+  if (twitterDesc && metaDesc?.hasAttribute('data-i18n-meta')) twitterDesc.setAttribute('content', metaDesc.content);
 
   // Update language switcher button text
   updateLanguageSwitcher();
@@ -128,7 +119,7 @@ function switchLanguage(lang) {
 
   if (translations[lang]) {
     currentLanguage = lang;
-    localStorage.setItem('snowmyscreen-language', lang);
+    try { localStorage.setItem('snowmyscreen-language', lang); } catch (_) { /* Explicit switching still works. */ }
     applyTranslations();
   }
 }
@@ -137,8 +128,8 @@ function switchLanguage(lang) {
 function updateLanguageSwitcher() {
   const switcher = document.getElementById('language-switcher');
   if (switcher) {
-    switcher.textContent = currentLanguage === 'en' ? 'Polski' : 'English';
-    switcher.setAttribute('aria-label', currentLanguage === 'en' ? 'Switch to Polish' : 'Przełącz na angielski');
+    switcher.textContent = currentLanguage === 'en' ? 'Українська' : 'English';
+    switcher.setAttribute('aria-label', currentLanguage === 'en' ? 'Switch to Ukrainian' : 'Перемкнути на англійську');
   }
 }
 
@@ -162,7 +153,7 @@ async function initLanguage() {
   if (switcher) {
     switcher.addEventListener('click', (e) => {
       e.preventDefault();
-      const newLang = currentLanguage === 'en' ? 'pl' : 'en';
+      const newLang = currentLanguage === 'en' ? 'uk' : 'en';
       switchLanguage(newLang);
     });
   }

@@ -1,0 +1,140 @@
+{
+  "en": {
+    "title": "Privacy Policy",
+    "pageTitle": "Privacy Policy - SnowMyScreen",
+    "effectiveDate": "Effective Date: November 26, 2025",
+    "intro": {
+      "heading": "Introduction",
+      "text": "SnowMyScreen is a macOS application that adds seasonal desktop effects and decorative lights. Your privacy is important to us, and this policy explains how we handle your information. Website analytics and cookie choices are described below."
+    },
+    "shortVersion": {
+      "heading": "The Short Version",
+      "text1": "The app does not collect any data.",
+      "text2": "SnowMyScreen works entirely on your Mac. Nothing you do in the app is tracked, recorded, or sent anywhere. We don't know who you are, how you use the app, or what settings you prefer."
+    },
+    "dontCollect": {
+      "heading": "What the App Does Not Collect",
+      "items": [
+        "No personal information",
+        "No usage statistics",
+        "No crash reports",
+        "No analytics data",
+        "No device identifiers",
+        "No location data",
+        "Nothing. Seriously."
+      ]
+    },
+    "staysOnMac": {
+      "heading": "What Stays on Your Mac",
+      "intro": "The app saves your preferences locally on your device:",
+      "items": [
+        "Effect theme, intensity and speed",
+        "Wind direction and strength",
+        "Selected shapes and custom images",
+        "Overlay placement and decorative light settings",
+        "Language preference"
+      ],
+      "outro": "Settings and imported images are stored locally on your Mac and are not uploaded by the app. Removing the app does not necessarily remove its saved preferences or app data."
+    },
+    "permissions": {
+      "heading": "Permissions",
+      "text": "SnowMyScreen may request permission to launch automatically when you start your Mac. This is optional and only for your convenience. No data is collected through this permission."
+    },
+    "noInternet": {
+      "heading": "No Internet Required",
+      "text": "SnowMyScreen doesn't need an internet connection to work. It doesn't communicate with any servers, ours or anyone else's."
+    },
+    "updates": {
+      "heading": "Updates",
+      "text": "All updates come through the Mac App Store. Apple handles the update process according to their privacy policy."
+    },
+    "children": {
+      "heading": "Children",
+      "text": "Since we don't collect any information, SnowMyScreen is safe for everyone, including children."
+    },
+    "questions": {
+      "heading": "Questions?",
+      "text": "If you have questions about this privacy policy, contact us at:",
+      "email": "Email:"
+    },
+    "footer": "This privacy policy may be updated occasionally. The current version is always available here and in the Mac App Store.",
+    "website": {
+      "heading": "Website analytics & cookies",
+      "updated": "Website section updated: October 5, 2026",
+      "storage": "The website uses local storage to remember your cookie choice (snowmyscreen_cookie_consent_v1) and, on the download page, your language preference (snowmyscreen-language). These preferences are saved on this device.",
+      "analytics": "If you allow analytics, the website loads Google Analytics 4 (measurement ID G-VB76JMX2B6) to measure page visits and browser/device information. Google processes this usage data. The Google tag is not loaded before you opt in or while optional cookies are declined. Advertising consent remains disabled.",
+      "cookies": "With analytics enabled, Google Analytics can store first-party _ga and _ga_VB76JMX2B6 cookies to distinguish browsers and sessions. These website statistics are separate from the desktop app, which does not collect analytics.",
+      "choices": "Choose Accept all, Only necessary or Customize in the banner. You can reopen Cookie settings in the footer at any time. Turning analytics off removes Google Analytics cookies and reloads the page to stop the running tag. Clearing browser storage removes your saved choice.",
+      "google": "Learn how Google handles this information:"
+    }
+  },
+  "uk": {
+    "title": "Політика конфіденційності",
+    "pageTitle": "Політика конфіденційності — SnowMyScreen",
+    "effectiveDate": "Дата набуття чинності: 26 листопада 2025 року",
+    "intro": {
+      "heading": "Вступ",
+      "text": "SnowMyScreen — застосунок для macOS, який додає сезонні ефекти на робочий стіл і декоративні гірлянди. Ваша конфіденційність важлива для нас. Ця політика пояснює, як ми поводимося з вашою інформацією. Аналітика сайту та вибір щодо cookie описані нижче."
+    },
+    "shortVersion": {
+      "heading": "Коротко",
+      "text1": "Застосунок не збирає жодних даних.",
+      "text2": "SnowMyScreen працює повністю на вашому Mac. Ваші дії в застосунку не відстежуються, не записуються й нікуди не надсилаються. Ми не знаємо, хто ви, як користуєтеся застосунком і яким налаштуванням віддаєте перевагу."
+    },
+    "dontCollect": {
+      "heading": "Що застосунок не збирає",
+      "items": [
+        "Особисту інформацію",
+        "Статистику використання",
+        "Звіти про збої",
+        "Аналітичні дані",
+        "Ідентифікатори пристроїв",
+        "Дані про місцеперебування",
+        "Нічого. Справді."
+      ]
+    },
+    "staysOnMac": {
+      "heading": "Що залишається на вашому Mac",
+      "intro": "Застосунок зберігає ваші налаштування локально на пристрої:",
+      "items": [
+        "Тему, інтенсивність і швидкість ефекту",
+        "Напрямок і силу вітру",
+        "Вибрані форми та власні зображення",
+        "Розташування ефектів і налаштування гірлянд",
+        "Мовні налаштування"
+      ],
+      "outro": "Налаштування та імпортовані зображення зберігаються локально на вашому Mac. Застосунок їх не завантажує на сервери. Видалення застосунку не обов’язково видаляє його збережені налаштування та дані."
+    },
+    "permissions": {
+      "heading": "Дозволи",
+      "text": "SnowMyScreen може попросити дозвіл на автоматичний запуск під час увімкнення Mac. Це необов’язково й потрібно лише для вашої зручності. Цей дозвіл не використовується для збору даних."
+    },
+    "noInternet": {
+      "heading": "Інтернет не потрібен",
+      "text": "Для роботи SnowMyScreen не потрібне підключення до інтернету. Застосунок не обмінюється даними з жодними серверами — нашими чи сторонніми."
+    },
+    "updates": {
+      "heading": "Оновлення",
+      "text": "Усі оновлення надходять через Mac App Store. Apple забезпечує процес оновлення відповідно до своєї політики конфіденційності."
+    },
+    "children": {
+      "heading": "Діти",
+      "text": "Оскільки ми не збираємо жодної інформації, SnowMyScreen безпечний для всіх, зокрема для дітей."
+    },
+    "questions": {
+      "heading": "Є питання?",
+      "text": "Якщо у вас є питання щодо цієї політики конфіденційності, напишіть нам:",
+      "email": "Електронна пошта:"
+    },
+    "footer": "Ця політика конфіденційності може час від часу оновлюватися. Поточна версія завжди доступна тут і в Mac App Store.",
+    "website": {
+      "heading": "Аналітика сайту та cookie",
+      "updated": "Розділ про сайт оновлено: 5 жовтня 2026 року",
+      "storage": "Сайт зберігає вибір щодо cookie (snowmyscreen_cookie_consent_v1) та, на сторінці завантаження, мовні налаштування (snowmyscreen-language) у локальному сховищі браузера. Ці налаштування залишаються на цьому пристрої.",
+      "analytics": "Якщо ви дозволите аналітику, сайт завантажить Google Analytics 4 (ідентифікатор G-VB76JMX2B6) для вимірювання відвідувань сторінок та інформації про браузер і пристрій. Google обробляє ці дані використання. До вашої згоди та за відмови від необов’язкових cookie тег Google не завантажується. Згода на рекламу залишається вимкненою.",
+      "cookies": "Коли аналітика дозволена, Google Analytics може зберігати cookie _ga та _ga_VB76JMX2B6 для розрізнення браузерів і сеансів. Статистика сайту не стосується застосунку для робочого столу, який не збирає аналітичних даних.",
+      "choices": "У банері виберіть «Прийняти всі», «Лише необхідні» або «Налаштувати». Ви можете знову відкрити «Налаштування cookie» у підвалі будь-коли. Вимкнення аналітики видаляє cookie Google Analytics і перезавантажує сторінку, щоб зупинити тег. Очищення сховища браузера видаляє збережений вибір.",
+      "google": "Докладніше про обробку цієї інформації Google:"
+    }
+  }
+}

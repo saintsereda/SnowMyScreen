@@ -1,0 +1,23 @@
+# SnowMyScreen
+
+> A macOS desktop overlay app. Current Mac App Store release: snowfall and custom PNG images. The next seasonal update adds rain, autumn leaves, spring petals, summer fireflies and decorative lights.
+
+The application runs on Mac; it is not an iPhone or iPad app, a weather forecast service, an audio app or a replacement for the macOS screensaver. Requirements: macOS 14.6 or later; confirm the available release on the Mac App Store.
+
+## Product and support
+- [Product, effects and FAQ](https://snowmyscreen.app/): Supported controls, overlay placement, custom images, multiple displays and release availability.
+- [Setup and support](https://snowmyscreen.app/support/): Menu bar controls, PNG import limits and troubleshooting.
+- [Privacy](https://snowmyscreen.app/privacy.html): Local settings and image storage.
+- [Mac App Store](https://apps.apple.com/app/id6755106853): Current available release.
+
+## Guides
+- [Desktop journal](https://snowmyscreen.app/blog/): Mac desktop customization guides.
+- [How to add snow to your Mac desktop](https://snowmyscreen.app/blog/mac-desktop-effects/): Overlay setup and a guide to the upcoming seasonal update.
+
+## Ukrainian
+- [Застосунок, ефекти та питання](https://snowmyscreen.app/uk/)
+- [Посібники](https://snowmyscreen.app/uk/blog/)
+- [Допомога](https://snowmyscreen.app/uk/support/)
+- [Конфіденційність](https://snowmyscreen.app/uk/privacy.html)
+
+Developer: Andrew Sereda. Contact: hello@andrewsereda.com.
