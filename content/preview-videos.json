@@ -1,7 +1,7 @@
 {
-  "snow": { "src": null, "poster": null },
-  "rain": { "src": null, "poster": null },
-  "leaves": { "src": null, "poster": null },
-  "petals": { "src": null, "poster": null },
-  "fireflies": { "src": null, "poster": null }
+  "snow": { "src": "/videos/snow-1440p.mp4", "poster": "/videos/snow-1440p.jpg" },
+  "rain": { "src": "/videos/rain-1440p.mp4", "poster": "/videos/rain-1440p.jpg" },
+  "leaves": { "src": "/videos/leaves-1440p.mp4", "poster": "/videos/leaves-1440p.jpg" },
+  "petals": { "src": "/videos/petals-1440p.mp4", "poster": "/videos/petals-1440p.jpg" },
+  "fireflies": { "src": "/videos/fireflies-1440p.mp4", "poster": "/videos/fireflies-1440p.jpg" }
 }

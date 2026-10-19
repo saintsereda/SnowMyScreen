@@ -19,16 +19,16 @@
     },
     "privacy": {
       "title": "Privacy Policy",
-      "pageTitle": "Privacy Policy - SnowMyScreen",
+      "pageTitle": "Privacy Policy - Wonderfall",
       "effectiveDate": "Effective Date: November 26, 2025",
       "intro": {
         "heading": "Introduction",
-        "text": "SnowMyScreen is a macOS application that adds seasonal desktop effects and decorative lights. Your privacy is important to us, and this policy explains how we handle your information. Website analytics and cookie choices are described below."
+        "text": "Wonderfall is a macOS application that adds seasonal desktop effects and decorative lights. Your privacy is important to us, and this policy explains how we handle your information. Website analytics and cookie choices are described below."
       },
       "shortVersion": {
         "heading": "The Short Version",
         "text1": "The app does not collect any data.",
-        "text2": "SnowMyScreen works entirely on your Mac. Nothing you do in the app is tracked, recorded, or sent anywhere. We don't know who you are, how you use the app, or what settings you prefer."
+        "text2": "Wonderfall works entirely on your Mac. Nothing you do in the app is tracked, recorded, or sent anywhere. We don't know who you are, how you use the app, or what settings you prefer."
       },
       "dontCollect": {
         "heading": "What the App Does Not Collect",
@@ -56,11 +56,11 @@
       },
       "permissions": {
         "heading": "Permissions",
-        "text": "SnowMyScreen may request permission to launch automatically when you start your Mac. This is optional and only for your convenience. No data is collected through this permission."
+        "text": "Wonderfall may request permission to launch automatically when you start your Mac. This is optional and only for your convenience. No data is collected through this permission."
       },
       "noInternet": {
         "heading": "No Internet Required",
-        "text": "SnowMyScreen doesn't need an internet connection to work. It doesn't communicate with any servers, ours or anyone else's."
+        "text": "Wonderfall doesn't need an internet connection to work. It doesn't communicate with any servers, ours or anyone else's."
       },
       "updates": {
         "heading": "Updates",
@@ -68,7 +68,7 @@
       },
       "children": {
         "heading": "Children",
-        "text": "Since we don't collect any information, SnowMyScreen is safe for everyone, including children."
+        "text": "Since we don't collect any information, Wonderfall is safe for everyone, including children."
       },
       "questions": {
         "heading": "Questions?",
@@ -87,7 +87,7 @@
       }
     },
     "error404": {
-      "pageTitle": "Page Not Found - SnowMyScreen",
+      "pageTitle": "Page Not Found - Wonderfall",
       "code": "404",
       "title": "Page Not Found",
       "message": "Oops! The page you're looking for seems to have drifted away like snowflakes in the wind.",
@@ -131,16 +131,16 @@
     },
     "privacy": {
       "title": "Політика конфіденційності",
-      "pageTitle": "Політика конфіденційності — SnowMyScreen",
+      "pageTitle": "Політика конфіденційності — Wonderfall",
       "effectiveDate": "Дата набуття чинності: 26 листопада 2025 року",
       "intro": {
         "heading": "Вступ",
-        "text": "SnowMyScreen — застосунок для macOS, який додає сезонні ефекти на робочий стіл і декоративні гірлянди. Ваша конфіденційність важлива для нас. Ця політика пояснює, як ми поводимося з вашою інформацією. Аналітика сайту та вибір щодо cookie описані нижче."
+        "text": "Wonderfall — застосунок для macOS, який додає сезонні ефекти на робочий стіл і декоративні гірлянди. Ваша конфіденційність важлива для нас. Ця політика пояснює, як ми поводимося з вашою інформацією. Аналітика сайту та вибір щодо cookie описані нижче."
       },
       "shortVersion": {
         "heading": "Коротко",
         "text1": "Застосунок не збирає жодних даних.",
-        "text2": "SnowMyScreen працює повністю на вашому Mac. Ваші дії в застосунку не відстежуються, не записуються й нікуди не надсилаються. Ми не знаємо, хто ви, як користуєтеся застосунком і яким налаштуванням віддаєте перевагу."
+        "text2": "Wonderfall працює повністю на вашому Mac. Ваші дії в застосунку не відстежуються, не записуються й нікуди не надсилаються. Ми не знаємо, хто ви, як користуєтеся застосунком і яким налаштуванням віддаєте перевагу."
       },
       "dontCollect": {
         "heading": "Що застосунок не збирає",
@@ -168,11 +168,11 @@
       },
       "permissions": {
         "heading": "Дозволи",
-        "text": "SnowMyScreen може попросити дозвіл на автоматичний запуск під час увімкнення Mac. Це необов’язково й потрібно лише для вашої зручності. Цей дозвіл не використовується для збору даних."
+        "text": "Wonderfall може попросити дозвіл на автоматичний запуск під час увімкнення Mac. Це необов’язково й потрібно лише для вашої зручності. Цей дозвіл не використовується для збору даних."
       },
       "noInternet": {
         "heading": "Інтернет не потрібен",
-        "text": "Для роботи SnowMyScreen не потрібне підключення до інтернету. Застосунок не обмінюється даними з жодними серверами — нашими чи сторонніми."
+        "text": "Для роботи Wonderfall не потрібне підключення до інтернету. Застосунок не обмінюється даними з жодними серверами — нашими чи сторонніми."
       },
       "updates": {
         "heading": "Оновлення",
@@ -180,7 +180,7 @@
       },
       "children": {
         "heading": "Діти",
-        "text": "Оскільки ми не збираємо жодної інформації, SnowMyScreen безпечний для всіх, зокрема для дітей."
+        "text": "Оскільки ми не збираємо жодної інформації, Wonderfall безпечний для всіх, зокрема для дітей."
       },
       "questions": {
         "heading": "Є питання?",
@@ -199,7 +199,7 @@
       }
     },
     "error404": {
-      "pageTitle": "Сторінку не знайдено — SnowMyScreen",
+      "pageTitle": "Сторінку не знайдено — Wonderfall",
       "code": "404",
       "title": "Сторінку не знайдено",
       "message": "Здається, ця сторінка полетіла за вітром, як сніжинка.",

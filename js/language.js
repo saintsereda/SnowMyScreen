@@ -1,4 +1,4 @@
-// Language detection and switching for SnowMyScreen
+// Language detection and switching for Wonderfall's legacy download page.
 let translations = {};
 let currentLanguage = 'en';
 
@@ -30,7 +30,7 @@ function detectUserLanguage() {
 // Load translations from JSON file
 async function loadTranslations() {
   try {
-    const response = await fetch('/js/translations.json');
+    const response = await fetch('/js/translations.json?v=wonderfall');
     if (!response.ok) return false;
     translations = await response.json();
     return true;

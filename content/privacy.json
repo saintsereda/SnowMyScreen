@@ -1,11 +1,11 @@
 {
   "en": {
     "title": "Privacy Policy",
-    "pageTitle": "Privacy Policy - SnowMyScreen",
+    "pageTitle": "Privacy Policy - Wonderfall",
     "effectiveDate": "Effective Date: October 19, 2026",
     "intro": {
       "heading": "Introduction",
-      "text": "SnowMyScreen is a macOS application that adds seasonal desktop effects and decorative lights. Your privacy is important to us, and this policy explains how we handle your information. Website analytics and cookie choices are described below."
+      "text": "Wonderfall is a macOS application that adds seasonal desktop effects and decorative lights. Your privacy is important to us, and this policy explains how we handle your information. Website analytics and cookie choices are described below."
     },
     "shortVersion": {
       "heading": "The Short Version",
@@ -54,7 +54,7 @@
     },
     "updates": {
       "heading": "Updates",
-      "text": "Purchases and updates are handled by the Mac App Store. Apple also controls any app diagnostics you choose to share through its system settings. These services follow Apple's privacy policies; SnowMyScreen does not include its own analytics or crash-reporting SDK."
+      "text": "Purchases and updates are handled by the Mac App Store. Apple also controls any app diagnostics you choose to share through its system settings. These services follow Apple's privacy policies; Wonderfall does not include its own analytics or crash-reporting SDK."
     },
     "children": {
       "heading": "Children",
@@ -78,11 +78,11 @@
   },
   "uk": {
     "title": "Політика конфіденційності",
-    "pageTitle": "Політика конфіденційності — SnowMyScreen",
+    "pageTitle": "Політика конфіденційності — Wonderfall",
     "effectiveDate": "Дата набуття чинності: 19 жовтня 2026 року",
     "intro": {
       "heading": "Вступ",
-      "text": "SnowMyScreen — застосунок для macOS, який додає сезонні ефекти на робочий стіл і декоративні гірлянди. Ваша конфіденційність важлива для нас. Ця політика пояснює, як ми поводимося з вашою інформацією. Аналітика сайту та вибір щодо cookie описані нижче."
+      "text": "Wonderfall — застосунок для macOS, який додає сезонні ефекти на робочий стіл і декоративні гірлянди. Ваша конфіденційність важлива для нас. Ця політика пояснює, як ми поводимося з вашою інформацією. Аналітика сайту та вибір щодо cookie описані нижче."
     },
     "shortVersion": {
       "heading": "Коротко",
@@ -131,7 +131,7 @@
     },
     "updates": {
       "heading": "Оновлення",
-      "text": "Покупки й оновлення обробляє Mac App Store. Apple також керує діагностичними даними застосунку, якими ви погоджуєтеся ділитися через системні налаштування. Ці сервіси діють за політиками конфіденційності Apple; SnowMyScreen не має власного SDK аналітики чи звітів про збої."
+      "text": "Покупки й оновлення обробляє Mac App Store. Apple також керує діагностичними даними застосунку, якими ви погоджуєтеся ділитися через системні налаштування. Ці сервіси діють за політиками конфіденційності Apple; Wonderfall не має власного SDK аналітики чи звітів про збої."
     },
     "children": {
       "heading": "Діти",

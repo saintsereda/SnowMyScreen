@@ -1,9 +1,9 @@
 /* Consent banner and preferences adapted from the Expensa website. */
 .cookie-banner, .cookie-modal {
-    --cookie-bg: #f6f9fa;
-    --cookie-ink: #163343;
-    --cookie-line: #b6ccd7;
-    --cookie-muted: #466578;
+    --cookie-bg: #ffffff;
+    --cookie-ink: #1e2429;
+    --cookie-line: #dce4ea;
+    --cookie-muted: #5d6872;
     box-sizing: border-box;
     font-family: inherit;
 }
@@ -107,8 +107,8 @@
 }
 
 .cookie-banner__btn--primary {
-    background: var(--cookie-ink);
-    color: var(--cookie-bg);
+    background: #0969b0;
+    color: #fff;
 }
 
 .cookie-banner__btn--primary:hover {

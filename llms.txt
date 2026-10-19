@@ -1,4 +1,4 @@
-# SnowMyScreen
+# Wonderfall
 
 > A macOS desktop overlay app. Current Mac App Store release: snowfall and custom PNG images. The next seasonal update adds rain, autumn leaves, spring petals, summer fireflies and decorative lights.
 

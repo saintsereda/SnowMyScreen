@@ -1,0 +1,116 @@
+/* Floating navigation adapted from getexpensa.com for the Wonderfall site. */
+html { scroll-padding-top: 112px; }
+.skip-link { z-index: 100; }
+.site-navigation ~ main { padding-top: 96px; }
+.site-navigation {
+  --nav-fill: #ffffff1f;
+  --nav-label: #fff;
+  --nav-muted: #ffffffe6;
+  --nav-menu: #1b2848f5;
+  --nav-hover: #ffffff14;
+  --nav-control: #ffffff2e;
+  position: fixed;
+  inset: 24px 0 auto;
+  z-index: 50;
+  color: var(--nav-label);
+  line-height: 1.25;
+  pointer-events: none;
+}
+.site-navigation a { color: inherit; text-decoration: none; }
+.site-navigation:not(.has-hero), .site-navigation.is-past-hero { --nav-fill: #1b294cb8; --nav-control: #1b294cd1; }
+.site-navigation button, .site-navigation summary { font: inherit; cursor: pointer; }
+.site-navigation :is(a, button, summary):focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.site-navigation__capsule, .site-navigation__round {
+  border: 0;
+  background: var(--nav-fill);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  backdrop-filter: blur(20px) saturate(120%);
+  pointer-events: auto;
+}
+.site-navigation__capsule {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: min(760px, calc(100% - 176px));
+  min-height: 64px;
+  margin-inline: auto;
+  padding: 7px 8px 7px 20px;
+  border-radius: 999px;
+}
+.site-navigation.has-hero:not(.is-past-hero) .site-navigation__capsule { padding-right: 24px; }
+.site-navigation__brand { display: inline-flex; flex: none; align-items: center; gap: 8px; }
+.site-navigation__brand img { display: block; width: 36px; height: 36px; }
+.site-navigation__wordmark { font-size: 21px; font-weight: 850; letter-spacing: -.045em; }
+.site-navigation__links { display: flex; align-items: center; gap: 20px; margin-left: auto; }
+.site-navigation__links a { display: flex; align-items: center; min-height: 44px; color: var(--nav-muted); font-size: 15px; font-weight: 650; white-space: nowrap; transition: color 160ms ease; }
+.site-navigation__links a:is(:hover, [aria-current]) { color: var(--nav-label); }
+.site-navigation__download {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 48px;
+  padding-inline: 18px;
+  border-radius: 999px;
+  background: #345bc1;
+  font-size: 16px;
+  font-weight: 750;
+  white-space: nowrap;
+  transition: background-color 160ms ease;
+}
+.site-navigation a.site-navigation__download { color: #fff; }
+.site-navigation.has-hero .site-navigation__download { display: none; }
+.site-navigation.has-hero.is-past-hero .site-navigation__download { display: inline-flex; }
+.site-navigation__download svg { width: 15px; height: 18px; flex: none; }
+.site-navigation__download:is(:hover, :focus-visible) { background: #294aa5; }
+.site-navigation__download:focus-visible { outline-color: var(--nav-label); }
+.site-navigation__round { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border-radius: 50%; color: var(--nav-label); transition: background-color 160ms ease; }
+.site-navigation__round:hover, .site-navigation__language[open] summary { background: var(--nav-control); }
+.site-navigation__language { position: absolute; top: 8px; right: 24px; border: 0; pointer-events: auto; }
+.site-navigation__language summary { list-style: none; font-size: 15px; font-weight: 750; letter-spacing: .02em; }
+.site-navigation__language summary::-webkit-details-marker { display: none; }
+.site-navigation__languages { position: absolute; top: calc(100% + 12px); right: 0; display: grid; gap: 4px; min-width: 172px; padding: 8px; border-radius: 20px; background: var(--nav-menu); box-shadow: 0 12px 36px #10193224; }
+.site-navigation__languages a { padding: 12px; border-radius: 12px; font-size: 15px; }
+.site-navigation__languages a:is(:hover, [aria-current]) { background: var(--nav-hover); }
+.site-navigation__toggle { display: none; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; margin-left: auto; padding: 0; border: 0; border-radius: 50%; color: inherit; background: transparent; }
+.site-navigation__toggle:hover { background: var(--nav-hover); }
+.site-navigation__toggle svg { width: 20px; height: 20px; }
+.site-navigation__toggle[aria-expanded="true"] .nav-menu-lines,
+.site-navigation__toggle[aria-expanded="false"] .nav-menu-close { display: none; }
+.site-navigation__mobile { position: absolute; top: calc(100% + 12px); inset-inline: 0; display: grid; gap: 4px; padding: 10px; border-radius: 24px; background: var(--nav-menu); box-shadow: 0 12px 36px #10193224; }
+.site-navigation__mobile a { display: flex; align-items: center; min-height: 48px; padding-inline: 16px; border-radius: 14px; font-size: 16px; font-weight: 650; }
+.site-navigation__mobile a:is(:hover, [aria-current]) { background: var(--nav-hover); }
+.site-navigation__fallback { display: none; }
+
+@media (hover: hover) and (pointer: fine) {
+  .site-navigation__download:active, .site-navigation__toggle:active { transform: scale(.97); }
+}
+@media (max-width: 900px) {
+  .site-navigation { top: 16px; }
+  .site-navigation__capsule { width: calc(100% - 144px); min-height: 56px; padding: 5px 6px 5px 16px; gap: 8px; }
+  .site-navigation__links { display: none; }
+  .site-navigation__toggle { display: inline-flex; }
+  .site-navigation__download { min-height: 44px; padding-inline: 16px; font-size: 15px; }
+  .site-navigation__language { right: 16px; top: 4px; }
+  .site-navigation__fallback { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; width: calc(100% - 24px); margin: 8px auto 0; padding: 8px; border-radius: 20px; background: var(--nav-menu); pointer-events: auto; }
+  .site-navigation__fallback a { padding: 10px; font-size: 14px; }
+}
+@media (max-width: 600px) {
+  .site-navigation { top: 14px; }
+  .site-navigation__capsule { width: calc(100% - 80px); margin-left: 12px; padding-left: 14px; gap: 4px; }
+  .site-navigation__brand { gap: 6px; }
+  .site-navigation__brand img { width: 32px; height: 32px; }
+  .site-navigation__wordmark { font-size: 19px; }
+  .site-navigation:not(.has-hero) .site-navigation__wordmark,
+  .site-navigation.is-past-hero .site-navigation__wordmark { display: none; }
+  .site-navigation__download { padding-inline: 12px; font-size: 14px; }
+  .site-navigation__language { right: 12px; }
+}
+@media (max-width: 360px) {
+  .site-navigation__download { padding-inline: 8px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-navigation *, .site-navigation *::before, .site-navigation *::after { transition: none !important; }
+}

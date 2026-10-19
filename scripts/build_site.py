@@ -2,6 +2,7 @@
 """Generate crawlable EN/UK pages using only the Python standard library."""
 from pathlib import Path
 import html
+import hashlib
 import json
 import re
 import xml.etree.ElementTree as ET
@@ -14,6 +15,10 @@ SLUG = 'mac-desktop-effects'
 LANGS = ('en', 'uk')
 E = html.escape
 
+def asset(path):
+    version=hashlib.sha256((ROOT/path.lstrip('/')).read_bytes()).hexdigest()[:10]
+    return f'{path}?v={version}'
+
 def home(lang):
     return '/' if lang == 'en' else '/uk/'
 
@@ -24,23 +29,41 @@ def dump(value):
     return json.dumps(value, ensure_ascii=False).replace('<', '\\u003c')
 
 def app_schema(c):
-    return {'@type':'SoftwareApplication','@id':ORIGIN+'/#app','name':'SnowMyScreen',
+    return {'@type':'SoftwareApplication','@id':ORIGIN+'/#app','name':'Wonderfall',
             'url':ORIGIN+'/', 'downloadUrl':STORE,'applicationCategory':'EntertainmentApplication',
             'operatingSystem':'macOS 14.6 or later','description':c['description'],
             'featureList':['Desktop snowfall','Custom PNG images']}
 
+def navigation(c, suffix='', preview=False):
+    lang=c['lang']; ui=c['navigation_ui']
+    links=''.join(f'<a href="{url(lang)}#{anchor}">{E(label)}</a>' for anchor,label in zip(('effects','features','faq'),c['nav'][:3]))
+    current=' aria-current="page"' if suffix=='blog/' else ''
+    links+=f'<a href="{url(lang,"blog/")}"{current}>{E(c["nav"][3])}</a>'
+    languages=''.join(f'<a href="{url(locale,suffix)}" lang="{locale}" hreflang="{locale}"'+(' aria-current="page"' if locale==lang else '')+f'>{label}</a>' for locale,label in (('en','English'),('uk','Українська')))
+    return f'''<header class="site-navigation{' has-hero' if preview else ''}" data-site-navigation>
+<nav class="site-navigation__capsule" aria-label="{E(ui['main'])}">
+<a class="site-navigation__brand" href="{url(lang)}" aria-label="Wonderfall — {E(ui['home'])}"><img src="{asset('/images/icon.png')}" width="36" height="36" alt=""><span class="site-navigation__wordmark">Wonderfall</span></a>
+<div class="site-navigation__links">{links}</div>
+<button class="site-navigation__toggle" type="button" data-nav-toggle hidden aria-label="{E(ui['menu'])}" aria-expanded="false" aria-controls="site-mobile-menu"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path class="nav-menu-lines" d="M3 5h14M3 10h14M3 15h14"/><path class="nav-menu-close" d="m5 5 10 10M15 5 5 15"/></svg></button>
+<a class="site-navigation__download" href="{STORE}"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.536c.027 3.143 2.757 4.188 2.787 4.2-.023.074-.436 1.49-1.438 2.952-.866 1.264-1.765 2.523-3.18 2.55-1.39.026-1.838-.824-3.428-.824-1.589 0-2.086.798-3.402.85-1.366.052-2.406-1.366-3.28-2.625-1.785-2.576-3.149-7.28-1.317-10.455.91-1.576 2.536-2.574 4.3-2.6 1.344-.026 2.612.902 3.429.902.816 0 2.349-1.115 3.956-.951.672.028 2.56.271 3.773 2.047-.098.061-2.253 1.31-2.2 3.954ZM14.453 4.93c.726-.879 1.214-2.102 1.08-3.32-1.047.042-2.313.698-3.064 1.577-.673.777-1.263 2.022-1.104 3.216 1.167.09 2.36-.593 3.088-1.473Z"/></svg>{E(c['short_cta'])}</a>
+<div class="site-navigation__mobile" id="site-mobile-menu" data-nav-menu hidden>{links}</div>
+</nav>
+<details class="site-navigation__language" data-nav-language><summary class="site-navigation__round" aria-label="{E(ui['language'])}: {lang.upper()}" aria-expanded="false">{lang.upper()}</summary><div class="site-navigation__languages">{languages}</div></details>
+<noscript><nav class="site-navigation__fallback" aria-label="{E(ui['sections'])}">{links}</nav></noscript>
+</header>'''
+
 def page(c, suffix, title, description, body, schemas=(), article=False, preview=False):
     lang=c['lang']; canonical=ORIGIN+url(lang,suffix)
-    other='uk' if lang=='en' else 'en'
-    graph=[{'@type':'WebSite','@id':ORIGIN+'/#website','name':'SnowMyScreen','url':ORIGIN+'/'},
+    graph=[{'@type':'WebSite','@id':ORIGIN+'/#website','name':'Wonderfall','url':ORIGIN+'/'},
            {'@type':'Person','@id':ORIGIN+'/#andrew','name':'Andrew Sereda',
             'url':'https://github.com/saintsereda'},
            {'@type':'WebPage','@id':canonical+'#page','url':canonical,'name':title,
             'description':description,'inLanguage':lang,'isPartOf':{'@id':ORIGIN+'/#website'}}, *schemas]
-    nav=''.join(f'<a href="{url(lang)}#{anchor}">{E(label)}</a>' for anchor,label in zip(('effects','features','faq'),c['nav'][:3]))
     alternates=''.join(f'<link rel="alternate" hreflang="{locale}" href="{ORIGIN+url(locale,suffix)}">' for locale in LANGS)
     feed=url(lang,'blog/feed.xml')
-    preview_script='<script src="/js/preview.js" defer></script><script src="/js/heading.js" defer></script>' if preview else ''
+    hero_preload='<link rel="preload" as="image" href="/images/hero/wonderfall-sky.webp" type="image/webp">\n' if preview else ''
+    hero_atmosphere='<div class="hero-atmosphere" aria-hidden="true"><span class="shooting-star" data-shooting-star></span></div>\n' if preview else ''
+    preview_script='<script src="/js/immersive.js" defer></script><script src="/js/preview.js" defer></script><script src="/js/features.js" defer></script><script src="/js/shooting-star.js" defer></script>' if preview else ''
     article_meta=f'<meta property="article:published_time" content="{DATE}T09:00:00+02:00"><meta property="article:modified_time" content="{DATE}T09:00:00+02:00">' if article else ''
     return f'''<!doctype html>
 <html lang="{lang}">
@@ -50,62 +73,67 @@ def page(c, suffix, title, description, body, schemas=(), article=False, preview
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="{canonical}">{alternates}
 <link rel="alternate" hreflang="x-default" href="{ORIGIN+url('en',suffix)}">
-<meta property="og:type" content="{'article' if article else 'website'}"><meta property="og:site_name" content="SnowMyScreen">
+<meta property="og:type" content="{'article' if article else 'website'}"><meta property="og:site_name" content="Wonderfall">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(description)}">
 <meta property="og:url" content="{canonical}"><meta property="og:locale" content="{c['locale']}">
-<meta property="og:image" content="{ORIGIN}/images/preview.png"><meta property="og:image:alt" content="{'SnowMyScreen desktop effects for Mac' if lang=='en' else 'Ефекти SnowMyScreen для робочого столу Mac'}">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{E(title)}">
-<meta name="twitter:description" content="{E(description)}"><meta name="twitter:image" content="{ORIGIN}/images/preview.png">
+<meta property="og:image" content="{ORIGIN}/images/wonderfall-icon.png"><meta property="og:image:width" content="1024"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="{'Wonderfall app icon' if lang=='en' else 'Іконка Wonderfall'}">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{E(title)}">
+<meta name="twitter:description" content="{E(description)}"><meta name="twitter:image" content="{ORIGIN}/images/wonderfall-icon.png">
 {article_meta}
-<link rel="icon" href="/images/favicon/favicon.ico"><link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
-<link rel="manifest" href="/images/favicon/site.webmanifest"><meta name="theme-color" content="#abddf5">
-<link rel="alternate" type="application/rss+xml" title="SnowMyScreen Blog ({lang})" href="{feed}">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="icon" href="{asset('/images/favicon/favicon.ico')}"><link rel="apple-touch-icon" href="{asset('/images/favicon/apple-touch-icon.png')}">
+<link rel="manifest" href="{asset('/images/favicon/site.webmanifest')}"><meta name="theme-color" content="{'#3983dc' if preview else '#f8f7f3'}">
+<link rel="alternate" type="application/rss+xml" title="Wonderfall Blog ({lang})" href="{feed}">
+{hero_preload}<link rel="stylesheet" href="{asset('/css/site.css')}">
+<link rel="stylesheet" href="{asset('/css/navigation.css')}">
 <link rel="stylesheet" href="/css/cookies.css">
 <script src="/js/analytics.js" defer></script>
 <script src="/js/cookie-banner.js" defer></script>
+<script src="{asset('/js/navigation.js')}" defer></script>
 <script type="application/ld+json">{dump({'@context':'https://schema.org','@graph':graph})}</script>
 {preview_script}
 </head>
-<body>
+<body class="{'home-page' if preview else 'inner-page'}">
 <a class="skip-link" href="#main">{E(c['skip'])}</a>
-<header class="header wrap">
-<a class="brand" href="{url(lang)}"><img src="/images/icon.png" alt="" width="30" height="30">SnowMyScreen</a>
-<nav class="navigation" aria-label="{'Main navigation' if lang=='en' else 'Основна навігація'}">{nav}<a href="{url(lang,'blog/')}">{c['nav'][3]}</a></nav>
-<div class="header-actions"><a class="language-link" href="{url(other,suffix)}" lang="{other}" hreflang="{other}">{c['other_label']}</a><a class="button button-small" href="{STORE}">{E(c['short_cta'])}</a></div>
-</header>
+{hero_atmosphere}{navigation(c,suffix,preview)}
 <main id="main">{body}</main>
-<footer class="footer wrap"><div><a class="brand" href="{url(lang)}">SnowMyScreen</a><p>{E(c['footer_line'])}</p></div>
+<footer class="footer wrap"><div><a class="brand" href="{url(lang)}"><img src="{asset('/images/icon.png')}" width="30" height="30" alt="">Wonderfall</a><p>{E(c['footer_line'])}</p></div>
 <nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}"><a href="{url(lang,'blog/')}">{c['nav'][3]}</a><a href="{url(lang,'support/')}">{E(c['support'])}</a><a href="{url(lang,'privacy.html')}">{E(c['privacy'])}</a><button type="button" data-cookie-settings>{E(c['cookie_settings'])}</button><a href="mailto:hello@andrewsereda.com">{E(c['contact'])}</a><a href="https://x.com/andrew_sereda">X</a><a href="https://www.threads.com/@saintsereda">Threads</a></nav></footer>
 </body></html>'''
 
 def cta(c):
-    return f'<section class="final-cta wrap"><p class="eyebrow">SnowMyScreen</p><h2>{E(c["cta_title"])}</h2><p>{E(c["cta_text"])}</p><a class="button" href="{STORE}">{E(c["download"])}</a><p class="compat">{E(c["compat"])}</p></section>'
+    return f'<section class="final-cta wrap"><p class="eyebrow">Wonderfall</p><h2>{E(c["cta_title"])}</h2><p>{E(c["cta_text"])}</p><a class="button" href="{STORE}">{E(c["download"])}</a><p class="compat">{E(c["compat"])}</p></section>'
 
 def article_card(c):
     return f'<article class="article-card"><div class="article-art" aria-hidden="true"><span>❄</span><span>✿</span><span>✦</span></div><div><p class="eyebrow">{E(c["article_label"])} · {E(c["minutes"])}</p><h3><a href="{url(c["lang"],"blog/"+SLUG+"/")}">{E(c["article_title"])}</a></h3><p>{E(c["article_summary"])}</p><a class="text-link" href="{url(c["lang"],"blog/"+SLUG+"/")}">{E(c["read"])} <span aria-hidden="true">↗</span></a></div></article>'
 
+def feature_showcase(c):
+    f=c['showcase']
+    snow=''.join('<span></span>' for _ in range(13))
+    bulbs=''.join('<span></span>' for _ in range(11))
+    sliders=''.join(f'<div class="custom-demo__row"><span>{E(f[key])}</span><i class="custom-demo__track custom-demo__track--{key}" aria-hidden="true"></i></div>' for key in ('custom_intensity','custom_size','custom_speed','custom_wind'))
+    return f'''<section class="feature-showcase" id="features"><div class="wrap">
+<div class="feature-showcase__heading"><p class="eyebrow">{E(f['eyebrow'])}</p><h2>{E(f['title'])}</h2></div>
+<article class="feature-story"><div class="feature-story__copy"><span class="feature-story__number">01</span><h3>{E(f['placement_title'])}</h3><p>{E(f['placement_text'])}</p><div class="placement-toggle" role="group" aria-label="{E(f['placement_title'])}" data-placement-toggle><button type="button" data-mode="over" data-description="{E(f['placement_over_description'])}" aria-pressed="true">{E(f['placement_over'])}</button><button type="button" data-mode="desktop" data-description="{E(f['placement_desktop_description'])}" aria-pressed="false">{E(f['placement_desktop'])}</button></div><p class="visually-hidden" data-placement-status aria-live="polite">{E(f['placement_over_description'])}</p></div><div class="feature-story__visual placement-demo" data-placement-demo data-mode="over" role="img" aria-label="{E(f['placement_over_description'])}"><div class="placement-demo__desktop"></div><div class="placement-demo__window" aria-hidden="true"><div class="placement-demo__toolbar"><span></span><span></span><span></span></div><div class="placement-demo__content"><i></i><i></i><i></i></div></div><div class="placement-demo__snow" aria-hidden="true">{snow}</div></div></article>
+<article class="feature-story feature-story--reverse"><div class="feature-story__copy"><span class="feature-story__number">02</span><h3>{E(f['garland_title'])}</h3><p>{E(f['garland_text'])}</p><div class="feature-story__tags"><span>{E(f['garland_menu'])}</span><span>{E(f['garland_dock'])}</span></div></div><div class="feature-story__visual garland-demo" aria-hidden="true"><div class="garland-demo__menu"><span>● ● ●</span><span>◔ &nbsp; ▰ &nbsp; ◌</span></div><div class="garland-demo__strand garland-demo__strand--top">{bulbs}</div><div class="garland-demo__glow"></div><div class="garland-demo__dock"><i></i><i></i><i></i><i></i><i></i></div><div class="garland-demo__strand garland-demo__strand--dock">{bulbs}</div></div></article>
+<article class="feature-story"><div class="feature-story__copy"><span class="feature-story__number">03</span><h3>{E(f['cleaning_title'])}</h3><p>{E(f['cleaning_text'])}</p></div><div class="feature-story__visual cleaning-demo"><div class="cleaning-demo__item cleaning-demo__snow"><img src="/videos/snow-1440p.jpg" alt="" loading="lazy" width="2560" height="1440"><strong>❄ {E(f['cleaning_snow'])}</strong></div><div class="cleaning-demo__item"><img src="/images/features/leaf-piles.jpg" alt="" loading="lazy" width="1100" height="642"><strong>🍂 {E(f['cleaning_leaves'])}</strong></div><div class="cleaning-demo__item"><img src="/images/features/rain-droplets.jpg" alt="" loading="lazy" width="1100" height="642"><strong>💧 {E(f['cleaning_rain'])}</strong></div></div></article>
+<article class="feature-story feature-story--reverse"><div class="feature-story__copy"><span class="feature-story__number">04</span><h3>{E(f['custom_title'])}</h3><p>{E(f['custom_text'])}</p></div><div class="feature-story__visual custom-demo" aria-hidden="true"><div class="custom-demo__panel">{sliders}<div class="custom-demo__extras"><span>＋ {E(f['custom_images'])}</span><span>{E(f['custom_lights'])} <i></i><i></i><i></i><i></i></span></div></div></div></article>
+</div></section>'''
+
 def homepage(c):
-    themes=''.join(f'<article class="theme-card {key}"><div class="theme-art" aria-hidden="true"><span>{glyph}</span><span>{glyph}</span><span>{glyph}</span></div><h3>{E(name)}</h3><p>{E(desc)}</p></article>' for key,name,desc,glyph in c['themes'])
-    features=''.join(f'<article><span class="feature-number" aria-hidden="true">0{i}</span><h3>{E(title)}</h3><p>{E(text)}</p></article>' for i,(title,text) in enumerate(c['features'],1))
-    steps=''.join(f'<li><span aria-hidden="true">0{i}</span><h3>{E(title)}</h3><p>{E(text)}</p></li>' for i,(title,text) in enumerate(c['steps'],1))
-    faq=''.join(f'<details><summary>{E(question)}</summary><p>{E(answer)}</p></details>' for question,answer in c['faq'])
     videos=json.loads((ROOT/'content/preview-videos.json').read_text())
+    faq=''.join(f'<details><summary>{E(question)}</summary><p>{E(answer)}</p></details>' for question,answer in c['faq'])
     def media_attrs(key):
         values=videos[key]
         for path in values.values():
             if path:
                 assert path.startswith('/') and (ROOT/path.lstrip('/')).is_file(), f'Missing preview media: {path}'
         return ''.join(f' data-{attribute}="{E(path)}"' for attribute,path in [('video',values['src']),('poster',values['poster'])] if path)
-    buttons=''.join(f'<button class="theme-option theme-{key}" type="button" data-theme="{key}" data-description="{E(desc)}"{media_attrs(key)} aria-pressed="{"true" if key=="snow" else "false"}"><span class="theme-symbol" aria-hidden="true">{glyph}</span><span class="theme-name">{E(name)}</span><span class="theme-check" aria-hidden="true">✓</span></button>' for key,name,desc,glyph in c['themes'][:5])
-    first=c['hero_phrases'][0]
-    hero=f'<h1 class="hero__title" data-rotator="{E(dump(c["hero_phrases"][1:]))}"><span class="hero__line">{E(c["hero_line"])}</span> <span class="hero__line hero__slot"><span class="hero__phrase" data-text="{E(first["text"])}" data-icon="{E(first["icon"])}">{E(first["text"])}<span class="hero__emoji" aria-hidden="true">{E(first["icon"])}</span></span></span></h1>'
-    body=f'''<section class="hero hero-with-preview wrap">{hero}<p class="hero-copy">{E(c['intro'])}</p><div class="hero-actions"><a class="button" href="{STORE}">{E(c['download'])} <span aria-hidden="true">↗</span></a></div><p class="compat">{E(c['compat'])}</p>
-<div class="preview device-stage" data-preview data-effect="snow"><div class="device-display"><div class="device-screen preview-scene" role="group" aria-label="{E(c['screen_label'])}"><video class="effect-video" data-effect-video muted loop playsinline preload="metadata" aria-label="{E(c['screen_label'])}" hidden></video><div class="video-placeholder" data-video-placeholder><span class="video-placeholder-mark" aria-hidden="true">▶</span><p class="video-placeholder-caption" data-video-caption>{E(c['themes'][0][1])}</p></div></div><img class="device-frame" src="/images/MacBook%20Pro%2014%20Mockup.png" width="2001" height="1370" alt="{E(c['device_alt'])}"></div>
-<aside class="control-panel" hidden><div class="panel-brand"><img src="/images/icon.png" width="22" height="22" alt=""><span>SnowMyScreen</span></div><p class="panel-label">{E(c['picker_title'])}</p><div class="theme-picker" role="group" aria-label="{E(c['preview_label'])}" hidden>{buttons}</div><p class="visually-hidden" data-theme-description aria-live="polite">{E(c['themes'][0][2])}</p><button class="preview-pause" type="button" data-pause data-play="{E(c['play'])}" data-stop="{E(c['pause'])}" aria-pressed="false" hidden>{E(c['pause'])}</button></aside></div></section>
-<section class="effects-section" id="effects"><div class="mobile-control-slot" data-mobile-controls></div><p class="preview-note">{E(c['preview_note'])}</p><div class="section wrap"><p class="eyebrow">{E(c['effects_kicker'])}</p><h2>{E(c['effects_title'])}</h2><p class="section-intro">{E(c['effects_intro'])}</p><div class="theme-grid">{themes}</div></div></section>
-<section class="section feature-section" id="features"><div class="wrap"><p class="eyebrow">{E(c['features_kicker'])}</p><h2>{E(c['features_title'])}</h2><div class="feature-grid">{features}</div></div></section>
-<section class="section wrap"><h2>{E(c['steps_title'])}</h2><ol class="steps">{steps}</ol></section>
+    buttons=''.join(f'<button class="theme-option theme-{key}" type="button" data-theme="{key}" data-description="{E(desc)}"{media_attrs(key)} aria-label="{E(name)}" aria-pressed="{"true" if key=="snow" else "false"}"><span class="theme-symbol" aria-hidden="true">{glyph}</span><span class="theme-name">{E(name)}</span><span class="theme-check" aria-hidden="true">✓</span></button>' for key,name,desc,glyph in c['themes'][:5])
+    hero=f'<h1 class="hero__title">{E(c["hero_headline"])}</h1>'
+    release=E(c['release_badge'].format(version=c['release_version']))
+    body=f'''<section class="hero hero-with-preview"><div class="wrap hero__inner"><a class="release-pill" href="{STORE}"><span class="release-pill__text">{release}</span><svg class="release-pill__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>{hero}<p class="hero-copy">{E(c['intro'])}</p><div class="hero-actions"><a class="button" href="{STORE}">{E(c['download'])}</a></div><p class="compat">{E(c['compat'])}</p></div></section>
+<section class="immersive-scroll" id="effects" data-immersive><div class="immersive-stage"><div class="preview video-preview" data-preview data-effect="snow"><div class="preview-media preview-scene" role="group" aria-label="{E(c['screen_label'])}"><video class="effect-video" data-effect-video muted loop playsinline preload="metadata" aria-label="{E(c['screen_label'])}" hidden></video><div class="video-placeholder" data-video-placeholder><span class="video-placeholder-mark" aria-hidden="true">▶</span><p class="video-placeholder-caption" data-video-caption>{E(c['themes'][0][1])}</p></div></div><aside class="control-panel" hidden><div class="theme-picker" role="group" aria-label="{E(c['preview_label'])}" hidden>{buttons}</div><p class="visually-hidden" data-theme-description aria-live="polite">{E(c['themes'][0][2])}</p></aside></div><p class="immersive-hint" aria-hidden="true">{E(c['scroll_hint'])} ↓</p></div></section>
+{feature_showcase(c)}
 <section class="section faq-section wrap" id="faq"><div><p class="eyebrow">{E(c['faq_kicker'])}</p><h2>{E(c['faq_title'])}</h2><a class="text-link" href="{url(c['lang'],'support/')}">{E(c['support'])} ↗</a></div><div class="faq-list">{faq}</div></section>
 <section class="section wrap"><p class="eyebrow">{E(c['blog_kicker'])}</p><h2>{E(c['blog_title'])}</h2>{article_card(c)}</section>{cta(c)}'''
     faq_schema={'@type':'FAQPage','@id':ORIGIN+url(c['lang'])+'#faq','inLanguage':c['lang'],
@@ -130,17 +158,17 @@ for lang in LANGS:
     article_url=ORIGIN+url(lang,'blog/'+SLUG+'/')
     article_schema={'@type':'BlogPosting','@id':article_url+'#article','headline':c['article_title'],
         'description':c['article_description'],'datePublished':DATE+'T09:00:00+02:00','dateModified':DATE+'T09:00:00+02:00',
-        'inLanguage':lang,'author':{'@id':ORIGIN+'/#andrew'},'publisher':{'@type':'Organization','name':'SnowMyScreen','url':ORIGIN+'/'},
-        'mainEntityOfPage':{'@id':article_url+'#page'},'image':ORIGIN+'/images/preview.png'}
+        'inLanguage':lang,'author':{'@id':ORIGIN+'/#andrew'},'publisher':{'@type':'Organization','name':'Wonderfall','url':ORIGIN+'/'},
+        'mainEntityOfPage':{'@id':article_url+'#page'},'image':ORIGIN+'/images/wonderfall-icon.png'}
     breadcrumb={'@type':'BreadcrumbList','itemListElement':[
-        {'@type':'ListItem','position':1,'name':'SnowMyScreen','item':ORIGIN+url(lang)},
+        {'@type':'ListItem','position':1,'name':'Wonderfall','item':ORIGIN+url(lang)},
         {'@type':'ListItem','position':2,'name':c['nav'][3],'item':ORIGIN+url(lang,'blog/')},
         {'@type':'ListItem','position':3,'name':c['article_title'],'item':article_url}]}
     article=(ROOT/'content/articles'/f'{lang}.html').read_text().replace('__HOME__',url(lang))
     # Derive read time from actual content rather than a fixed estimate.
     words=len(re.sub('<[^>]+>',' ',article).split()); minutes=max(1,(words+179)//180)
     read_time=f'{minutes} minute read' if lang=='en' else f'{minutes} хв читання'
-    body=f'<article class="prose wrap"><nav class="breadcrumbs" aria-label="{"Breadcrumb" if lang=="en" else "Шлях до сторінки"}"><a href="{url(lang)}">SnowMyScreen</a> / <a href="{url(lang,"blog/")}">{c["nav"][3]}</a></nav><p class="eyebrow">{E(c["article_label"])}</p><h1>{E(c["article_title"])}</h1><p class="byline">{E(c["author"])}</p><p class="byline"><time datetime="{DATE}">{E(c["published"])}</time> · {read_time}</p>{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></article>'+cta(c)
+    body=f'<article class="prose wrap"><nav class="breadcrumbs" aria-label="{"Breadcrumb" if lang=="en" else "Шлях до сторінки"}"><a href="{url(lang)}">Wonderfall</a> / <a href="{url(lang,"blog/")}">{c["nav"][3]}</a></nav><p class="eyebrow">{E(c["article_label"])}</p><h1>{E(c["article_title"])}</h1><p class="byline">{E(c["author"])}</p><p class="byline"><time datetime="{DATE}">{E(c["published"])}</time> · {read_time}</p>{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></article>'+cta(c)
     write(url(lang,'blog/'+SLUG+'/index.html'),page(c,'blog/'+SLUG+'/',c['article_meta_title'],c['article_description'],body,[article_schema,breadcrumb],article=True))
     sections=''.join(f'<section><h2>{E(title)}</h2><p>{E(text)}</p></section>' for title,text in c['support_sections'])
     body=f'<div class="prose wrap"><p class="eyebrow">{E(c["support"])}</p><h1>{E(c["support_title"])}</h1><p class="answer">{E(c["support_intro"])}</p>{sections}<p><a class="button" href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a></p></div>'
@@ -155,10 +183,10 @@ for lang in LANGS:
     policy=(ROOT/'content/privacy-template.html').read_text()
     policy=re.sub(r'<(h1|h2|p|li|strong)([^>]*data-i18n="(privacy\.[^"]+)"[^>]*)>.*?</\1>',lambda m:f'<{m[1]}>{E(get(m[3]))}</{m[1]}>',policy,flags=re.S)
     policy=re.sub(r'<a([^>]*?) data-i18n="(privacy\.[^"]+)"([^>]*)>.*?</a>',lambda m:f'<a{m[1]}{m[3]}>{E(get(m[2]))}</a>',policy,flags=re.S)
-    privacy_description='How SnowMyScreen handles local app data, optional location and Apple WeatherKit, website analytics and cookie choices.' if lang=='en' else 'Як SnowMyScreen зберігає локальні дані, використовує необов’язкову геолокацію й Apple WeatherKit, аналітику сайту та cookie за вашою згодою.'
+    privacy_description='How Wonderfall handles local app data, optional location and Apple WeatherKit, website analytics and cookie choices.' if lang=='en' else 'Як Wonderfall зберігає локальні дані, використовує необов’язкову геолокацію й Apple WeatherKit, аналітику сайту та cookie за вашою згодою.'
     write(url(lang,'privacy.html'),page(c,'privacy.html',privacy['pageTitle'],privacy_description,'<div class="prose wrap">'+policy+'</div>'))
     rss=ET.Element('rss',version='2.0'); channel=ET.SubElement(rss,'channel')
-    for name,text in [('title','SnowMyScreen Blog'),('link',ORIGIN+url(lang,'blog/')),('description',c['blog_description']),('language',lang)]:
+    for name,text in [('title','Wonderfall Blog'),('link',ORIGIN+url(lang,'blog/')),('description',c['blog_description']),('language',lang)]:
         ET.SubElement(channel,name).text=text
     item=ET.SubElement(channel,'item')
     for name,text in [('title',c['article_title']),('link',article_url),('guid',article_url),('description',c['article_description']),('pubDate','Mon, 05 Oct 2026 07:00:00 GMT')]:

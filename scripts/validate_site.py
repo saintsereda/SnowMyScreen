@@ -76,7 +76,7 @@ for path,page in pages.items():
         graph=schema.get('@graph',[])
         for item in graph:
             if item.get('@type')=='FAQPage':
-                details=sum(t=='details' for t,a in page.tags)
+                details=sum(t=='details' and 'data-nav-language' not in a for t,a in page.tags)
                 assert len(item['mainEntity'])==details==10,path
                 source=path.read_text()
                 for q in item['mainEntity']:
