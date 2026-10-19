@@ -2,26 +2,26 @@
   "en": {
     "title": "Privacy Policy",
     "pageTitle": "Privacy Policy - SnowMyScreen",
-    "effectiveDate": "Effective Date: November 26, 2025",
+    "effectiveDate": "Effective Date: October 19, 2026",
     "intro": {
       "heading": "Introduction",
       "text": "SnowMyScreen is a macOS application that adds seasonal desktop effects and decorative lights. Your privacy is important to us, and this policy explains how we handle your information. Website analytics and cookie choices are described below."
     },
     "shortVersion": {
       "heading": "The Short Version",
-      "text1": "The app does not collect any data.",
-      "text2": "SnowMyScreen works entirely on your Mac. Nothing you do in the app is tracked, recorded, or sent anywhere. We don't know who you are, how you use the app, or what settings you prefer."
+      "text1": "Your settings and imported images stay on your device. Weather matching is optional.",
+      "text2": "The desktop app has no accounts, advertising SDKs or in-app analytics. In version 1.3 and later, if you enable local weather matching and allow location access, your location is used to request weather from Apple's WeatherKit service. Website analytics require a separate choice, described below."
     },
     "dontCollect": {
-      "heading": "What the App Does Not Collect",
+      "heading": "Privacy in the Desktop App",
       "items": [
-        "No personal information",
-        "No usage statistics",
-        "No crash reports",
-        "No analytics data",
-        "No device identifiers",
-        "No location data",
-        "Nothing. Seriously."
+        "No account registration",
+        "No in-app analytics or advertising SDKs",
+        "No tracking across apps or websites",
+        "No upload of settings or imported images",
+        "No desktop screenshots or screen recordings",
+        "No microphone or camera access",
+        "No location history stored by the app"
       ]
     },
     "staysOnMac": {
@@ -34,27 +34,35 @@
         "Overlay placement and decorative light settings",
         "Language preference"
       ],
-      "outro": "Settings and imported images are stored locally on your Mac and are not uploaded by the app. Removing the app does not necessarily remove its saved preferences or app data."
+      "outro": "Settings and imported images are stored locally and are not uploaded by the app. You can reset preferences in Settings and delete imported images from the image gallery. Resetting preferences preserves imported images. Removing the app does not necessarily remove its saved preferences or app data."
+    },
+    "weather": {
+      "heading": "Optional Location and Weather Matching",
+      "location": "Weather matching is off by default. When you enable it and grant permission, macOS supplies a location to the app. The app requests kilometre-level accuracy; macOS controls the accuracy it provides. This location is sent to Apple's WeatherKit service to retrieve current weather and choose a matching decorative effect. It is not sent to the developer.",
+      "storage": "The app does not save coordinates or a location history to its preferences or image files. Location and weather results are used in memory to select effects. While the feature is enabled, weather is normally refreshed every 30 minutes and may be refreshed again after a location-permission change or when the app restarts.",
+      "control": "You can turn weather matching off in the app or revoke location access in System Settings. Turning the feature off cancels its scheduled updates. Manual themes continue to work without location access. Apple processes WeatherKit requests under its own privacy policies; the app also retrieves Apple Weather attribution resources when needed.",
+      "appleWeather": "Apple Weather & Privacy",
+      "applePrivacy": "Apple Privacy Policy"
     },
     "permissions": {
       "heading": "Permissions",
-      "text": "SnowMyScreen may request permission to launch automatically when you start your Mac. This is optional and only for your convenience. No data is collected through this permission."
+      "text": "Location permission is used only for optional weather matching. You choose PNG files through the system file picker; the app copies those images into its own local storage for later use. Launch at login is optional and can be changed in the app or System Settings. Desktop effects and cleaning tools do not require Screen Recording, microphone or camera access."
     },
     "noInternet": {
-      "heading": "No Internet Required",
-      "text": "SnowMyScreen doesn't need an internet connection to work. It doesn't communicate with any servers, ours or anyone else's."
+      "heading": "Offline Effects and Online Services",
+      "text": "Manual themes, decorative lights, imported images and cleaning sounds work offline. Local weather matching and Apple Weather attribution need an internet connection. Opening website links and downloading App Store updates also use the internet."
     },
     "updates": {
       "heading": "Updates",
-      "text": "All updates come through the Mac App Store. Apple handles the update process according to their privacy policy."
+      "text": "Purchases and updates are handled by the Mac App Store. Apple also controls any app diagnostics you choose to share through its system settings. These services follow Apple's privacy policies; SnowMyScreen does not include its own analytics or crash-reporting SDK."
     },
     "children": {
       "heading": "Children",
-      "text": "Since we don't collect any information, SnowMyScreen is safe for everyone, including children."
+      "text": "The desktop app has no accounts, advertising or in-app analytics. Optional location access uses the same system permission controls for all users. Website analytics remain subject to the separate cookie choice below."
     },
     "questions": {
       "heading": "Questions?",
-      "text": "If you have questions about this privacy policy, contact us at:",
+      "text": "If you email support, we receive your email address and the information you choose to include. Support correspondence is used to respond to and resolve your request and kept for that purpose. To ask about this policy or request deletion of support correspondence, contact:",
       "email": "Email:"
     },
     "footer": "This privacy policy may be updated occasionally. The current version is always available here and in the Mac App Store.",
@@ -71,26 +79,26 @@
   "uk": {
     "title": "Політика конфіденційності",
     "pageTitle": "Політика конфіденційності — SnowMyScreen",
-    "effectiveDate": "Дата набуття чинності: 26 листопада 2025 року",
+    "effectiveDate": "Дата набуття чинності: 19 жовтня 2026 року",
     "intro": {
       "heading": "Вступ",
       "text": "SnowMyScreen — застосунок для macOS, який додає сезонні ефекти на робочий стіл і декоративні гірлянди. Ваша конфіденційність важлива для нас. Ця політика пояснює, як ми поводимося з вашою інформацією. Аналітика сайту та вибір щодо cookie описані нижче."
     },
     "shortVersion": {
       "heading": "Коротко",
-      "text1": "Застосунок не збирає жодних даних.",
-      "text2": "SnowMyScreen працює повністю на вашому Mac. Ваші дії в застосунку не відстежуються, не записуються й нікуди не надсилаються. Ми не знаємо, хто ви, як користуєтеся застосунком і яким налаштуванням віддаєте перевагу."
+      "text1": "Налаштування та імпортовані зображення залишаються на вашому пристрої. Узгодження з місцевою погодою — необов’язкове.",
+      "text2": "Застосунок для робочого столу не має облікових записів, рекламних SDK чи вбудованої аналітики. У версії 1.3 та новіших, якщо ви ввімкнете узгодження з місцевою погодою та надасте доступ до геолокації, ваше місцеперебування використовується для запиту погоди через сервіс Apple WeatherKit. Аналітика сайту потребує окремої згоди, описаної нижче."
     },
     "dontCollect": {
-      "heading": "Що застосунок не збирає",
+      "heading": "Конфіденційність у застосунку",
       "items": [
-        "Особисту інформацію",
-        "Статистику використання",
-        "Звіти про збої",
-        "Аналітичні дані",
-        "Ідентифікатори пристроїв",
-        "Дані про місцеперебування",
-        "Нічого. Справді."
+        "Без реєстрації облікового запису",
+        "Без вбудованої аналітики та рекламних SDK",
+        "Без відстеження між застосунками й сайтами",
+        "Без завантаження налаштувань чи імпортованих зображень на сервери",
+        "Без знімків і запису робочого столу",
+        "Без доступу до мікрофона чи камери",
+        "Без збереження історії місцеперебування в застосунку"
       ]
     },
     "staysOnMac": {
@@ -103,27 +111,35 @@
         "Розташування ефектів і налаштування гірлянд",
         "Мовні налаштування"
       ],
-      "outro": "Налаштування та імпортовані зображення зберігаються локально на вашому Mac. Застосунок їх не завантажує на сервери. Видалення застосунку не обов’язково видаляє його збережені налаштування та дані."
+      "outro": "Налаштування та імпортовані зображення зберігаються локально й не завантажуються застосунком на сервери. Ви можете скинути налаштування та видалити імпортовані зображення з галереї. Скидання налаштувань зберігає імпортовані зображення. Видалення застосунку не обов’язково видаляє його збережені налаштування та дані."
+    },
+    "weather": {
+      "heading": "Необов’язкові геолокація та місцева погода",
+      "location": "Узгодження з місцевою погодою початково вимкнене. Коли ви вмикаєте його й надаєте дозвіл, macOS передає застосунку місцеперебування. Застосунок запитує точність на рівні кілометра; фактичну точність визначає macOS. Це місцеперебування надсилається сервісу Apple WeatherKit, щоб отримати поточну погоду й вибрати відповідний декоративний ефект. Розробнику воно не передається.",
+      "storage": "Застосунок не записує координати чи історію місцеперебування в налаштування або файли зображень. Місцеперебування та результат запиту погоди використовуються в пам’яті для вибору ефектів. Поки функція ввімкнена, погода зазвичай оновлюється кожні 30 хвилин; додаткове оновлення можливе після зміни дозволу на геолокацію або перезапуску застосунку.",
+      "control": "Ви можете вимкнути узгодження з погодою в застосунку або відкликати доступ до геолокації в Системних параметрах. Вимкнення функції скасовує її заплановані оновлення. Ручний вибір тем працює без геолокації. Apple обробляє запити WeatherKit за власними політиками конфіденційності; за потреби застосунок також завантажує матеріали атрибуції Apple Weather.",
+      "appleWeather": "Apple Weather і конфіденційність",
+      "applePrivacy": "Політика конфіденційності Apple"
     },
     "permissions": {
       "heading": "Дозволи",
-      "text": "SnowMyScreen може попросити дозвіл на автоматичний запуск під час увімкнення Mac. Це необов’язково й потрібно лише для вашої зручності. Цей дозвіл не використовується для збору даних."
+      "text": "Доступ до геолокації використовується лише для необов’язкового узгодження з погодою. Ви вибираєте PNG через системне вікно вибору файлів; застосунок копіює ці зображення у власне локальне сховище для подальшого використання. Запуск під час входу необов’язковий; його можна змінити в застосунку чи Системних параметрах. Ефекти робочого столу й інструменти очищення не потребують дозволу на запис екрана, доступу до мікрофона чи камери."
     },
     "noInternet": {
-      "heading": "Інтернет не потрібен",
-      "text": "Для роботи SnowMyScreen не потрібне підключення до інтернету. Застосунок не обмінюється даними з жодними серверами — нашими чи сторонніми."
+      "heading": "Офлайн-ефекти й онлайн-сервіси",
+      "text": "Ручний вибір тем, декоративні гірлянди, імпортовані зображення та звуки інструментів працюють без інтернету. Узгодження з місцевою погодою та атрибуція Apple Weather потребують підключення. Відкриття посилань на сайти й завантаження оновлень з App Store також використовують інтернет."
     },
     "updates": {
       "heading": "Оновлення",
-      "text": "Усі оновлення надходять через Mac App Store. Apple забезпечує процес оновлення відповідно до своєї політики конфіденційності."
+      "text": "Покупки й оновлення обробляє Mac App Store. Apple також керує діагностичними даними застосунку, якими ви погоджуєтеся ділитися через системні налаштування. Ці сервіси діють за політиками конфіденційності Apple; SnowMyScreen не має власного SDK аналітики чи звітів про збої."
     },
     "children": {
       "heading": "Діти",
-      "text": "Оскільки ми не збираємо жодної інформації, SnowMyScreen безпечний для всіх, зокрема для дітей."
+      "text": "Застосунок для робочого столу не має облікових записів, реклами чи вбудованої аналітики. Необов’язковий доступ до геолокації використовує однакові системні дозволи для всіх користувачів. Аналітика сайту залежить від окремого вибору щодо cookie, описаного нижче."
     },
     "questions": {
       "heading": "Є питання?",
-      "text": "Якщо у вас є питання щодо цієї політики конфіденційності, напишіть нам:",
+      "text": "Якщо ви пишете в підтримку, ми отримуємо вашу адресу електронної пошти та інформацію, яку ви вирішите надіслати. Листування використовується для відповіді й розв’язання вашого запиту та зберігається для цієї мети. Щоб запитати про політику чи попросити видалити листування з підтримкою, напишіть:",
       "email": "Електронна пошта:"
     },
     "footer": "Ця політика конфіденційності може час від часу оновлюватися. Поточна версія завжди доступна тут і в Mac App Store.",

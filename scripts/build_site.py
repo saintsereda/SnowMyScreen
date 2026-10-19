@@ -145,7 +145,7 @@ for lang in LANGS:
     sections=''.join(f'<section><h2>{E(title)}</h2><p>{E(text)}</p></section>' for title,text in c['support_sections'])
     body=f'<div class="prose wrap"><p class="eyebrow">{E(c["support"])}</p><h1>{E(c["support_title"])}</h1><p class="answer">{E(c["support_intro"])}</p>{sections}<p><a class="button" href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a></p></div>'
     write(url(lang,'support/index.html'),page(c,'support/',c['support_title'],c['support_description'],body))
-    # Preserve the existing policy text as the source, with only factual product copy corrections.
+    # Generate both policies from the same template and localized privacy source.
     privacy=json.loads((ROOT/'content/privacy.json').read_text())[lang]
     def get(key):
         value=privacy
@@ -154,7 +154,8 @@ for lang in LANGS:
         return value
     policy=(ROOT/'content/privacy-template.html').read_text()
     policy=re.sub(r'<(h1|h2|p|li|strong)([^>]*data-i18n="(privacy\.[^"]+)"[^>]*)>.*?</\1>',lambda m:f'<{m[1]}>{E(get(m[3]))}</{m[1]}>',policy,flags=re.S)
-    privacy_description='How SnowMyScreen handles local app data, optional website analytics and cookie choices.' if lang=='en' else 'Як SnowMyScreen зберігає дані застосунку локально та використовує необов’язкову аналітику й cookie на сайті за вашою згодою.'
+    policy=re.sub(r'<a([^>]*?) data-i18n="(privacy\.[^"]+)"([^>]*)>.*?</a>',lambda m:f'<a{m[1]}{m[3]}>{E(get(m[2]))}</a>',policy,flags=re.S)
+    privacy_description='How SnowMyScreen handles local app data, optional location and Apple WeatherKit, website analytics and cookie choices.' if lang=='en' else 'Як SnowMyScreen зберігає локальні дані, використовує необов’язкову геолокацію й Apple WeatherKit, аналітику сайту та cookie за вашою згодою.'
     write(url(lang,'privacy.html'),page(c,'privacy.html',privacy['pageTitle'],privacy_description,'<div class="prose wrap">'+policy+'</div>'))
     rss=ET.Element('rss',version='2.0'); channel=ET.SubElement(rss,'channel')
     for name,text in [('title','SnowMyScreen Blog'),('link',ORIGIN+url(lang,'blog/')),('description',c['blog_description']),('language',lang)]:
