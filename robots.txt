@@ -3,4 +3,4 @@ Allow: /
 Disallow: /content/
 Disallow: /scripts/
 
-Sitemap: https://snowmyscreen.app/sitemap.xml
+Sitemap: https://getwonderfall.com/sitemap.xml
