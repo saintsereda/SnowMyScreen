@@ -1,30 +1,29 @@
 # Wonderfall
 
-> Animated desktop effects for Mac. Wonderfall is the new product and website name for the macOS app currently listed as SnowMyScreen on the Mac App Store, app ID 6755106853, by Andrii (Andrew) Sereda.
+> Animated desktop effects for Mac by Andrii (Andrew) Sereda. The Mac App Store app ID is 6755106853.
 
-## Available release
-- Public listing checked: 2026-10-20.
-- Mac App Store name and version: SnowMyScreen 1.1.2.
+## Wonderfall for Mac
 - Requires macOS 14.6 or later; Mac only.
-- Available effects: falling snow and custom PNG images. Up to 10 PNGs, each up to 5 MB and 1024 × 1024 pixels.
+- Seasonal effects: falling snow, rain, autumn leaves, spring petals and summer fireflies.
+- Custom PNG images can move like snow, leaves or rain. Import up to 10 PNGs, each up to 5 MB and 1024 × 1024 pixels.
+- Garlands decorate the top menu bar. Interactive tools clear snow, leaves, petals and raindrops.
 - Place the overlay over open windows or on the desktop behind them, while keeping the existing wallpaper.
 - Controls include intensity, size, speed and wind.
-- Current US store download price: US$1.99. Prices depend on the region and may change; the App Store is the source of current availability and pricing.
+- Optional weather matching uses location permission and Apple WeatherKit.
+- Rain is a visual effect without ambient rain audio.
+- US store price checked on 2026-10-20: US$1.99. Prices depend on the region and may change; the App Store is the source of pricing.
 - The app is a desktop overlay, not a replacement for wallpaper or the macOS screensaver.
 
-## Upcoming seasonal update
-The videos and feature demos preview rain, autumn leaves, spring petals, summer fireflies, garlands and interactive clearing tools. These are not all included in the public 1.1.2 release. Optional weather matching uses location permission and Apple WeatherKit. The rain preview is visual and does not include ambient rain audio.
-
 ## Official product sources
-- [Product and release availability](https://getwonderfall.com/): Product overview, effects, review excerpts, setup steps and frequently asked questions.
+- [Product overview](https://getwonderfall.com/): Effects, review excerpts, setup steps and frequently asked questions.
 - [Setup and support](https://getwonderfall.com/support/): Menu bar controls, PNG import limits and troubleshooting.
 - [Privacy](https://getwonderfall.com/privacy.html): Local app storage, optional location and WeatherKit, and separate consent for website analytics.
-- [Mac App Store](https://apps.apple.com/app/id6755106853): Current available release and local pricing.
-- [Original App Store reviews](https://apps.apple.com/ua/app/snowmyscreen/id6755106853?see-all=reviews&platform=mac): Ukrainian storefront; reviews refer to the app as SnowMyScreen.
+- [Mac App Store](https://apps.apple.com/app/id6755106853): Download and local pricing.
+- [Original App Store reviews](https://apps.apple.com/ua/app/snowmyscreen/id6755106853?see-all=reviews&platform=mac): Ukrainian storefront; reviews were written for SnowMyScreen.
 
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
-- [How to add snow to your Mac desktop](https://getwonderfall.com/blog/mac-desktop-effects/): Setup, desktop overlays versus live wallpaper or screensavers, and the upcoming seasonal update.
+- [How to add snow to your Mac desktop](https://getwonderfall.com/blog/mac-desktop-effects/): Setup, desktop overlays versus live wallpaper or screensavers, and seasonal effects.
 
 ## Українською
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)

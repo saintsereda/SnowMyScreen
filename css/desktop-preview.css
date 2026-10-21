@@ -1,0 +1,90 @@
+/* Decorative menu bars stay separate from the footage and demo controls. */
+.desktop-screen {
+  --desktop-bar-height: 34px;
+  --desktop-bar-inset: 16px;
+  --desktop-icon-size: 14px;
+  --desktop-icon-gap: 13px;
+  --recording-zoom: 1;
+  position: relative;
+  isolation: isolate;
+}
+.desktop-menu {
+  position: absolute;
+  z-index: 5;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--desktop-bar-height);
+  padding-inline: var(--desktop-bar-inset);
+  color: #fffffff2;
+  pointer-events: none;
+  user-select: none;
+}
+.desktop-menu__apple, .desktop-menu__icon {
+  display: block;
+  flex: none;
+  width: auto;
+  height: var(--desktop-icon-size);
+  object-fit: contain;
+}
+.desktop-menu__status {
+  display: flex;
+  align-items: center;
+  gap: var(--desktop-icon-gap);
+}
+.desktop-menu__app {
+  display: grid;
+  place-items: center;
+}
+.desktop-menu__apple { height: calc(var(--desktop-icon-size) * 1.1); }
+.desktop-menu__icon--battery { height: calc(var(--desktop-icon-size) * .8); }
+.desktop-screen--video {
+  --desktop-bar-height: clamp(28px, 3.3vw, 38px);
+  --desktop-bar-inset: clamp(12px, 1.8vw, 24px);
+  --desktop-icon-size: clamp(12px, 1.2vw, 16px);
+  --desktop-icon-gap: clamp(9px, 1.4vw, 18px);
+  --recording-zoom: 1.035;
+}
+.desktop-screen--compact {
+  --desktop-bar-height: 26px;
+  --desktop-bar-inset: 12px;
+  --desktop-icon-size: 11px;
+  --desktop-icon-gap: 10px;
+}
+.desktop-screen--mini {
+  --desktop-bar-height: 17px;
+  --desktop-bar-inset: 7px;
+  --desktop-icon-size: 8px;
+  --desktop-icon-gap: 6px;
+}
+.desktop-screen--mini .desktop-menu__icon--battery,
+.desktop-screen--mini .desktop-menu__icon--volume { display: none; }
+
+/* The source recordings include a menu bar. Crop it out beneath our own. */
+.desktop-screen__recording {
+  transform: scale(var(--recording-zoom));
+  transform-origin: center bottom;
+}
+
+/* Expensa's scroll-linked tilt, applied to the video, menu bar and pause control together. */
+.video-preview.has-perspective .preview-media {
+  transform-origin: center bottom;
+  transform: translateY(calc(-24% * (1 - var(--preview-progress, 0))))
+    perspective(clamp(900px, 150vw, 1800px))
+    rotateX(calc(42deg * (1 - var(--preview-progress, 0))));
+  backface-visibility: hidden;
+}
+.video-preview.is-perspective-active .preview-media { will-change: transform; }
+
+@media (max-width: 440px) {
+  .desktop-screen:not(.desktop-screen--mini) {
+    --desktop-bar-inset: 12px;
+    --desktop-icon-size: 12px;
+    --desktop-icon-gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-preview.has-perspective .preview-media { transform: none; will-change: auto; }
+}

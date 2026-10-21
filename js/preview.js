@@ -8,8 +8,12 @@
   const picker = preview.querySelector('.theme-picker');
   const panel = preview.querySelector('.control-panel');
   const pause = preview.querySelector('[data-preview-pause]');
+  const menuIcon = preview.querySelector('[data-desktop-app-icon]');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const description = preview.querySelector('[data-theme-description]');
+  // Keep media configuration independent of the React radio's rendered buttons.
+  const buttons = [...picker.querySelectorAll('[data-theme]')];
+  const themes = new Map(buttons.map(button => [button.dataset.theme, button]));
   let onScreen = !('IntersectionObserver' in window);
   let hasVideo = false;
   let activeTheme = null;
@@ -38,11 +42,12 @@
   }
 
   function setTheme(theme) {
-    const button = picker.querySelector(`[data-theme="${theme}"]`);
+    const button = themes.get(theme);
     if (!button || theme === activeTheme) return;
     const firstSelection = activeTheme === null;
     activeTheme = theme;
     preview.dataset.effect = theme;
+    if (menuIcon && button.dataset.menuIcon) menuIcon.src = button.dataset.menuIcon;
     const source = button.dataset.video || '';
     hasVideo = !!source;
     video.classList.toggle('is-switching', !motion.matches && onScreen);
@@ -54,13 +59,14 @@
     video.hidden = !hasVideo;
     placeholder.hidden = hasVideo;
     caption.textContent = button.querySelector('.theme-name').textContent;
-    picker.querySelectorAll('[data-theme]').forEach(option => {
+    buttons.forEach(option => {
       option.setAttribute('aria-pressed', String(option === button));
     });
     video.setAttribute('aria-label', button.dataset.description);
     if (description) description.textContent = button.dataset.description;
     if (!firstSelection) video.load();
     syncPlayback();
+    preview.dispatchEvent(new CustomEvent('wonderfall:theme-change', { detail: { theme } }));
   }
 
   video.addEventListener('error', () => {
@@ -84,6 +90,7 @@
     const button = event.target.closest('[data-theme]');
     if (button) setTheme(button.dataset.theme);
   });
+  preview.addEventListener('wonderfall:theme-request', event => setTheme(event.detail?.theme));
   document.addEventListener('visibilitychange', syncPlayback);
   motion.addEventListener('change', () => {
     motionOverride = false;

@@ -1,186 +1,321 @@
-/* Independent demos; no location requests or external weather calls. */
+/* Feature choices and browser previews. Videos are read from the local media manifest at build time. */
 (() => {
   const section = document.querySelector('#features');
   if (!section) return;
-  const showControls = root => root.querySelectorAll('[data-demo-controls]').forEach(el => { el.hidden = false; });
-  const select = (root, selector, button) => root.querySelectorAll(selector).forEach(el => {
-    el.setAttribute('aria-pressed', String(el === button));
-  });
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let pageActive = true;
+  const callbacks = [];
+  const watch = (element, callback) => {
+    if (!('IntersectionObserver' in window)) { callback(true); return; }
+    const observer = new IntersectionObserver(entries => callback(entries[0].isIntersecting));
+    observer.observe(element);
+  };
+  const lifecycle = callback => { callbacks.push(callback); callback(); };
+  const syncAll = () => callbacks.forEach(callback => callback());
+  document.addEventListener('visibilitychange', syncAll);
+  window.addEventListener('pagehide', () => { pageActive = false; syncAll(); });
+  window.addEventListener('pageshow', () => { pageActive = true; syncAll(); });
+  reduced.addEventListener('change', syncAll);
 
-  function weather() {
-    const root = section.querySelector('[data-weather-demo]');
-    if (!root) return;
-    const scene = root.querySelector('[data-weather-scene]');
-    const symbol = root.querySelector('[data-weather-symbol]');
-    const status = root.querySelector('[data-weather-status]');
-    showControls(root);
-    root.addEventListener('click', event => {
-      const button = event.target.closest('[data-weather-choice]');
-      if (!button || !root.contains(button)) return;
-      select(root, '[data-weather-choice]', button);
-      root.dataset.weather = button.dataset.weatherChoice;
-      symbol.replaceChildren(button.querySelector('svg').cloneNode(true));
-      scene.setAttribute('aria-label', button.dataset.description);
-      status.textContent = button.dataset.description;
+  for (const root of section.querySelectorAll('[data-feature-media="cleaning"], [data-feature-media="garlands"]')) {
+    const article = root.closest('[data-feature]');
+    const choices = [...article.querySelectorAll('[data-feature-choice]')];
+    const video = root.querySelector('[data-feature-video]');
+    const image = root.querySelector('[data-feature-image]');
+    const preview = root.querySelector('[data-garland-preview]');
+    const button = root.querySelector('[data-feature-pause]');
+    const demoButton = root.querySelector('[data-demo-pause]');
+    let visible = false, userPaused = false, motionOverride = false, failed = false;
+    let demoPaused = false, demoMotionOverride = false;
+    video.controls = false;
+    const syncButton = () => {
+      button.hidden = video.hidden || failed;
+      button.setAttribute('aria-pressed', String(video.paused));
+      button.setAttribute('aria-label', video.paused ? button.dataset.play : button.dataset.pause);
+    };
+    const sync = () => {
+      if (video.hidden || failed || !pageActive || !visible || document.hidden || userPaused || (reduced.matches && !motionOverride)) {
+        video.pause();
+      } else {
+        const play = video.play();
+        if (play && play.catch) play.catch(syncButton);
+      }
+      syncButton();
+    };
+    const syncDemo = () => {
+      if (!demoButton) return;
+      const paused = demoPaused || (reduced.matches && !demoMotionOverride) || !pageActive || document.hidden || !visible;
+      preview.classList.toggle('is-paused', paused);
+      preview.classList.toggle('motion-override', demoMotionOverride);
+      demoButton.setAttribute('aria-pressed', String(paused));
+      demoButton.setAttribute('aria-label', paused ? demoButton.dataset.play : demoButton.dataset.pause);
+    };
+    const select = choice => {
+      if (choice.getAttribute('aria-pressed') === 'true') return;
+      choices.forEach(option => option.setAttribute('aria-pressed', String(option === choice)));
+      video.pause();
+      failed = false;
+      const src = choice.dataset.src;
+      const poster = choice.dataset.poster;
+      if (src) video.setAttribute('src', src);
+      else video.removeAttribute('src');
+      if (poster) video.setAttribute('poster', poster);
+      else video.removeAttribute('poster');
+      video.hidden = !src;
+      video.load();
+      if (image) {
+        image.hidden = !!src || !poster;
+        if (poster) image.src = poster;
+        if (choice.dataset.alt) image.alt = choice.dataset.alt;
+      }
+      if (choice.dataset.alt) video.setAttribute('aria-label', choice.dataset.alt);
+      if (preview) {
+        preview.hidden = !!src;
+        preview.dataset.scene = choice.dataset.featureChoice;
+        demoButton.hidden = !!src;
+      }
+      if (choice.dataset.menuIcon) root.querySelector('[data-desktop-app-icon]').src = choice.dataset.menuIcon;
+      root.dataset.featureMediaState = src ? 'video' : 'preview';
+      sync();
+      syncDemo();
+    };
+    choices.forEach(choice => choice.addEventListener('click', () => select(choice)));
+    button.addEventListener('click', () => {
+      userPaused = !video.paused;
+      if (!userPaused) motionOverride = true;
+      sync();
     });
+    if (demoButton) demoButton.addEventListener('click', () => {
+      demoPaused = demoButton.getAttribute('aria-pressed') !== 'true';
+      if (!demoPaused) demoMotionOverride = true;
+      syncDemo();
+    });
+    video.addEventListener('play', syncButton);
+    video.addEventListener('pause', syncButton);
+    video.addEventListener('error', () => {
+      failed = true;
+      video.hidden = true;
+      if (image) image.hidden = !image.getAttribute('src');
+      if (preview) { preview.hidden = false; demoButton.hidden = false; }
+      root.dataset.featureMediaState = 'preview';
+      sync();
+      syncDemo();
+    });
+    watch(root, value => { visible = value; sync(); syncDemo(); });
+    lifecycle(() => { sync(); syncDemo(); });
   }
 
-  function cleaning() {
-    const root = section.querySelector('[data-cleaning-demo]');
-    if (!root) return;
-    const image = root.querySelector('[data-cleaning-image]');
-    const canvas = root.querySelector('[data-cleaning-canvas]');
-    const context = canvas.getContext('2d');
-    if (!context) return;
-    const scene = root.querySelector('.cleaning-demo__scene');
-    const hint = root.querySelector('[data-cleaning-hint]');
-    const status = root.querySelector('[data-cleaning-status]');
-    let width = 0, height = 0, activePointer = null, last = null, pending = null, frame = 0;
-    let cleared = false;
-    function draw() {
-      if (!image.complete || !image.naturalWidth) return;
-      const bounds = scene.getBoundingClientRect();
-      width = bounds.width;
-      height = bounds.height;
-      if (!width || !height) return;
-      const density = Math.min(devicePixelRatio || 1, 2);
-      canvas.width = Math.round(width * density);
-      canvas.height = Math.round(height * density);
-      context.setTransform(density, 0, 0, density, 0, 0);
-      context.globalCompositeOperation = 'source-over';
-      const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
-      context.drawImage(image, (width - image.naturalWidth * scale) / 2,
-        (height - image.naturalHeight * scale) / 2, image.naturalWidth * scale, image.naturalHeight * scale);
-      if (root.dataset.cleaningMode === 'snow') {
-        const fill = context.createLinearGradient(0, height * .7, 0, height);
-        fill.addColorStop(0, '#ffffff'); fill.addColorStop(1, '#d9eafb');
-        context.fillStyle = fill;
-        context.beginPath(); context.moveTo(0, height * .85);
-        context.bezierCurveTo(width * .16, height * .65, width * .2, height * .97, width * .44, height * .82);
-        context.bezierCurveTo(width * .63, height * .68, width * .72, height * .96, width, height * .78);
-        context.lineTo(width, height); context.lineTo(0, height); context.closePath(); context.fill();
-      }
-      if (cleared) context.clearRect(0, 0, width, height);
-      root.classList.add('is-ready');
-      showControls(root);
+  const placement = section.querySelector('[data-placement-preview]');
+  if (placement) {
+    const placementButton = placement.parentElement.querySelector('[data-demo-pause]');
+    let placementPaused = false, placementOverride = false, placementVisible = false;
+    const syncPlacement = () => {
+      const paused = placementPaused || (reduced.matches && !placementOverride) || !pageActive || document.hidden || !placementVisible;
+      placement.classList.toggle('is-paused', paused);
+      placement.classList.toggle('motion-override', placementOverride);
+      placementButton.setAttribute('aria-pressed', String(paused));
+      placementButton.setAttribute('aria-label', paused ? placementButton.dataset.play : placementButton.dataset.pause);
+    };
+    placementButton.addEventListener('click', () => {
+      placementPaused = placementButton.getAttribute('aria-pressed') !== 'true';
+      if (!placementPaused) placementOverride = true;
+      syncPlacement();
+    });
+    watch(placement, value => { placementVisible = value; syncPlacement(); });
+    lifecycle(syncPlacement);
+    const buttons = [...placement.closest('[data-feature]').querySelectorAll('[data-placement-choice]')];
+    buttons.forEach(button => button.addEventListener('click', () => {
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      placement.dataset.layer = button.dataset.placementChoice;
+      placement.setAttribute('aria-label', button.dataset.description);
+    }));
+  }
+
+  const custom = section.querySelector('[data-custom-preview]');
+  if (!custom) return;
+  const canvas = custom.querySelector('[data-custom-canvas]');
+  const context = canvas.getContext('2d');
+  if (!context) return;
+  const card = custom.closest('[data-feature]');
+  const customButton = custom.parentElement.querySelector('[data-demo-pause]');
+  const fileInput = card.querySelector('[data-custom-file]');
+  const status = card.querySelector('[data-custom-status]');
+  const motionButtons = [...card.querySelectorAll('[data-custom-motion]')];
+  let artwork, artworkURL, width = 0, height = 0, motion = 'snow';
+  let customPaused = false, customOverride = false;
+  let particles = [], visible = false, frame = 0, lastTime = 0, emission = [0, 0, 0];
+  const bases = [
+    { accel: 70, births: 32, opacity: .3 },
+    { accel: 90, births: 28, opacity: .6 },
+    { accel: 110, births: 22, opacity: 1 }
+  ];
+  const profiles = {
+    snow: { speed: .5, size: .63, drift: .8, spin: .25, spinRange: 1 },
+    leaves: { speed: .9, size: .63, drift: .8, spin: .65, spinRange: .5 },
+    rain: { speed: 1.3, size: .63, drift: 0, spin: 0, spinRange: 0 }
+  };
+  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  // Mirrors CustomImageMotion and WeatherRenderConfiguration in the macOS app.
+  const specification = (mode, base) => {
+    const settings = profiles[mode];
+    const depth = clamp(base.accel / 110, .6, 1.2);
+    const progress = clamp((settings.speed - .05) / 3.65, 0, 1);
+    const travelHeight = height / scale();
+    if (mode === 'rain') {
+      const down = (250 + 850 * Math.pow(progress, .7)) * depth;
+      const gravity = 25 * depth;
+      const distance = Math.max(travelHeight + 80, 80);
+      const flight = (Math.sqrt(down * down + 2 * gravity * distance) - down) / gravity;
+      return { down, gravity: 25 * depth, size: (12 + 20 * settings.size) * depth,
+        birth: (down / 320) * .08, response: .18, driftGain: 0, lifetime: clamp(flight * 1.18, .25, 12) };
     }
-    function reset() {
-      cleared = false; last = null; pending = null; activePointer = null;
-      cancelAnimationFrame(frame); frame = 0;
-      root.classList.remove('is-dirty', 'is-clear');
-      hint.textContent = root.dataset.hint;
+    if (mode === 'leaves') {
+      const down = (65 + 85 * progress) * depth;
+      return { down, gravity: 2, size: (12 + 16 * settings.size) * depth,
+        birth: .11, response: .55, driftGain: 9 * depth,
+        lifetime: clamp((travelHeight + 60) / down * 1.15, 1, 35) };
+    }
+    const down = (16 + 40 * progress) * depth;
+    const gravity = base.accel * settings.speed;
+    const distance = Math.max(travelHeight + 80, 80);
+    const flight = (Math.sqrt(down * down + 2 * gravity * distance) - down) / gravity;
+    return { down: down + gravity * 5, gravity: 0, size: (12 + 20 * settings.size) * depth,
+      birth: .12, response: .8, driftGain: 9 * depth, lifetime: clamp(flight * 1.2, .5, 40) };
+  };
+  const scale = () => clamp(width / 900, .38, .7);
+  const spawn = (layer, anywhere = false) => {
+    const spec = specification(motion, bases[layer]);
+    const variation = .84 + Math.random() * .32;
+    const size = spec.size * variation * scale();
+    const phase = Math.random() * Math.PI * 2;
+    particles.push({
+      layer, x: Math.random() * width, y: anywhere ? Math.random() * height : -size,
+      vx: 0, vy: spec.down * variation * scale(),
+      size, opacity: bases[layer].opacity, age: anywhere ? Math.random() * Math.min(3, spec.lifetime) : 0,
+      phase, frequency: (motion === 'leaves' ? 1.3 : .85) * (.85 + Math.random() * .3),
+      angle: 0, variation,
+      trait: Math.random() * 2 - 1, spec
+    });
+  };
+  const resize = () => {
+    const rect = canvas.getBoundingClientRect();
+    width = rect.width; height = rect.height;
+    if (!width || !height) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    context.setTransform(dpr, 0, 0, dpr, 0, 0);
+    particles = [];
+    for (let layer = 0; layer < bases.length; layer++) for (let n = 0; n < 10; n++) spawn(layer, true);
+    draw();
+  };
+  const draw = () => {
+    context.clearRect(0, 0, width, height);
+    if (!artwork) return;
+    const aspect = artwork.naturalWidth / artwork.naturalHeight;
+    for (const particle of particles) {
+      const leafTurn = motion === 'leaves' ? .58 + .42 * Math.abs(Math.cos(particle.phase + particle.age * 1.1)) : 1;
+      const w = (aspect >= 1 ? particle.size : particle.size * aspect) * leafTurn;
+      const h = aspect >= 1 ? particle.size / aspect : particle.size;
+      context.save();
+      context.globalAlpha = particle.opacity * clamp(particle.age / .16, 0, 1) *
+        clamp((particle.spec.lifetime - particle.age) / .3, 0, 1);
+      context.translate(particle.x, particle.y);
+      context.rotate(particle.angle);
+      context.drawImage(artwork, -w / 2, -h / 2, w, h);
+      context.restore();
+    }
+  };
+  const tick = now => {
+    frame = 0;
+    if (!lastTime) lastTime = now;
+    const dt = clamp((now - lastTime) / 1000, 0, .05);
+    lastTime = now;
+    if (artwork && width && height) {
+      bases.forEach((base, layer) => {
+        const spec = specification(motion, base);
+        emission[layer] += dt * 1.68 * base.births * spec.birth * scale();
+        while (emission[layer] >= 1 && particles.length < 110) { spawn(layer); emission[layer]--; }
+      });
+      particles = particles.filter(particle => {
+        const { spec } = particle;
+        particle.age += dt;
+        const air = profiles[motion].drift * spec.driftGain * Math.sin(particle.phase + particle.age * particle.frequency);
+        const vertical = (spec.down * particle.variation + spec.gravity * Math.min(particle.age, 5)) * scale();
+        const blend = 1 - Math.exp(-dt / spec.response);
+        particle.vx += (air * scale() - particle.vx) * blend;
+        particle.vy += (vertical - particle.vy) * blend;
+        particle.x += particle.vx * dt;
+        particle.y += particle.vy * dt;
+        particle.angle += (profiles[motion].spin * Math.sign(particle.trait || 1) + profiles[motion].spinRange * particle.trait) * dt;
+        if (motion === 'rain') particle.angle = Math.atan2(-particle.vx, Math.max(particle.vy, 1));
+        return particle.age < spec.lifetime && particle.y < height + particle.size &&
+          particle.x > -particle.size && particle.x < width + particle.size;
+      });
       draw();
     }
-    function point(event) {
-      const bounds = canvas.getBoundingClientRect();
-      return { x: event.clientX - bounds.left, y: event.clientY - bounds.top };
+    syncAnimation();
+  };
+  const syncAnimation = () => {
+    const paused = customPaused || (reduced.matches && !customOverride);
+    customButton.setAttribute('aria-pressed', String(paused));
+    customButton.setAttribute('aria-label', paused ? customButton.dataset.play : customButton.dataset.pause);
+    const active = pageActive && !document.hidden && visible && !paused && !!artwork;
+    if (active && !frame) frame = requestAnimationFrame(tick);
+    else if (!active && frame) { cancelAnimationFrame(frame); frame = 0; lastTime = 0; draw(); }
+  };
+  customButton.addEventListener('click', () => {
+    customPaused = customButton.getAttribute('aria-pressed') !== 'true';
+    if (!customPaused) customOverride = true;
+    syncAnimation();
+  });
+  const setArtwork = (image, url) => {
+    if (artworkURL) URL.revokeObjectURL(artworkURL);
+    artworkURL = url || null;
+    artwork = image;
+    particles = [];
+    emission = [0, 0, 0];
+    resize();
+    syncAnimation();
+  };
+  const upload = file => {
+    if (!file || !['image/png', 'image/jpeg', 'image/webp'].includes(file.type) || file.size > 5 * 1024 * 1024) {
+      status.textContent = status.dataset.error;
+      return;
     }
-    function erase(next) {
-      if (!root.classList.contains('is-ready') || cleared) return;
-      context.globalCompositeOperation = 'destination-out';
-      context.lineWidth = Math.max(52, width * .1);
-      context.lineCap = 'round'; context.lineJoin = 'round';
-      context.beginPath();
-      context.moveTo(last ? last.x : next.x - .1, last ? last.y : next.y);
-      context.lineTo(next.x, next.y); context.stroke();
-      last = next;
-      root.classList.add('is-dirty');
-    }
-    function flush() {
-      frame = 0;
-      if (pending) erase(pending);
-      pending = null;
-    }
-    canvas.addEventListener('pointerdown', event => {
-      if (activePointer !== null || event.button !== 0) return;
-      activePointer = event.pointerId; last = null;
-      canvas.setPointerCapture(event.pointerId);
-      if (event.pointerType === 'mouse') event.preventDefault();
-      erase(point(event));
-    });
-    canvas.addEventListener('pointermove', event => {
-      if (event.pointerId !== activePointer) return;
-      pending = point(event);
-      if (!frame) frame = requestAnimationFrame(flush);
-    });
-    function finish(event) {
-      if (event.pointerId !== activePointer) return;
-      if (event.type === 'pointerup') erase(point(event));
-      cancelAnimationFrame(frame); frame = 0; pending = null; last = null; activePointer = null;
-      if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
-    }
-    canvas.addEventListener('pointerup', finish);
-    canvas.addEventListener('pointercancel', finish);
-    canvas.addEventListener('lostpointercapture', finish);
-    root.addEventListener('click', event => {
-      const button = event.target.closest('[data-cleaning-choice]');
-      if (!button || !root.contains(button)) return;
-      select(root, '[data-cleaning-choice]', button);
-      root.dataset.cleaningMode = button.dataset.cleaningChoice;
-      image.src = button.dataset.source;
-      reset();
-      status.textContent = button.getAttribute('aria-label');
-    });
-    root.querySelector('[data-cleaning-clear]').addEventListener('click', () => {
-      cancelAnimationFrame(frame); frame = 0; pending = null;
-      cleared = true;
-      context.clearRect(0, 0, width, height);
-      root.classList.add('is-dirty', 'is-clear');
-      hint.textContent = root.dataset.cleared;
-      status.textContent = root.dataset.cleared;
-    });
-    root.querySelector('[data-cleaning-reset]').addEventListener('click', event => {
-      reset();
-      status.textContent = event.currentTarget.getAttribute('aria-label');
-    });
-    image.addEventListener('load', draw);
-    if ('ResizeObserver' in window) new ResizeObserver(draw).observe(scene);
-    else window.addEventListener('resize', draw);
-    draw();
-  }
-
-  function lights() {
-    const root = section.querySelector('[data-garland-demo]');
-    if (!root) return;
-    showControls(root);
-    root.addEventListener('click', event => {
-      const placement = event.target.closest('[data-light-placement]');
-      if (placement && root.contains(placement)) {
-        const enabled = placement.getAttribute('aria-pressed') !== 'true';
-        placement.setAttribute('aria-pressed', String(enabled));
-        root.dataset[placement.dataset.lightPlacement] = String(enabled);
-      }
-      const palette = event.target.closest('[data-light-palette]');
-      if (palette && root.contains(palette)) {
-        select(root, '[data-light-palette]', palette);
-        root.dataset.palette = palette.dataset.lightPalette;
-      }
-    });
-  }
-
-  function placement() {
-    const root = section.querySelector('[data-feature="placement"]');
-    if (!root) return;
-    const toggle = root.querySelector('[data-placement-toggle]');
-    const demo = root.querySelector('[data-placement-demo]');
-    const strip = root.querySelector('[data-placement-strip]');
-    const status = root.querySelector('[data-placement-status]');
-    showControls(root);
-    function sync() {
-      const button = toggle.querySelector('[aria-pressed="true"]');
-      demo.dataset.mode = button.dataset.mode;
-      demo.dataset.area = strip.checked ? 'strip' : 'full';
-      const description = `${button.dataset.description} ${strip.checked ? strip.dataset.description : strip.dataset.fullDescription}`;
-      demo.setAttribute('aria-label', description); status.textContent = description;
-    }
-    toggle.addEventListener('click', event => {
-      const button = event.target.closest('button[data-mode]');
-      if (!button || !toggle.contains(button)) return;
-      select(toggle, 'button[data-mode]', button); sync();
-    });
-    strip.addEventListener('change', sync);
-    sync();
-  }
-
-  weather(); cleaning(); lights(); placement();
+    const url = URL.createObjectURL(file);
+    const image = new Image();
+    image.onload = () => { setArtwork(image, url); status.textContent = status.dataset.ready; };
+    image.onerror = () => { URL.revokeObjectURL(url); status.textContent = status.dataset.error; };
+    image.src = url;
+  };
+  fileInput.addEventListener('change', () => upload(fileInput.files[0]));
+  for (const event of ['dragenter', 'dragover']) custom.addEventListener(event, e => {
+    if (!e.dataTransfer?.types.includes('Files')) return;
+    e.preventDefault();
+    custom.classList.add('is-dragging');
+  });
+  custom.addEventListener('dragleave', () => custom.classList.remove('is-dragging'));
+  custom.addEventListener('drop', e => {
+    e.preventDefault();
+    custom.classList.remove('is-dragging');
+    upload(e.dataTransfer?.files[0]);
+  });
+  motionButtons.forEach(button => button.addEventListener('click', () => {
+    motion = button.dataset.customMotion;
+    motionButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    particles = [];
+    emission = [0, 0, 0];
+    resize();
+  }));
+  if ('ResizeObserver' in window) new ResizeObserver(resize).observe(canvas);
+  else window.addEventListener('resize', resize);
+  watch(custom, value => { visible = value; syncAnimation(); });
+  lifecycle(syncAnimation);
+  const sample = new Image();
+  sample.onload = () => setArtwork(sample, null);
+  sample.src = '/images/icon.png';
+  window.addEventListener('pagehide', () => {
+    if (artworkURL) { URL.revokeObjectURL(artworkURL); artworkURL = null; }
+  });
 })();

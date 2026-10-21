@@ -1,0 +1,29 @@
+{
+  "sources": {
+    "licenses/react-bits.md": "4bdd1fa59a6b7d5954bc3b213dbc34e455c635a94bbcecf9293553797d0fad02",
+    "package-lock.json": "287e31c7ed01abded985685a4be264125c90487b3da1512a84dda71ca185888e",
+    "package.json": "cd7902892adf941e04f6be08340fe8fc6ae3eb78ef611b81d02d508ec056f919",
+    "scripts/build_ui.mjs": "03189f6c0f754dce2d8b0bafdcb70e260cd3ed219bb140515e044d27a30b93bf",
+    "src/components/JellyRadio.css": "cc3fe10fd2cbb7d111713db84bb126b5792cec9390510ecc85a6f8915c6867a9",
+    "src/components/JellyRadio.jsx": "ddc3d0269badded42c2ac76a6db91325b3bc6a68e41775bc01195b00a2b13a5e",
+    "src/mobile-menu.js": "d43aaf080692e9ece9ebe0f8c40f5bb9e1ee27d261b021776cf483dc938b812a",
+    "src/weather-switch.css": "04f0c30ad1a30958db57f2f522cbd229e04ca222213cc383e5f3d23cf408e896",
+    "src/weather-switch.jsx": "4f5580cc3086dc32e12bf95d2bbf8135abf2a5c0d1d46b2fd836985937f8dcd8"
+  },
+  "outputs": {
+    "js/weather-switch.js.LEGAL.txt": "7f7c24a09d16008bb30b5ae5ad7bb4376eaf402772f0a29dc88df6f0f39ed929",
+    "js/weather-switch.js": "b34d65b3262fd637f91acfe77f8a6052cf190704fd2c8d4f3ed91d7f0edee85f",
+    "css/weather-switch.css.LEGAL.txt": "73037f82f677b68066f8b8cb4fa743228ff5a45463d4b8b7213c3c19a11a79c4",
+    "css/weather-switch.css": "e73a6360f63e4b560f6eb91099df8aa5de4bfbe5b1069bf44c9066426fd17488",
+    "js/mobile-menu.js.LEGAL.txt": "8ae140703bfb551c146b6ede8a07b56820e007bb5c9c49f0fe5b4da125775e47",
+    "js/mobile-menu.js": "214968c8b1e4c8dcf79ed8324fe4e3af9b82ffab6799d252ae1b172cc31e3131",
+    "licenses/vendor/framer-motion.txt": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32",
+    "licenses/vendor/gsap.txt": "346fe3994d9de531cb7cfc7a82e5b1a8395374f74674aea2d3f9f4b86928a83e",
+    "licenses/vendor/motion.txt": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+    "licenses/vendor/motion-dom.txt": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+    "licenses/vendor/motion-utils.txt": "1bf0dc3f7727723e5a032ed12164a47cf92c05204cb1a3485f123c24e2833ed1",
+    "licenses/vendor/react.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "licenses/vendor/react-dom.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "licenses/vendor/scheduler.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+  }
+}

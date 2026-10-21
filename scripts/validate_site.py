@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate crawlability, localized metadata and local navigation before deployment."""
 from pathlib import Path
+from hashlib import sha256
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 import json, re, xml.etree.ElementTree as ET
@@ -8,6 +9,15 @@ ROOT=Path(__file__).resolve().parents[1]
 SITE=json.loads((ROOT/'content/site.json').read_text())
 STORE_DATA=json.loads((ROOT/'content/app-store.json').read_text())
 ORIGIN=SITE['origin'].rstrip('/')
+UI_BUILD=json.loads((ROOT/'content/ui-build.json').read_text())
+ui_sources={p.relative_to(ROOT).as_posix() for p in (ROOT/'src').rglob('*') if p.is_file()}
+ui_sources.update({'package.json','package-lock.json','scripts/build_ui.mjs','licenses/react-bits.md'})
+assert set(UI_BUILD['sources'])==ui_sources,'UI sources changed; run npm run build:ui'
+assert {'js/weather-switch.js','css/weather-switch.css','js/mobile-menu.js'} <= set(UI_BUILD['outputs']),'Missing UI bundle; run npm run build:ui'
+for files in UI_BUILD.values():
+    for filename,digest in files.items():
+        p=ROOT/filename
+        assert p.is_file() and sha256(p.read_bytes()).hexdigest()==digest,f'Stale UI build: {filename}; run npm run build:ui'
 class Page(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True);self.tags=[];self.ids=set();self.schemas=[];self.current=None;self.buffer='';self.lang=None
@@ -30,7 +40,7 @@ def target(path):
     return p/'index.html' if path.endswith('/') or p.is_dir() else p
 pages={}
 for p in ROOT.rglob('*.html'):
-    if any(part in {'content','.git'} for part in p.relative_to(ROOT).parts):continue
+    if any(part in {'content','.git','node_modules'} for part in p.relative_to(ROOT).parts):continue
     page=Page();page.feed(p.read_text());pages[p.resolve()]=page
 assert len(pages)==12, f'Expected 11 generated pages plus 404; got {len(pages)}'
 canonicals={};descriptions=set()
@@ -65,7 +75,7 @@ for path,page in pages.items():
             assert peer_links==alternates,(path,locale)
     for tag,attrs in page.tags:
         if tag=='img':assert 'alt' in attrs,path
-        for attribute in ('src','href','data-source','data-poster'):
+        for attribute in ('src','href','data-source','data-poster','data-menu-icon','data-nav-motion'):
             link=attrs.get(attribute)
             if not link:continue
             parsed=urlsplit(link)
@@ -94,7 +104,7 @@ for path,page in pages.items():
                 assert item['dateModified'].startswith(SITE['content_updated']),path
             if item.get('@type')=='SoftwareApplication':
                 assert item['name']=='Wonderfall' and item['alternateName']==STORE_DATA['name'],path
-                assert item['softwareVersion']==STORE_DATA['version'],path
+                assert 'softwareVersion' not in item,path
                 assert item['operatingSystem']==f'macOS {STORE_DATA["minimum_os"]} or later',path
                 assert item['offers']['price']==STORE_DATA['offer']['price'],path
                 assert item['offers']['priceCurrency']==STORE_DATA['offer']['currency'],path
@@ -104,8 +114,29 @@ for path,page in pages.items():
     if path in [(ROOT/'index.html').resolve(),(ROOT/'uk/index.html').resolve()]:
         source=path.read_text()
         topics=[a['data-feature'] for t,a in page.tags if 'data-feature' in a]
-        assert topics==['weather','cleaning','garlands','images','motion','placement','displays'],f'Keep seven details below the existing seasonal preview: {path}'
-        assert len([t for t,a in page.tags if t=='video'])==1,f'Do not duplicate the seasonal video in the feature section: {path}'
+        assert topics==['weather','displays','motion','cleaning','garlands','images','placement'],f'Keep the supporting points above the four feature stories: {path}'
+        media_topics=[a['data-feature'] for t,a in page.tags if a.get('data-feature-presentation')=='media']
+        point_topics=[a['data-feature'] for t,a in page.tags if a.get('data-feature-presentation')=='point']
+        assert media_topics==['cleaning','garlands','images','placement'],path
+        assert point_topics==['weather','displays','motion'],path
+        slots=[a.get('data-feature-media') for t,a in page.tags if 'data-feature-media' in a]
+        assert slots==media_topics,f'Every main feature needs its own media slot: {path}'
+        assert source.count('class="desktop-menu"')==1+len(media_topics),f'Every feature card needs a macOS menu bar: {path}'
+        feature_videos=[a for t,a in page.tags if t=='video' and 'data-feature-video' in a]
+        assert len(feature_videos)==2 and len([t for t,a in page.tags if t=='video'])==3,f'Keep seasonal, cleaning, and garland recordings separate: {path}'
+        for video in feature_videos:
+            assert video.get('aria-label') and video.get('preload')=='none',path
+            assert all(key in video for key in ('controls','muted','loop','playsinline')),path
+            assert video.get('src') or 'hidden' in video,path
+        choices=[a['data-feature-choice'] for t,a in page.tags if t=='button' and 'data-feature-choice' in a]
+        assert choices==['snow','leaves','rain','winterNight','cozyEvening','springBloom','celebration'],path
+        tool_icons=[a.get('src','').split('?')[0] for t,a in page.tags if t=='img' and a.get('class')=='feature-tool-icon']
+        assert tool_icons==['/images/features/tools/shovel.png','/images/features/tools/broom.png','/images/features/tools/squeegee.png'],path
+        assert 'garland-preview__dock' not in source,path
+        assert [a['data-custom-motion'] for t,a in page.tags if t=='button' and 'data-custom-motion' in a]==['snow','leaves','rain'],path
+        assert [a['data-placement-choice'] for t,a in page.tags if t=='button' and 'data-placement-choice' in a]==['over','desktop'],path
+        assert len([a for t,a in page.tags if t=='canvas' and 'data-custom-canvas' in a])==1,path
+        assert len([a for t,a in page.tags if t=='input' and 'data-custom-file' in a])==1,path
         themes=[a['data-theme'] for t,a in page.tags if t=='button' and 'data-theme' in a]
         assert themes==['snow','rain','leaves','petals','fireflies'],f'Preserve the seasonal preview above the feature section: {path}'
         ids=[a['data-review-id'] for t,a in page.tags if 'data-review-id' in a]
@@ -127,7 +158,6 @@ for feed in [ROOT/'blog/feed.xml',ROOT/'uk/blog/feed.xml']:
 assert (ROOT/'CNAME').read_text().strip()==urlsplit(ORIGIN).hostname
 assert f'Sitemap: {ORIGIN}/sitemap.xml' in (ROOT/'robots.txt').read_text()
 assert ORIGIN+'/support/' in (ROOT/'llms.txt').read_text()
-assert STORE_DATA['version'] in (ROOT/'llms.txt').read_text()
 assert '__ORIGIN__' not in (ROOT/'download.html').read_text()
 assert f'href="{ORIGIN}/download.html"' in (ROOT/'download.html').read_text()
 assert not (ROOT/'js/notifications.js').exists(),'Fabricated purchase notifications must be removed'

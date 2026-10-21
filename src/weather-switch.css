@@ -1,0 +1,22 @@
+.home-page .control-panel { min-height: 104px; }
+.weather-switch {
+  display: flex;
+  max-width: 100%;
+  min-width: 0;
+  padding-block: 4px 10px;
+}
+.weather-switch > .jelly-radio {
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+  row-gap: 12px;
+  margin-inline: auto;
+}
+.weather-jelly .jelly-radio__chip { display: flex; flex: 0 0 auto; align-items: center; justify-content: center; min-height: 48px; }
+.weather-jelly .jelly-radio__skin { box-shadow: inset 0 0 0 1px #ffffff29; }
+.weather-jelly .jelly-radio__icon { font-size: 17px; line-height: 1; }
+@media (max-width: 640px) {
+  .weather-jelly .jelly-radio__skin { padding-inline: 16px; }
+}

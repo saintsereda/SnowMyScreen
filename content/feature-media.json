@@ -1,0 +1,15 @@
+{
+  "cleaning": {
+    "snow": { "src": "", "poster": "/videos/snow-1440p.jpg" },
+    "leaves": { "src": "", "poster": "/images/features/leaf-piles.jpg" },
+    "rain": { "src": "", "poster": "/images/features/rain-droplets.jpg" }
+  },
+  "garlands": {
+    "winterNight": { "src": "", "poster": "" },
+    "cozyEvening": { "src": "", "poster": "" },
+    "springBloom": { "src": "", "poster": "" },
+    "celebration": { "src": "", "poster": "" }
+  },
+  "images": { "type": "interactive" },
+  "placement": { "type": "interactive" }
+}

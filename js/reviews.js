@@ -4,26 +4,20 @@
   if (!section) return;
   const marquee = section.querySelector('[data-reviews-marquee]');
   const track = section.querySelector('[data-reviews-track]');
-  const pause = section.querySelector('[data-reviews-pause]');
   const originals = [...track.children];
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let onScreen = !('IntersectionObserver' in window);
-  let manuallyPaused = false;
   let frame = 0;
 
   function sync() {
-    const paused = manuallyPaused || !onScreen || document.hidden;
+    const paused = !onScreen || document.hidden;
     section.classList.toggle('is-running', !motion.matches && !paused);
-    section.classList.toggle('is-paused', manuallyPaused);
-    pause.setAttribute('aria-pressed', String(manuallyPaused));
-    pause.setAttribute('aria-label', manuallyPaused ? pause.dataset.play : pause.dataset.pause);
   }
 
   function build() {
     frame = 0;
     track.querySelectorAll('[data-review-clone]').forEach(copy => copy.remove());
     section.classList.remove('is-enhanced');
-    pause.hidden = motion.matches;
     if (motion.matches || !onScreen) {
       sync();
       return;
@@ -54,10 +48,6 @@
     if (!frame) frame = requestAnimationFrame(build);
   }
 
-  pause.addEventListener('click', () => {
-    manuallyPaused = !manuallyPaused;
-    sync();
-  });
   document.addEventListener('visibilitychange', sync);
   motion.addEventListener('change', schedule);
   window.addEventListener('resize', schedule, { passive: true });

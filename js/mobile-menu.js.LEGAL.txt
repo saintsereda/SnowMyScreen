@@ -1,0 +1,26 @@
+/*! BubbleMenu motion adapted from the supplied React Bits component.
+ * Copyright (c) 2026 David Haz; see /licenses/react-bits.md.
+ * The existing static navigation owns links, focus and open/close state.
+ */
+
+Bundled license information:
+
+gsap/gsap-core.js:
+  /*!
+   * GSAP 3.15.0
+   * https://gsap.com
+   *
+   * @license Copyright 2008-2026, GreenSock. All rights reserved.
+   * Subject to the terms at https://gsap.com/standard-license
+   * @author: Jack Doyle, jack@greensock.com
+  */
+
+gsap/CSSPlugin.js:
+  /*!
+   * CSSPlugin 3.15.0
+   * https://gsap.com
+   *
+   * Copyright 2008-2026, GreenSock. All rights reserved.
+   * Subject to the terms at https://gsap.com/standard-license
+   * @author: Jack Doyle, jack@greensock.com
+  */

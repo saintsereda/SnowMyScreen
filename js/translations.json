@@ -99,7 +99,7 @@
       "description": "Add snow, rain, autumn leaves, petals and fireflies to your Mac desktop. Customize seasonal overlays, import your own images and decorate with festive lights."
     },
     "go": {
-      "redirecting": "Redirecting to App Store...",
+      "redirecting": "Redirecting to App Store",
       "redirectMessage": "You will be redirected automatically in a moment.",
       "fallbackLink": "If you are not redirected, tap here",
       "openInSafari": "Open in Safari to continue",
@@ -211,7 +211,7 @@
       "description": "Додайте сніг, дощ, осіннє листя, пелюстки та світлячків на робочий стіл Mac. Налаштуйте сезонні ефекти, імпортуйте власні зображення й увімкніть гірлянди."
     },
     "go": {
-      "redirecting": "Перехід до App Store…",
+      "redirecting": "Перехід до App Store",
       "redirectMessage": "За мить ви автоматично перейдете до App Store.",
       "fallbackLink": "Якщо перехід не відбувся, натисніть тут",
       "openInSafari": "Відкрийте в Safari, щоб продовжити",

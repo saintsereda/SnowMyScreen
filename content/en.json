@@ -12,29 +12,25 @@
   "download": "Get on Mac App Store",
   "short_cta": "Download",
   "title": "Mac Desktop Effects: Snow, Rain & More | Wonderfall",
-  "description": "Desktop effects for Mac: snow, custom PNGs and a preview of rain, leaves and fireflies. Keep your wallpaper and tune the motion with Wonderfall.",
+  "description": "Desktop effects for Mac: snow, rain, leaves, fireflies and your own PNG artwork. Keep your wallpaper and tune the motion with Wonderfall.",
   "hero": "Mac desktop effects.\nA different season.",
   "hero_headline": "A little wonder for your Mac",
-  "intro": "Snow, rain, falling leaves, drifting petals and summer fireflies. Bring a little of the outside to your Mac with desktop effects you can make your own.",
+  "intro": "Snow, rain, falling leaves, drifting petals and summer fireflies — bring a little of the outside to your Mac with desktop effects you can make your own",
   "compat": "For macOS {minimum_os} and later",
-  "release_badge": "Version {version} is available",
-  "release_version": "1.1.2",
-  "release_summary": "Polish language & custom image shuffle fix",
   "preview_label": "Choose an atmosphere",
   "pause": "Pause motion",
   "play": "Resume motion",
-  "preview_note": "Choose an effect to preview. Your own wallpaper stays just as it is.",
+  "preview_note": "Choose an effect to preview — your own wallpaper stays just as it is",
   "benefits_label": "More ways to make it yours",
   "benefits": [
     "Keep your wallpaper. The effects appear over or behind your windows.",
-    "Add lights to the menu bar or Dock, independently of the weather effects.",
+    "Add lights along the top menu bar, independently of the weather effects.",
     "Use your own PNG artwork and adjust the motion to suit your desktop."
   ],
   "showcase": {
-    "eyebrow": "Make it yours",
-    "title": "Your desktop. Your kind of wonder.",
-    "weather_title": "A little of the outside, brought in.",
-    "weather_text": "Let your desktop follow the weather outside. On clear days, it finds a little inspiration in the season instead.",
+    "title": "Your desktop Your kind of wonder",
+    "weather_title": "Follow the weather outside",
+    "weather_text": "Automatically match the weather outside, with seasonal effects for clear days.",
     "weather_outside": "Outside",
     "weather_desktop": "Your desktop",
     "weather_snow": "Snowy",
@@ -43,7 +39,7 @@
     "weather_snow_description": "Snow outside. Snowflakes on your desktop.",
     "weather_rain_description": "Rain outside. Raindrops on your desktop.",
     "weather_clear_description": "A clear autumn day. Leaves on your desktop.",
-    "cleaning_title": "A little weather. A little play.",
+    "cleaning_title": "A little weather A little play",
     "cleaning_text": "Shovel the snow, sweep away leaves and petals, or wipe the raindrops. Even clearing your desktop can be a little satisfying.",
     "cleaning_snow": "Shovel snow",
     "cleaning_leaves": "Sweep leaves",
@@ -52,18 +48,17 @@
     "cleaning_clear": "Clear the screen",
     "cleaning_reset": "Bring the weather back",
     "cleaning_cleared": "All clear. Bring the weather back to try again.",
-    "garland_title": "Make the edges glow.",
-    "garland_text": "A string of lights along the menu bar, the Dock, or both. Choose your colors, bulb shapes and animation — with or without the weather.",
+    "garland_title": "Make the top edge glow",
+    "garland_text": "A string of lights along the top menu bar. Choose your colors, bulb shapes and animation — with or without the weather.",
     "garland_menu": "Menu bar",
-    "garland_dock": "Dock",
     "palette_warm": "Warm lights",
     "palette_color": "Colorful lights",
     "palette_ice": "Icy lights",
-    "images_title": "Let something of your own fall.",
+    "images_title": "Let something of your own fall",
     "images_text": "Bring up to 10 PNG images and turn your artwork into falling shapes. Use one, or let a few mingle.",
-    "motion_title": "Find your perfect drift.",
-    "motion_text": "Make it lighter, slower or a little windier. Adjust intensity, size, speed and drifting to suit your mood.",
-    "placement_title": "Right where you want it.",
+    "motion_title": "Find your perfect drift",
+    "motion_text": "Fine-tune the intensity, size, speed and wind.",
+    "placement_title": "Right where you want it",
     "placement_text": "Over your apps or behind your windows. Across the whole screen, or just a little along the top.",
     "placement_over": "Over windows",
     "placement_desktop": "Desktop only",
@@ -72,19 +67,39 @@
     "placement_strip": "Top edge only",
     "placement_strip_description": "Effects stay along the top edge.",
     "placement_full_description": "Effects cover the full screen.",
-    "displays_title": "Room for more than one screen.",
-    "displays_text": "One display or a whole desk. Wonderfall brings the atmosphere to your connected screens.",
+    "displays_title": "One display or a whole desk",
+    "displays_text": "Choose which connected screens get the effects.",
     "weather_label": "Try a weather change",
     "cleaning_label": "Try a cleaning tool",
     "palette_label": "Choose a light palette",
+    "garland_scenes_label": "Choose a light scene",
+    "scene_winterNight": "Winter Night",
+    "scene_cozyEvening": "Cozy Evening",
+    "scene_springBloom": "Spring Bloom",
+    "scene_celebration": "Celebration",
+    "image_choose": "Choose your image",
+    "image_drop": "or drop an image here",
+    "image_motion_label": "Choose how your image falls",
+    "image_motion_snow": "Float like snow",
+    "image_motion_leaves": "Drift like leaves",
+    "image_motion_rain": "Fall like rain",
+    "image_file_error": "Choose a PNG, JPEG, or WebP image under 5 MB.",
+    "image_ready": "Your image is falling in the preview.",
+    "placement_label": "Choose where the effects appear",
     "displays_label": "Effects across two connected displays",
-    "preview_note": "A preview of the upcoming seasonal update."
+    "cleaning_media_alt": "Fallen leaves gathered along the bottom of the desktop.",
+    "cleaning_snow_alt": "Snow falling across the desktop, ready to shovel.",
+    "cleaning_leaves_alt": "Fallen leaves gathered along the bottom of the desktop.",
+    "cleaning_rain_alt": "Raindrops on the desktop, ready to wipe away.",
+    "garland_media_alt": "Garland lights along the top menu bar.",
+    "images_media_alt": "Custom artwork used as falling desktop effects.",
+    "placement_media_alt": "Desktop effects shown over open windows and behind them."
   },
   "preview_name": "Make room for a little wonder.",
   "preview_detail": "Same desktop. A new atmosphere.",
   "effects_kicker": "Six ways to set the scene",
   "effects_title": "More than a snow day",
-  "effects_intro": "Choose a seasonal effect, or bring your own artwork. Change the intensity, size, speed and wind to find a look that feels right.",
+  "effects_intro": "Choose a seasonal effect, or bring your own artwork — change the intensity, size, speed and wind to find a look that feels right",
   "themes": [
     [
       "snow",
@@ -140,7 +155,7 @@
     ],
     [
       "Add a little light",
-      "Decorate the menu bar, Dock or both with garlands. Pick colors, bulb shapes and steady, twinkle, wave or chase animation."
+      "Decorate the top menu bar with garlands. Pick colors, bulb shapes and steady, twinkle, wave or chase animation."
     ],
     [
       "Make it your own",
@@ -155,7 +170,7 @@
   "steps": [
     [
       "Install and open",
-      "Download the current release from the Mac App Store and open its menu bar icon."
+      "Download Wonderfall from the Mac App Store and open its menu bar icon."
     ],
     [
       "Choose your snowflakes",
@@ -167,19 +182,14 @@
     ]
   ],
   "faq_title": "A few things you might be wondering",
-  "faq_kicker": "Questions, answered",
   "faq": [
     [
       "What is Wonderfall?",
-      "Wonderfall is a macOS menu bar app for animated desktop overlays. The current App Store release, {store_name} {version}, includes falling snow and custom PNG images. The upcoming seasonal update adds rain, autumn leaves, spring petals, summer fireflies and decorative lights."
-    ],
-    [
-      "Why does the App Store say SnowMyScreen?",
-      "Wonderfall is the new website and product name for the same app by Andrii Sereda. Until the next store update, the download is listed as {store_name} {version}. The App Store app ID is unchanged."
+      "Wonderfall is a macOS menu bar app for animated desktop overlays: snow, rain, autumn leaves, spring petals, summer fireflies, custom PNG artwork and decorative lights."
     ],
     [
       "Is Wonderfall free?",
-      "The current {store_name} release is a paid download, listed at {us_price} in the US Mac App Store. Prices vary by region and may change; check your local store for the current price."
+      "Wonderfall is a paid download, listed at {us_price} in the US Mac App Store. Prices vary by region and may change; check your local store for the current price."
     ],
     [
       "Is it a live wallpaper or a screensaver?",
@@ -195,45 +205,42 @@
     ],
     [
       "Can I use my own images?",
-      "Yes. Import up to 10 PNG images, each up to 5 MB and 1024 × 1024 pixels. Choose one or mix several as falling shapes. The upcoming update adds leaf-like and rain-like motion for custom artwork."
+      "Yes. Import up to 10 PNG images, each up to 5 MB and 1024 × 1024 pixels. Choose one or mix several, with snow-like, leaf-like or rain-like motion."
     ],
     [
       "Can I add Christmas lights without snowfall?",
-      "Garlands are part of the upcoming seasonal update previewed on this page. They have separate controls from weather effects, so you can decorate the menu bar, Dock or both without snowfall."
+      "Yes. Garlands have separate controls from weather effects, so you can light up the top menu bar without snowfall."
     ],
     [
       "Does the rain effect include sound?",
-      "The upcoming rain effect is a visual desktop overlay. It does not include ambient rain audio or music."
+      "The rain effect is a visual desktop overlay. It does not include ambient rain audio or music."
     ],
     [
       "Which Macs are supported?",
-      "Wonderfall requires macOS {minimum_os} or later. Check the available Mac App Store release before downloading. This is a Mac app; it is not an iPhone or iPad app."
+      "Wonderfall requires macOS {minimum_os} or later. This is a Mac app; it is not an iPhone or iPad app."
     ],
     [
       "Does it need an internet connection?",
-      "Snowfall, settings and custom PNGs work locally on your Mac. Downloading and updating require internet access. Optional weather matching in the upcoming update also needs internet and location permission to use Apple WeatherKit."
+      "Desktop effects, settings and custom PNGs work locally on your Mac. Downloading and updating require internet access. Optional weather matching also needs internet and location permission to use Apple WeatherKit."
     ],
     [
       "How do I turn the effects off?",
       "Use the menu bar controls to disable weather effects or lights, or quit the app. Launch-at-login behavior is a separate setting."
     ]
   ],
-  "blog_kicker": "The desktop journal",
   "blog_title": "A little inspiration for your workspace",
   "article_title": "How to Add Snow to Your Mac Desktop (and Other Seasonal Effects)",
   "article_meta_title": "How to Add Snow to Your Mac Desktop | Wonderfall",
-  "article_description": "Set up falling snow on your Mac, customize desktop overlays and PNGs, and preview Wonderfall’s upcoming seasonal effects without changing your wallpaper.",
-  "article_summary": "A practical guide to desktop overlays, seasonal effects and finding a setup that stays out of your way.",
-  "article_label": "Mac desktop guide",
+  "article_description": "Set up falling snow on your Mac, customize desktop overlays and PNGs, and explore Wonderfall’s seasonal effects without changing your wallpaper.",
+  "article_summary": "A practical guide to desktop overlays, seasonal effects and finding a setup that stays out of your way",
   "read": "Read the guide",
   "all_posts": "All articles",
-  "minutes": "6 minute read",
   "published": "October 5, 2026",
   "blog_meta_title": "Mac Desktop Guides & Seasonal Effects | Wonderfall",
   "blog_description": "Practical guides to Mac desktop customization: snow and rain overlays, seasonal effects, decorative lights and custom images.",
-  "blog_intro": "Practical guides to giving your Mac a little more atmosphere. Start with the basics, then make the setup your own.",
-  "cta_title": "A small change. A different feeling",
-  "cta_text": "Give your Mac a season of its own. Start with snow, then see where the mood takes you.",
+  "blog_intro": "Practical guides to giving your Mac a little more atmosphere — start with the basics, then make the setup your own",
+  "cta_title": "A small change A different feeling",
+  "cta_text": "Give your Mac a season of its own — start with snow, then see where the mood takes you",
   "footer_line": "Seasonal desktop effects, made for Mac.",
   "privacy": "Privacy policy",
   "support": "Support",
@@ -241,11 +248,11 @@
   "author": "By Andrew Sereda, developer of Wonderfall",
   "support_title": "Wonderfall Support & Setup for Mac",
   "support_description": "Get help with Wonderfall on Mac: menu bar controls, themes, overlays, PNG imports and contacting the developer.",
-  "support_intro": "Use the menu bar icon to turn snowfall on or off, adjust its motion and import PNG images. The current store download is {store_name}; this site also previews the upcoming Wonderfall settings.",
+  "support_intro": "Use the menu bar icon to choose a seasonal effect, adjust its motion, add garlands or import your own PNG images.",
   "support_sections": [
     [
       "Getting started",
-      "Download the current Mac App Store release, open the app and click its menu bar icon to enable snowfall and adjust settings. The settings window does not need to stay open. The upcoming seasonal update adds the Weather effects theme picker."
+      "Download Wonderfall from the Mac App Store, open the app and click its menu bar icon to choose a theme in Weather effects. The settings window does not need to stay open."
     ],
     [
       "I cannot see an effect",
@@ -253,11 +260,11 @@
     ],
     [
       "Importing custom artwork",
-      "Import a PNG through the custom image controls. The limit is 10 images, each up to 5 MB and 1024 × 1024 pixels. Transparent backgrounds give clean edges. Snowfall motion is available now; the seasonal update adds leaf-like and rain-like motion."
+      "Import a PNG through the custom image controls. The limit is 10 images, each up to 5 MB and 1024 × 1024 pixels. Transparent backgrounds give clean edges. Choose snow-like, leaf-like or rain-like motion."
     ],
     [
       "Controlling lights separately",
-      "Garlands are included in the upcoming seasonal update. Their controls let you choose the menu bar, Dock or both. Lights and weather effects work independently, so lights can be used on their own."
+      "Garland controls let you decorate the top menu bar. Lights and weather effects work independently, so lights can be used on their own."
     ],
     [
       "Turning off automatic launch",
@@ -285,26 +292,26 @@
     "Edit",
     "View"
   ],
-  "hero_line": "Mac desktop effects.",
+  "hero_line": "Mac desktop effects",
   "hero_phrases": [
     {
-      "text": "Winter snow.",
+      "text": "Winter snow",
       "icon": "❄️"
     },
     {
-      "text": "Rain.",
+      "text": "Rain",
       "icon": "🌧️"
     },
     {
-      "text": "Autumn leaves.",
+      "text": "Autumn leaves",
       "icon": "🍂"
     },
     {
-      "text": "Spring petals.",
+      "text": "Spring petals",
       "icon": "🌸"
     },
     {
-      "text": "Summer fireflies.",
+      "text": "Summer fireflies",
       "icon": "✨"
     }
   ],
@@ -316,8 +323,7 @@
     "sections": "Site sections",
     "home": "Home"
   },
-  "product_kicker": "Made for your desktop",
-  "product_title": "Desktop effects for Mac. Your wallpaper stays.",
+  "product_title": "Desktop effects for Mac Your wallpaper stays",
   "product_summary": "Wonderfall adds animated snow, rain, autumn leaves, spring petals and fireflies to your Mac desktop. Keep the effects behind your windows or let them drift over your apps, with your own wallpaper underneath.",
   "product_facts": [
     [
@@ -333,26 +339,22 @@
       "Up to 10 custom PNG images"
     ]
   ],
-  "availability": "Available now as {store_name} {version}: snowfall and custom PNGs. Rain, leaves, petals, fireflies and garlands are previewed here for the upcoming Wonderfall update.",
-  "store_details": "View the available release",
   "setup_link": "How to add snow to your Mac desktop",
-  "released_description": "Wonderfall, currently listed as {store_name}, is a Mac menu bar app for animated desktop snowfall and custom PNG overlays. It keeps your existing wallpaper and requires macOS {minimum_os} or later.",
+  "released_description": "Wonderfall is a Mac menu bar app for animated snow, rain, leaves, petals, fireflies, custom PNG overlays and garlands. It keeps your existing wallpaper and requires macOS {minimum_os} or later.",
   "released_features": [
-    "Animated desktop snowfall",
-    "Custom PNG images",
+    "Animated snow, rain, autumn leaves, spring petals and summer fireflies",
+    "Custom PNG images with multiple motion styles",
+    "Garlands along the top menu bar",
+    "Optional weather matching",
     "Effects over windows or desktop only",
     "Adjustable intensity, size, speed and wind"
   ],
   "reviews_ui": {
-    "eyebrow": "A little love from the App Store",
-    "title": "A little wonder, in their words.",
+    "title": "A little wonder, in their words",
     "summary": "{value} out of 5 · {count} ratings in Ukraine",
     "rating": "Rated {rating} out of 5 stars",
     "country": "Ukraine",
-    "checked": "App Store Ukraine, checked {date}",
-    "pause": "Pause review animation",
-    "play": "Resume review animation",
-    "note": "Reviews of SnowMyScreen, the app’s current App Store name. Excerpts in the authors’ own words."
+    "checked": "App Store Ukraine, checked {date}"
   },
   "updated_label": "Updated",
   "updated_date": "October 20, 2026"
