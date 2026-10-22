@@ -28,7 +28,7 @@
     "Use your own PNG artwork and adjust the motion to suit your desktop."
   ],
   "showcase": {
-    "title": "Your desktop Your kind of wonder",
+    "title": "Your desktop. Your kind of wonder",
     "weather_title": "Follow the weather outside",
     "weather_text": "Automatically match the weather outside, with seasonal effects for clear days.",
     "weather_outside": "Outside",
@@ -39,7 +39,7 @@
     "weather_snow_description": "Snow outside. Snowflakes on your desktop.",
     "weather_rain_description": "Rain outside. Raindrops on your desktop.",
     "weather_clear_description": "A clear autumn day. Leaves on your desktop.",
-    "cleaning_title": "A little weather A little play",
+    "cleaning_title": "A little weather. A little play",
     "cleaning_text": "Shovel the snow, sweep away leaves and petals, or wipe the raindrops. Even clearing your desktop can be a little satisfying.",
     "cleaning_snow": "Shovel snow",
     "cleaning_leaves": "Sweep leaves",
@@ -88,10 +88,14 @@
     "placement_label": "Choose where the effects appear",
     "displays_label": "Effects across two connected displays",
     "cleaning_media_alt": "Fallen leaves gathered along the bottom of the desktop.",
-    "cleaning_snow_alt": "Snow falling across the desktop, ready to shovel.",
-    "cleaning_leaves_alt": "Fallen leaves gathered along the bottom of the desktop.",
-    "cleaning_rain_alt": "Raindrops on the desktop, ready to wipe away.",
+    "cleaning_snow_alt": "A shovel clears falling snow from the desktop.",
+    "cleaning_leaves_alt": "A broom sweeps fallen leaves from the desktop.",
+    "cleaning_rain_alt": "A squeegee wipes raindrops from the desktop.",
     "garland_media_alt": "Garland lights along the top menu bar.",
+    "garland_winterNight_alt": "Tree-shaped garland lights twinkling along the top edge.",
+    "garland_cozyEvening_alt": "Warm bulb garland lights glowing along the top edge.",
+    "garland_springBloom_alt": "Pink heart garland lights twinkling along the top edge.",
+    "garland_celebration_alt": "Multicolored star garland lights twinkling along the top edge.",
     "images_media_alt": "Custom artwork used as falling desktop effects.",
     "placement_media_alt": "Desktop effects shown over open windows and behind them."
   },
@@ -323,7 +327,7 @@
     "sections": "Site sections",
     "home": "Home"
   },
-  "product_title": "Desktop effects for Mac Your wallpaper stays",
+  "product_title": "Desktop effects for Mac. Your wallpaper stays",
   "product_summary": "Wonderfall adds animated snow, rain, autumn leaves, spring petals and fireflies to your Mac desktop. Keep the effects behind your windows or let them drift over your apps, with your own wallpaper underneath.",
   "product_facts": [
     [

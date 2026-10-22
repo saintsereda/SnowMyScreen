@@ -27,6 +27,27 @@
     const demoButton = root.querySelector('[data-demo-pause]');
     let visible = false, userPaused = false, motionOverride = false, failed = false;
     let demoPaused = false, demoMotionOverride = false;
+    let selection = 0;
+    const posters = new Map();
+    const loadPoster = url => {
+      if (!posters.has(url)) {
+        posters.set(url, new Promise(resolve => {
+          const poster = new Image();
+          poster.onload = async () => {
+            if (poster.decode) {
+              try { await poster.decode(); } catch { /* The loaded image can still be shown. */ }
+            }
+            resolve(true);
+          };
+          poster.onerror = () => resolve(false);
+          poster.src = url;
+        }));
+      }
+      return posters.get(url);
+    };
+    if (image) choices.forEach(choice => {
+      if (choice.dataset.poster) loadPoster(choice.dataset.poster);
+    });
     video.controls = false;
     const syncButton = () => {
       button.hidden = video.hidden || failed;
@@ -50,34 +71,45 @@
       demoButton.setAttribute('aria-pressed', String(paused));
       demoButton.setAttribute('aria-label', paused ? demoButton.dataset.play : demoButton.dataset.pause);
     };
-    const select = choice => {
-      if (choice.getAttribute('aria-pressed') === 'true') return;
-      choices.forEach(option => option.setAttribute('aria-pressed', String(option === choice)));
+    const applySelection = (choice, posterReady) => {
       video.pause();
       failed = false;
       const src = choice.dataset.src;
       const poster = choice.dataset.poster;
+      root.classList.toggle('is-switching', !!(image && src && posterReady));
+      if (image) {
+        image.hidden = !poster || (!!src && !posterReady);
+        if (poster) image.src = poster;
+        if (choice.dataset.alt) image.alt = choice.dataset.alt;
+      }
       if (src) video.setAttribute('src', src);
       else video.removeAttribute('src');
       if (poster) video.setAttribute('poster', poster);
       else video.removeAttribute('poster');
       video.hidden = !src;
       video.load();
-      if (image) {
-        image.hidden = !!src || !poster;
-        if (poster) image.src = poster;
-        if (choice.dataset.alt) image.alt = choice.dataset.alt;
-      }
       if (choice.dataset.alt) video.setAttribute('aria-label', choice.dataset.alt);
       if (preview) {
         preview.hidden = !!src;
         preview.dataset.scene = choice.dataset.featureChoice;
         demoButton.hidden = !!src;
       }
-      if (choice.dataset.menuIcon) root.querySelector('[data-desktop-app-icon]').src = choice.dataset.menuIcon;
       root.dataset.featureMediaState = src ? 'video' : 'preview';
       sync();
       syncDemo();
+    };
+    const select = choice => {
+      if (choice.getAttribute('aria-pressed') === 'true') return;
+      choices.forEach(option => option.setAttribute('aria-pressed', String(option === choice)));
+      const current = ++selection;
+      const poster = choice.dataset.poster;
+      if (image && choice.dataset.src && poster) {
+        loadPoster(poster).then(ready => {
+          if (current === selection) applySelection(choice, ready);
+        });
+      } else {
+        applySelection(choice, false);
+      }
     };
     choices.forEach(choice => choice.addEventListener('click', () => select(choice)));
     button.addEventListener('click', () => {
@@ -92,9 +124,15 @@
     });
     video.addEventListener('play', syncButton);
     video.addEventListener('pause', syncButton);
+    video.addEventListener('loadeddata', () => {
+      if (!image || !root.classList.contains('is-switching')) return;
+      root.classList.remove('is-switching');
+      image.hidden = true;
+    });
     video.addEventListener('error', () => {
       failed = true;
       video.hidden = true;
+      root.classList.remove('is-switching');
       if (image) image.hidden = !image.getAttribute('src');
       if (preview) { preview.hidden = false; demoButton.hidden = false; }
       root.dataset.featureMediaState = 'preview';

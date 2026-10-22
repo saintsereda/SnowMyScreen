@@ -121,7 +121,7 @@ for path,page in pages.items():
         assert point_topics==['weather','displays','motion'],path
         slots=[a.get('data-feature-media') for t,a in page.tags if 'data-feature-media' in a]
         assert slots==media_topics,f'Every main feature needs its own media slot: {path}'
-        assert source.count('class="desktop-menu"')==1+len(media_topics),f'Every feature card needs a macOS menu bar: {path}'
+        assert source.count('class="desktop-menu"')==len(media_topics),f'Only the seasonal preview and non-cleaning feature cards need a macOS menu bar: {path}'
         feature_videos=[a for t,a in page.tags if t=='video' and 'data-feature-video' in a]
         assert len(feature_videos)==2 and len([t for t,a in page.tags if t=='video'])==3,f'Keep seasonal, cleaning, and garland recordings separate: {path}'
         for video in feature_videos:

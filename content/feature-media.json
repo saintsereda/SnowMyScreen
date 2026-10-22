@@ -1,14 +1,14 @@
 {
   "cleaning": {
-    "snow": { "src": "", "poster": "/videos/snow-1440p.jpg" },
-    "leaves": { "src": "", "poster": "/images/features/leaf-piles.jpg" },
-    "rain": { "src": "", "poster": "/images/features/rain-droplets.jpg" }
+    "snow": { "src": "/videos/cleaning-snow.mp4", "poster": "/videos/cleaning-snow.jpg" },
+    "leaves": { "src": "/videos/cleaning-leaves.mp4", "poster": "/videos/cleaning-leaves.jpg" },
+    "rain": { "src": "/videos/cleaning-rain.mp4", "poster": "/videos/cleaning-rain.jpg" }
   },
   "garlands": {
-    "winterNight": { "src": "", "poster": "" },
-    "cozyEvening": { "src": "", "poster": "" },
-    "springBloom": { "src": "", "poster": "" },
-    "celebration": { "src": "", "poster": "" }
+    "winterNight": { "src": "/videos/garland-winter-night.mp4", "poster": "/videos/garland-winter-night.jpg" },
+    "cozyEvening": { "src": "/videos/garland-cozy-evening.mp4", "poster": "/videos/garland-cozy-evening.jpg" },
+    "springBloom": { "src": "/videos/garland-spring-bloom.mp4", "poster": "/videos/garland-spring-bloom.jpg" },
+    "celebration": { "src": "/videos/garland-celebration.mp4", "poster": "/videos/garland-celebration.jpg" }
   },
   "images": { "type": "interactive" },
   "placement": { "type": "interactive" }

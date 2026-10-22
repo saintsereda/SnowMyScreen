@@ -184,11 +184,11 @@ def feature_showcase(c):
         for name,text_key in choices:
             entry=media[key][name]
             paths=''.join(f' data-{field}="{E(asset(path) if path else "")}"' for field,path in entry.items())
-            menu=f' data-menu-icon="{menu_symbol_asset(MENU_EFFECT_SYMBOLS[name])}"' if key=='cleaning' else ''
-            alt=f' data-alt="{E(f["cleaning_"+name+"_alt"])}"' if key=='cleaning' else ''
+            alt_key=('garland' if key=='garlands' else 'cleaning')+'_'+name+'_alt'
+            alt=f' data-alt="{E(f[alt_key])}"' if key in ('cleaning','garlands') else ''
             tool={'snow':'shovel','leaves':'broom','rain':'squeegee'}.get(name) if key=='cleaning' else None
             icon=f'<img class="feature-tool-icon" src="{asset("/images/features/tools/"+tool+".png")}" alt="" width="64" height="64" loading="lazy" decoding="async">' if tool else ''
-            buttons.append(f'<button type="button" data-feature-choice="{name}"{paths}{menu}{alt} aria-pressed="{str(name==selected).lower()}">{icon}<span>{E(f[text_key])}</span></button>')
+            buttons.append(f'<button type="button" data-feature-choice="{name}"{paths}{alt} aria-pressed="{str(name==selected).lower()}">{icon}<span>{E(f[text_key])}</span></button>')
         classes='feature-switcher feature-switcher--tools' if key=='cleaning' else 'feature-switcher'
         return f'<div class="{classes}" role="group" aria-label="{E(f[label])}">{"".join(buttons)}</div>'
 
@@ -200,13 +200,13 @@ def feature_showcase(c):
         entry=media[key][first]
         poster=entry['poster']
         src=entry['src']
-        alt=f['cleaning_snow_alt'] if key=='cleaning' else f[prefix+'_media_alt']
+        alt=f['cleaning_snow_alt'] if key=='cleaning' else f['garland_winterNight_alt']
         preview=''
         if key=='garlands':
             bulbs=''.join(f'<span style="--bulb:{index}" aria-hidden="true"></span>' for index in range(16))
-            preview=f'<div class="garland-preview" data-garland-preview data-scene="{first}" aria-hidden="true"><div class="garland-preview__wallpaper"></div><div class="garland-preview__lights">{bulbs}</div></div>'
-        image=f'<img class="feature-media__image" data-feature-image src="{asset(poster)}" alt="{E(alt)}" loading="lazy" decoding="async"' + ('' if poster else ' hidden') + '>' if key=='cleaning' else ''
-        video=f'<video class="feature-media__video" data-feature-video{f" src={chr(34)}{E(src)}{chr(34)}" if src else ""}{f" poster={chr(34)}{asset(poster)}{chr(34)}" if poster else ""} muted loop playsinline preload="none" controls aria-label="{E(alt)}"' + ('' if src else ' hidden') + '></video>'
+            preview=f'<div class="garland-preview" data-garland-preview data-scene="{first}" aria-hidden="true"{" hidden" if src else ""}><div class="garland-preview__wallpaper"></div><div class="garland-preview__lights">{bulbs}</div></div>'
+        image=f'<img class="feature-media__image" data-feature-image src="{asset(poster)}" alt="{E(alt)}" loading="lazy" decoding="async"' + ('' if poster and not src else ' hidden') + '>' if key=='cleaning' else ''
+        video=f'<video class="feature-media__video" data-feature-video{f" src={chr(34)}{asset(src)}{chr(34)}" if src else ""}{f" poster={chr(34)}{asset(poster)}{chr(34)}" if poster else ""} muted loop playsinline preload="none" controls aria-label="{E(alt)}"' + ('' if src else ' hidden') + '></video>'
         return preview+image+video+pause_button('data-feature-pause',True)+(pause_button('data-demo-pause',bool(src)) if key=='garlands' else '')
 
     def custom_content():
@@ -218,9 +218,10 @@ def feature_showcase(c):
 
     def media_slot(key, prefix):
         content=video_content(key,prefix) if key in variants else custom_content() if key=='images' else placement_content()
-        app_symbol={'cleaning':'snowflake','garlands':'lightbulb',
-                    'images':'sparkles','placement':'switch.2'}[key]
-        return f'<div class="feature-media feature-media--{key} desktop-screen desktop-screen--compact" data-feature-media="{key}" data-feature-media-state="{"video" if key in variants and media[key][variants[key][0][0]]["src"] else "interactive" if key not in variants else "preview"}">{desktop_menu_bar(app_symbol)}<div class="feature-media__viewport">{content}</div></div>'
+        app_symbol={'garlands':'lightbulb','images':'sparkles','placement':'switch.2'}.get(key)
+        desktop=' desktop-screen desktop-screen--compact' if app_symbol else ''
+        menu=desktop_menu_bar(app_symbol) if app_symbol else ''
+        return f'<div class="feature-media feature-media--{key}{desktop}" data-feature-media="{key}" data-feature-media-state="{"video" if key in variants and media[key][variants[key][0][0]]["src"] else "interactive" if key not in variants else "preview"}">{menu}<div class="feature-media__viewport">{content}</div></div>'
 
     def controls(key):
         if key=='cleaning': return switcher(key,variants[key],'cleaning_label','snow')

@@ -82,29 +82,60 @@ for (const locale of ['en', 'uk']) {
     assert.equal(doc.querySelectorAll('[data-feature-presentation="media"]').length, 4);
     const cleaning = doc.querySelector('[data-feature-media="cleaning"]');
     const image = cleaning.querySelector('[data-feature-image]');
+    const garlands = doc.querySelector('[data-feature-media="garlands"]');
+    const garlandVideo = garlands.querySelector('[data-feature-video]');
+    const garlandPreview = garlands.querySelector('[data-garland-preview]');
+    assert.equal(cleaning.querySelector('.desktop-menu'), null);
+    assert.equal(doc.querySelectorAll('#features .desktop-menu').length, 3);
     const toolIcons = [...doc.querySelectorAll('[data-feature="cleaning"] .feature-tool-icon')];
     assert.deepEqual(toolIcons.map(icon => new URL(icon.src).pathname),
       ['/images/features/tools/shovel.png', '/images/features/tools/broom.png', '/images/features/tools/squeegee.png']);
     assert.ok(toolIcons.every(icon => icon.alt === ''));
     assert.equal(doc.querySelectorAll('[data-garland-preview] .garland-preview__lights').length, 1);
     assert.equal(doc.querySelectorAll('[data-garland-preview] .garland-preview__dock').length, 0);
+    assert.equal(garlandPreview.hidden, true);
+    assert.match(garlandVideo.src, /garland-winter-night\.mp4\?v=/);
     assert.equal(image.alt, doc.querySelector('[data-feature="cleaning"] [data-feature-choice="snow"]').dataset.alt);
+    assert.equal(image.hidden, true);
+    assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-snow\.mp4\?v=/);
     app.click('[data-feature-choice="leaves"]');
-    assert.match(image.src, /leaf-piles\.jpg/);
+    assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-snow\.mp4\?v=/,
+      'The previous video stays visible until the next poster is ready');
+    await wait(0);
+    assert.match(image.src, /cleaning-leaves\.jpg\?v=/);
+    assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-leaves\.mp4\?v=/);
     assert.equal(image.alt, doc.querySelector('[data-feature="cleaning"] [data-feature-choice="leaves"]').dataset.alt);
+    assert.equal(image.hidden, false);
+    assert.equal(cleaning.classList.contains('is-switching'), true);
+    cleaning.querySelector('[data-feature-video]').dispatchEvent(new app.window.Event('loadeddata'));
+    assert.equal(image.hidden, true);
+    assert.equal(cleaning.classList.contains('is-switching'), false);
     assert.equal(doc.querySelector('[data-feature="cleaning"] [data-feature-choice="leaves"]').getAttribute('aria-pressed'), 'true');
     app.click('[data-feature-choice="rain"]');
-    assert.match(image.src, /rain-droplets\.jpg/);
-    app.click('[data-feature-choice="cozyEvening"]');
-    assert.equal(doc.querySelector('[data-garland-preview]').dataset.scene, 'cozyEvening');
-    app.click('[data-feature-choice="celebration"]');
-    assert.equal(doc.querySelector('[data-garland-preview]').dataset.scene, 'celebration');
+    await wait(0);
+    assert.match(image.src, /cleaning-rain\.jpg\?v=/);
+    assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-rain\.mp4\?v=/);
+    for (const [choice, filename] of [
+      ['cozyEvening', 'cozy-evening'], ['springBloom', 'spring-bloom'],
+      ['celebration', 'celebration'], ['winterNight', 'winter-night']
+    ]) {
+      const button = doc.querySelector(`[data-feature-choice="${choice}"]`);
+      button.click();
+      assert.match(garlandVideo.src, new RegExp(`garland-${filename}\\.mp4\\?v=`));
+      assert.match(garlandVideo.getAttribute('poster'), new RegExp(`garland-${filename}\\.jpg\\?v=`));
+      assert.equal(garlandVideo.getAttribute('aria-label'), button.dataset.alt);
+      assert.equal(garlandPreview.hidden, true);
+    }
     app.visible(true);
-    const garlandPause = doc.querySelector('[data-feature="garlands"] [data-demo-pause]');
+    const garlandPause = doc.querySelector('[data-feature="garlands"] [data-feature-pause]');
     garlandPause.click();
-    assert.equal(doc.querySelector('[data-garland-preview]').classList.contains('is-paused'), true);
+    assert.equal(garlandVideo.paused, true);
     garlandPause.click();
-    assert.equal(doc.querySelector('[data-garland-preview]').classList.contains('is-paused'), false);
+    assert.equal(garlandVideo.paused, false);
+    garlandVideo.dispatchEvent(new app.window.Event('error'));
+    assert.equal(garlandVideo.hidden, true);
+    assert.equal(garlandPreview.hidden, false);
+    assert.equal(garlands.dataset.featureMediaState, 'preview');
     app.click('[data-placement-choice="desktop"]');
     assert.equal(doc.querySelector('[data-placement-preview]').dataset.layer, 'desktop');
     assert.equal(doc.querySelector('[data-placement-choice="desktop"]').getAttribute('aria-pressed'), 'true');
@@ -115,17 +146,19 @@ for (const locale of ['en', 'uk']) {
   });
 }
 
-test('a later local recording replaces a poster and obeys playback visibility', async t => {
+test('cleaning recordings obey playback visibility and reduced motion', async t => {
   const app = await setup(t);
   const doc = app.window.document;
   const choice = doc.querySelector('[data-feature="cleaning"] [data-feature-choice="leaves"]');
   const root = doc.querySelector('[data-feature-media="cleaning"]');
   const video = root.querySelector('[data-feature-video]');
-  choice.dataset.src = '/videos/cleaning-leaves.mp4';
   app.visible(true);
   choice.click();
+  await wait(0);
   assert.match(video.src, /cleaning-leaves\.mp4/);
   assert.equal(video.hidden, false);
+  assert.equal(root.querySelector('[data-feature-image]').hidden, false);
+  video.dispatchEvent(new app.window.Event('loadeddata'));
   assert.equal(root.querySelector('[data-feature-image]').hidden, true);
   assert.equal(video.paused, false);
   app.visible(false);
