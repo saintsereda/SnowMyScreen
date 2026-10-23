@@ -61,6 +61,7 @@
     const applySelection = (choice, posterReady) => {
       video.pause();
       failed = false;
+      if (root.dataset.featureMedia === 'cleaning') root.dataset.cleaningTool = choice.dataset.featureChoice;
       const src = choice.dataset.src;
       const poster = choice.dataset.poster;
       root.classList.toggle('is-switching', !!(image && src && posterReady));

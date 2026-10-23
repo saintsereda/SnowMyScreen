@@ -136,6 +136,10 @@ for (const locale of ['en', 'uk']) {
     await wait(0);
     assert.match(image.src, /cleaning-rain\.jpg\?v=/);
     assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-rain\.mp4\?v=/);
+    assert.equal(cleaning.dataset.cleaningTool, 'rain', 'The rain recording uses its full-width framing');
+    app.click('[data-feature-choice="snow"]');
+    await wait(0);
+    assert.equal(cleaning.dataset.cleaningTool, 'snow', 'Other tools return to the enlarged framing');
     app.click('[data-feature="placement"] [data-feature-choice="desktop"]');
     await wait(0);
     assert.match(placementVideo.src, /placement-desktop\.mp4\?v=/);
