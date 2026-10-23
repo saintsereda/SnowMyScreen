@@ -58,12 +58,25 @@ def garland_montage(source):
     poster(destination, VIDEOS / "garland-showcase.jpg", 0.5)
 
 
-def placement_recording(source):
-    destination = VIDEOS / "placement-showcase.mp4"
-    run("-i", source, "-vf", "fps=24,scale=960:-2", "-an", "-c:v", "libx264",
-        "-preset", "medium", "-crf", "25", "-pix_fmt", "yuv420p",
-        "-movflags", "+faststart", destination)
-    poster(destination, VIDEOS / "placement-showcase.jpg", 17)
+def placement_recordings(source):
+    settings = ("-an", "-c:v", "libx264", "-preset", "medium", "-crf", "25",
+                "-pix_fmt", "yuv420p", "-movflags", "+faststart")
+
+    # The first and last stretches keep the snow behind the browser window;
+    # the middle stretch shows it falling in front of the window.
+    desktop = VIDEOS / "placement-desktop.mp4"
+    filter_graph = (
+        "[0:v]trim=start=0.2:end=9.6,setpts=PTS-STARTPTS,fps=24,scale=960:-2[a];"
+        "[0:v]trim=start=26.7:end=48.7,setpts=PTS-STARTPTS,fps=24,scale=960:-2[b];"
+        "[a][b]concat=n=2:v=1:a=0[out]"
+    )
+    run("-i", source, "-filter_complex", filter_graph, "-map", "[out]", *settings, desktop)
+    poster(desktop, VIDEOS / "placement-desktop.jpg", 3)
+
+    over = VIDEOS / "placement-over-windows.mp4"
+    run("-i", source, "-vf", "trim=start=10.5:end=25.4,setpts=PTS-STARTPTS,fps=24,scale=960:-2",
+        *settings, over)
+    poster(over, VIDEOS / "placement-over-windows.jpg", 5)
 
 
 if __name__ == "__main__":
@@ -72,4 +85,4 @@ if __name__ == "__main__":
     parser.add_argument("placement_mov", type=Path)
     args = parser.parse_args()
     garland_montage(args.garland_mov)
-    placement_recording(args.placement_mov)
+    placement_recordings(args.placement_mov)

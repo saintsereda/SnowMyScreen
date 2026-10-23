@@ -6,5 +6,8 @@
   },
   "garlands": { "src": "/videos/garland-showcase.mp4", "poster": "/videos/garland-showcase.jpg" },
   "images": { "type": "interactive" },
-  "placement": { "src": "/videos/placement-showcase.mp4", "poster": "/videos/placement-showcase.jpg" }
+  "placement": {
+    "over": { "src": "/videos/placement-over-windows.mp4", "poster": "/videos/placement-over-windows.jpg" },
+    "desktop": { "src": "/videos/placement-desktop.mp4", "poster": "/videos/placement-desktop.jpg" }
+  }
 }
