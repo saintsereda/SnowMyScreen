@@ -234,7 +234,7 @@ def feature_showcase(c):
         buttons=''.join(f'<button type="button" data-placement-choice="{name}" data-description="{E(f["placement_"+name+"_description"])}" aria-pressed="{str(name=="over").lower()}">{E(f[text_key])}</button>' for name,text_key in choices)
         return f'<div class="feature-switcher" role="group" aria-label="{E(f["placement_label"])}">{buttons}</div>'
 
-    stories=''.join(f'<article class="feature-story" data-feature="{key}" data-feature-presentation="media"><div class="feature-story__visual">{media_slot(key,prefix)}{controls(key)}</div><div class="feature-story__copy"><h3>{E(f[prefix+"_title"])}</h3><p>{E(f[prefix+"_text"])}</p></div></article>' for key,prefix in primary)
+    stories=''.join(f'<article class="feature-story" data-feature="{key}" data-feature-presentation="media"><div class="feature-story__visual">{media_slot(key,prefix)}{controls(key) if key!="cleaning" else ""}</div><div class="feature-story__copy"><h3>{E(f[prefix+"_title"])}</h3><p>{E(f[prefix+"_text"])}</p>{controls(key) if key=="cleaning" else ""}</div></article>' for key,prefix in primary)
     points=''.join(f'<li class="feature-point" data-feature="{key}" data-feature-presentation="point"><span class="feature-point__tile" aria-hidden="true">{symbol(icon,"feature-point__icon")}</span><div><h3>{E(f[key+"_title"])}</h3><p>{E(f[key+"_text"])}</p></div></li>' for key,icon in (('weather','cloud.sun'),('displays','desktopcomputer.and.macbook'),('motion','gear')))
     return f"""<section class="feature-showcase" id="features" aria-labelledby="features-title"><div class="wrap">
 <div class="feature-showcase__heading"><h2 id="features-title">{E(f['title'])}</h2></div>

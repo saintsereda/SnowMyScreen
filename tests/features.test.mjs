@@ -81,11 +81,14 @@ for (const locale of ['en', 'uk']) {
     const doc = app.window.document;
     assert.equal(doc.querySelectorAll('[data-feature-presentation="media"]').length, 4);
     const cleaning = doc.querySelector('[data-feature-media="cleaning"]');
+    const cleaningStory = doc.querySelector('[data-feature="cleaning"]');
     const image = cleaning.querySelector('[data-feature-image]');
     const garlands = doc.querySelector('[data-feature-media="garlands"]');
     const garlandVideo = garlands.querySelector('[data-feature-video]');
     const garlandPreview = garlands.querySelector('[data-garland-preview]');
     assert.equal(cleaning.querySelector('.desktop-menu'), null);
+    assert.ok(cleaningStory.querySelector('.feature-story__copy > .feature-switcher--tools'));
+    assert.equal(cleaningStory.querySelector('.feature-story__visual > .feature-switcher--tools'), null);
     assert.equal(doc.querySelectorAll('#features .desktop-menu').length, 3);
     const toolIcons = [...doc.querySelectorAll('[data-feature="cleaning"] .feature-tool-icon')];
     assert.deepEqual(toolIcons.map(icon => new URL(icon.src).pathname),
