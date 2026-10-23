@@ -17,7 +17,8 @@ async function setup(t, path = '/', reduced = false) {
   window.matchMedia = () => media;
   const scrolls = [];
   window.scrollTo = options => scrolls.push(options);
-  window.document.write(await readFile(new URL(path.slice(1) + 'index.html', root), 'utf8'));
+  const file = path.endsWith('.html') ? path.slice(1) : path.slice(1) + 'index.html';
+  window.document.write(await readFile(new URL(file, root), 'utf8'));
   window.eval(script);
   return { window, media, scrolls, links: [...window.document.querySelectorAll('[data-brand-link]')] };
 }
@@ -28,8 +29,7 @@ function click(window, link, options = {}) {
   return event;
 }
 
-function finish(window, link, animationName = window.document.body.classList.contains('home-page') ?
-  'brand-star-shooting' : 'brand-star-crossing') {
+function finish(window, link, animationName = 'brand-star-shooting') {
   const event = new window.Event('animationend', { bubbles: true });
   Object.defineProperty(event, 'animationName', { value: animationName });
   link.querySelector('.brand-icon__star').dispatchEvent(event);
@@ -45,8 +45,8 @@ for (const locale of ['en', 'uk']) {
       assert.ok(icon.querySelector('.brand-icon__star'));
       assert.equal(click(window, link).defaultPrevented, true);
       assert.equal(icon.classList.contains('is-launching'), true);
-      finish(window, link, 'brand-star-crossing');
-      assert.equal(icon.classList.contains('is-launching'), true, 'Home pages wait for the shooting-star motion');
+      finish(window, link, 'unrelated-animation');
+      assert.equal(icon.classList.contains('is-launching'), true, 'The link waits for the shooting-star motion');
       finish(window, link);
       assert.equal(icon.classList.contains('is-launching'), false);
     }
@@ -55,14 +55,16 @@ for (const locale of ['en', 'uk']) {
   });
 }
 
-for (const locale of ['en', 'uk']) {
-  test(`${locale}: an inner-page logo follows its home link after the original motion`, async t => {
-    const path = locale === 'en' ? '/support/' : '/uk/support/';
+for (const [locale, path] of [
+  ['en', '/support/'], ['uk', '/uk/support/'],
+  ['en', '/privacy.html'], ['uk', '/uk/privacy.html']
+]) {
+  test(`${locale}: logo on ${path} follows its home link after the shared motion`, async t => {
     const { window, links } = await setup(t, path);
     assert.equal(click(window, links[0]).defaultPrevented, true);
     assert.equal(window.location.pathname, path);
-    finish(window, links[0], 'brand-star-shooting');
-    assert.equal(window.location.pathname, path, 'The shooting-star motion stays on home pages');
+    finish(window, links[0], 'unrelated-animation');
+    assert.equal(window.location.pathname, path);
     finish(window, links[0]);
     assert.equal(window.location.pathname, locale === 'en' ? '/' : '/uk/');
   });

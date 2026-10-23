@@ -1,7 +1,6 @@
 (() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const shooting = document.body.classList.contains('home-page');
-  const animationName = shooting ? 'brand-star-shooting' : 'brand-star-crossing';
+  const animationName = 'brand-star-shooting';
 
   document.querySelectorAll('[data-brand-link]').forEach(link => {
     const icon = link.querySelector('.brand-icon');
@@ -41,7 +40,7 @@
       finishCurrent = finish;
       star.addEventListener('animationend', onAnimationEnd);
       icon.classList.add('is-launching');
-      timeout = window.setTimeout(finish, shooting ? 1150 : 920);
+      timeout = window.setTimeout(finish, 1150);
     });
 
     reducedMotion.addEventListener('change', () => {

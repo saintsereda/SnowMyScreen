@@ -26,12 +26,7 @@
 .brand-icon__background { z-index: 0; }
 .brand-icon__star { z-index: 2; }
 
-.brand-icon.is-launching .brand-icon__star {
-  animation: brand-star-crossing 820ms both;
-}
-
-/* Home pages use the star's own upper-left to lower-right axis. */
-.home-page .brand-icon::after {
+.brand-icon::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -42,11 +37,11 @@
   pointer-events: none;
 }
 
-.home-page .brand-icon.is-launching .brand-icon__star {
+.brand-icon.is-launching .brand-icon__star {
   animation: brand-star-shooting 1050ms both;
 }
 
-.home-page .brand-icon.is-launching::after {
+.brand-icon.is-launching::after {
   animation: brand-star-afterimage 1050ms both;
 }
 
@@ -69,13 +64,6 @@
   100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0; }
 }
 
-@keyframes brand-star-crossing {
-  0% { transform: translateX(0); animation-timing-function: cubic-bezier(.45, 0, .9, .55); }
-  42% { transform: translateX(120%); }
-  42.01% { transform: translateX(-120%); animation-timing-function: cubic-bezier(.12, .65, .3, 1); }
-  100% { transform: translateX(0); }
-}
-
 @media (max-width: 640px) {
   .footer .brand-icon { width: 24px; }
 }
@@ -86,6 +74,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .brand-icon.is-launching .brand-icon__star,
-  .home-page .brand-icon.is-launching .brand-icon__star,
-  .home-page .brand-icon.is-launching::after { animation: none; }
+  .brand-icon.is-launching::after { animation: none; }
 }
