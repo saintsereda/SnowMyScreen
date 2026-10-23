@@ -86,6 +86,9 @@
     const select = choice => {
       if (choice.getAttribute('aria-pressed') === 'true') return;
       choices.forEach(option => option.setAttribute('aria-pressed', String(option === choice)));
+      if (root.dataset.featureMedia === 'placement') {
+        choice.parentElement.dispatchEvent(new CustomEvent('wonderfall:placement-change', { detail: { value: choice.dataset.featureChoice } }));
+      }
       const current = ++selection;
       const poster = choice.dataset.poster;
       if (image && choice.dataset.src && poster) {

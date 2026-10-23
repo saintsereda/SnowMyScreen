@@ -124,6 +124,33 @@ for (const locale of ['en', 'uk']) {
   });
 }
 
+test('placement choices use the same animated radio and forward video selections', async t => {
+  const app = await setup(t);
+  const fallback = app.window.document.querySelector('[data-feature="placement"] .feature-switcher--placement');
+  const group = app.window.document.querySelector('[data-placement-switch] [role="radiogroup"]');
+  const radios = [...group.querySelectorAll('[role="radio"]')];
+  const native = [...fallback.querySelectorAll('[data-feature-choice]')];
+  const choices = [];
+  native.forEach(button => button.addEventListener('click', () => choices.push(button.dataset.featureChoice)));
+
+  assert.equal(fallback.hidden, true);
+  assert.equal(radios.length, 3);
+  assert.deepEqual(radios.map(radio => radio.textContent), native.map(button => button.textContent));
+  radios[1].dispatchEvent(new app.window.MouseEvent('click', { bubbles: true, detail: 1 }));
+  await wait(60);
+  assert.deepEqual(choices, ['desktop']);
+  assert.deepEqual(radios.map(radio => radio.getAttribute('aria-checked')), ['false', 'true', 'false']);
+  const moving = radios[1].style.transform;
+  await wait(60);
+  assert.notEqual(radios[1].style.transform, moving, 'Placement clicks run the same spring as season clicks');
+
+  radios[1].dispatchEvent(new app.window.KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true, cancelable: true }));
+  await wait(20);
+  assert.deepEqual(choices, ['desktop', 'strip']);
+  assert.equal(radios[2].getAttribute('aria-checked'), 'true');
+  assert.equal(app.window.document.activeElement, radios[2]);
+});
+
 test('keyboard arrows wrap, Home/End focus the selection, and external changes stay in sync', async t => {
   const app = await setup(t);
   for (const [from, key, to] of [[0, 'ArrowLeft', 4], [4, 'ArrowRight', 0], [0, 'End', 4], [4, 'Home', 0], [0, 'ArrowDown', 1], [1, 'ArrowUp', 0]]) {
