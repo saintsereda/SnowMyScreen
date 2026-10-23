@@ -105,6 +105,8 @@ for (const locale of ['en', 'uk']) {
     assert.match(placementVideo.getAttribute('poster'), /placement-over-windows\.jpg\?v=/);
     assert.equal(doc.querySelectorAll('[data-feature="garlands"] [data-feature-choice]').length, 0);
     assert.deepEqual([...doc.querySelectorAll('[data-feature="placement"] [data-feature-choice]')].map(button => button.dataset.featureChoice), ['over', 'desktop']);
+    assert.ok(doc.querySelector('[data-feature="placement"] .feature-story__copy > .feature-switcher'));
+    assert.equal(doc.querySelector('[data-feature="placement"] .feature-story__visual > .feature-switcher'), null);
     assert.equal(image.alt, doc.querySelector('[data-feature="cleaning"] [data-feature-choice="snow"]').dataset.alt);
     assert.equal(image.hidden, true);
     assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-snow\.mp4\?v=/);
