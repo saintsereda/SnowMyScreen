@@ -7,7 +7,6 @@
   const caption = preview.querySelector('[data-video-caption]');
   const picker = preview.querySelector('.theme-picker');
   const panel = preview.querySelector('.control-panel');
-  const pause = preview.querySelector('[data-preview-pause]');
   const menuIcon = preview.querySelector('[data-desktop-app-icon]');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const description = preview.querySelector('[data-theme-description]');
@@ -17,28 +16,14 @@
   let onScreen = !('IntersectionObserver' in window);
   let hasVideo = false;
   let activeTheme = null;
-  let paused = false;
-  let motionOverride = false;
-  video.controls = false;
-
-  function syncPauseControl() {
-    pause.hidden = !hasVideo;
-    pause.setAttribute('aria-pressed', String(video.paused));
-    pause.setAttribute('aria-label', video.paused ? pause.dataset.play : pause.dataset.pause);
-  }
 
   function syncPlayback() {
-    if (!hasVideo || paused || (motion.matches && !motionOverride) || document.hidden || !onScreen) {
+    if (!hasVideo || motion.matches || document.hidden || !onScreen) {
       video.pause();
       video.classList.remove('is-switching');
     } else {
-      video.play().catch(error => {
-        if (error.name === 'NotAllowedError') video.controls = true;
-        video.classList.remove('is-switching');
-        syncPauseControl();
-      });
+      video.play().catch(() => video.classList.remove('is-switching'));
     }
-    syncPauseControl();
   }
 
   function setTheme(theme) {
@@ -77,13 +62,6 @@
     syncPlayback();
   });
   video.addEventListener('loadeddata', () => video.classList.remove('is-switching'));
-  video.addEventListener('play', syncPauseControl);
-  video.addEventListener('pause', syncPauseControl);
-  pause.addEventListener('click', () => {
-    paused = !video.paused;
-    if (!paused) motionOverride = true;
-    syncPlayback();
-  });
   picker.hidden = false;
   panel.hidden = false;
   picker.addEventListener('click', event => {
@@ -92,10 +70,7 @@
   });
   preview.addEventListener('wonderfall:theme-request', event => setTheme(event.detail?.theme));
   document.addEventListener('visibilitychange', syncPlayback);
-  motion.addEventListener('change', () => {
-    motionOverride = false;
-    syncPlayback();
-  });
+  motion.addEventListener('change', syncPlayback);
   window.addEventListener('pageshow', syncPlayback);
   window.addEventListener('pagehide', () => video.pause());
   if ('IntersectionObserver' in window) {

@@ -472,30 +472,9 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
   color: #334baf;
 }
 .home-page .control-panel .theme-option:active { transform: scale(.97); }
-.home-page .preview-pause {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  padding: 11px;
-  right: 16px;
-  bottom: 16px;
-  border-color: #ffffff4d;
-  background: #172b4773;
-  color: #fff;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  transition: background-color 160ms ease, transform 120ms cubic-bezier(.23,1,.32,1);
-}
-.preview-pause svg { width: 20px; height: 20px; }
-.preview-pause[aria-pressed=true] .preview-pause__pause,
-.preview-pause:not([aria-pressed=true]) .preview-pause__play { display: none; }
-.home-page .preview-pause:active { transform: scale(.96); }
-.home-page .preview-pause:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
 @media (hover: hover) and (pointer: fine) {
   .home-page .control-panel .theme-option:hover { background: #f2f5ff; }
   .home-page .control-panel .theme-option[aria-pressed=true]:hover { background: #e8edff; }
-  .home-page .preview-pause:hover { background: #172b47a6; }
 }
 
 .faq-section { border-color: #e8e2e8; }
@@ -556,7 +535,6 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
   .home-page .control-panel { padding-top: 20px; }
   .home-page .control-panel .theme-option { padding: 9px 12px; font-size: 12px; }
   .home-page .control-panel .theme-picker { gap: 6px; }
-  .home-page .preview-pause { right: 10px; bottom: 10px; }
   .final-cta { margin-block: 44px 70px; padding: 55px 22px; border-radius: 25px; }
 }
 

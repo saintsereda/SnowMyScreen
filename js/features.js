@@ -23,10 +23,7 @@
     const video = root.querySelector('[data-feature-video]');
     const image = root.querySelector('[data-feature-image]');
     const preview = root.querySelector('[data-garland-preview]');
-    const button = root.querySelector('[data-feature-pause]');
-    const demoButton = root.querySelector('[data-demo-pause]');
-    let visible = false, userPaused = false, motionOverride = false, failed = false;
-    let demoPaused = false, demoMotionOverride = false;
+    let visible = false, failed = false;
     let selection = 0;
     const posters = new Map();
     const loadPoster = url => {
@@ -48,28 +45,18 @@
     if (image) choices.forEach(choice => {
       if (choice.dataset.poster) loadPoster(choice.dataset.poster);
     });
-    video.controls = false;
-    const syncButton = () => {
-      button.hidden = video.hidden || failed;
-      button.setAttribute('aria-pressed', String(video.paused));
-      button.setAttribute('aria-label', video.paused ? button.dataset.play : button.dataset.pause);
-    };
     const sync = () => {
-      if (video.hidden || failed || !pageActive || !visible || document.hidden || userPaused || (reduced.matches && !motionOverride)) {
+      if (video.hidden || failed || !pageActive || !visible || document.hidden || reduced.matches) {
         video.pause();
       } else {
         const play = video.play();
-        if (play && play.catch) play.catch(syncButton);
+        if (play && play.catch) play.catch(() => {});
       }
-      syncButton();
     };
     const syncDemo = () => {
-      if (!demoButton) return;
-      const paused = demoPaused || (reduced.matches && !demoMotionOverride) || !pageActive || document.hidden || !visible;
+      if (!preview) return;
+      const paused = reduced.matches || !pageActive || document.hidden || !visible;
       preview.classList.toggle('is-paused', paused);
-      preview.classList.toggle('motion-override', demoMotionOverride);
-      demoButton.setAttribute('aria-pressed', String(paused));
-      demoButton.setAttribute('aria-label', paused ? demoButton.dataset.play : demoButton.dataset.pause);
     };
     const applySelection = (choice, posterReady) => {
       video.pause();
@@ -91,7 +78,6 @@
       if (choice.dataset.alt) video.setAttribute('aria-label', choice.dataset.alt);
       if (preview) {
         preview.hidden = !!src;
-        demoButton.hidden = !!src;
       }
       root.dataset.featureMediaState = src ? 'video' : 'preview';
       sync();
@@ -111,18 +97,6 @@
       }
     };
     choices.forEach(choice => choice.addEventListener('click', () => select(choice)));
-    button.addEventListener('click', () => {
-      userPaused = !video.paused;
-      if (!userPaused) motionOverride = true;
-      sync();
-    });
-    if (demoButton) demoButton.addEventListener('click', () => {
-      demoPaused = demoButton.getAttribute('aria-pressed') !== 'true';
-      if (!demoPaused) demoMotionOverride = true;
-      syncDemo();
-    });
-    video.addEventListener('play', syncButton);
-    video.addEventListener('pause', syncButton);
     video.addEventListener('loadeddata', () => {
       if (!image || !root.classList.contains('is-switching')) return;
       root.classList.remove('is-switching');
@@ -133,7 +107,7 @@
       video.hidden = true;
       root.classList.remove('is-switching');
       if (image) image.hidden = !image.getAttribute('src');
-      if (preview) { preview.hidden = false; demoButton.hidden = false; }
+      if (preview) preview.hidden = false;
       root.dataset.featureMediaState = 'preview';
       sync();
       syncDemo();
@@ -148,11 +122,9 @@
   const context = canvas.getContext('2d');
   if (!context) return;
   const card = custom.closest('[data-feature]');
-  const customButton = custom.parentElement.querySelector('[data-demo-pause]');
   const fileInput = card.querySelector('[data-custom-file]');
   const status = card.querySelector('[data-custom-status]');
   let artwork, artworkURL, width = 0, height = 0, motion = 'snow';
-  let customPaused = false, customOverride = false;
   let particles = [], visible = false, frame = 0, lastTime = 0, emission = [0, 0, 0];
   const bases = [
     { accel: 70, births: 32, opacity: .3 },
@@ -267,18 +239,10 @@
     syncAnimation();
   };
   const syncAnimation = () => {
-    const paused = customPaused || (reduced.matches && !customOverride);
-    customButton.setAttribute('aria-pressed', String(paused));
-    customButton.setAttribute('aria-label', paused ? customButton.dataset.play : customButton.dataset.pause);
-    const active = pageActive && !document.hidden && visible && !paused && !!artwork;
+    const active = pageActive && !document.hidden && visible && !reduced.matches && !!artwork;
     if (active && !frame) frame = requestAnimationFrame(tick);
     else if (!active && frame) { cancelAnimationFrame(frame); frame = 0; lastTime = 0; draw(); }
   };
-  customButton.addEventListener('click', () => {
-    customPaused = customButton.getAttribute('aria-pressed') !== 'true';
-    if (!customPaused) customOverride = true;
-    syncAnimation();
-  });
   const setArtwork = (image, url) => {
     if (artworkURL) URL.revokeObjectURL(artworkURL);
     artworkURL = url || null;

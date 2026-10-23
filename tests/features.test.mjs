@@ -102,6 +102,8 @@ for (const locale of ['en', 'uk']) {
     assert.ok(images.querySelector('[data-custom-preview] .feature-upload [data-custom-file]'));
     assert.equal(images.querySelector('.custom-preview__drop'), null);
     assert.equal(doc.querySelectorAll('[data-custom-motion]').length, 0);
+    assert.equal(doc.querySelectorAll('#features [data-feature-pause], #features [data-demo-pause]').length, 0);
+    assert.ok([...doc.querySelectorAll('#features video')].every(video => !video.hasAttribute('controls')));
     assert.equal(garlandPreview.hidden, true);
     assert.match(garlandVideo.src, /garland-showcase\.mp4\?v=/);
     assert.match(garlandVideo.getAttribute('poster'), /garland-showcase\.jpg\?v=/);
@@ -153,19 +155,11 @@ for (const locale of ['en', 'uk']) {
     assert.match(placementVideo.src, /placement-over-windows\.mp4\?v=/);
     assert.equal(doc.querySelector('[data-feature="placement"] [data-feature-choice="over"]').getAttribute('aria-pressed'), 'true');
     app.visible(true);
-    const garlandPause = doc.querySelector('[data-feature="garlands"] [data-feature-pause]');
-    garlandPause.click();
-    assert.equal(garlandVideo.paused, true);
-    garlandPause.click();
     assert.equal(garlandVideo.paused, false);
     garlandVideo.dispatchEvent(new app.window.Event('error'));
     assert.equal(garlandVideo.hidden, true);
     assert.equal(garlandPreview.hidden, false);
     assert.equal(garlands.dataset.featureMediaState, 'preview');
-    const placementPause = placement.querySelector('[data-feature-pause]');
-    placementPause.click();
-    assert.equal(placementVideo.paused, true);
-    placementPause.click();
     assert.equal(placementVideo.paused, false);
     placementVideo.dispatchEvent(new app.window.Event('error'));
     assert.equal(placementVideo.hidden, true);
@@ -209,9 +203,8 @@ test('automatic garland and placement recordings stop offscreen and for reduced 
   app.visible(true);
   app.reduce(true);
   assert.ok(videos.every(video => video.paused));
-  app.click('[data-feature="placement"] [data-feature-pause]');
-  assert.equal(videos[1].paused, false, 'The visitor can explicitly play despite reduced motion');
-  assert.equal(videos[0].paused, true);
+  app.reduce(false);
+  assert.ok(videos.every(video => !video.paused));
 });
 
 test('custom artwork stays local and validates files', async t => {
@@ -219,12 +212,10 @@ test('custom artwork stays local and validates files', async t => {
   const doc = app.window.document;
   assert.ok(app.canvasCalls.length > 0, 'The default artwork makes the preview visible');
   app.visible(true);
-  const pause = doc.querySelector('[data-feature="images"] [data-demo-pause]');
-  pause.click();
-  assert.equal(pause.getAttribute('aria-pressed'), 'true');
+  assert.ok(app.frames.size > 0);
+  app.reduce(true);
   assert.equal(app.frames.size, 0);
-  pause.click();
-  assert.equal(pause.getAttribute('aria-pressed'), 'false');
+  app.reduce(false);
   assert.ok(app.frames.size > 0);
   app.drop({ type: 'image/svg+xml', size: 100 });
   assert.equal(doc.querySelector('[data-custom-status]').textContent,

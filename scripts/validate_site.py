@@ -126,7 +126,8 @@ for path,page in pages.items():
         assert len(feature_videos)==3 and len([t for t,a in page.tags if t=='video'])==4,f'Keep seasonal, cleaning, garland, and placement recordings separate: {path}'
         for video in feature_videos:
             assert video.get('aria-label') and video.get('preload')=='none',path
-            assert all(key in video for key in ('controls','muted','loop','playsinline')),path
+            assert all(key in video for key in ('muted','loop','playsinline')),path
+            assert 'controls' not in video,path
             assert video.get('src') or 'hidden' in video,path
         choices=[a['data-feature-choice'] for t,a in page.tags if t=='button' and 'data-feature-choice' in a]
         assert choices==['snow','leaves','rain','over','desktop','strip'],path
@@ -135,6 +136,7 @@ for path,page in pages.items():
         assert 'garland-preview__dock' not in source,path
         assert not [a for t,a in page.tags if 'data-custom-motion' in a],path
         assert 'custom-preview__drop' not in source,path
+        assert not [a for t,a in page.tags if t=='button' and any(key in a for key in ('data-preview-pause','data-feature-pause','data-demo-pause'))],path
         assert not [a for t,a in page.tags if t=='button' and 'data-placement-choice' in a],path
         assert len([a for t,a in page.tags if t=='canvas' and 'data-custom-canvas' in a])==1,path
         assert len([a for t,a in page.tags if t=='input' and 'data-custom-file' in a])==1,path
@@ -148,7 +150,7 @@ for path,page in pages.items():
             assert __import__('html').escape(review['author']) in source,(path,review['id'])
             assert __import__('html').escape(review['source']) in source,(path,review['id'])
         video=[a for t,a in page.tags if t=='video' and 'data-effect-video' in a]
-        assert len(video)==1 and video[0].get('poster') and video[0].get('src') and 'controls' in video[0],f'Keep a working video/poster without JavaScript: {path}'
+        assert len(video)==1 and video[0].get('poster') and video[0].get('src') and 'controls' not in video[0],f'Keep a static video poster without JavaScript: {path}'
 sitemap=ET.parse(ROOT/'sitemap.xml')
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 locations={element.text for element in sitemap.findall('.//s:loc',ns)}

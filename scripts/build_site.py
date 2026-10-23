@@ -200,9 +200,6 @@ def feature_showcase(c):
         classes='feature-switcher feature-switcher--tools' if key=='cleaning' else 'feature-switcher feature-switcher--placement'
         return f'<div class="{classes}" role="group" aria-label="{E(f[label])}">{"".join(buttons)}</div>'
 
-    def pause_button(attribute, hidden=False):
-        return f'<button class="feature-media__pause" type="button" {attribute} data-play="{E(c["play"])}" data-pause="{E(c["pause"])}" aria-label="{E(c["pause"])}" aria-pressed="false"{" hidden" if hidden else ""}><svg class="feature-media__pause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 5v14m6-14v14"/></svg><svg class="feature-media__play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg></button>'
-
     def video_content(key):
         entry=media[key][variants[key][0][0]] if key in variants else media[key]
         poster=entry['poster']
@@ -213,13 +210,13 @@ def feature_showcase(c):
             bulbs=''.join(f'<span style="--bulb:{index}" aria-hidden="true"></span>' for index in range(16))
             preview=f'<div class="garland-preview" data-garland-preview aria-hidden="true"{" hidden" if src else ""}><div class="garland-preview__wallpaper"></div><div class="garland-preview__lights">{bulbs}</div></div>'
         image=f'<img class="feature-media__image" data-feature-image src="{asset(poster)}" alt="{E(alt)}" loading="lazy" decoding="async"' + ('' if poster and not src else ' hidden') + '>' if key in ('cleaning','placement') else ''
-        video=f'<video class="feature-media__video" data-feature-video{f" src={chr(34)}{asset(src)}{chr(34)}" if src else ""}{f" poster={chr(34)}{asset(poster)}{chr(34)}" if poster else ""} muted loop playsinline preload="none" controls aria-label="{E(alt)}"' + ('' if src else ' hidden') + '></video>'
-        return preview+image+video+pause_button('data-feature-pause',True)+(pause_button('data-demo-pause',bool(src)) if key=='garlands' else '')
+        video=f'<video class="feature-media__video" data-feature-video{f" src={chr(34)}{asset(src)}{chr(34)}" if src else ""}{f" poster={chr(34)}{asset(poster)}{chr(34)}" if poster else ""} muted loop playsinline preload="none" aria-label="{E(alt)}"' + ('' if src else ' hidden') + '></video>'
+        return preview+image+video
 
     def custom_content():
         upload=f'<label class="feature-upload"><input type="file" accept="image/png,image/jpeg,image/webp" data-custom-file><span>{E(f["image_choose"])}</span></label>'
         status=f'<span class="visually-hidden" data-custom-status data-error="{E(f["image_file_error"])}" data-ready="{E(f["image_ready"])}" role="status"></span>'
-        return f'<div class="custom-preview" data-custom-preview><div class="custom-preview__wallpaper" aria-hidden="true"></div><canvas data-custom-canvas aria-label="{E(f["images_media_alt"])}"></canvas>{upload}{status}</div>'+pause_button('data-demo-pause')
+        return f'<div class="custom-preview" data-custom-preview><div class="custom-preview__wallpaper" aria-hidden="true"></div><canvas data-custom-canvas aria-label="{E(f["images_media_alt"])}"></canvas>{upload}{status}</div>'
 
     def media_slot(key):
         content=custom_content() if key=='images' else video_content(key)
@@ -275,7 +272,7 @@ def homepage(c):
     buttons=''.join(f'<button class="theme-option theme-{key}" type="button" data-theme="{key}" data-description="{E(desc)}"{media_attrs(key)} aria-label="{E(name)}" aria-pressed="{"true" if key=="snow" else "false"}"><span class="theme-symbol" aria-hidden="true">{glyph}</span><span class="theme-name">{E(name)}</span></button>' for key,name,desc,glyph in c['themes'][:5])
     hero=f'<h1 class="hero__title">{E(c["hero_headline"])}</h1>'
     body=f'''<section class="hero hero-with-preview"><div class="wrap hero__inner">{hero}<p class="hero-copy">{E(c['intro'])}</p><div class="hero-actions"><a class="button" href="{STORE}">{E(c['download'])}</a></div><p class="compat">{E(c['compat'])}</p></div></section>
-<section class="seasons-preview wrap" id="effects" aria-label="{E(c['screen_label'])}"><div class="preview video-preview" data-preview data-effect="snow"><div class="preview-media desktop-screen desktop-screen--video" role="group" aria-label="{E(c['screen_label'])}">{desktop_menu_bar()}<video class="effect-video desktop-screen__recording" data-effect-video src="{E(videos['snow']['src'] or '')}" poster="{E(videos['snow']['poster'] or '')}" muted loop playsinline preload="none" controls aria-label="{E(c['screen_label'])}"></video><div class="video-placeholder" data-video-placeholder hidden><span class="video-placeholder-mark" aria-hidden="true">▶</span><p class="video-placeholder-caption" data-video-caption>{E(c['themes'][0][1])}</p></div><button class="preview-pause" type="button" data-preview-pause data-pause="{E(c['pause'])}" data-play="{E(c['play'])}" aria-label="{E(c['pause'])}" aria-pressed="false" hidden><svg class="preview-pause__pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 5v14m6-14v14"/></svg><svg class="preview-pause__play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg></button></div><div class="control-panel" hidden><div class="theme-picker" data-weather-switch role="group" aria-label="{E(c['preview_label'])}" hidden>{buttons}</div><p class="visually-hidden" data-theme-description aria-live="polite">{E(c['themes'][0][2])}</p></div></div></section>
+<section class="seasons-preview wrap" id="effects" aria-label="{E(c['screen_label'])}"><div class="preview video-preview" data-preview data-effect="snow"><div class="preview-media desktop-screen desktop-screen--video" role="group" aria-label="{E(c['screen_label'])}">{desktop_menu_bar()}<video class="effect-video desktop-screen__recording" data-effect-video src="{E(videos['snow']['src'] or '')}" poster="{E(videos['snow']['poster'] or '')}" muted loop playsinline preload="none" aria-label="{E(c['screen_label'])}"></video><div class="video-placeholder" data-video-placeholder hidden><span class="video-placeholder-mark" aria-hidden="true">▶</span><p class="video-placeholder-caption" data-video-caption>{E(c['themes'][0][1])}</p></div></div><div class="control-panel" hidden><div class="theme-picker" data-weather-switch role="group" aria-label="{E(c['preview_label'])}" hidden>{buttons}</div><p class="visually-hidden" data-theme-description aria-live="polite">{E(c['themes'][0][2])}</p></div></div></section>
 {feature_showcase(c)}
 {reviews_section(c)}
 <div class="faq-region"><section class="section faq-section wrap" id="faq"><div><h2>{E(c['faq_title'])}</h2><a class="text-link" href="{url(c['lang'],'support/')}">{E(c['support'])} ↗</a></div><div class="faq-list">{faq}</div></section></div>

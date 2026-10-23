@@ -105,6 +105,8 @@ for (const locale of ['en', 'uk']) {
     assert.ok(group, 'The supplied React component mounts');
     assert.equal(group.getAttribute('aria-label'), locale === 'uk' ? 'Виберіть атмосферу' : 'Choose an atmosphere');
     assert.equal(app.chips().length, 5);
+    assert.equal(app.preview.querySelector('[data-preview-pause]'), null);
+    assert.equal(app.video.hasAttribute('controls'), false);
     assert.deepEqual(app.chips().map(chip => chip.querySelector('.jelly-radio__label').textContent), app.options.map(option => option.label));
     app.assertChoice(0);
     assert.equal(app.playback.loads, 0, 'Mounting the radio does not reload the initial video');
@@ -135,16 +137,12 @@ test('keyboard arrows wrap, Home/End focus the selection, and external changes s
   app.assertChoice(3);
 });
 
-test('selection preserves manual pause and offscreen/hidden-tab playback rules', async t => {
+test('selection preserves offscreen and hidden-tab playback rules', async t => {
   const app = await setup(t);
-  const pause = app.preview.querySelector('[data-preview-pause]');
   assert.equal(app.video.paused, false);
-  pause.click();
   app.click(2);
   await wait(15);
   app.assertChoice(2);
-  assert.equal(app.video.paused, true, 'An explicit pause survives weather changes');
-  pause.click();
   assert.equal(app.video.paused, false);
   app.visible(false); app.click(3);
   await wait(15);
@@ -191,8 +189,8 @@ test('native HTML choices still switch videos when the React bundle is unavailab
   app.originals[1].click();
   app.assertChoice(1);
   assert.equal(app.video.paused, true, 'Reduced motion also applies to fallback playback');
-  app.preview.querySelector('[data-preview-pause]').click();
-  assert.equal(app.video.paused, false, 'An explicit Play remains available');
+  app.reduce(false);
+  assert.equal(app.video.paused, false);
 });
 
 test('wrapped choices keep neighbour motion in their own row and adjust after resizing', async t => {
