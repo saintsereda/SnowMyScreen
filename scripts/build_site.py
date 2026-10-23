@@ -190,10 +190,14 @@ def feature_showcase(c):
             paths=''.join(f' data-{field}="{E(asset(path) if path else "")}"' for field,path in entry.items())
             alt_key=f'cleaning_{name}_alt' if key=='cleaning' else f'placement_{name}_description'
             alt=f' data-alt="{E(f[alt_key])}"'
-            tool={'snow':'shovel','leaves':'broom','rain':'squeegee'}.get(name) if key=='cleaning' else None
-            icon=f'<img class="feature-tool-icon" src="{asset("/images/features/tools/"+tool+".png")}" alt="" width="64" height="64" loading="lazy" decoding="async">' if tool else ''
+            if key=='cleaning':
+                tool={'snow':'shovel','leaves':'broom','rain':'squeegee'}[name]
+                icon=f'<img class="feature-tool-icon" src="{asset("/images/features/tools/"+tool+".png")}" alt="" width="64" height="64" loading="lazy" decoding="async">'
+            else:
+                image='over-windows' if name=='over' else 'desktop-only'
+                icon=f'<span class="feature-placement-icon" aria-hidden="true"><img src="{asset("/images/features/placement/"+image+".png")}" alt="" width="40" height="40" loading="lazy" decoding="async"></span>'
             buttons.append(f'<button type="button" data-feature-choice="{name}"{paths}{alt} aria-pressed="{str(name==selected).lower()}">{icon}<span>{E(f[text_key])}</span></button>')
-        classes='feature-switcher feature-switcher--tools' if key=='cleaning' else 'feature-switcher'
+        classes='feature-switcher feature-switcher--tools' if key=='cleaning' else 'feature-switcher feature-switcher--placement'
         return f'<div class="{classes}" role="group" aria-label="{E(f[label])}">{"".join(buttons)}</div>'
 
     def pause_button(attribute, hidden=False):
