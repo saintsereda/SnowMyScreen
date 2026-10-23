@@ -104,11 +104,11 @@ for (const locale of ['en', 'uk']) {
     assert.match(placementVideo.src, /placement-over-windows\.mp4\?v=/);
     assert.match(placementVideo.getAttribute('poster'), /placement-over-windows\.jpg\?v=/);
     assert.equal(doc.querySelectorAll('[data-feature="garlands"] [data-feature-choice]').length, 0);
-    assert.deepEqual([...doc.querySelectorAll('[data-feature="placement"] [data-feature-choice]')].map(button => button.dataset.featureChoice), ['over', 'desktop']);
+    assert.deepEqual([...doc.querySelectorAll('[data-feature="placement"] [data-feature-choice]')].map(button => button.dataset.featureChoice), ['over', 'desktop', 'strip']);
     assert.ok(doc.querySelector('[data-feature="placement"] .feature-story__copy > .feature-switcher'));
     assert.equal(doc.querySelector('[data-feature="placement"] .feature-story__visual > .feature-switcher'), null);
     assert.deepEqual([...doc.querySelectorAll('[data-feature="placement"] .feature-placement-icon img')].map(icon => new URL(icon.src).pathname),
-      ['/images/features/placement/over-windows.png', '/images/features/placement/desktop-only.png']);
+      ['/images/features/placement/over-windows.png', '/images/features/placement/desktop-only.png', '/images/features/placement/top-strip.png']);
     assert.ok([...doc.querySelectorAll('[data-feature="placement"] .feature-placement-icon img')].every(icon => icon.alt === ''));
     assert.equal(image.alt, doc.querySelector('[data-feature="cleaning"] [data-feature-choice="snow"]').dataset.alt);
     assert.equal(image.hidden, true);
@@ -138,6 +138,12 @@ for (const locale of ['en', 'uk']) {
     assert.equal(placement.querySelector('[data-feature-image]').hidden, false);
     placementVideo.dispatchEvent(new app.window.Event('loadeddata'));
     assert.equal(placement.querySelector('[data-feature-image]').hidden, true);
+    app.click('[data-feature="placement"] [data-feature-choice="strip"]');
+    await wait(0);
+    assert.match(placementVideo.src, /placement-top-strip\.mp4\?v=/);
+    assert.match(placementVideo.getAttribute('poster'), /placement-top-strip\.jpg\?v=/);
+    assert.equal(placementVideo.getAttribute('aria-label'), doc.querySelector('[data-feature="placement"] [data-feature-choice="strip"]').dataset.alt);
+    assert.equal(doc.querySelector('[data-feature="placement"] [data-feature-choice="strip"]').getAttribute('aria-pressed'), 'true');
     app.click('[data-feature="placement"] [data-feature-choice="over"]');
     await wait(0);
     assert.match(placementVideo.src, /placement-over-windows\.mp4\?v=/);

@@ -129,7 +129,7 @@ for path,page in pages.items():
             assert all(key in video for key in ('controls','muted','loop','playsinline')),path
             assert video.get('src') or 'hidden' in video,path
         choices=[a['data-feature-choice'] for t,a in page.tags if t=='button' and 'data-feature-choice' in a]
-        assert choices==['snow','leaves','rain','over','desktop'],path
+        assert choices==['snow','leaves','rain','over','desktop','strip'],path
         tool_icons=[a.get('src','').split('?')[0] for t,a in page.tags if t=='img' and a.get('class')=='feature-tool-icon']
         assert tool_icons==['/images/features/tools/shovel.png','/images/features/tools/broom.png','/images/features/tools/squeegee.png'],path
         assert 'garland-preview__dock' not in source,path

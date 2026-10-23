@@ -64,7 +64,7 @@
     "placement_desktop": "Desktop only",
     "placement_over_description": "Snow appears over open windows.",
     "placement_desktop_description": "Snow stays behind open windows.",
-    "placement_strip": "Top edge only",
+    "placement_strip": "Top strip",
     "placement_strip_description": "Effects stay along the top edge.",
     "placement_full_description": "Effects cover the full screen.",
     "displays_title": "One display or a whole desk",

@@ -166,7 +166,7 @@ def feature_showcase(c):
 
     variants={
         'cleaning':(('snow','cleaning_snow'),('leaves','cleaning_leaves'),('rain','cleaning_rain')),
-        'placement':(('over','placement_over'),('desktop','placement_desktop')),
+        'placement':(('over','placement_over'),('desktop','placement_desktop'),('strip','placement_strip')),
     }
     for key, choices in variants.items():
         assert set(media[key])=={name for name,_ in choices}, f'{key}: configure every choice.'
@@ -194,7 +194,7 @@ def feature_showcase(c):
                 tool={'snow':'shovel','leaves':'broom','rain':'squeegee'}[name]
                 icon=f'<img class="feature-tool-icon" src="{asset("/images/features/tools/"+tool+".png")}" alt="" width="64" height="64" loading="lazy" decoding="async">'
             else:
-                image='over-windows' if name=='over' else 'desktop-only'
+                image={'over':'over-windows','desktop':'desktop-only','strip':'top-strip'}[name]
                 icon=f'<span class="feature-placement-icon" aria-hidden="true"><img src="{asset("/images/features/placement/"+image+".png")}" alt="" width="40" height="40" loading="lazy" decoding="async"></span>'
             buttons.append(f'<button type="button" data-feature-choice="{name}"{paths}{alt} aria-pressed="{str(name==selected).lower()}">{icon}<span>{E(f[text_key])}</span></button>')
         classes='feature-switcher feature-switcher--tools' if key=='cleaning' else 'feature-switcher feature-switcher--placement'

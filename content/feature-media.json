@@ -8,6 +8,7 @@
   "images": { "type": "interactive" },
   "placement": {
     "over": { "src": "/videos/placement-over-windows.mp4", "poster": "/videos/placement-over-windows.jpg" },
-    "desktop": { "src": "/videos/placement-desktop.mp4", "poster": "/videos/placement-desktop.jpg" }
+    "desktop": { "src": "/videos/placement-desktop.mp4", "poster": "/videos/placement-desktop.jpg" },
+    "strip": { "src": "/videos/placement-top-strip.mp4", "poster": "/videos/placement-top-strip.jpg" }
   }
 }

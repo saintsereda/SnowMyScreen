@@ -61,22 +61,18 @@ def garland_montage(source):
 def placement_recordings(source):
     settings = ("-an", "-c:v", "libx264", "-preset", "medium", "-crf", "25",
                 "-pix_fmt", "yuv420p", "-movflags", "+faststart")
-
-    # The first and last stretches keep the snow behind the browser window;
-    # the middle stretch shows it falling in front of the window.
-    desktop = VIDEOS / "placement-desktop.mp4"
-    filter_graph = (
-        "[0:v]trim=start=0.2:end=9.6,setpts=PTS-STARTPTS,fps=24,scale=960:-2[a];"
-        "[0:v]trim=start=26.7:end=48.7,setpts=PTS-STARTPTS,fps=24,scale=960:-2[b];"
-        "[a][b]concat=n=2:v=1:a=0[out]"
+    # The new recording shows desktop, over windows, then top strip in order.
+    scenes = (
+        ("desktop", 0.4, 9.8, "placement-desktop", 2),
+        ("over", 11.1, 24.5, "placement-over-windows", 3),
+        ("strip", 25.4, 38.0, "placement-top-strip", 3),
     )
-    run("-i", source, "-filter_complex", filter_graph, "-map", "[out]", *settings, desktop)
-    poster(desktop, VIDEOS / "placement-desktop.jpg", 3)
-
-    over = VIDEOS / "placement-over-windows.mp4"
-    run("-i", source, "-vf", "trim=start=10.5:end=25.4,setpts=PTS-STARTPTS,fps=24,scale=960:-2",
-        *settings, over)
-    poster(over, VIDEOS / "placement-over-windows.jpg", 5)
+    for _, start, end, basename, poster_second in scenes:
+        video = VIDEOS / f"{basename}.mp4"
+        run("-i", source,
+            "-vf", f"trim=start={start}:end={end},setpts=PTS-STARTPTS,fps=24,scale=960:-2",
+            *settings, video)
+        poster(video, VIDEOS / f"{basename}.jpg", poster_second)
 
 
 if __name__ == "__main__":

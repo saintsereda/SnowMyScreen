@@ -15,6 +15,7 @@ let configuration = NSImage.SymbolConfiguration(pointSize: 28, weight: .medium)
 for (filename, symbol) in [
     ("over-windows", "interface.window.on.rectangle"),
     ("desktop-only", "desktopcomputer"),
+    ("top-strip", "inset.filled.tophalf.rectangle"),
 ] {
     guard let base = NSImage(systemSymbolName: symbol, accessibilityDescription: nil),
           let image = base.withSymbolConfiguration(configuration),

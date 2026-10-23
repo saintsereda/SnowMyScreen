@@ -64,7 +64,7 @@
     "placement_desktop": "За вікнами",
     "placement_over_description": "Сніг з’являється поверх відкритих вікон.",
     "placement_desktop_description": "Сніг залишається за відкритими вікнами.",
-    "placement_strip": "Лише верхній край",
+    "placement_strip": "Верхня смуга",
     "placement_strip_description": "Ефекти залишаються вздовж верхнього краю.",
     "placement_full_description": "Ефекти займають увесь екран.",
     "displays_title": "Один екран чи цілий робочий простір",
