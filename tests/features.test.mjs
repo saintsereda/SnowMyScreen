@@ -84,6 +84,7 @@ for (const locale of ['en', 'uk']) {
     const cleaningStory = doc.querySelector('[data-feature="cleaning"]');
     const image = cleaning.querySelector('[data-feature-image]');
     const garlands = doc.querySelector('[data-feature-media="garlands"]');
+    const images = doc.querySelector('[data-feature-media="images"]');
     const garlandVideo = garlands.querySelector('[data-feature-video]');
     const garlandPreview = garlands.querySelector('[data-garland-preview]');
     const placement = doc.querySelector('[data-feature-media="placement"]');
@@ -98,6 +99,9 @@ for (const locale of ['en', 'uk']) {
     assert.ok(toolIcons.every(icon => icon.alt === ''));
     assert.equal(doc.querySelectorAll('[data-garland-preview] .garland-preview__lights').length, 1);
     assert.equal(doc.querySelectorAll('[data-garland-preview] .garland-preview__dock').length, 0);
+    assert.ok(images.querySelector('[data-custom-preview] .feature-upload [data-custom-file]'));
+    assert.equal(images.querySelector('.custom-preview__drop'), null);
+    assert.equal(doc.querySelectorAll('[data-custom-motion]').length, 0);
     assert.equal(garlandPreview.hidden, true);
     assert.match(garlandVideo.src, /garland-showcase\.mp4\?v=/);
     assert.match(garlandVideo.getAttribute('poster'), /garland-showcase\.jpg\?v=/);
@@ -210,7 +214,7 @@ test('automatic garland and placement recordings stop offscreen and for reduced 
   assert.equal(videos[0].paused, true);
 });
 
-test('custom artwork stays local, validates files, and switches the app motion profiles', async t => {
+test('custom artwork stays local and validates files', async t => {
   const app = await setup(t);
   const doc = app.window.document;
   assert.ok(app.canvasCalls.length > 0, 'The default artwork makes the preview visible');
@@ -230,10 +234,6 @@ test('custom artwork stays local, validates files, and switches the app motion p
   assert.equal(doc.querySelector('[data-custom-status]').textContent,
     doc.querySelector('[data-custom-status]').dataset.ready);
   assert.ok(app.canvasCalls.length > 0);
-  app.click('[data-custom-motion="leaves"]');
-  assert.equal(doc.querySelector('[data-custom-motion="leaves"]').getAttribute('aria-pressed'), 'true');
-  app.click('[data-custom-motion="rain"]');
-  assert.equal(doc.querySelector('[data-custom-motion="rain"]').getAttribute('aria-pressed'), 'true');
   app.window.dispatchEvent(new app.window.Event('pagehide'));
   assert.deepEqual(app.revoked, ['blob:local-image']);
 });

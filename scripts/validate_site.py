@@ -133,7 +133,8 @@ for path,page in pages.items():
         tool_icons=[a.get('src','').split('?')[0] for t,a in page.tags if t=='img' and a.get('class')=='feature-tool-icon']
         assert tool_icons==['/images/features/tools/shovel.png','/images/features/tools/broom.png','/images/features/tools/squeegee.png'],path
         assert 'garland-preview__dock' not in source,path
-        assert [a['data-custom-motion'] for t,a in page.tags if t=='button' and 'data-custom-motion' in a]==['snow','leaves','rain'],path
+        assert not [a for t,a in page.tags if 'data-custom-motion' in a],path
+        assert 'custom-preview__drop' not in source,path
         assert not [a for t,a in page.tags if t=='button' and 'data-placement-choice' in a],path
         assert len([a for t,a in page.tags if t=='canvas' and 'data-custom-canvas' in a])==1,path
         assert len([a for t,a in page.tags if t=='input' and 'data-custom-file' in a])==1,path

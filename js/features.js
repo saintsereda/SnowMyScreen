@@ -151,7 +151,6 @@
   const customButton = custom.parentElement.querySelector('[data-demo-pause]');
   const fileInput = card.querySelector('[data-custom-file]');
   const status = card.querySelector('[data-custom-status]');
-  const motionButtons = [...card.querySelectorAll('[data-custom-motion]')];
   let artwork, artworkURL, width = 0, height = 0, motion = 'snow';
   let customPaused = false, customOverride = false;
   let particles = [], visible = false, frame = 0, lastTime = 0, emission = [0, 0, 0];
@@ -312,13 +311,6 @@
     custom.classList.remove('is-dragging');
     upload(e.dataTransfer?.files[0]);
   });
-  motionButtons.forEach(button => button.addEventListener('click', () => {
-    motion = button.dataset.customMotion;
-    motionButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    particles = [];
-    emission = [0, 0, 0];
-    resize();
-  }));
   if ('ResizeObserver' in window) new ResizeObserver(resize).observe(canvas);
   else window.addEventListener('resize', resize);
   watch(custom, value => { visible = value; syncAnimation(); });

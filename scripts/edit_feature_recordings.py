@@ -64,7 +64,7 @@ def placement_recordings(source):
     # The new recording shows desktop, over windows, then top strip in order.
     scenes = (
         ("desktop", 0.4, 9.8, "placement-desktop", 2),
-        ("over", 11.1, 24.5, "placement-over-windows", 3),
+        ("over", 14.0, 24.5, "placement-over-windows", 1),
         ("strip", 25.4, 38.0, "placement-top-strip", 3),
     )
     for _, start, end, basename, poster_second in scenes:
