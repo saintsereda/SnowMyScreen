@@ -7,14 +7,14 @@
     "src/components/JellyRadio.css": "cc3fe10fd2cbb7d111713db84bb126b5792cec9390510ecc85a6f8915c6867a9",
     "src/components/JellyRadio.jsx": "ddc3d0269badded42c2ac76a6db91325b3bc6a68e41775bc01195b00a2b13a5e",
     "src/mobile-menu.js": "d43aaf080692e9ece9ebe0f8c40f5bb9e1ee27d261b021776cf483dc938b812a",
-    "src/weather-switch.css": "5459e2721e1b19db18109df2b2d801ee0f343f0a15c2aaae414302b4fbe9d6c5",
-    "src/weather-switch.jsx": "a7b6bc9d144c273deb63a2fd04cdbf4e40313be6549082cf70927c4bcdc19260"
+    "src/weather-switch.css": "7d9be7ccbf3fb68128c9084d06d1c2c7370d6d2b8482230611cf5054f9f71573",
+    "src/weather-switch.jsx": "b22792acf360eb5c4fa83df32efad4759ff21b83d955db80225d90d8d92190a4"
   },
   "outputs": {
     "js/weather-switch.js.LEGAL.txt": "7f7c24a09d16008bb30b5ae5ad7bb4376eaf402772f0a29dc88df6f0f39ed929",
-    "js/weather-switch.js": "4e2eae5b01c63383e93c2a1caaa61503dc07289bcaef18660c90aabd2f7ee9c4",
+    "js/weather-switch.js": "392fa3f278207e2bcddfad3f85d4943c99ee08d6ae80cf07a3e1730548a0be2a",
     "css/weather-switch.css.LEGAL.txt": "73037f82f677b68066f8b8cb4fa743228ff5a45463d4b8b7213c3c19a11a79c4",
-    "css/weather-switch.css": "5ad4386b36b6070575fb93c432c9cc8e8bacfb87d8cc39dd222b356b19c77097",
+    "css/weather-switch.css": "02ce27795e17f0950ab18aa8fdc7149c0004da728941474c54935a335e20b2be",
     "js/mobile-menu.js.LEGAL.txt": "8ae140703bfb551c146b6ede8a07b56820e007bb5c9c49f0fe5b4da125775e47",
     "js/mobile-menu.js": "214968c8b1e4c8dcf79ed8324fe4e3af9b82ffab6799d252ae1b172cc31e3131",
     "licenses/vendor/framer-motion.txt": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32",

@@ -21,19 +21,20 @@
 .placement-switch > .jelly-radio {
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: calc(100% + 64px);
+  width: calc(100% + 72px);
   min-width: 0;
   row-gap: 12px;
   margin-left: calc(12px - var(--jr-pad-x));
 }
 .placement-jelly .jelly-radio__chip { display: flex; flex: 0 0 auto; align-items: center; justify-content: center; min-height: 48px; }
-.placement-jelly .jelly-radio__skin { box-shadow: inset 0 0 0 1px #ffffff29; }
-.placement-jelly .jelly-radio__icon img { display: block; width: 18px; height: 18px; object-fit: contain; }
+.placement-jelly .jelly-radio__skin { padding-inline: 16px; box-shadow: inset 0 0 0 1px #ffffff29; }
+.placement-jelly .jelly-radio__icon img { display: block; width: 32px; height: 32px; object-fit: contain; }
 .placement-jelly .jelly-radio__chip[data-on='true'] .jelly-radio__icon img {
   filter: brightness(0) saturate(100%) invert(24%) sepia(83%) saturate(1696%) hue-rotate(196deg) brightness(89%) contrast(94%);
 }
 @media (max-width: 760px) {
   .placement-switch > .jelly-radio { width: calc(100% + 20px); }
+  .placement-jelly .jelly-radio__skin { padding-inline: 14px; }
 }
 @media (max-width: 640px) {
   .weather-jelly .jelly-radio__skin { padding-inline: 16px; }

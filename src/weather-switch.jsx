@@ -77,7 +77,7 @@ if (placementButtons.length) {
   const items = placementButtons.map(button => ({
     value: button.dataset.featureChoice,
     label: button.lastElementChild.textContent,
-    icon: <img src={button.querySelector('.feature-placement-icon img').getAttribute('src')} alt="" width="18" height="18" />
+    icon: <img src={button.querySelector('.feature-placement-icon img').getAttribute('src')} alt="" width="32" height="32" />
   }));
   let root;
   const restore = () => {
