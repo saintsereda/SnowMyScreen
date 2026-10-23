@@ -42,7 +42,7 @@ html.has-bubble-menu, html.has-bubble-menu body { overflow: hidden; }
 }
 .site-navigation.has-hero:not(.is-past-hero) .site-navigation__capsule { padding-right: 24px; }
 @media (min-width: 901px) {
-  .home-page .site-navigation__capsule { margin-top: 81px; }
+  .home-page .site-navigation__capsule { margin-top: 371px; }
 }
 .site-navigation__brand { display: inline-flex; flex: none; align-items: center; gap: 8px; margin-block: -14px; padding-block: 14px; }
 .site-navigation__brand img { display: block; width: 36px; height: 36px; }
