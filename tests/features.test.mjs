@@ -76,7 +76,7 @@ async function setup(t, locale = 'en') {
 }
 
 for (const locale of ['en', 'uk']) {
-  test(`${locale}: all four feature cards switch their real preview states`, async t => {
+  test(`${locale}: feature cards render recordings and interactive previews`, async t => {
     const app = await setup(t, locale);
     const doc = app.window.document;
     assert.equal(doc.querySelectorAll('[data-feature-presentation="media"]').length, 4);
@@ -86,6 +86,8 @@ for (const locale of ['en', 'uk']) {
     const garlands = doc.querySelector('[data-feature-media="garlands"]');
     const garlandVideo = garlands.querySelector('[data-feature-video]');
     const garlandPreview = garlands.querySelector('[data-garland-preview]');
+    const placement = doc.querySelector('[data-feature-media="placement"]');
+    const placementVideo = placement.querySelector('[data-feature-video]');
     assert.equal(cleaning.querySelector('.desktop-menu'), null);
     assert.ok(cleaningStory.querySelector('.feature-story__copy > .feature-switcher--tools'));
     assert.equal(cleaningStory.querySelector('.feature-story__visual > .feature-switcher--tools'), null);
@@ -97,7 +99,12 @@ for (const locale of ['en', 'uk']) {
     assert.equal(doc.querySelectorAll('[data-garland-preview] .garland-preview__lights').length, 1);
     assert.equal(doc.querySelectorAll('[data-garland-preview] .garland-preview__dock').length, 0);
     assert.equal(garlandPreview.hidden, true);
-    assert.match(garlandVideo.src, /garland-winter-night\.mp4\?v=/);
+    assert.match(garlandVideo.src, /garland-showcase\.mp4\?v=/);
+    assert.match(garlandVideo.getAttribute('poster'), /garland-showcase\.jpg\?v=/);
+    assert.match(placementVideo.src, /placement-showcase\.mp4\?v=/);
+    assert.match(placementVideo.getAttribute('poster'), /placement-showcase\.jpg\?v=/);
+    assert.equal(doc.querySelectorAll('[data-feature="garlands"] [data-feature-choice]').length, 0);
+    assert.equal(doc.querySelectorAll('[data-feature="placement"] [data-placement-choice]').length, 0);
     assert.equal(image.alt, doc.querySelector('[data-feature="cleaning"] [data-feature-choice="snow"]').dataset.alt);
     assert.equal(image.hidden, true);
     assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-snow\.mp4\?v=/);
@@ -118,17 +125,6 @@ for (const locale of ['en', 'uk']) {
     await wait(0);
     assert.match(image.src, /cleaning-rain\.jpg\?v=/);
     assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-rain\.mp4\?v=/);
-    for (const [choice, filename] of [
-      ['cozyEvening', 'cozy-evening'], ['springBloom', 'spring-bloom'],
-      ['celebration', 'celebration'], ['winterNight', 'winter-night']
-    ]) {
-      const button = doc.querySelector(`[data-feature-choice="${choice}"]`);
-      button.click();
-      assert.match(garlandVideo.src, new RegExp(`garland-${filename}\\.mp4\\?v=`));
-      assert.match(garlandVideo.getAttribute('poster'), new RegExp(`garland-${filename}\\.jpg\\?v=`));
-      assert.equal(garlandVideo.getAttribute('aria-label'), button.dataset.alt);
-      assert.equal(garlandPreview.hidden, true);
-    }
     app.visible(true);
     const garlandPause = doc.querySelector('[data-feature="garlands"] [data-feature-pause]');
     garlandPause.click();
@@ -139,13 +135,15 @@ for (const locale of ['en', 'uk']) {
     assert.equal(garlandVideo.hidden, true);
     assert.equal(garlandPreview.hidden, false);
     assert.equal(garlands.dataset.featureMediaState, 'preview');
-    app.click('[data-placement-choice="desktop"]');
-    assert.equal(doc.querySelector('[data-placement-preview]').dataset.layer, 'desktop');
-    assert.equal(doc.querySelector('[data-placement-choice="desktop"]').getAttribute('aria-pressed'), 'true');
-    app.click('[data-placement-choice="over"]');
-    assert.equal(doc.querySelector('[data-placement-preview]').dataset.layer, 'over');
-    assert.equal(doc.querySelector('[data-placement-preview]').getAttribute('aria-label'),
-      doc.querySelector('[data-placement-choice="over"]').dataset.description);
+    const placementPause = placement.querySelector('[data-feature-pause]');
+    placementPause.click();
+    assert.equal(placementVideo.paused, true);
+    placementPause.click();
+    assert.equal(placementVideo.paused, false);
+    placementVideo.dispatchEvent(new app.window.Event('error'));
+    assert.equal(placementVideo.hidden, true);
+    assert.equal(placement.querySelector('[data-feature-image]').hidden, false);
+    assert.equal(placement.dataset.featureMediaState, 'preview');
   });
 }
 
@@ -170,6 +168,23 @@ test('cleaning recordings obey playback visibility and reduced motion', async t 
   assert.equal(video.paused, false);
   app.reduce(true);
   assert.equal(video.paused, true);
+});
+
+test('automatic garland and placement recordings stop offscreen and for reduced motion', async t => {
+  const app = await setup(t);
+  const videos = ['garlands', 'placement'].map(name =>
+    app.window.document.querySelector(`[data-feature-media="${name}"] [data-feature-video]`));
+  assert.ok(videos.every(video => video.paused));
+  app.visible(true);
+  assert.ok(videos.every(video => !video.paused));
+  app.visible(false);
+  assert.ok(videos.every(video => video.paused));
+  app.visible(true);
+  app.reduce(true);
+  assert.ok(videos.every(video => video.paused));
+  app.click('[data-feature="placement"] [data-feature-pause]');
+  assert.equal(videos[1].paused, false, 'The visitor can explicitly play despite reduced motion');
+  assert.equal(videos[0].paused, true);
 });
 
 test('custom artwork stays local, validates files, and switches the app motion profiles', async t => {

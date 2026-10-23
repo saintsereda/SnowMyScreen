@@ -17,7 +17,7 @@
   window.addEventListener('pageshow', () => { pageActive = true; syncAll(); });
   reduced.addEventListener('change', syncAll);
 
-  for (const root of section.querySelectorAll('[data-feature-media="cleaning"], [data-feature-media="garlands"]')) {
+  for (const root of section.querySelectorAll('[data-feature-media="cleaning"], [data-feature-media="garlands"], [data-feature-media="placement"]')) {
     const article = root.closest('[data-feature]');
     const choices = [...article.querySelectorAll('[data-feature-choice]')];
     const video = root.querySelector('[data-feature-video]');
@@ -91,7 +91,6 @@
       if (choice.dataset.alt) video.setAttribute('aria-label', choice.dataset.alt);
       if (preview) {
         preview.hidden = !!src;
-        preview.dataset.scene = choice.dataset.featureChoice;
         demoButton.hidden = !!src;
       }
       root.dataset.featureMediaState = src ? 'video' : 'preview';
@@ -141,32 +140,6 @@
     });
     watch(root, value => { visible = value; sync(); syncDemo(); });
     lifecycle(() => { sync(); syncDemo(); });
-  }
-
-  const placement = section.querySelector('[data-placement-preview]');
-  if (placement) {
-    const placementButton = placement.parentElement.querySelector('[data-demo-pause]');
-    let placementPaused = false, placementOverride = false, placementVisible = false;
-    const syncPlacement = () => {
-      const paused = placementPaused || (reduced.matches && !placementOverride) || !pageActive || document.hidden || !placementVisible;
-      placement.classList.toggle('is-paused', paused);
-      placement.classList.toggle('motion-override', placementOverride);
-      placementButton.setAttribute('aria-pressed', String(paused));
-      placementButton.setAttribute('aria-label', paused ? placementButton.dataset.play : placementButton.dataset.pause);
-    };
-    placementButton.addEventListener('click', () => {
-      placementPaused = placementButton.getAttribute('aria-pressed') !== 'true';
-      if (!placementPaused) placementOverride = true;
-      syncPlacement();
-    });
-    watch(placement, value => { placementVisible = value; syncPlacement(); });
-    lifecycle(syncPlacement);
-    const buttons = [...placement.closest('[data-feature]').querySelectorAll('[data-placement-choice]')];
-    buttons.forEach(button => button.addEventListener('click', () => {
-      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      placement.dataset.layer = button.dataset.placementChoice;
-      placement.setAttribute('aria-label', button.dataset.description);
-    }));
   }
 
   const custom = section.querySelector('[data-custom-preview]');

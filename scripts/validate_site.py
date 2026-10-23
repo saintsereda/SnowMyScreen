@@ -123,18 +123,18 @@ for path,page in pages.items():
         assert slots==media_topics,f'Every main feature needs its own media slot: {path}'
         assert source.count('class="desktop-menu"')==len(media_topics),f'Only the seasonal preview and non-cleaning feature cards need a macOS menu bar: {path}'
         feature_videos=[a for t,a in page.tags if t=='video' and 'data-feature-video' in a]
-        assert len(feature_videos)==2 and len([t for t,a in page.tags if t=='video'])==3,f'Keep seasonal, cleaning, and garland recordings separate: {path}'
+        assert len(feature_videos)==3 and len([t for t,a in page.tags if t=='video'])==4,f'Keep seasonal, cleaning, garland, and placement recordings separate: {path}'
         for video in feature_videos:
             assert video.get('aria-label') and video.get('preload')=='none',path
             assert all(key in video for key in ('controls','muted','loop','playsinline')),path
             assert video.get('src') or 'hidden' in video,path
         choices=[a['data-feature-choice'] for t,a in page.tags if t=='button' and 'data-feature-choice' in a]
-        assert choices==['snow','leaves','rain','winterNight','cozyEvening','springBloom','celebration'],path
+        assert choices==['snow','leaves','rain'],path
         tool_icons=[a.get('src','').split('?')[0] for t,a in page.tags if t=='img' and a.get('class')=='feature-tool-icon']
         assert tool_icons==['/images/features/tools/shovel.png','/images/features/tools/broom.png','/images/features/tools/squeegee.png'],path
         assert 'garland-preview__dock' not in source,path
         assert [a['data-custom-motion'] for t,a in page.tags if t=='button' and 'data-custom-motion' in a]==['snow','leaves','rain'],path
-        assert [a['data-placement-choice'] for t,a in page.tags if t=='button' and 'data-placement-choice' in a]==['over','desktop'],path
+        assert not [a for t,a in page.tags if t=='button' and 'data-placement-choice' in a],path
         assert len([a for t,a in page.tags if t=='canvas' and 'data-custom-canvas' in a])==1,path
         assert len([a for t,a in page.tags if t=='input' and 'data-custom-file' in a])==1,path
         themes=[a['data-theme'] for t,a in page.tags if t=='button' and 'data-theme' in a]
