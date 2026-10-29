@@ -9,6 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SITE=json.loads((ROOT/'content/site.json').read_text())
 STORE_DATA=json.loads((ROOT/'content/app-store.json').read_text())
 ORIGIN=SITE['origin'].rstrip('/')
+ARTICLES={a['slug']:a for a in json.loads((ROOT/'content/articles/articles.json').read_text())['articles'] if a['status']=='published'}
 UI_BUILD=json.loads((ROOT/'content/ui-build.json').read_text())
 ui_sources={p.relative_to(ROOT).as_posix() for p in (ROOT/'src').rglob('*') if p.is_file()}
 ui_sources.update({'package.json','package-lock.json','scripts/build_ui.mjs','licenses/react-bits.md'})
@@ -42,7 +43,8 @@ pages={}
 for p in ROOT.rglob('*.html'):
     if any(part in {'content','.git','node_modules'} for part in p.relative_to(ROOT).parts):continue
     page=Page();page.feed(p.read_text());pages[p.resolve()]=page
-assert len(pages)==12, f'Expected 11 generated pages plus 404; got {len(pages)}'
+expected=9+2*len(ARTICLES)
+assert len(pages)==expected+1, f'Expected {expected} generated pages plus 404; got {len(pages)}'
 canonicals={};descriptions=set()
 for path,page in pages.items():
     assert page.lang in {'en','uk'}, path
@@ -100,8 +102,10 @@ for path,page in pages.items():
             if item.get('@type')=='BlogPosting':
                 assert item['mainEntityOfPage']['@id'].removesuffix('#page') in page.attr('link','rel','canonical','href'),path
                 assert item['datePublished'] and item['author'] and item['image'],path
-                assert item['datePublished'].startswith(SITE['article_published']),path
-                assert item['dateModified'].startswith(SITE['content_updated']),path
+                slug=urlsplit(item['@id']).path.rstrip('/').split('/')[-1]
+                assert slug in ARTICLES,path
+                assert item['datePublished'].startswith(ARTICLES[slug]['published']),path
+                assert item['dateModified'].startswith(ARTICLES[slug]['updated']),path
             if item.get('@type')=='SoftwareApplication':
                 assert item['name']=='Wonderfall' and item['alternateName']==STORE_DATA['name'],path
                 assert 'softwareVersion' not in item,path
@@ -156,8 +160,8 @@ ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 locations={element.text for element in sitemap.findall('.//s:loc',ns)}
 assert locations==set(canonicals),f'Sitemap mismatch: {locations ^ set(canonicals)}'
 for feed in [ROOT/'blog/feed.xml',ROOT/'uk/blog/feed.xml']:
-    items=ET.parse(feed).findall('./channel/item');assert len(items)==1
-    assert items[0].findtext('link') in locations,feed
+    items=ET.parse(feed).findall('./channel/item');assert len(items)==len(ARTICLES),feed
+    assert all(item.findtext('link') in locations for item in items),feed
 assert (ROOT/'CNAME').read_text().strip()==urlsplit(ORIGIN).hostname
 assert f'Sitemap: {ORIGIN}/sitemap.xml' in (ROOT/'robots.txt').read_text()
 assert ORIGIN+'/support/' in (ROOT/'llms.txt').read_text()

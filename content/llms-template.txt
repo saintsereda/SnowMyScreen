@@ -23,12 +23,12 @@
 
 ## Guides
 - [Mac desktop guides]({origin}/blog/)
-- [How to add snow to your Mac desktop]({origin}/blog/mac-desktop-effects/): Setup, desktop overlays versus live wallpaper or screensavers, and seasonal effects.
+{guides_en}
 
 ## Українською
 - [Ефекти, відгуки та відповіді на питання]({origin}/uk/)
 - [Посібники]({origin}/uk/blog/)
-- [Як додати сніг на робочий стіл Mac]({origin}/uk/blog/mac-desktop-effects/)
+{guides_uk}
 - [Допомога]({origin}/uk/support/)
 - [Конфіденційність]({origin}/uk/privacy.html)
 

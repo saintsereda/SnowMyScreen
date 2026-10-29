@@ -226,13 +226,8 @@
     ]
   ],
   "blog_title": "A little inspiration for your workspace",
-  "article_title": "How to Add Snow to Your Mac Desktop (and Other Seasonal Effects)",
-  "article_meta_title": "How to Add Snow to Your Mac Desktop | Wonderfall",
-  "article_description": "Set up falling snow on your Mac, customize desktop overlays and PNGs, and explore Wonderfall’s seasonal effects without changing your wallpaper.",
-  "article_summary": "A practical guide to desktop overlays, seasonal effects and finding a setup that stays out of your way",
   "read": "Read the guide",
   "all_posts": "All articles",
-  "published": "October 5, 2026",
   "blog_meta_title": "Mac Desktop Guides & Seasonal Effects | Wonderfall",
   "blog_description": "Practical guides to Mac desktop customization: snow and rain overlays, seasonal effects, decorative lights and custom images.",
   "blog_intro": "Practical guides to giving your Mac a little more atmosphere — start with the basics, then make the setup your own",
@@ -353,6 +348,5 @@
     "country": "Ukraine",
     "checked": "App Store Ukraine, checked {date}"
   },
-  "updated_label": "Updated",
-  "updated_date": "October 20, 2026"
+  "updated_label": "Updated"
 }

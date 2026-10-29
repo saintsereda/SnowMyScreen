@@ -15,11 +15,24 @@ origin_parts = urlsplit(ORIGIN)
 assert origin_parts.scheme == 'https' and origin_parts.hostname and not origin_parts.path and not origin_parts.query and not origin_parts.fragment and not origin_parts.username, 'Set a plain HTTPS origin in content/site.json.'
 STORE_DATA = json.loads((ROOT/'content/app-store.json').read_text())
 STORE = 'https://apps.apple.com/app/id6755106853'
-DATE = SITE['article_published']
 UPDATED = SITE['content_updated']
-SLUG = 'mac-desktop-effects'
 LANGS = ('en', 'uk')
 E = html.escape
+# Each guide lives in content/articles/<slug>/{en,uk}.html; drafts stay out of the build.
+ARTICLES = sorted((a for a in json.loads((ROOT/'content/articles/articles.json').read_text())['articles'] if a['status']=='published'),
+                  key=lambda a: a['published'], reverse=True)
+FEATURED = next(a for a in ARTICLES if a.get('featured'))
+MONTHS = {'en':('January','February','March','April','May','June','July','August','September','October','November','December'),
+          'uk':('січня','лютого','березня','квітня','травня','червня','липня','серпня','вересня','жовтня','листопада','грудня')}
+
+def human_date(lang, iso):
+    year,month,day=(int(part) for part in iso.split('-'))
+    name=MONTHS[lang][month-1]
+    return f'{name} {day}, {year}' if lang=='en' else f'{day} {name} {year} року'
+
+def rfc822(iso):
+    import datetime
+    return datetime.date.fromisoformat(iso).strftime('%a, %d %b %Y 07:00:00 GMT')
 
 def asset(path):
     version=hashlib.sha256((ROOT/path.lstrip('/')).read_bytes()).hexdigest()[:10]
@@ -72,7 +85,7 @@ def navigation(c, suffix='', preview=False):
 <noscript><nav class="site-navigation__fallback" aria-label="{E(ui['sections'])}">{links}</nav></noscript>
 </header>'''
 
-def page(c, suffix, title, description, body, schemas=(), article=False, preview=False):
+def page(c, suffix, title, description, body, schemas=(), article=None, preview=False):
     lang=c['lang']; canonical=ORIGIN+url(lang,suffix)
     webpage={'@type':'WebPage','@id':canonical+'#page','url':canonical,'name':title,
              'description':description,'inLanguage':lang,'isPartOf':{'@id':ORIGIN+'/#website'},
@@ -90,7 +103,8 @@ def page(c, suffix, title, description, body, schemas=(), article=False, preview
     hero_atmosphere='<div class="hero-atmosphere" aria-hidden="true"></div>\n' if preview else ''
     shooting_stars='<div class="shooting-stars" data-shooting-stars aria-hidden="true"></div>' if preview else ''
     preview_script=''.join(f'<script src="{asset(path)}" defer></script>' for path in ('/js/preview.js','/js/weather-switch.js','/js/preview-perspective.js','/js/features.js','/js/shooting-star.js','/js/reviews.js','/js/faq.js')) if preview else ''
-    article_meta=f'<meta property="article:published_time" content="{DATE}T09:00:00+02:00"><meta property="article:modified_time" content="{UPDATED}T09:00:00+02:00">' if article else ''
+    article_script=f'<script src="{asset("/js/article-media.js")}" defer></script>' if article else ''
+    article_meta=f'<meta property="article:published_time" content="{article["published"]}T09:00:00+02:00"><meta property="article:modified_time" content="{article["updated"]}T09:00:00+02:00">' if article else ''
     return f'''<!doctype html>
 <html lang="{lang}">
 <head>
@@ -120,7 +134,7 @@ def page(c, suffix, title, description, body, schemas=(), article=False, preview
 <script src="{asset('/js/navigation.js')}" defer></script>
 <script src="{asset('/js/brand-icon.js')}" defer></script>
 <script type="application/ld+json">{dump({'@context':'https://schema.org','@graph':graph})}</script>
-{preview_script}
+{preview_script}{article_script}
 </head>
 <body class="{'home-page' if preview else 'inner-page'}">
 <a class="skip-link" href="#main">{E(c['skip'])}</a>
@@ -133,8 +147,39 @@ def page(c, suffix, title, description, body, schemas=(), article=False, preview
 def cta(c):
     return f'<section class="final-cta wrap"><h2>{E(c["cta_title"])}</h2><p>{E(c["cta_text"])}</p><a class="button" href="{STORE}">{E(c["download"])}</a><p class="compat">{E(c["compat"])}</p></section>'
 
-def article_card(c):
-    return f'<article class="article-card"><div class="article-art" aria-hidden="true"><span>❄</span><span>✿</span><span>✦</span></div><div><h3><a href="{url(c["lang"],"blog/"+SLUG+"/")}">{E(c["article_title"])}</a></h3><p>{E(c["article_summary"])}</p><a class="text-link" href="{url(c["lang"],"blog/"+SLUG+"/")}">{E(c["read"])} <span aria-hidden="true">↗</span></a></div></article>'
+def media_figure(m, label, caption='', cover=False):
+    classes='article-cover' if cover else 'article-media'
+    text=f'<figcaption>{E(caption)}</figcaption>' if caption else ''
+    return (f'<figure class="{classes}"><video data-article-video src="{asset(m["video"])}" poster="{asset(m["poster"])}" '
+            f'muted loop playsinline controls preload="none" aria-label="{E(label)}"></video>{text}</figure>')
+
+def with_media(article, a, lang):
+    # Each inline video goes after the first paragraph of the section it illustrates.
+    for m in a.get('inline',[]):
+        start=article.index(f'<h2 id="{m["after"]}"')
+        end=article.index('</p>',start)+len('</p>')
+        caption=m['caption'][lang]
+        article=article[:end]+media_figure(m,caption,caption)+article[end:]
+    return article
+
+def post_row(c, a):
+    lang=c['lang']; href=url(lang,"blog/"+a["slug"]+"/"); text=a[lang]
+    return f'<li class="post-row"><h2><a href="{href}">{E(text["title"])}</a></h2><p class="post-meta"><time datetime="{a["published"]}">{E(human_date(lang,a["published"]))}</time> · {read_minutes(a,lang)}</p><p>{E(text["description"])}</p></li>'
+
+def read_minutes(a, lang):
+    # Derive read time from actual content rather than a fixed estimate.
+    article=(ROOT/'content/articles'/a['slug']/f'{lang}.html').read_text()
+    words=len(re.sub('<[^>]+>',' ',article).split()); minutes=max(1,(words+179)//180)
+    return f'{minutes} minute read' if lang=='en' else f'{minutes} хв читання'
+
+def other_language(lang, suffix):
+    other='uk' if lang=='en' else 'en'
+    label='Читати українською' if lang=='en' else 'Read in English'
+    return f'<a class="language-switch" href="{url(other,suffix)}" lang="{other}" hreflang="{other}">{label}</a>'
+
+def article_card(c, a):
+    href=url(c["lang"],"blog/"+a["slug"]+"/"); text=a[c["lang"]]
+    return f'<article class="article-card"><div class="article-art" aria-hidden="true"><span>❄</span><span>✿</span><span>✦</span></div><div><h3><a href="{href}">{E(text["title"])}</a></h3><p>{E(text["summary"])}</p><a class="text-link" href="{href}">{E(c["read"])} <span aria-hidden="true">↗</span></a></div></article>'
 
 MENU_EFFECT_SYMBOLS = {'snow':'snowflake', 'rain':'cloud.rain', 'leaves':'leaf',
                        'petals':'camera.macro', 'fireflies':'sparkles'}
@@ -242,7 +287,7 @@ def feature_showcase(c):
 def product_overview(c):
     facts=''.join(f'<div><dt>{E(label)}</dt><dd>{E(value)}</dd></div>' for label,value in c['product_facts'])
     return f'''<section class="product-overview section wrap" aria-labelledby="product-title">
-<div class="product-overview__copy"><h2 id="product-title">{E(c['product_title'])}</h2><p>{E(c['product_summary'])}</p><a class="text-link" href="{url(c['lang'],'blog/'+SLUG+'/')}">{E(c['setup_link'])} <span aria-hidden="true">↗</span></a></div>
+<div class="product-overview__copy"><h2 id="product-title">{E(c['product_title'])}</h2><p>{E(c['product_summary'])}</p><a class="text-link" href="{url(c['lang'],'blog/'+FEATURED['slug']+'/')}">{E(c['setup_link'])} <span aria-hidden="true">↗</span></a></div>
 <div class="product-overview__details"><dl class="product-facts">{facts}</dl></div></section>'''
 
 def reviews_section(c):
@@ -277,7 +322,7 @@ def homepage(c):
 {reviews_section(c)}
 <div class="faq-region"><section class="section faq-section wrap" id="faq"><div><h2>{E(c['faq_title'])}</h2><a class="text-link" href="{url(c['lang'],'support/')}">{E(c['support'])} ↗</a></div><div class="faq-list">{faq}</div></section></div>
 {product_overview(c)}
-<section class="section wrap"><h2>{E(c['blog_title'])}</h2>{article_card(c)}</section>{cta(c)}'''
+<section class="section wrap"><h2>{E(c['blog_title'])}</h2>{article_card(c,FEATURED)}</section>{cta(c)}'''
     faq_schema={'@type':'FAQPage','@id':ORIGIN+url(c['lang'])+'#faq','inLanguage':c['lang'],
                 'mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in c['faq']]}
     return page(c,'',c['title'],c['description'],body,[app_schema(c),faq_schema],preview=True)
@@ -302,24 +347,30 @@ for lang in LANGS:
     c['support_intro']=c['support_intro'].format(**substitutions)
     c['support_sections']=[[title,text.format(**substitutions)] for title,text in c['support_sections']]
     write(url(lang,'index.html'),homepage(c))
-    collection={'@type':'CollectionPage','@id':ORIGIN+url(lang,'blog/')+'#collection','name':c['blog_meta_title'],'hasPart':{'@id':ORIGIN+url(lang,'blog/'+SLUG+'/')+'#article'}}
-    body=f'<section class="page-heading wrap"><h1>{E(c["blog_title"])}</h1><p>{E(c["blog_intro"])}</p></section><section class="wrap blog-list">{article_card(c)}<p><a class="text-link" href="{url(lang,"blog/feed.xml")}">RSS ↗</a></p></section>'+cta(c)
+    collection={'@type':'CollectionPage','@id':ORIGIN+url(lang,'blog/')+'#collection','name':c['blog_meta_title'],'hasPart':[{'@id':ORIGIN+url(lang,'blog/'+a['slug']+'/')+'#article'} for a in ARTICLES]}
+    rows=''.join(post_row(c,a) for a in ARTICLES)
+    body=f'<section class="blog-heading wrap"><div><h1>{E(c["blog_title"])}</h1><p>{E(c["blog_intro"])}</p></div>{other_language(lang,"blog/")}</section><section class="wrap blog-list"><ol class="post-list">{rows}</ol><p><a class="text-link" href="{url(lang,"blog/feed.xml")}">RSS ↗</a></p></section>'+cta(c)
     write(url(lang,'blog/index.html'),page(c,'blog/',c['blog_meta_title'],c['blog_description'],body,[collection]))
-    article_url=ORIGIN+url(lang,'blog/'+SLUG+'/')
-    article_schema={'@type':'BlogPosting','@id':article_url+'#article','headline':c['article_title'],
-        'description':c['article_description'],'datePublished':DATE+'T09:00:00+02:00','dateModified':UPDATED+'T09:00:00+02:00',
-        'inLanguage':lang,'author':{'@id':ORIGIN+'/#andrew'},'publisher':{'@type':'Organization','name':'Wonderfall','url':ORIGIN+'/'},
-        'mainEntityOfPage':{'@id':article_url+'#page'},'image':ORIGIN+'/images/wonderfall-icon.png'}
-    breadcrumb={'@type':'BreadcrumbList','itemListElement':[
-        {'@type':'ListItem','position':1,'name':'Wonderfall','item':ORIGIN+url(lang)},
-        {'@type':'ListItem','position':2,'name':c['nav'][3],'item':ORIGIN+url(lang,'blog/')},
-        {'@type':'ListItem','position':3,'name':c['article_title'],'item':article_url}]}
-    article=(ROOT/'content/articles'/f'{lang}.html').read_text().replace('__HOME__',url(lang))
-    # Derive read time from actual content rather than a fixed estimate.
-    words=len(re.sub('<[^>]+>',' ',article).split()); minutes=max(1,(words+179)//180)
-    read_time=f'{minutes} minute read' if lang=='en' else f'{minutes} хв читання'
-    body=f'<article class="prose wrap"><nav class="breadcrumbs" aria-label="{"Breadcrumb" if lang=="en" else "Шлях до сторінки"}"><a href="{url(lang)}">Wonderfall</a> / <a href="{url(lang,"blog/")}">{c["nav"][3]}</a></nav><h1>{E(c["article_title"])}</h1><p class="byline">{E(c["author"])}</p><p class="byline"><time datetime="{DATE}">{E(c["published"])}</time> · {read_time} · {E(c["updated_label"])} <time datetime="{UPDATED}">{E(c["updated_date"])}</time></p>{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></article>'+cta(c)
-    write(url(lang,'blog/'+SLUG+'/index.html'),page(c,'blog/'+SLUG+'/',c['article_meta_title'],c['article_description'],body,[article_schema,breadcrumb],article=True))
+    for a in ARTICLES:
+        text=a[lang]; suffix='blog/'+a['slug']+'/'
+        article_url=ORIGIN+url(lang,suffix)
+        article_schema={'@type':'BlogPosting','@id':article_url+'#article','headline':text['title'],
+            'description':text['description'],'datePublished':a['published']+'T09:00:00+02:00','dateModified':a['updated']+'T09:00:00+02:00',
+            'inLanguage':lang,'author':{'@id':ORIGIN+'/#andrew'},'publisher':{'@type':'Organization','name':'Wonderfall','url':ORIGIN+'/'},
+            'mainEntityOfPage':{'@id':article_url+'#page'},'image':ORIGIN+'/images/wonderfall-icon.png'}
+        breadcrumb={'@type':'BreadcrumbList','itemListElement':[
+            {'@type':'ListItem','position':1,'name':'Wonderfall','item':ORIGIN+url(lang)},
+            {'@type':'ListItem','position':2,'name':c['nav'][3],'item':ORIGIN+url(lang,'blog/')},
+            {'@type':'ListItem','position':3,'name':text['title'],'item':article_url}]}
+        article=with_media((ROOT/'content/articles'/a['slug']/f'{lang}.html').read_text().replace('__HOME__',url(lang)),a,lang)
+        updated=f' · {E(c["updated_label"])} <time datetime="{a["updated"]}">{E(human_date(lang,a["updated"]))}</time>' if a['updated']!=a['published'] else ''
+        cover=media_figure(a['cover'],a['cover']['alt'][lang],cover=True) if a.get('cover') else ''
+        header=(f'<header class="article-header"><p class="post-meta"><time datetime="{a["published"]}">{E(human_date(lang,a["published"]))}</time> · {read_minutes(a,lang)}{updated}</p>'
+                f'<h1>{E(text["title"])}</h1><p class="article-summary">{E(text["description"])}</p><p class="byline">{E(c["author"])}</p>'
+                f'<a class="button" href="{STORE}">{E(c["download"])}</a></header>')
+        crumbs=f'<nav class="breadcrumbs" aria-label="{"Breadcrumb" if lang=="en" else "Шлях до сторінки"}"><a href="{url(lang,"blog/")}">{c["nav"][3]}</a> / <span>{E(text["title"])}</span></nav>'
+        body=f'<article class="article-page"><div class="article-top wrap">{crumbs}{other_language(lang,suffix)}</div>{header}{cover}<div class="prose article-body wrap">{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></div></article>'+cta(c)
+        write(url(lang,suffix+'index.html'),page(c,suffix,text['meta_title'],text['description'],body,[article_schema,breadcrumb],article=a))
     sections=''.join(f'<section><h2>{E(title)}</h2><p>{E(text)}</p></section>' for title,text in c['support_sections'])
     body=f'<div class="prose wrap"><h1>{E(c["support_title"])}</h1><p class="answer">{E(c["support_intro"])}</p>{sections}<p><a class="button" href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a></p></div>'
     write(url(lang,'support/index.html'),page(c,'support/',c['support_title'],c['support_description'],body))
@@ -338,16 +389,18 @@ for lang in LANGS:
     rss=ET.Element('rss',version='2.0'); channel=ET.SubElement(rss,'channel')
     for name,text in [('title','Wonderfall Blog'),('link',ORIGIN+url(lang,'blog/')),('description',c['blog_description']),('language',lang)]:
         ET.SubElement(channel,name).text=text
-    item=ET.SubElement(channel,'item')
-    for name,text in [('title',c['article_title']),('link',article_url),('guid',article_url),('description',c['article_description']),('pubDate','Mon, 05 Oct 2026 07:00:00 GMT')]:
-        ET.SubElement(item,name).text=text
+    for a in ARTICLES:
+        item=ET.SubElement(channel,'item'); link=ORIGIN+url(lang,'blog/'+a['slug']+'/')
+        for name,text in [('title',a[lang]['title']),('link',link),('guid',link),('description',a[lang]['description']),('pubDate',rfc822(a['published']))]:
+            ET.SubElement(item,name).text=text
     write(url(lang,'blog/feed.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n'+ET.tostring(rss,encoding='unicode'))
-    for suffix in ('','blog/','blog/'+SLUG+'/','support/','privacy.html'):
+    for suffix in ('','blog/',*('blog/'+a['slug']+'/' for a in ARTICLES),'support/','privacy.html'):
         entry=ET.SubElement(sitemap,ns+'url'); ET.SubElement(entry,ns+'loc').text=ORIGIN+url(lang,suffix); ET.SubElement(entry,ns+'lastmod').text=UPDATED
         for alternate in (*LANGS,'x-default'):
             ET.SubElement(entry,'{http://www.w3.org/1999/xhtml}link',rel='alternate',hreflang=alternate,href=ORIGIN+url('en' if alternate=='x-default' else alternate,suffix))
 write('/sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n'+ET.tostring(sitemap,encoding='unicode')+'\n')
 write('/robots.txt','User-agent: *\nAllow: /\nDisallow: /content/\nDisallow: /scripts/\n\nSitemap: '+ORIGIN+'/sitemap.xml\n')
-write('/llms.txt',(ROOT/'content/llms-template.txt').read_text().format(origin=ORIGIN,**substitutions,checked_at=STORE_DATA['checked_at']))
+guides={lang:'\n'.join(f'- [{a[lang]["title"]}]({ORIGIN}{url(lang,"blog/"+a["slug"]+"/")}): {a[lang]["description"]}' for a in ARTICLES) for lang in LANGS}
+write('/llms.txt',(ROOT/'content/llms-template.txt').read_text().format(origin=ORIGIN,**substitutions,checked_at=STORE_DATA['checked_at'],guides_en=guides['en'],guides_uk=guides['uk']))
 write('/download.html',(ROOT/'content/download-template.html').read_text().replace('__ORIGIN__',ORIGIN))
-print('Generated 11 static pages, 2 RSS feeds, sitemap.xml, robots.txt and llms.txt.')
+print(f'Generated {9+2*len(ARTICLES)} static pages ({len(ARTICLES)} guides per language), 2 RSS feeds, sitemap.xml, robots.txt and llms.txt.')

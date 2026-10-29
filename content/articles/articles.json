@@ -1,0 +1,134 @@
+{
+  "articles": [
+    {
+      "slug": "mac-desktop-effects",
+      "status": "published",
+      "featured": true,
+      "published": "2026-10-05",
+      "updated": "2026-10-20",
+      "en": {
+        "title": "How to Add Snow to Your Mac Desktop (and Other Seasonal Effects)",
+        "meta_title": "How to Add Snow to Your Mac Desktop | Wonderfall",
+        "description": "Set up falling snow on your Mac, customize desktop overlays and PNGs, and explore Wonderfall’s seasonal effects without changing your wallpaper.",
+        "summary": "A practical guide to desktop overlays, seasonal effects and finding a setup that stays out of your way"
+      },
+      "uk": {
+        "title": "Як додати сніг на робочий стіл Mac та інші сезонні ефекти",
+        "meta_title": "Як додати сніг на робочий стіл Mac | Wonderfall",
+        "description": "Увімкніть сніг на робочому столі Mac, налаштуйте анімацію й власні PNG та спробуйте сезонні ефекти Wonderfall, зберігши свої шпалери.",
+        "summary": "Практичний посібник із сезонних ефектів: як усе налаштувати та знайти атмосферу, яка не заважає працювати"
+      },
+      "cover": {
+        "video": "/videos/snow-1440p.mp4",
+        "poster": "/videos/snow-1440p.jpg",
+        "alt": {
+          "en": "Falling snow over a blue desktop wallpaper",
+          "uk": "Сніг падає поверх синіх шпалер робочого столу"
+        }
+      },
+      "inline": [
+        {
+          "after": "overlay",
+          "video": "/videos/placement-over-windows.mp4",
+          "poster": "/videos/placement-over-windows.jpg",
+          "caption": {
+            "en": "Over the content: snow falls in front of open windows, and clicks still pass through.",
+            "uk": "Поверх вмісту: сніг падає перед відкритими вікнами, а кліки проходять крізь нього."
+          }
+        },
+        {
+          "after": "balance",
+          "video": "/videos/placement-top-strip.mp4",
+          "poster": "/videos/placement-top-strip.jpg",
+          "caption": {
+            "en": "The top strip keeps the effect near the menu bar.",
+            "uk": "Верхня смуга тримає ефект біля рядка меню."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "animated-snow-mac-desktop",
+      "status": "published",
+      "published": "2026-10-29",
+      "updated": "2026-10-29",
+      "en": {
+        "title": "Animated Snow on Your Mac: Wallpaper, Screensaver or Overlay?",
+        "meta_title": "Animated Snow on Your Mac Desktop | Wonderfall",
+        "description": "Moving wallpaper, snow screensaver or desktop overlay: what each option does on a Mac and how to keep snow falling over your own wallpaper while you work.",
+        "summary": "Three ways to get falling snow on a Mac, and which one stays visible while you work"
+      },
+      "uk": {
+        "title": "Анімований сніг на Mac: шпалери, скринсейвер чи оверлей?",
+        "meta_title": "Анімований сніг на робочому столі Mac | Wonderfall",
+        "description": "Рухомі шпалери, скринсейвер зі снігом чи оверлей: що робить кожен варіант на Mac і як залишити сніг поверх своїх шпалер під час роботи.",
+        "summary": "Три способи отримати сніг на Mac і який із них видно під час роботи"
+      },
+      "cover": {
+        "video": "/videos/snow-1440p.mp4",
+        "poster": "/videos/snow-1440p.jpg",
+        "alt": {
+          "en": "Falling snow over a blue desktop wallpaper",
+          "uk": "Сніг падає поверх синіх шпалер робочого столу"
+        }
+      },
+      "inline": [
+        {
+          "after": "overlay",
+          "video": "/videos/placement-over-windows.mp4",
+          "poster": "/videos/placement-over-windows.jpg",
+          "caption": {
+            "en": "An overlay keeps your wallpaper and can fall in front of open windows.",
+            "uk": "Оверлей зберігає ваші шпалери й може падати перед відкритими вікнами."
+          }
+        },
+        {
+          "after": "setup",
+          "video": "/videos/placement-desktop.mp4",
+          "poster": "/videos/placement-desktop.jpg",
+          "caption": {
+            "en": "Desktop only: the snow stays behind your windows.",
+            "uk": "Тільки на робочому столі: сніг залишається за вікнами."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "christmas-lights-mac-desktop",
+      "status": "draft",
+      "published": "2026-11-17",
+      "updated": "2026-11-17",
+      "en": {
+        "title": "How to Put Christmas Lights on Your Mac Desktop",
+        "meta_title": "Christmas Lights for Your Mac Desktop | Wonderfall",
+        "description": "Hang animated Christmas lights along your Mac menu bar, pick a scene, colors and glow, and keep them over your windows or only on the desktop.",
+        "summary": "String lights along the menu bar, from Winter Night to Holiday Lights"
+      },
+      "uk": {
+        "title": "Як повісити новорічну гірлянду на робочий стіл Mac",
+        "meta_title": "Новорічна гірлянда на робочому столі Mac | Wonderfall",
+        "description": "Повісьте анімовану гірлянду вздовж рядка меню Mac, оберіть сцену, кольори й сяйво та покажіть її поверх вікон або лише на робочому столі.",
+        "summary": "Гірлянда вздовж рядка меню: від «Зимової ночі» до «Святкових вогнів»"
+      },
+      "cover": {
+        "video": "/videos/garland-showcase.mp4",
+        "poster": "/videos/garland-showcase.jpg",
+        "alt": {
+          "en": "A string of glowing lights along the top of a dark desktop",
+          "uk": "Гірлянда світиться вздовж верхнього краю темного робочого столу"
+        }
+      },
+      "inline": [
+        {
+          "after": "snow",
+          "video": "/videos/snow-1440p.mp4",
+          "poster": "/videos/snow-1440p.jpg",
+          "caption": {
+            "en": "Turn on Snow to add falling flakes below the lights.",
+            "uk": "Увімкніть сніг, щоб під гірляндою падали сніжинки."
+          }
+        }
+      ]
+    }
+  ]
+}
