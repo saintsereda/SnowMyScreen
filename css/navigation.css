@@ -56,17 +56,15 @@ html.has-bubble-menu, html.has-bubble-menu body { overflow: hidden; }
   min-height: 48px;
   padding-inline: 18px;
   border-radius: 999px;
-  background: #fff;
   font-size: 16px;
-  font-weight: 750;
+  font-weight: 600;
+  letter-spacing: -.01em;
   white-space: nowrap;
-  transition: background-color 160ms ease;
 }
-.site-navigation a.site-navigation__download { color: #171717; }
+.site-navigation a.site-navigation__download { color: #111; }
 .site-navigation.has-hero .site-navigation__download { display: none; }
 .site-navigation.has-hero.is-past-hero .site-navigation__download { display: inline-flex; }
 .site-navigation__download svg { width: 15px; height: 18px; flex: none; }
-.site-navigation__download:is(:hover, :focus-visible) { background: #f0f4ff; }
 .site-navigation__download:focus-visible { outline-color: var(--nav-label); }
 .site-navigation__round { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border-radius: 50%; color: var(--nav-label); transition: background-color 160ms ease; }
 .site-navigation__round:hover, .site-navigation__language[open] summary { background: var(--nav-control); }

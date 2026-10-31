@@ -8,12 +8,14 @@
       "updated": "2026-10-20",
       "en": {
         "title": "How to Add Snow to Your Mac Desktop (and Other Seasonal Effects)",
+        "footer_label": "Add snow to your Mac desktop",
         "meta_title": "How to Add Snow to Your Mac Desktop | Wonderfall",
         "description": "Set up falling snow on your Mac, customize desktop overlays and PNGs, and explore Wonderfall’s seasonal effects without changing your wallpaper.",
         "summary": "A practical guide to desktop overlays, seasonal effects and finding a setup that stays out of your way"
       },
       "uk": {
         "title": "Як додати сніг на робочий стіл Mac та інші сезонні ефекти",
+        "footer_label": "Як додати сніг на робочий стіл",
         "meta_title": "Як додати сніг на робочий стіл Mac | Wonderfall",
         "description": "Увімкніть сніг на робочому столі Mac, налаштуйте анімацію й власні PNG та спробуйте сезонні ефекти Wonderfall, зберігши свої шпалери.",
         "summary": "Практичний посібник із сезонних ефектів: як усе налаштувати та знайти атмосферу, яка не заважає працювати"
@@ -54,12 +56,14 @@
       "updated": "2026-10-29",
       "en": {
         "title": "Animated Snow on Your Mac: Wallpaper, Screensaver or Overlay?",
+        "footer_label": "Wallpaper, screensaver or overlay",
         "meta_title": "Animated Snow on Your Mac Desktop | Wonderfall",
         "description": "Moving wallpaper, snow screensaver or desktop overlay: what each option does on a Mac and how to keep snow falling over your own wallpaper while you work.",
         "summary": "Three ways to get falling snow on a Mac, and which one stays visible while you work"
       },
       "uk": {
         "title": "Анімований сніг на Mac: шпалери, скринсейвер чи оверлей?",
+        "footer_label": "Шпалери, скринсейвер чи оверлей",
         "meta_title": "Анімований сніг на робочому столі Mac | Wonderfall",
         "description": "Рухомі шпалери, скринсейвер зі снігом чи оверлей: що робить кожен варіант на Mac і як залишити сніг поверх своїх шпалер під час роботи.",
         "summary": "Три способи отримати сніг на Mac і який із них видно під час роботи"
@@ -100,12 +104,14 @@
       "updated": "2026-11-17",
       "en": {
         "title": "How to Put Christmas Lights on Your Mac Desktop",
+        "footer_label": "Christmas lights on your Mac",
         "meta_title": "Christmas Lights for Your Mac Desktop | Wonderfall",
         "description": "Hang animated Christmas lights along your Mac menu bar, pick a scene, colors and glow, and keep them over your windows or only on the desktop.",
         "summary": "String lights along the menu bar, from Winter Night to Holiday Lights"
       },
       "uk": {
         "title": "Як повісити новорічну гірлянду на робочий стіл Mac",
+        "footer_label": "Новорічна гірлянда на Mac",
         "meta_title": "Новорічна гірлянда на робочому столі Mac | Wonderfall",
         "description": "Повісьте анімовану гірлянду вздовж рядка меню Mac, оберіть сцену, кольори й сяйво та покажіть її поверх вікон або лише на робочому столі.",
         "summary": "Гірлянда вздовж рядка меню: від «Зимової ночі» до «Святкових вогнів»"

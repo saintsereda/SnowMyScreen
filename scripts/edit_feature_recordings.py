@@ -22,26 +22,25 @@ def poster(video, destination, second):
 
 
 def garland_montage(source):
-    # Distinct scenes, with alternating short and long holds. The source changes
-    # scene in order; these starts leave its transition frames out of the edit.
+    # Distinct designs in a shuffled order, with alternating short and long holds.
+    # These starts leave the source's scene changes and the year's flash out of the edit.
     scenes = (
-        (0.5, 3.6),   # cool white bulbs
-        (13.1, 2.1),  # warm bulbs
-        (18.3, 2.8),  # hearts
-        (24.4, 3.2),  # stars
-        (32.5, 2.2),  # multicolor rounds
-        (39.1, 2.6),  # year figures
-        (44.4, 2.0),  # gifts
-        (50.3, 3.5),  # gold lights
-        (69.0, 2.3),  # red lights
-        (75.0, 3.1),  # multicolor finale
+        (1.0, 3.4),   # colored stars
+        (20.5, 2.2),  # classic bulbs
+        (39.5, 2.8),  # cats
+        (13.0, 2.0),  # trees
+        (27.0, 3.0),  # mugs
+        (52.2, 2.4),  # year figures
+        (34.2, 2.2),  # clovers
+        (45.5, 3.0),  # dogs
+        (56.8, 2.6),  # gold sparkles
     )
     fade = 0.24
     filters = []
     for index, (start, duration) in enumerate(scenes):
         filters.append(
             f"[0:v]trim=start={start}:duration={duration},setpts=PTS-STARTPTS,"
-            f"fps=24,crop=1298:730:0:0,scale=960:540,format=yuv420p[s{index}]"
+            f"fps=30,crop=1728:972:0:0,scale=1440:810:flags=lanczos,format=yuv420p[s{index}]"
         )
     total = scenes[0][1]
     previous = "s0"
@@ -53,7 +52,7 @@ def garland_montage(source):
         total += duration - fade
     destination = VIDEOS / "garland-showcase.mp4"
     run("-i", source, "-filter_complex", ";".join(filters), "-map", f"[{previous}]",
-        "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "22", "-pix_fmt", "yuv420p",
+        "-an", "-c:v", "libx264", "-preset", "slow", "-crf", "20", "-pix_fmt", "yuv420p",
         "-movflags", "+faststart", destination)
     poster(destination, VIDEOS / "garland-showcase.jpg", 0.5)
 

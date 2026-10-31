@@ -89,10 +89,11 @@ for (const locale of ['en', 'uk']) {
     const garlandPreview = garlands.querySelector('[data-garland-preview]');
     const placement = doc.querySelector('[data-feature-media="placement"]');
     const placementVideo = placement.querySelector('[data-feature-video]');
-    assert.equal(cleaning.querySelector('.desktop-menu'), null);
     assert.ok(cleaningStory.querySelector('.feature-story__copy > .feature-switcher--tools'));
     assert.equal(cleaningStory.querySelector('.feature-story__visual > .feature-switcher--tools'), null);
-    assert.equal(doc.querySelectorAll('#features .desktop-menu').length, 3);
+    assert.equal(cleaning.querySelector('.desktop-menu'), null);
+    assert.equal(garlands.querySelector('.desktop-menu'), null, 'The garland recording shows its own menu bar');
+    assert.equal(doc.querySelectorAll('#features .desktop-menu').length, 2);
     const toolIcons = [...doc.querySelectorAll('[data-feature="cleaning"] .feature-tool-icon')];
     assert.deepEqual(toolIcons.map(icon => new URL(icon.src).pathname),
       ['/images/features/tools/shovel.png', '/images/features/tools/broom.png', '/images/features/tools/squeegee.png']);
@@ -136,10 +137,6 @@ for (const locale of ['en', 'uk']) {
     await wait(0);
     assert.match(image.src, /cleaning-rain\.jpg\?v=/);
     assert.match(cleaning.querySelector('[data-feature-video]').src, /cleaning-rain\.mp4\?v=/);
-    assert.equal(cleaning.dataset.cleaningTool, 'rain', 'The rain recording uses its full-width framing');
-    app.click('[data-feature-choice="snow"]');
-    await wait(0);
-    assert.equal(cleaning.dataset.cleaningTool, 'snow', 'Other tools return to the enlarged framing');
     app.click('[data-feature="placement"] [data-feature-choice="desktop"]');
     await wait(0);
     assert.match(placementVideo.src, /placement-desktop\.mp4\?v=/);

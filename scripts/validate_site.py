@@ -125,9 +125,11 @@ for path,page in pages.items():
         assert point_topics==['weather','displays','motion'],path
         slots=[a.get('data-feature-media') for t,a in page.tags if 'data-feature-media' in a]
         assert slots==media_topics,f'Every main feature needs its own media slot: {path}'
-        assert source.count('class="desktop-menu"')==len(media_topics),f'Only the seasonal preview and non-cleaning feature cards need a macOS menu bar: {path}'
+        assert source.count('class="desktop-menu"')==4,f'Only the seasonal preview, closing display, and the custom image and placement cards need a macOS menu bar: {path}'
         feature_videos=[a for t,a in page.tags if t=='video' and 'data-feature-video' in a]
-        assert len(feature_videos)==3 and len([t for t,a in page.tags if t=='video'])==4,f'Keep seasonal, cleaning, garland, and placement recordings separate: {path}'
+        assert len(feature_videos)==3 and len([t for t,a in page.tags if t=='video'])==5,f'Keep seasonal, cleaning, garland, placement and closing recordings separate: {path}'
+        closing=[a for t,a in page.tags if t=='video' and 'data-closing-video' in a]
+        assert len(closing)==1 and closing[0].get('poster') and closing[0].get('preload')=='none' and 'controls' not in closing[0],f'The closing display needs one poster-backed video: {path}'
         for video in feature_videos:
             assert video.get('aria-label') and video.get('preload')=='none',path
             assert all(key in video for key in ('muted','loop','playsinline')),path

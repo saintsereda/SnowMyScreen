@@ -15,10 +15,11 @@
   "description": "Desktop effects for Mac: snow, rain, leaves, fireflies and your own PNG artwork. Keep your wallpaper and tune the motion with Wonderfall.",
   "hero": "Mac desktop effects.\nA different season.",
   "hero_headline": "A little wonder for your Mac",
-  "intro": "Snow, rain, falling leaves, drifting petals and summer fireflies — bring a little of the outside to your Mac with desktop effects you can make your own",
+  "intro": "Snow, rain, falling leaves, drifting petals and summer fireflies. Bring a little of the outside to your Mac with desktop effects you can make your own",
   "compat": "For macOS {minimum_os} and later",
+  "updates_soon": "App updates coming soon",
   "preview_label": "Choose an atmosphere",
-  "preview_note": "Choose an effect to preview — your own wallpaper stays just as it is",
+  "preview_note": "Choose an effect to preview. Your own wallpaper stays just as it is",
   "benefits_label": "More ways to make it yours",
   "benefits": [
     "Keep your wallpaper. The effects appear over or behind your windows.",
@@ -28,7 +29,7 @@
   "showcase": {
     "title": "Your desktop. Your kind of wonder",
     "weather_title": "Follow the weather outside",
-    "weather_text": "Automatically match the weather outside, with seasonal effects for clear days.",
+    "weather_text": "Automatically match the weather outside, with seasonal effects for clear days",
     "weather_outside": "Outside",
     "weather_desktop": "Your desktop",
     "weather_snow": "Snowy",
@@ -38,7 +39,7 @@
     "weather_rain_description": "Rain outside. Raindrops on your desktop.",
     "weather_clear_description": "A clear autumn day. Leaves on your desktop.",
     "cleaning_title": "A little weather. A little play",
-    "cleaning_text": "Shovel the snow, sweep away leaves and petals, or wipe the raindrops. Even clearing your desktop can be a little satisfying.",
+    "cleaning_text": "Shovel the snow, sweep away leaves and petals, or wipe the raindrops. Even clearing your desktop can be a little satisfying",
     "cleaning_snow": "Shovel snow",
     "cleaning_leaves": "Sweep leaves",
     "cleaning_rain": "Wipe raindrops",
@@ -47,17 +48,17 @@
     "cleaning_reset": "Bring the weather back",
     "cleaning_cleared": "All clear. Bring the weather back to try again.",
     "garland_title": "Make the top edge glow",
-    "garland_text": "A string of lights along the top menu bar. Choose your colors, bulb shapes and animation — with or without the weather.",
+    "garland_text": "A string of lights along the top menu bar. Choose your colors, bulb shapes and animation, with or without the weather",
     "garland_menu": "Menu bar",
     "palette_warm": "Warm lights",
     "palette_color": "Colorful lights",
     "palette_ice": "Icy lights",
     "images_title": "Let something of your own fall",
-    "images_text": "Bring up to 10 PNG images and turn your artwork into falling shapes. Use one, or let a few mingle.",
+    "images_text": "Bring up to 10 PNG images and turn your artwork into falling shapes. Use one, or let a few mingle",
     "motion_title": "Find your perfect drift",
-    "motion_text": "Fine-tune the intensity, size, speed and wind.",
+    "motion_text": "Fine-tune the intensity, size, speed and wind",
     "placement_title": "Right where you want it",
-    "placement_text": "Over your apps or behind your windows. Across the whole screen, or just a little along the top.",
+    "placement_text": "Over your apps or behind your windows. Across the whole screen, or just a little along the top",
     "placement_over": "Over windows",
     "placement_desktop": "Desktop only",
     "placement_over_description": "Snow appears over open windows.",
@@ -66,7 +67,7 @@
     "placement_strip_description": "Effects stay along the top edge.",
     "placement_full_description": "Effects cover the full screen.",
     "displays_title": "One display or a whole desk",
-    "displays_text": "Choose which connected screens get the effects.",
+    "displays_text": "Choose which connected screens get the effects",
     "weather_label": "Try a weather change",
     "cleaning_label": "Try a cleaning tool",
     "palette_label": "Choose a light palette",
@@ -96,13 +97,13 @@
   "preview_detail": "Same desktop. A new atmosphere.",
   "effects_kicker": "Six ways to set the scene",
   "effects_title": "More than a snow day",
-  "effects_intro": "Choose a seasonal effect, or bring your own artwork — change the intensity, size, speed and wind to find a look that feels right",
+  "effects_intro": "Choose a seasonal effect or bring your own artwork, then change the intensity, size, speed and wind to find a look that feels right",
   "themes": [
     [
       "snow",
       "Winter snow",
       "Soft flakes, gentle drift and a little winter magic. Choose from built-in snowflake shapes.",
-      "❄"
+      "❄️"
     ],
     [
       "rain",
@@ -120,13 +121,13 @@
       "petals",
       "Spring petals",
       "Blush-colored petals float through your workspace for a softer change of season.",
-      "✿"
+      "🌸"
     ],
     [
       "fireflies",
       "Summer fireflies",
       "Warm points of light wander across the screen, bringing a summer evening indoors.",
-      "✦"
+      "✨"
     ],
     [
       "custom",
@@ -230,17 +231,18 @@
   "all_posts": "All articles",
   "blog_meta_title": "Mac Desktop Guides & Seasonal Effects | Wonderfall",
   "blog_description": "Practical guides to Mac desktop customization: snow and rain overlays, seasonal effects, decorative lights and custom images.",
-  "blog_intro": "Practical guides to giving your Mac a little more atmosphere — start with the basics, then make the setup your own",
-  "cta_title": "A small change A different feeling",
-  "cta_text": "Give your Mac a season of its own — start with snow, then see where the mood takes you",
-  "footer_line": "Seasonal desktop effects, made for Mac.",
+  "blog_intro": "Practical guides to giving your Mac a little more atmosphere. Start with the basics, then make the setup your own",
+  "cta_title": "A small change. A different feeling",
+  "cta_text": "Give your Mac a season of its own. Start with snow, then see where the mood takes you",
+  "footer_line": "Seasonal desktop effects, made for Mac",
+  "footer_groups": ["Guides", "Product", "Legal", "Connect"],
   "privacy": "Privacy policy",
   "support": "Support",
   "contact": "Contact Andrew",
   "author": "By Andrew Sereda, developer of Wonderfall",
   "support_title": "Wonderfall Support & Setup for Mac",
   "support_description": "Get help with Wonderfall on Mac: menu bar controls, themes, overlays, PNG imports and contacting the developer.",
-  "support_intro": "Use the menu bar icon to choose a seasonal effect, adjust its motion, add garlands or import your own PNG images.",
+  "support_intro": "Use the menu bar icon to choose a seasonal effect, adjust its motion, add garlands or import your own PNG images",
   "support_sections": [
     [
       "Getting started",
@@ -316,7 +318,7 @@
     "home": "Home"
   },
   "product_title": "Desktop effects for Mac. Your wallpaper stays",
-  "product_summary": "Wonderfall adds animated snow, rain, autumn leaves, spring petals and fireflies to your Mac desktop. Keep the effects behind your windows or let them drift over your apps, with your own wallpaper underneath.",
+  "product_summary": "Wonderfall adds animated snow, rain, autumn leaves, spring petals and fireflies to your Mac desktop. Keep the effects behind your windows or let them drift over your apps, with your own wallpaper underneath",
   "product_facts": [
     [
       "Platform",

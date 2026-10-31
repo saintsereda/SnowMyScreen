@@ -75,7 +75,7 @@ def navigation(c, suffix='', preview=False):
     languages=''.join(f'<a href="{url(locale,suffix)}" lang="{locale}" hreflang="{locale}"'+(' aria-current="page"' if locale==lang else '')+f'>{label}</a>' for locale,label in (('en','English'),('uk','Українська')))
     return f'''<header class="site-navigation{' has-hero' if preview else ''}" data-site-navigation data-nav-motion="{asset('/js/mobile-menu.js')}">
 <nav class="site-navigation__capsule" aria-label="{E(ui['main'])}">
-<a class="site-navigation__brand" href="{url(lang)}" aria-label="Wonderfall — {E(ui['home'])}" data-brand-link>{brand_icon()}<span class="site-navigation__wordmark">Wonderfall</span></a>
+<a class="site-navigation__brand" href="{url(lang)}" aria-label="Wonderfall, {E(ui['home'])}" data-brand-link>{brand_icon()}<span class="site-navigation__wordmark">Wonderfall</span></a>
 <div class="site-navigation__links">{links}</div>
 <button class="site-navigation__toggle" type="button" data-nav-toggle hidden aria-label="{E(ui['menu'])}" aria-expanded="false" aria-controls="site-mobile-menu"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path class="nav-menu-lines" d="M3 5h14M3 10h14M3 15h14"/><path class="nav-menu-close" d="m5 5 10 10M15 5 5 15"/></svg></button>
 <a class="site-navigation__download" href="{STORE}"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.536c.027 3.143 2.757 4.188 2.787 4.2-.023.074-.436 1.49-1.438 2.952-.866 1.264-1.765 2.523-3.18 2.55-1.39.026-1.838-.824-3.428-.824-1.589 0-2.086.798-3.402.85-1.366.052-2.406-1.366-3.28-2.625-1.785-2.576-3.149-7.28-1.317-10.455.91-1.576 2.536-2.574 4.3-2.6 1.344-.026 2.612.902 3.429.902.816 0 2.349-1.115 3.956-.951.672.028 2.56.271 3.773 2.047-.098.061-2.253 1.31-2.2 3.954ZM14.453 4.93c.726-.879 1.214-2.102 1.08-3.32-1.047.042-2.313.698-3.064 1.577-.673.777-1.263 2.022-1.104 3.216 1.167.09 2.36-.593 3.088-1.473Z"/></svg>{E(c['short_cta'])}</a>
@@ -99,11 +99,13 @@ def page(c, suffix, title, description, body, schemas=(), article=None, preview=
            webpage, *schemas]
     alternates=''.join(f'<link rel="alternate" hreflang="{locale}" href="{ORIGIN+url(locale,suffix)}">' for locale in LANGS)
     feed=url(lang,'blog/feed.xml')
-    feature_styles=''.join(f'<link rel="stylesheet" href="{asset(path)}">\n' for path in ('/css/features.css','/css/desktop-preview.css','/css/weather-switch.css')) if preview else ''
+    closing='data-closing-screen' in body
+    feature_styles=''.join(f'<link rel="stylesheet" href="{asset(path)}">\n' for path in ('/css/features.css','/css/desktop-preview.css','/css/weather-switch.css')) if preview else f'<link rel="stylesheet" href="{asset("/css/desktop-preview.css")}">\n' if closing else ''
     hero_atmosphere='<div class="hero-atmosphere" aria-hidden="true"></div>\n' if preview else ''
     shooting_stars='<div class="shooting-stars" data-shooting-stars aria-hidden="true"></div>' if preview else ''
     preview_script=''.join(f'<script src="{asset(path)}" defer></script>' for path in ('/js/preview.js','/js/weather-switch.js','/js/preview-perspective.js','/js/features.js','/js/shooting-star.js','/js/reviews.js','/js/faq.js')) if preview else ''
     article_script=f'<script src="{asset("/js/article-media.js")}" defer></script>' if article else ''
+    closing_script=f'<script src="{asset("/js/closing-screen.js")}" defer></script>' if closing else ''
     article_meta=f'<meta property="article:published_time" content="{article["published"]}T09:00:00+02:00"><meta property="article:modified_time" content="{article["updated"]}T09:00:00+02:00">' if article else ''
     return f'''<!doctype html>
 <html lang="{lang}">
@@ -125,6 +127,7 @@ def page(c, suffix, title, description, body, schemas=(), article=None, preview=
 <link rel="icon" href="{asset('/images/favicon/favicon.ico')}"><link rel="apple-touch-icon" href="{asset('/images/favicon/apple-touch-icon.png')}">
 <link rel="manifest" href="{asset('/images/favicon/site.webmanifest')}"><meta name="theme-color" content="{'#3983dc' if preview else '#f8f7f3'}">
 <link rel="alternate" type="application/rss+xml" title="Wonderfall Blog ({lang})" href="{feed}">
+<link rel="preload" href="/fonts/nunito-{'latin' if lang=='en' else 'cyrillic'}.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{asset('/css/site.css')}">
 <link rel="stylesheet" href="{asset('/css/navigation.css')}">
 <link rel="stylesheet" href="{asset('/css/brand-icon.css')}">
@@ -134,18 +137,22 @@ def page(c, suffix, title, description, body, schemas=(), article=None, preview=
 <script src="{asset('/js/navigation.js')}" defer></script>
 <script src="{asset('/js/brand-icon.js')}" defer></script>
 <script type="application/ld+json">{dump({'@context':'https://schema.org','@graph':graph})}</script>
-{preview_script}{article_script}
+{preview_script}{article_script}{closing_script}
 </head>
 <body class="{'home-page' if preview else 'inner-page'}">
 <a class="skip-link" href="#main">{E(c['skip'])}</a>
 {hero_atmosphere}{navigation(c,suffix,preview)}
 <main id="main">{shooting_stars}{body}</main>
 <footer class="footer wrap"><div><a class="brand" href="{url(lang)}" data-brand-link>{brand_icon()}Wonderfall</a><p>{E(c['footer_line'])}</p></div>
-<nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}"><a href="{url(lang,'blog/')}">{c['nav'][3]}</a><a href="{url(lang,'support/')}">{E(c['support'])}</a><a href="{url(lang,'privacy.html')}">{E(c['privacy'])}</a><button type="button" data-cookie-settings>{E(c['cookie_settings'])}</button><a href="mailto:hello@andrewsereda.com">{E(c['contact'])}</a><a href="https://x.com/andrew_sereda">X</a><a href="https://www.threads.com/@saintsereda">Threads</a></nav></footer>
+<nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}">{footer_groups(c,lang)}</nav></footer>
 </body></html>'''
 
-def cta(c):
-    return f'<section class="final-cta wrap"><h2>{E(c["cta_title"])}</h2><p>{E(c["cta_text"])}</p><a class="button" href="{STORE}">{E(c["download"])}</a><p class="compat">{E(c["compat"])}</p></section>'
+def closing_screen(c):
+    """The closing call to action, on a MacBook display that rises from behind the footer."""
+    media=json.loads((ROOT/'content/preview-videos.json').read_text())['snow']
+    return (f'<section class="closing-screen" data-closing-screen aria-labelledby="closing-title"><div class="closing-screen__stage"><div class="closing-screen__device"><div class="closing-screen__display desktop-screen desktop-screen--video">'
+        f'{desktop_menu_bar()}<video class="closing-screen__video" data-closing-video src="{E(media["src"])}" poster="{E(media["poster"])}" muted loop playsinline preload="none" aria-hidden="true"></video></div></div>'
+        f'<div class="closing-screen__content"><h2 id="closing-title">{E(c["cta_title"]).replace(". ",".<br>")}</h2><p>{E(c["cta_text"])}</p><a class="button" href="{STORE}">{E(c["download"])}</a><p class="compat">{E(c["compat"])}</p></div></div></section>')
 
 def media_figure(m, label, caption='', cover=False):
     classes='article-cover' if cover else 'article-media'
@@ -177,9 +184,17 @@ def other_language(lang, suffix):
     label='Читати українською' if lang=='en' else 'Read in English'
     return f'<a class="language-switch" href="{url(other,suffix)}" lang="{other}" hreflang="{other}">{label}</a>'
 
-def article_card(c, a):
-    href=url(c["lang"],"blog/"+a["slug"]+"/"); text=a[c["lang"]]
-    return f'<article class="article-card"><div class="article-art" aria-hidden="true"><span>❄</span><span>✿</span><span>✦</span></div><div><h3><a href="{href}">{E(text["title"])}</a></h3><p>{E(text["summary"])}</p><a class="text-link" href="{href}">{E(c["read"])} <span aria-hidden="true">↗</span></a></div></article>'
+def footer_group(key, title, *links):
+    items=''.join(f'<li>{link}</li>' for link in links)
+    return f'<div class="footer-group"><p class="footer-group__title" id="footer-{key}">{E(title)}</p><ul aria-labelledby="footer-{key}">{items}</ul></div>'
+
+def footer_groups(c, lang):
+    guides,product,legal,connect=c['footer_groups']
+    anchors=[f'<a href="{url(lang)}#{anchor}">{E(label)}</a>' for anchor,label in zip(('effects','features','faq'),c['nav'][:3])]
+    return (footer_group('guides',guides,*(f'<a href="{url(lang,"blog/"+a["slug"]+"/")}">{E(a[lang]["footer_label"])}</a>' for a in ARTICLES))
+        +footer_group('product',product,*anchors,f'<a href="{url(lang,"blog/")}">{E(c["nav"][3])}</a>',f'<a href="{url(lang,"support/")}">{E(c["support"])}</a>',f'<a href="{STORE}">App Store</a>')
+        +footer_group('legal',legal,f'<a href="{url(lang,"privacy.html")}">{E(c["privacy"])}</a>',f'<button type="button" data-cookie-settings>{E(c["cookie_settings"])}</button>')
+        +footer_group('connect',connect,f'<a href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a>','<a href="https://x.com/andrew_sereda">X</a>','<a href="https://www.threads.com/@saintsereda">Threads</a>'))
 
 MENU_EFFECT_SYMBOLS = {'snow':'snowflake', 'rain':'cloud.rain', 'leaves':'leaf',
                        'petals':'camera.macro', 'fireflies':'sparkles'}
@@ -265,7 +280,7 @@ def feature_showcase(c):
 
     def media_slot(key):
         content=custom_content() if key=='images' else video_content(key)
-        app_symbol={'garlands':'lightbulb','images':'sparkles','placement':'switch.2'}.get(key)
+        app_symbol={'images':'sparkles','placement':'switch.2'}.get(key)
         desktop=' desktop-screen desktop-screen--compact' if app_symbol else ''
         menu=desktop_menu_bar(app_symbol) if app_symbol else ''
         has_video=media[key][variants[key][0][0]]['src'] if key in variants else media[key]['src'] if key!='images' else ''
@@ -316,13 +331,13 @@ def homepage(c):
         return ''.join(f' data-{attribute}="{E(path)}"' for attribute,path in [('video',values['src']),('poster',values['poster'])] if path)+f' data-menu-icon="{menu_symbol_asset(MENU_EFFECT_SYMBOLS[key])}"'
     buttons=''.join(f'<button class="theme-option theme-{key}" type="button" data-theme="{key}" data-description="{E(desc)}"{media_attrs(key)} aria-label="{E(name)}" aria-pressed="{"true" if key=="snow" else "false"}"><span class="theme-symbol" aria-hidden="true">{glyph}</span><span class="theme-name">{E(name)}</span></button>' for key,name,desc,glyph in c['themes'][:5])
     hero=f'<h1 class="hero__title">{E(c["hero_headline"])}</h1>'
-    body=f'''<section class="hero hero-with-preview"><div class="wrap hero__inner">{hero}<p class="hero-copy">{E(c['intro'])}</p><div class="hero-actions"><a class="button" href="{STORE}">{E(c['download'])}</a></div><p class="compat">{E(c['compat'])}</p></div></section>
+    body=f'''<section class="hero hero-with-preview"><div class="wrap hero__inner"><p class="hero-update">{E(c['updates_soon'])}</p>{hero}<p class="hero-copy">{E(c['intro'])}</p><div class="hero-actions"><a class="button" href="{STORE}">{E(c['download'])}</a></div><p class="compat">{E(c['compat'])}</p></div></section>
 <section class="seasons-preview wrap" id="effects" aria-label="{E(c['screen_label'])}"><div class="preview video-preview" data-preview data-effect="snow"><div class="preview-media desktop-screen desktop-screen--video" role="group" aria-label="{E(c['screen_label'])}">{desktop_menu_bar()}<video class="effect-video desktop-screen__recording" data-effect-video src="{E(videos['snow']['src'] or '')}" poster="{E(videos['snow']['poster'] or '')}" muted loop playsinline preload="none" aria-label="{E(c['screen_label'])}"></video><div class="video-placeholder" data-video-placeholder hidden><span class="video-placeholder-mark" aria-hidden="true">▶</span><p class="video-placeholder-caption" data-video-caption>{E(c['themes'][0][1])}</p></div></div><div class="control-panel" hidden><div class="theme-picker" data-weather-switch role="group" aria-label="{E(c['preview_label'])}" hidden>{buttons}</div><p class="visually-hidden" data-theme-description aria-live="polite">{E(c['themes'][0][2])}</p></div></div></section>
 {feature_showcase(c)}
 {reviews_section(c)}
 <div class="faq-region"><section class="section faq-section wrap" id="faq"><div><h2>{E(c['faq_title'])}</h2><a class="text-link" href="{url(c['lang'],'support/')}">{E(c['support'])} ↗</a></div><div class="faq-list">{faq}</div></section></div>
 {product_overview(c)}
-<section class="section wrap"><h2>{E(c['blog_title'])}</h2>{article_card(c,FEATURED)}</section>{cta(c)}'''
+{closing_screen(c)}'''
     faq_schema={'@type':'FAQPage','@id':ORIGIN+url(c['lang'])+'#faq','inLanguage':c['lang'],
                 'mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in c['faq']]}
     return page(c,'',c['title'],c['description'],body,[app_schema(c),faq_schema],preview=True)
@@ -349,7 +364,7 @@ for lang in LANGS:
     write(url(lang,'index.html'),homepage(c))
     collection={'@type':'CollectionPage','@id':ORIGIN+url(lang,'blog/')+'#collection','name':c['blog_meta_title'],'hasPart':[{'@id':ORIGIN+url(lang,'blog/'+a['slug']+'/')+'#article'} for a in ARTICLES]}
     rows=''.join(post_row(c,a) for a in ARTICLES)
-    body=f'<section class="blog-heading wrap"><div><h1>{E(c["blog_title"])}</h1><p>{E(c["blog_intro"])}</p></div>{other_language(lang,"blog/")}</section><section class="wrap blog-list"><ol class="post-list">{rows}</ol><p><a class="text-link" href="{url(lang,"blog/feed.xml")}">RSS ↗</a></p></section>'+cta(c)
+    body=f'<section class="blog-heading wrap"><div><h1>{E(c["blog_title"])}</h1><p>{E(c["blog_intro"])}</p></div>{other_language(lang,"blog/")}</section><section class="wrap blog-list"><ol class="post-list">{rows}</ol><p><a class="text-link" href="{url(lang,"blog/feed.xml")}">RSS ↗</a></p></section>'+closing_screen(c)
     write(url(lang,'blog/index.html'),page(c,'blog/',c['blog_meta_title'],c['blog_description'],body,[collection]))
     for a in ARTICLES:
         text=a[lang]; suffix='blog/'+a['slug']+'/'
@@ -369,7 +384,7 @@ for lang in LANGS:
                 f'<h1>{E(text["title"])}</h1><p class="article-summary">{E(text["description"])}</p><p class="byline">{E(c["author"])}</p>'
                 f'<a class="button" href="{STORE}">{E(c["download"])}</a></header>')
         crumbs=f'<nav class="breadcrumbs" aria-label="{"Breadcrumb" if lang=="en" else "Шлях до сторінки"}"><a href="{url(lang,"blog/")}">{c["nav"][3]}</a> / <span>{E(text["title"])}</span></nav>'
-        body=f'<article class="article-page"><div class="article-top wrap">{crumbs}{other_language(lang,suffix)}</div>{header}{cover}<div class="prose article-body wrap">{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></div></article>'+cta(c)
+        body=f'<article class="article-page"><div class="article-top wrap">{crumbs}{other_language(lang,suffix)}</div>{header}{cover}<div class="prose article-body wrap">{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></div></article>'+closing_screen(c)
         write(url(lang,suffix+'index.html'),page(c,suffix,text['meta_title'],text['description'],body,[article_schema,breadcrumb],article=a))
     sections=''.join(f'<section><h2>{E(title)}</h2><p>{E(text)}</p></section>' for title,text in c['support_sections'])
     body=f'<div class="prose wrap"><h1>{E(c["support_title"])}</h1><p class="answer">{E(c["support_intro"])}</p>{sections}<p><a class="button" href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a></p></div>'
