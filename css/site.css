@@ -624,6 +624,8 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
 /* Crop the recorded system menu bar off the top of 16:9 screen recordings. */
 .article-cover video { aspect-ratio: 16 / 8.6; object-fit: cover; object-position: center bottom; }
 .article-media { margin: 32px 0; }
+/* Square recordings keep the guide's rhythm: crop to the bottom, where the action is. */
+.article-media video { max-height: 480px; object-fit: cover; object-position: center bottom; }
 .article-media figcaption { font-size: .85rem; color: var(--muted); margin-top: 10px; line-height: 1.5; }
 .article-body { padding-top: 40px; }
 .article-body .answer { padding: 0; border: 0; background: none; margin-top: 0; font-size: 1.12rem; color: var(--ink); }

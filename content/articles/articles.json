@@ -21,21 +21,21 @@
         "summary": "Практичний посібник із сезонних ефектів: як усе налаштувати та знайти атмосферу, яка не заважає працювати"
       },
       "cover": {
-        "video": "/videos/snow-1440p.mp4",
-        "poster": "/videos/snow-1440p.jpg",
+        "video": "/videos/snow-demo-1440p.mp4",
+        "poster": "/videos/snow-demo-1440p.jpg",
         "alt": {
-          "en": "Falling snow over a blue desktop wallpaper",
-          "uk": "Сніг падає поверх синіх шпалер робочого столу"
+          "en": "Falling snow over a sunset desktop wallpaper",
+          "uk": "Сніг падає поверх шпалер із заходом сонця"
         }
       },
       "inline": [
         {
           "after": "overlay",
-          "video": "/videos/placement-over-windows.mp4",
-          "poster": "/videos/placement-over-windows.jpg",
+          "video": "/videos/placement-desktop.mp4",
+          "poster": "/videos/placement-desktop.jpg",
           "caption": {
-            "en": "Over the content: snow falls in front of open windows, and clicks still pass through.",
-            "uk": "Поверх вмісту: сніг падає перед відкритими вікнами, а кліки проходять крізь нього."
+            "en": "Desktop only: the effect stays behind your windows, in front of your own wallpaper.",
+            "uk": "Тільки на робочому столі: ефект залишається за вікнами, поверх ваших шпалер."
           }
         },
         {
@@ -45,6 +45,33 @@
           "caption": {
             "en": "The top strip keeps the effect near the menu bar.",
             "uk": "Верхня смуга тримає ефект біля рядка меню."
+          }
+        },
+        {
+          "after": "seasons",
+          "video": "/videos/petals-demo-1440p.mp4",
+          "poster": "/videos/petals-demo-1440p.jpg",
+          "caption": {
+            "en": "Spring petals drift across the desktop.",
+            "uk": "Весняні пелюстки пливуть робочим столом."
+          }
+        },
+        {
+          "after": "seasons",
+          "video": "/videos/leaves-demo-1440p.mp4",
+          "poster": "/videos/leaves-demo-1440p.jpg",
+          "caption": {
+            "en": "Autumn leaves tumble down in amber and crimson.",
+            "uk": "Осіннє листя падає в бурштинових і багряних кольорах."
+          }
+        },
+        {
+          "after": "lights",
+          "video": "/videos/garland-showcase.mp4",
+          "poster": "/videos/garland-showcase.jpg",
+          "caption": {
+            "en": "Lights hang along the menu bar, in shapes from classic bulbs to cats and year figures.",
+            "uk": "Гірлянда висить уздовж рядка меню: від класичних лампочок до котів і цифр року."
           }
         }
       ]
@@ -88,11 +115,11 @@
         },
         {
           "after": "setup",
-          "video": "/videos/placement-desktop.mp4",
-          "poster": "/videos/placement-desktop.jpg",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
           "caption": {
-            "en": "Desktop only: the snow stays behind your windows.",
-            "uk": "Тільки на робочому столі: сніг залишається за вікнами."
+            "en": "Snow settles along the bottom of the desktop, and the shovel clears it.",
+            "uk": "Сніг осідає внизу робочого столу, а лопата його прибирає."
           }
         }
       ]

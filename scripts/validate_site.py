@@ -77,6 +77,7 @@ for path,page in pages.items():
             assert peer_links==alternates,(path,locale)
     for tag,attrs in page.tags:
         if tag=='img':assert 'alt' in attrs,path
+        if tag=='video':assert 'controls' not in attrs,f'Videos play without controls: {path}'
         for attribute in ('src','href','data-source','data-poster','data-menu-icon','data-nav-motion'):
             link=attrs.get(attribute)
             if not link:continue

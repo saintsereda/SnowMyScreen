@@ -147,9 +147,9 @@ def page(c, suffix, title, description, body, schemas=(), article=None, preview=
 <nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}">{footer_groups(c,lang)}</nav></footer>
 </body></html>'''
 
-def closing_screen(c):
+def closing_screen(c, effect='snow'):
     """The closing call to action, on a MacBook display that rises from behind the footer."""
-    media=json.loads((ROOT/'content/preview-videos.json').read_text())['snow']
+    media=json.loads((ROOT/'content/preview-videos.json').read_text())[effect]
     return (f'<section class="closing-screen" data-closing-screen aria-labelledby="closing-title"><div class="closing-screen__stage"><div class="closing-screen__device"><div class="closing-screen__display desktop-screen desktop-screen--video">'
         f'{desktop_menu_bar()}<video class="closing-screen__video" data-closing-video src="{E(media["src"])}" poster="{E(media["poster"])}" muted loop playsinline preload="none" aria-hidden="true"></video></div></div>'
         f'<div class="closing-screen__content"><h2 id="closing-title">{E(c["cta_title"]).replace(". ",".<br>")}</h2><p>{E(c["cta_text"])}</p><a class="button" href="{STORE}">{E(c["download"])}</a><p class="compat">{E(c["compat"])}</p></div></div></section>')
@@ -158,7 +158,7 @@ def media_figure(m, label, caption='', cover=False):
     classes='article-cover' if cover else 'article-media'
     text=f'<figcaption>{E(caption)}</figcaption>' if caption else ''
     return (f'<figure class="{classes}"><video data-article-video src="{asset(m["video"])}" poster="{asset(m["poster"])}" '
-            f'muted loop playsinline controls preload="none" aria-label="{E(label)}"></video>{text}</figure>')
+            f'muted loop playsinline preload="none" aria-label="{E(label)}"></video>{text}</figure>')
 
 def with_media(article, a, lang):
     # Each inline video goes after the first paragraph of the section it illustrates.
@@ -364,7 +364,7 @@ for lang in LANGS:
     write(url(lang,'index.html'),homepage(c))
     collection={'@type':'CollectionPage','@id':ORIGIN+url(lang,'blog/')+'#collection','name':c['blog_meta_title'],'hasPart':[{'@id':ORIGIN+url(lang,'blog/'+a['slug']+'/')+'#article'} for a in ARTICLES]}
     rows=''.join(post_row(c,a) for a in ARTICLES)
-    body=f'<section class="blog-heading wrap"><div><h1>{E(c["blog_title"])}</h1><p>{E(c["blog_intro"])}</p></div>{other_language(lang,"blog/")}</section><section class="wrap blog-list"><ol class="post-list">{rows}</ol><p><a class="text-link" href="{url(lang,"blog/feed.xml")}">RSS ↗</a></p></section>'+closing_screen(c)
+    body=f'<section class="blog-heading wrap"><div><h1>{E(c["blog_title"])}</h1><p>{E(c["blog_intro"])}</p></div>{other_language(lang,"blog/")}</section><section class="wrap blog-list"><ol class="post-list">{rows}</ol><p><a class="text-link" href="{url(lang,"blog/feed.xml")}">RSS ↗</a></p></section>'+closing_screen(c,'rain')
     write(url(lang,'blog/index.html'),page(c,'blog/',c['blog_meta_title'],c['blog_description'],body,[collection]))
     for a in ARTICLES:
         text=a[lang]; suffix='blog/'+a['slug']+'/'
@@ -384,7 +384,7 @@ for lang in LANGS:
                 f'<h1>{E(text["title"])}</h1><p class="article-summary">{E(text["description"])}</p><p class="byline">{E(c["author"])}</p>'
                 f'<a class="button" href="{STORE}">{E(c["download"])}</a></header>')
         crumbs=f'<nav class="breadcrumbs" aria-label="{"Breadcrumb" if lang=="en" else "Шлях до сторінки"}"><a href="{url(lang,"blog/")}">{c["nav"][3]}</a> / <span>{E(text["title"])}</span></nav>'
-        body=f'<article class="article-page"><div class="article-top wrap">{crumbs}{other_language(lang,suffix)}</div>{header}{cover}<div class="prose article-body wrap">{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></div></article>'+closing_screen(c)
+        body=f'<article class="article-page"><div class="article-top wrap">{crumbs}{other_language(lang,suffix)}</div>{header}{cover}<div class="prose article-body wrap">{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></div></article>'+closing_screen(c,'rain')
         write(url(lang,suffix+'index.html'),page(c,suffix,text['meta_title'],text['description'],body,[article_schema,breadcrumb],article=a))
     sections=''.join(f'<section><h2>{E(title)}</h2><p>{E(text)}</p></section>' for title,text in c['support_sections'])
     body=f'<div class="prose wrap"><h1>{E(c["support_title"])}</h1><p class="answer">{E(c["support_intro"])}</p>{sections}<p><a class="button" href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a></p></div>'
