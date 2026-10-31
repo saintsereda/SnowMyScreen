@@ -399,7 +399,7 @@ for lang in LANGS:
     policy=(ROOT/'content/privacy-template.html').read_text()
     policy=re.sub(r'<(h1|h2|p|li|strong)([^>]*data-i18n="(privacy\.[^"]+)"[^>]*)>.*?</\1>',lambda m:f'<{m[1]}>{E(get(m[3]))}</{m[1]}>',policy,flags=re.S)
     policy=re.sub(r'<a([^>]*?) data-i18n="(privacy\.[^"]+)"([^>]*)>.*?</a>',lambda m:f'<a{m[1]}{m[3]}>{E(get(m[2]))}</a>',policy,flags=re.S)
-    privacy_description='How Wonderfall handles local app data, optional location and Apple WeatherKit, website analytics and cookie choices.' if lang=='en' else 'Як Wonderfall зберігає локальні дані, використовує необов’язкову геолокацію й Apple WeatherKit, аналітику сайту та cookie за вашою згодою.'
+    privacy_description='How Wonderfall handles local app data, usage statistics, crash reports, optional location, website analytics and cookie choices.' if lang=='en' else 'Як Wonderfall зберігає локальні дані, збирає статистику використання та звіти про збої, використовує необов’язкову геолокацію, аналітику сайту та cookie.'
     write(url(lang,'privacy.html'),page(c,'privacy.html',privacy['pageTitle'],privacy_description,'<div class="prose wrap">'+policy+'</div>'))
     rss=ET.Element('rss',version='2.0'); channel=ET.SubElement(rss,'channel')
     for name,text in [('title','Wonderfall Blog'),('link',ORIGIN+url(lang,'blog/')),('description',c['blog_description']),('language',lang)]:
