@@ -438,7 +438,7 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
 .home-page .hero-actions .button:hover { background: #e0e0e0; }
 .home-page .hero-actions .button:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
 .home-page .hero .compat { margin-top: 20px; color: #ffffffbf; font-size: 16px; font-weight: 400; line-height: 1.5; }
-.home-page .hero-update { display: inline-block; margin: 18px auto 0; padding: 7px 14px; border: 1px solid #ffffff66; border-radius: 999px; background: #ffffff1a; color: #fff; font-size: 14px; font-weight: 600; line-height: 1.4; }
+.home-page .hero-update { display: inline-block; max-width: 100%; margin: 0 auto 26px; padding: 11px 20px; border-radius: 999px; background: #fff; color: #124aab; font-size: 16px; font-weight: 800; line-height: 1.3; text-wrap: balance; box-shadow: 0 12px 30px #0b287b4d; }
 
 /* A bounded demo, with season choices in the normal document flow. */
 .seasons-preview { padding-top: 96px; scroll-margin-top: 24px; }
