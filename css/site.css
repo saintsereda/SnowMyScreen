@@ -698,3 +698,22 @@ p, li { text-wrap: pretty; }
   .button:hover::after, .site-navigation__download:hover::after { transform: skewX(-20deg); transition: none; }
   .button:active { transform: none; }
 }
+
+/* Press kit: facts, story and downloadable media. */
+.press-page { max-width: 960px; padding-bottom: 64px; }
+.press-page .page-heading { padding-inline: 0; }
+.press-section { padding-block: 32px; border-top: 1px solid var(--line); }
+.press-section.prose { max-width: none; padding-block: 32px; }
+.press-section h2 { font-size: 1.75rem; letter-spacing: -.025em; line-height: 1.2; margin-bottom: 20px; }
+.press-section.prose h2 + p, .press-section.prose h2 + ul { margin-top: 0; }
+.press-section.prose h2:not(:first-child) { margin-top: 40px; }
+.press-quote { margin: 0; padding: 4px 0 4px 24px; border-left: 3px solid var(--accent); }
+.press-quote p { font-size: 1.12rem; color: var(--ink); margin-bottom: 8px; }
+.press-quote footer { font-size: .88rem; color: var(--muted); }
+.press-icon { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
+.press-icon img { width: 120px; height: 120px; }
+.press-page h3 { margin: 28px 0 16px; }
+.press-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.press-grid img, .press-grid video { display: block; width: 100%; height: auto; border-radius: 14px; background: #d9e3f2; }
+.press-grid video { aspect-ratio: 16 / 10; object-fit: cover; }
+.press-grid span { display: block; margin-top: 8px; font-size: .88rem; color: var(--muted); line-height: 1.5; }

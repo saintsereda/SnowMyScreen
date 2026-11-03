@@ -22,6 +22,7 @@ E = html.escape
 ARTICLES = sorted((a for a in json.loads((ROOT/'content/articles/articles.json').read_text())['articles'] if a['status']=='published'),
                   key=lambda a: a['published'], reverse=True)
 FEATURED = next(a for a in ARTICLES if a.get('featured'))
+PRESS = json.loads((ROOT/'content/press.json').read_text())
 MONTHS = {'en':('January','February','March','April','May','June','July','August','September','October','November','December'),
           'uk':('січня','лютого','березня','квітня','травня','червня','липня','серпня','вересня','жовтня','листопада','грудня')}
 
@@ -194,7 +195,7 @@ def footer_groups(c, lang):
     return (footer_group('guides',guides,*(f'<a href="{url(lang,"blog/"+a["slug"]+"/")}">{E(a[lang]["footer_label"])}</a>' for a in ARTICLES))
         +footer_group('product',product,*anchors,f'<a href="{url(lang,"blog/")}">{E(c["nav"][3])}</a>',f'<a href="{url(lang,"support/")}">{E(c["support"])}</a>',f'<a href="{STORE}">App Store</a>')
         +footer_group('legal',legal,f'<a href="{url(lang,"privacy.html")}">{E(c["privacy"])}</a>',f'<button type="button" data-cookie-settings>{E(c["cookie_settings"])}</button>')
-        +footer_group('connect',connect,f'<a href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a>','<a href="https://x.com/andrew_sereda">X</a>','<a href="https://www.threads.com/@saintsereda">Threads</a>'))
+        +footer_group('connect',connect,f'<a href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a>',f'<a href="{url(lang,"press/")}">{E(PRESS[lang]["footer_label"])}</a>','<a href="https://x.com/andrew_sereda">X</a>','<a href="https://www.threads.com/@saintsereda">Threads</a>'))
 
 MENU_EFFECT_SYMBOLS = {'snow':'snowflake', 'rain':'cloud.rain', 'leaves':'leaf',
                        'petals':'camera.macro', 'fireflies':'sparkles'}
@@ -342,6 +343,22 @@ def homepage(c):
                 'mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in c['faq']]}
     return page(c,'',c['title'],c['description'],body,[app_schema(c),faq_schema],preview=True)
 
+def press_page(c):
+    lang=c['lang']; p=PRESS[lang]
+    facts=''.join(f'<div><dt>{E(k)}</dt><dd>{E(v)}</dd></div>' for k,v in p['facts'])
+    paragraphs=lambda items:''.join(f'<p>{E(x)}</p>' for x in items)
+    new=''.join(f'<li>{E(x)}</li>' for x in p['new'])
+    icon=PRESS['icon']
+    shots=''.join(f'<li><a href="{s["src"]}" download><img src="{asset(s["thumb"])}" alt="{E(s["label"][lang])}" loading="lazy" decoding="async"></a><span>{E(s["label"][lang])}</span></li>' for s in PRESS['screenshots'])
+    shots_block=f'<h3>{E(p["screenshots_title"])}</h3><ul class="press-grid">{shots}</ul>' if shots else ''
+    videos=''.join(f'<li><video data-article-video src="{asset(v["src"])}" poster="{asset(v["poster"])}" muted loop playsinline preload="none" aria-label="{E(v["label"][lang])}"></video><span>{E(v["label"][lang])} · <a href="{v["src"]}" download>{E(p["download"])}</a></span></li>' for v in PRESS['videos'])
+    body=f'''<div class="press-page wrap"><section class="page-heading"><h1>{E(p["title"])}</h1><p>{E(p["intro"])}</p></section>
+<section class="press-section"><h2>{E(p["facts_title"])}</h2><dl class="product-facts">{facts}</dl></section>
+<section class="press-section prose"><h2>{E(p["about_title"])}</h2>{paragraphs(p["about"])}<h2>{E(p["story_title"])}</h2>{paragraphs(p["story"])}<h2>{E(p["new_title"])}</h2><ul>{new}</ul><h2>{E(p["quote_title"])}</h2><blockquote class="press-quote"><p>{E(p["quote"])}</p><footer>{E(p["quote_by"])}</footer></blockquote></section>
+<section class="press-section"><h2>{E(p["assets_title"])}</h2><div class="press-icon"><img src="{asset(icon["src"])}" alt="{E(icon["label"][lang])}" width="160" height="160"><a class="button" href="{icon["src"]}" download>{E(p["download"])} · {E(icon["label"][lang])}</a></div>{shots_block}<h3>{E(p["videos_title"])}</h3><ul class="press-grid">{videos}</ul></section>
+<section class="press-section"><h2>{E(p["contact_title"])}</h2><p>{E(p["contact_text"])} <a href="mailto:hello@andrewsereda.com">hello@andrewsereda.com</a>.</p></section></div><script src="{asset('/js/article-media.js')}" defer></script>'''
+    return page(c,'press/',p['meta_title'],p['description'],body)
+
 def write(path,content):
     target=ROOT/path.lstrip('/')
     target.parent.mkdir(parents=True,exist_ok=True)
@@ -389,6 +406,7 @@ for lang in LANGS:
     sections=''.join(f'<section><h2>{E(title)}</h2><p>{E(text)}</p></section>' for title,text in c['support_sections'])
     body=f'<div class="prose wrap"><h1>{E(c["support_title"])}</h1><p class="answer">{E(c["support_intro"])}</p>{sections}<p><a class="button" href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a></p></div>'
     write(url(lang,'support/index.html'),page(c,'support/',c['support_title'],c['support_description'],body))
+    write(url(lang,'press/index.html'),press_page(c))
     # Generate both policies from the same template and localized privacy source.
     privacy=json.loads((ROOT/'content/privacy.json').read_text())[lang]
     def get(key):
@@ -409,7 +427,7 @@ for lang in LANGS:
         for name,text in [('title',a[lang]['title']),('link',link),('guid',link),('description',a[lang]['description']),('pubDate',rfc822(a['published']))]:
             ET.SubElement(item,name).text=text
     write(url(lang,'blog/feed.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n'+ET.tostring(rss,encoding='unicode'))
-    for suffix in ('','blog/',*('blog/'+a['slug']+'/' for a in ARTICLES),'support/','privacy.html'):
+    for suffix in ('','blog/',*('blog/'+a['slug']+'/' for a in ARTICLES),'support/','press/','privacy.html'):
         entry=ET.SubElement(sitemap,ns+'url'); ET.SubElement(entry,ns+'loc').text=ORIGIN+url(lang,suffix); ET.SubElement(entry,ns+'lastmod').text=UPDATED
         for alternate in (*LANGS,'x-default'):
             ET.SubElement(entry,'{http://www.w3.org/1999/xhtml}link',rel='alternate',hreflang=alternate,href=ORIGIN+url('en' if alternate=='x-default' else alternate,suffix))
@@ -418,4 +436,4 @@ write('/robots.txt','User-agent: *\nAllow: /\nDisallow: /content/\nDisallow: /sc
 guides={lang:'\n'.join(f'- [{a[lang]["title"]}]({ORIGIN}{url(lang,"blog/"+a["slug"]+"/")}): {a[lang]["description"]}' for a in ARTICLES) for lang in LANGS}
 write('/llms.txt',(ROOT/'content/llms-template.txt').read_text().format(origin=ORIGIN,**substitutions,checked_at=STORE_DATA['checked_at'],guides_en=guides['en'],guides_uk=guides['uk']))
 write('/download.html',(ROOT/'content/download-template.html').read_text().replace('__ORIGIN__',ORIGIN))
-print(f'Generated {9+2*len(ARTICLES)} static pages ({len(ARTICLES)} guides per language), 2 RSS feeds, sitemap.xml, robots.txt and llms.txt.')
+print(f'Generated {11+2*len(ARTICLES)} static pages ({len(ARTICLES)} guides per language), 2 RSS feeds, sitemap.xml, robots.txt and llms.txt.')

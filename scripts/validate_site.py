@@ -43,7 +43,7 @@ pages={}
 for p in ROOT.rglob('*.html'):
     if any(part in {'content','.git','node_modules'} for part in p.relative_to(ROOT).parts):continue
     page=Page();page.feed(p.read_text());pages[p.resolve()]=page
-expected=9+2*len(ARTICLES)
+expected=11+2*len(ARTICLES)
 assert len(pages)==expected+1, f'Expected {expected} generated pages plus 404; got {len(pages)}'
 canonicals={};descriptions=set()
 for path,page in pages.items():

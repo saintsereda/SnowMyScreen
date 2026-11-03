@@ -1,0 +1,241 @@
+{
+  "icon": {
+    "src": "/images/press/wonderfall-icon-1024.png",
+    "label": {
+      "en": "App icon, 1024 × 1024 PNG",
+      "uk": "Іконка застосунку, PNG 1024 × 1024"
+    }
+  },
+  "screenshots": [
+    {
+      "src": "/images/press/screenshot-seasonal.png",
+      "thumb": "/images/press/screenshot-seasonal-thumb.jpg",
+      "label": {
+        "en": "Seasonal effects and lights on your desktop",
+        "uk": "Сезонні ефекти й гірлянда на робочому столі"
+      }
+    },
+    {
+      "src": "/images/press/screenshot-seasons.png",
+      "thumb": "/images/press/screenshot-seasons-thumb.jpg",
+      "label": {
+        "en": "Pick your season",
+        "uk": "Обери пору року"
+      }
+    },
+    {
+      "src": "/images/press/screenshot-cleanup.png",
+      "thumb": "/images/press/screenshot-cleanup-thumb.jpg",
+      "label": {
+        "en": "Your desktop needs a cleanup",
+        "uk": "Робочий стіл треба прибрати"
+      }
+    },
+    {
+      "src": "/images/press/screenshot-lights.png",
+      "thumb": "/images/press/screenshot-lights-thumb.jpg",
+      "label": {
+        "en": "Lights for every celebration",
+        "uk": "Гірлянда до будь-якого свята"
+      }
+    },
+    {
+      "src": "/images/press/screenshot-customize.png",
+      "thumb": "/images/press/screenshot-customize-thumb.jpg",
+      "label": {
+        "en": "Make it your own",
+        "uk": "Налаштуй під себе"
+      }
+    },
+    {
+      "src": "/images/press/screenshot-display.png",
+      "thumb": "/images/press/screenshot-display-thumb.jpg",
+      "label": {
+        "en": "Flexible display options",
+        "uk": "Гнучкі варіанти показу"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "src": "/videos/cleaning-snow.mp4",
+      "poster": "/videos/cleaning-snow.jpg",
+      "label": {
+        "en": "Shovelling a snow bank",
+        "uk": "Лопата прибирає сніг"
+      }
+    },
+    {
+      "src": "/videos/cleaning-rain.mp4",
+      "poster": "/videos/cleaning-rain.jpg",
+      "label": {
+        "en": "Wiping raindrops with a squeegee",
+        "uk": "Скребок стирає краплі дощу"
+      }
+    },
+    {
+      "src": "/videos/cleaning-leaves.mp4",
+      "poster": "/videos/cleaning-leaves.jpg",
+      "label": {
+        "en": "Sweeping a leaf pile",
+        "uk": "Мітла замітає листя"
+      }
+    },
+    {
+      "src": "/videos/garland-showcase.mp4",
+      "poster": "/videos/garland-showcase.jpg",
+      "label": {
+        "en": "String lights along the menu bar",
+        "uk": "Гірлянда вздовж рядка меню"
+      }
+    },
+    {
+      "src": "/videos/snow-demo-1440p.mp4",
+      "poster": "/videos/snow-demo-1440p.jpg",
+      "label": {
+        "en": "Snowfall, 1440p",
+        "uk": "Снігопад, 1440p"
+      }
+    },
+    {
+      "src": "/videos/leaves-demo-1440p.mp4",
+      "poster": "/videos/leaves-demo-1440p.jpg",
+      "label": {
+        "en": "Autumn leaves, 1440p",
+        "uk": "Осіннє листя, 1440p"
+      }
+    }
+  ],
+  "en": {
+    "meta_title": "Press Kit | Wonderfall",
+    "description": "Wonderfall press kit: facts, the story behind the app, a developer quote, the app icon, screenshots and screen recordings for coverage.",
+    "title": "Press kit",
+    "intro": "Everything you need to write about Wonderfall. All images and recordings are from the real app and free to use in coverage of Wonderfall.",
+    "facts_title": "Fact sheet",
+    "facts": [
+      [
+        "App",
+        "Wonderfall (formerly SnowMyScreen)"
+      ],
+      [
+        "Release",
+        "Version 1.2, November 10, 2026"
+      ],
+      [
+        "Platform",
+        "Mac, macOS 14.6 or later"
+      ],
+      [
+        "Price",
+        "US$1.99, one-time purchase on the Mac App Store"
+      ],
+      [
+        "Languages",
+        "13, including English and Ukrainian"
+      ],
+      [
+        "Developer",
+        "Andrew Sereda, independent developer, Kraków"
+      ],
+      [
+        "Press contact",
+        "hello@andrewsereda.com"
+      ]
+    ],
+    "about_title": "About Wonderfall",
+    "about": [
+      "Wonderfall brings snow, rain, falling leaves, petals, fireflies and string lights to your Mac desktop, over your own wallpaper.",
+      "Snow, leaves and petals pile up at the bottom of the screen, and raindrops form on the glass. A shovel, broom or squeegee clears them away. Clicks pass through the effects, so you keep working normally."
+    ],
+    "story_title": "The story",
+    "story": [
+      "Two winters ago it didn't snow in Kraków at all. Andrew Sereda missed it and wrote a tiny utility that let snow fall along the top of the screen, just to lift the mood. It was never meant to go anywhere, until someone on a work call noticed the snow and asked where they could get one. So it got finished and went on the Mac App Store as SnowMyScreen.",
+      "The next ideas came from nostalgia for the PC games Andrew played as a kid. Snow started piling up at the bottom of the screen, and then it needed a shovel. Version 1.2 adds rain, leaves, petals and fireflies, and a new name: Wonderfall."
+    ],
+    "new_title": "What's new in 1.2",
+    "new": [
+      "Rain, autumn leaves, flower petals and fireflies alongside snow",
+      "Snow banks, raindrops and leaf and petal piles you clear with a shovel, squeegee or broom",
+      "String lights along the menu bar, with winter, Halloween, New Year and holiday scenes",
+      "Your own images, including SVG, as falling shapes",
+      "Optional scenes that match your local weather",
+      "A new name and icon"
+    ],
+    "quote_title": "From the developer",
+    "quote": "The name is about the small magic of the seasons: “wonder” for that feeling, “fall” for things that fall.",
+    "quote_by": "Andrew Sereda, developer of Wonderfall",
+    "assets_title": "Images and recordings",
+    "screenshots_title": "Screenshots",
+    "videos_title": "Screen recordings",
+    "download": "Download",
+    "contact_title": "Contact",
+    "contact_text": "For questions, interviews or review codes, write to",
+    "footer_label": "Press kit"
+  },
+  "uk": {
+    "meta_title": "Прес-кіт | Wonderfall",
+    "description": "Прес-кіт Wonderfall: факти, історія застосунку, цитата розробника, іконка, скриншоти й записи екрана для публікацій.",
+    "title": "Прес-кіт",
+    "intro": "Усе, що потрібно, щоб написати про Wonderfall. Усі зображення й записи зроблено в справжньому застосунку, їх можна вільно використовувати в матеріалах про Wonderfall.",
+    "facts_title": "Факти",
+    "facts": [
+      [
+        "Застосунок",
+        "Wonderfall (раніше SnowMyScreen)"
+      ],
+      [
+        "Реліз",
+        "Версія 1.2, 10 листопада 2026 року"
+      ],
+      [
+        "Платформа",
+        "Mac, macOS 14.6 або новіша"
+      ],
+      [
+        "Ціна",
+        "1,99 $ у США, разова покупка в Mac App Store"
+      ],
+      [
+        "Мови",
+        "13, зокрема англійська й українська"
+      ],
+      [
+        "Розробник",
+        "Андрій Середа, незалежний розробник, Краків"
+      ],
+      [
+        "Контакт для преси",
+        "hello@andrewsereda.com"
+      ]
+    ],
+    "about_title": "Про Wonderfall",
+    "about": [
+      "Wonderfall додає на робочий стіл Mac сніг, дощ, осіннє листя, пелюстки, світлячків і гірлянду поверх ваших шпалер.",
+      "Сніг, листя й пелюстки накопичуються внизу екрана, а на склі з’являються краплі дощу. Їх можна прибрати лопатою, мітлою чи скребком. Кліки проходять крізь ефекти, тож працювати можна як завжди."
+    ],
+    "story_title": "Історія",
+    "story": [
+      "Два роки тому в Кракові взимку зовсім не було снігу. Андрій Середа сумував за ним і написав маленьку утиліту, щоб сніг падав угорі екрана, просто для настрою. Вона не мала виходити за межі одного комп’ютера, поки на робочому дзвінку хтось не помітив сніг і не запитав, де такий взяти. Тож утиліту доробили, і вона з’явилася в Mac App Store як SnowMyScreen.",
+      "Наступні ідеї прийшли з ностальгії за іграми на ПК, у які Андрій грав у дитинстві. Сніг почав накопичуватися внизу екрана, а тоді знадобилася лопата. Версія 1.2 додає дощ, листя, пелюстки й світлячків і нову назву — Wonderfall."
+    ],
+    "new_title": "Що нового в 1.2",
+    "new": [
+      "Дощ, осіннє листя, пелюстки й світлячки на додачу до снігу",
+      "Замети, краплі, купи листя й пелюсток, які прибирають лопатою, скребком або мітлою",
+      "Гірлянда вздовж рядка меню зі сценами для зими, Гелловіну, Нового року та свят",
+      "Власні зображення, зокрема SVG, у ролі сніжинок",
+      "Необов’язковий добір сцени за місцевою погодою",
+      "Нова назва й іконка"
+    ],
+    "quote_title": "Слово розробника",
+    "quote": "Назва — про маленьке диво пір року: «wonder» — це відчуття, «fall» — те, що падає.",
+    "quote_by": "Андрій Середа, розробник Wonderfall",
+    "assets_title": "Зображення й записи",
+    "screenshots_title": "Скриншоти",
+    "videos_title": "Записи екрана",
+    "download": "Завантажити",
+    "contact_title": "Контакт",
+    "contact_text": "Із запитаннями, проханнями про інтерв’ю чи код для огляду пишіть на",
+    "footer_label": "Прес-кіт"
+  }
+}
