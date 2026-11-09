@@ -45,9 +45,9 @@ For a phone preview, start the server with `python3 -m http.server 8000 --bind 0
 
 New content is present in the HTML without JavaScript. The website supports English at `/` and Ukrainian at `/uk/`. Each page has its own canonical URL and reciprocal `en`/`uk` hreflang. The preview and rotating headline honor reduced motion and pause off screen and in hidden tabs.
 
-The website brand is Wonderfall. GitHub Pages serves `getwonderfall.com` from branch `main` of `saintsereda/SnowMyScreen`. The local `content/site.json` and `CNAME` target that domain; publishing them requires a separate authorized push. The existing App Store destination and consent storage identifiers stay unchanged. Canonical URLs, EN/UK hreflang, social metadata, schema IDs, RSS, sitemap and the AI source index use the configured origin. The validator checks that it matches the local `CNAME`. The generator versions CSS, homepage JavaScript, navigation JavaScript and icon URLs by file content; regenerate pages after editing them.
+The website brand is Wonderfall. GitHub Pages serves `getwonderfall.com` from branch `main` of `saintsereda/SnowMyScreen`. `content/site.json` and `CNAME` use that domain; a push to `main` publishes changes. The existing App Store destination and consent storage identifiers stay unchanged. Canonical URLs, EN/UK hreflang, social metadata, schema IDs, RSS, sitemap and the AI source index use the configured origin. The validator checks that it matches the local `CNAME`. The generator versions CSS, homepage JavaScript, navigation JavaScript and icon URLs by file content; regenerate pages after editing them.
 
-DNS checked on 2026-10-22 points the apex domain to GitHub Pages and `www` to `saintsereda.github.io`. The GitHub Pages custom domain is `getwonderfall.com`; HTTPS responds successfully. The remote `main` branch still contains the old `snowmyscreen.app` CNAME and canonical metadata, so the live page has mismatched metadata until the prepared changes are published. The [official DNS records](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) are:
+DNS points the apex domain to GitHub Pages and `www` to `saintsereda.github.io`. The GitHub Pages custom domain is `getwonderfall.com`, and the remote `main` branch carries the matching `CNAME` and canonical metadata (checked 2026-11-09). `www` redirects to the apex; plain `http://` is not yet redirected to HTTPS. The old `snowmyscreen.app` domain returns a GitHub Pages 404. The [official DNS records](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) are:
 
 | Type | Host | Value |
 | --- | --- | --- |
@@ -57,7 +57,7 @@ DNS checked on 2026-10-22 points the apex domain to GitHub Pages and `www` to `s
 | A | @ | 185.199.111.153 |
 | CNAME | www | saintsereda.github.io |
 
-Publishing the prepared changes is a separate live operation from the domain and DNS changes already made. A push to `main` triggers the production deployment.
+A push to `main` triggers the production deployment.
 
 Analytics stays blocked until the visitor opts in (basic Consent Mode v2). The shared scripts are included on all pages, including the blog, privacy, download and 404. Consent is stored under `snowmyscreen_cookie_consent_v1`, version `1`; keep the version synchronized in both scripts when the purposes change. Cookie settings in the footer reopen preferences. Withdrawal removes GA cookies and reloads to unload the tag. Advertising storage, user data and personalization stay denied. The website privacy section describes this separately from the app's local data.
 

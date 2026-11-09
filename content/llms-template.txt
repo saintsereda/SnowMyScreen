@@ -1,6 +1,6 @@
 # Wonderfall
 
-> Animated desktop effects for Mac by Andrii (Andrew) Sereda. The Mac App Store app ID is 6755106853.
+> Animated desktop effects for Mac by Andrii (Andrew) Sereda. The Mac App Store app ID is 6755106853. Wonderfall was formerly named SnowMyScreen; both names refer to the same app.
 
 ## Wonderfall for Mac
 - Requires macOS {minimum_os} or later; Mac only.
@@ -18,6 +18,7 @@
 - [Product overview]({origin}/): Effects, review excerpts, setup steps and frequently asked questions.
 - [Setup and support]({origin}/support/): Menu bar controls, PNG import limits and troubleshooting.
 - [Privacy]({origin}/privacy.html): Local app storage, optional location and WeatherKit, and separate consent for website analytics.
+- [Press kit]({origin}/press/): Fact sheet, the story behind the app, a developer quote, the icon, screenshots and screen recordings.
 - [Mac App Store](https://apps.apple.com/app/id6755106853): Download and local pricing.
 - [Original App Store reviews](https://apps.apple.com/ua/app/snowmyscreen/id6755106853?see-all=reviews&platform=mac): Ukrainian storefront; reviews were written for SnowMyScreen.
 
@@ -31,5 +32,6 @@
 {guides_uk}
 - [Допомога]({origin}/uk/support/)
 - [Конфіденційність]({origin}/uk/privacy.html)
+- [Прес-кіт]({origin}/uk/press/)
 
 Developer: Andrii Sereda, also known as Andrew Sereda. Contact: hello@andrewsereda.com.
