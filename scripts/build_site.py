@@ -144,6 +144,7 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 <script src="/js/analytics.js" defer></script>
 <script src="/js/cookie-banner.js" defer></script>
 <script src="{asset('/js/navigation.js')}" defer></script>
+<script src="{asset('/js/app-store-link.js')}" defer></script>
 <script src="{asset('/js/brand-icon.js')}" defer></script>
 <script type="application/ld+json">{dump({'@context':'https://schema.org','@graph':graph})}</script>
 {preview_script}{article_script}{closing_script}
