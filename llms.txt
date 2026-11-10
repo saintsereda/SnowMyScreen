@@ -6,7 +6,7 @@
 - Requires macOS 14.6 or later; Mac only.
 - Seasonal effects: falling snow, rain, autumn leaves, spring petals and summer fireflies.
 - Custom images (common formats and SVG) can move like snow, leaves or rain. Import up to 10 at once; the app prepares the size automatically.
-- Version 1.2 (November 2026) is the current App Store release. Decorative lights with eight scenes hang along the menu bar, the Dock or both. Interactive tools clear snow, leaves, petals and raindrops.
+- Version 1.3 (November 2026) is the current App Store release. Snow settles on top of open windows, the snow bank can be rolled into snowballs and a snowman, and a snowplow clears it. Decorative lights with eight scenes hang along the menu bar, the Dock or both. Interactive tools clear snow, leaves, petals and raindrops.
 - Place the overlay over open windows or on the desktop behind them, while keeping the existing wallpaper.
 - Controls include intensity, size, speed and wind. Snow can pile up at the bottom of the screen and be cleared with a shovel.
 - Optional weather matching uses location permission and Apple WeatherKit.
@@ -27,6 +27,8 @@
 - [How to Give Your Mac a Christmas Theme: Wallpaper, Snow and Lights](https://getwonderfall.com/blog/christmas-theme-mac/): Turn your Mac or MacBook desktop into a Christmas scene: a festive wallpaper, falling snow, menu bar lights, a snow drift and a New Year variation.
 - [SnowMyScreen Is Now Wonderfall: What’s New in Version 1.2](https://getwonderfall.com/blog/snowmyscreen-is-now-wonderfall/): SnowMyScreen is now Wonderfall. Version 1.2 adds snow drifts and a shovel, Christmas lights with eight scenes, rain, leaves, petals and weather matching.
 - [How to Put Christmas Lights on Your Mac Desktop](https://getwonderfall.com/blog/christmas-lights-mac-desktop/): Hang animated Christmas lights along your Mac menu bar, pick a scene, colors and glow, and keep them over your windows or only on the desktop.
+- [How to Build a Snowman on Your Mac Desktop](https://getwonderfall.com/blog/snowman-mac-desktop/): Let snow pile up at the bottom of your Mac screen, roll snowballs, stack a snowman, throw snowballs at your windows and call a snowplow to clean up.
+- [Wonderfall 1.3: Snow on Your Windows, Snowballs and a Snowplow](https://getwonderfall.com/blog/wonderfall-1-3-snow-on-windows/): Wonderfall 1.3 lets snow settle on top of your Mac windows and move with them, adds snowballs, a snowman, a snowplow and a leaf sweeper.
 - [Animated Snow on Your Mac: Wallpaper, Screensaver or Overlay?](https://getwonderfall.com/blog/animated-snow-mac-desktop/): Moving wallpaper, snow screensaver or desktop overlay: what each option does on a Mac and how to keep snow falling over your own wallpaper while you work.
 - [How to Add Snow to Your Mac Desktop (and Other Seasonal Effects)](https://getwonderfall.com/blog/mac-desktop-effects/): Set up falling snow on your Mac, customize the motion and your own images, and explore Wonderfall’s seasonal effects without changing your wallpaper.
 
@@ -36,6 +38,8 @@
 - [Різдвяне оформлення Mac: шпалери, сніг і гірлянда](https://getwonderfall.com/uk/blog/christmas-theme-mac/): Перетворіть робочий стіл Mac чи MacBook на різдвяну сцену: святкові шпалери, сніг, гірлянда в рядку меню, кучугура й новорічний варіант.
 - [SnowMyScreen тепер Wonderfall: що нового у версії 1.2](https://getwonderfall.com/uk/blog/snowmyscreen-is-now-wonderfall/): SnowMyScreen тепер Wonderfall. У версії 1.2 кучугури й лопата, гірлянда з вісьмома сценами, дощ, листя, пелюстки та вибір за місцевою погодою.
 - [Як повісити новорічну гірлянду на робочий стіл Mac](https://getwonderfall.com/uk/blog/christmas-lights-mac-desktop/): Повісьте анімовану гірлянду вздовж рядка меню Mac, оберіть сцену, кольори й сяйво та покажіть її поверх вікон або лише на робочому столі.
+- [Як зліпити сніговика на робочому столі Mac](https://getwonderfall.com/uk/blog/snowman-mac-desktop/): Нехай сніг накопичується внизу екрана Mac: качайте сніжки, ліпіть сніговика, кидайте сніжки у вікна й викликайте снігоочисник, щоб прибрати.
+- [Wonderfall 1.3: сніг на вікнах, сніжки й снігоочисник](https://getwonderfall.com/uk/blog/wonderfall-1-3-snow-on-windows/): У Wonderfall 1.3 сніг лягає на верхні краї вікон Mac і рухається з ними, а ще з’явилися сніжки, сніговик, снігоочисник і машинка для листя.
 - [Анімований сніг на Mac: шпалери, скринсейвер чи оверлей?](https://getwonderfall.com/uk/blog/animated-snow-mac-desktop/): Рухомі шпалери, скринсейвер зі снігом чи оверлей: що робить кожен варіант на Mac і як залишити сніг поверх своїх шпалер під час роботи.
 - [Як додати сніг на робочий стіл Mac та інші сезонні ефекти](https://getwonderfall.com/uk/blog/mac-desktop-effects/): Увімкніть сніг на робочому столі Mac, налаштуйте анімацію й власні зображення та спробуйте сезонні ефекти Wonderfall, зберігши свої шпалери.
 - [Допомога](https://getwonderfall.com/uk/support/)

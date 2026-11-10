@@ -322,7 +322,7 @@ def reviews_section(c):
 <div class="reviews-marquee" data-reviews-marquee role="group" aria-labelledby="reviews-title" tabindex="0"><div class="reviews-track" data-reviews-track>{''.join(cards)}</div></div></section>'''
 
 def release_note(c):
-    return f'<a class="hero-update" href="{url(c["lang"],"blog/snowmyscreen-is-now-wonderfall/")}">{E(c["updates_released"])} →</a>'
+    return f'<a class="hero-update" href="{url(c["lang"],"blog/wonderfall-1-3-snow-on-windows/")}">{E(c["updates_released"])} →</a>'
 
 def homepage(c):
     videos=json.loads((ROOT/'content/preview-videos.json').read_text())

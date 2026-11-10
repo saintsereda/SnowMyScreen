@@ -6,7 +6,7 @@
 - Requires macOS {minimum_os} or later; Mac only.
 - Seasonal effects: falling snow, rain, autumn leaves, spring petals and summer fireflies.
 - Custom images (common formats and SVG) can move like snow, leaves or rain. Import up to 10 at once; the app prepares the size automatically.
-- Version 1.2 (November 2026) is the current App Store release. Decorative lights with eight scenes hang along the menu bar, the Dock or both. Interactive tools clear snow, leaves, petals and raindrops.
+- Version 1.3 (November 2026) is the current App Store release. Snow settles on top of open windows, the snow bank can be rolled into snowballs and a snowman, and a snowplow clears it. Decorative lights with eight scenes hang along the menu bar, the Dock or both. Interactive tools clear snow, leaves, petals and raindrops.
 - Place the overlay over open windows or on the desktop behind them, while keeping the existing wallpaper.
 - Controls include intensity, size, speed and wind. Snow can pile up at the bottom of the screen and be cleared with a shovel.
 - Optional weather matching uses location permission and Apple WeatherKit.
