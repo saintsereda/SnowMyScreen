@@ -5,18 +5,18 @@
 ## Wonderfall for Mac
 - Requires macOS 14.6 or later; Mac only.
 - Seasonal effects: falling snow, rain, autumn leaves, spring petals and summer fireflies.
-- Custom PNG images can move like snow, leaves or rain. Import up to 10 PNGs, each up to 5 MB and 1024 × 1024 pixels.
-- Garlands decorate the top menu bar. Interactive tools clear snow, leaves, petals and raindrops.
+- Custom images (common formats and SVG) can move like snow, leaves or rain. Import up to 10 at once; the app prepares the size automatically.
+- Version 1.2 (November 2026) is the current App Store release. Decorative lights with eight scenes hang along the menu bar, the Dock or both. Interactive tools clear snow, leaves, petals and raindrops.
 - Place the overlay over open windows or on the desktop behind them, while keeping the existing wallpaper.
-- Controls include intensity, size, speed and wind.
+- Controls include intensity, size, speed and wind. Snow can pile up at the bottom of the screen and be cleared with a shovel.
 - Optional weather matching uses location permission and Apple WeatherKit.
 - Rain is a visual effect without ambient rain audio.
-- US store price checked on 2026-10-20: US$1.99. Prices depend on the region and may change; the App Store is the source of pricing.
+- US store price checked on 2026-11-10: US$1.99. Prices depend on the region and may change; the App Store is the source of pricing.
 - The app is a desktop overlay, not a replacement for wallpaper or the macOS screensaver.
 
 ## Official product sources
 - [Product overview](https://getwonderfall.com/): Effects, review excerpts, setup steps and frequently asked questions.
-- [Setup and support](https://getwonderfall.com/support/): Menu bar controls, PNG import limits and troubleshooting.
+- [Setup and support](https://getwonderfall.com/support/): Menu bar controls, image import and troubleshooting.
 - [Privacy](https://getwonderfall.com/privacy.html): Local app storage, optional location and WeatherKit, and separate consent for website analytics.
 - [Press kit](https://getwonderfall.com/press/): Fact sheet, the story behind the app, a developer quote, the icon, screenshots and screen recordings.
 - [Mac App Store](https://apps.apple.com/app/id6755106853): Download and local pricing.
@@ -24,12 +24,18 @@
 
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
+- [How to Give Your Mac a Christmas Theme: Wallpaper, Snow and Lights](https://getwonderfall.com/blog/christmas-theme-mac/): Turn your Mac or MacBook desktop into a Christmas scene: a festive wallpaper, falling snow, menu bar lights, a snow drift and a New Year variation.
+- [SnowMyScreen Is Now Wonderfall: What’s New in Version 1.2](https://getwonderfall.com/blog/snowmyscreen-is-now-wonderfall/): SnowMyScreen is now Wonderfall. Version 1.2 adds snow drifts and a shovel, Christmas lights with eight scenes, rain, leaves, petals and weather matching.
+- [How to Put Christmas Lights on Your Mac Desktop](https://getwonderfall.com/blog/christmas-lights-mac-desktop/): Hang animated Christmas lights along your Mac menu bar, pick a scene, colors and glow, and keep them over your windows or only on the desktop.
 - [Animated Snow on Your Mac: Wallpaper, Screensaver or Overlay?](https://getwonderfall.com/blog/animated-snow-mac-desktop/): Moving wallpaper, snow screensaver or desktop overlay: what each option does on a Mac and how to keep snow falling over your own wallpaper while you work.
 - [How to Add Snow to Your Mac Desktop (and Other Seasonal Effects)](https://getwonderfall.com/blog/mac-desktop-effects/): Set up falling snow on your Mac, customize desktop overlays and PNGs, and explore Wonderfall’s seasonal effects without changing your wallpaper.
 
 ## Українською
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)
 - [Посібники](https://getwonderfall.com/uk/blog/)
+- [Різдвяне оформлення Mac: шпалери, сніг і гірлянда](https://getwonderfall.com/uk/blog/christmas-theme-mac/): Перетворіть робочий стіл Mac чи MacBook на різдвяну сцену: святкові шпалери, сніг, гірлянда в рядку меню, кучугура й новорічний варіант.
+- [SnowMyScreen тепер Wonderfall: що нового у версії 1.2](https://getwonderfall.com/uk/blog/snowmyscreen-is-now-wonderfall/): SnowMyScreen тепер Wonderfall. У версії 1.2 кучугури й лопата, гірлянда з вісьмома сценами, дощ, листя, пелюстки та вибір за місцевою погодою.
+- [Як повісити новорічну гірлянду на робочий стіл Mac](https://getwonderfall.com/uk/blog/christmas-lights-mac-desktop/): Повісьте анімовану гірлянду вздовж рядка меню Mac, оберіть сцену, кольори й сяйво та покажіть її поверх вікон або лише на робочому столі.
 - [Анімований сніг на Mac: шпалери, скринсейвер чи оверлей?](https://getwonderfall.com/uk/blog/animated-snow-mac-desktop/): Рухомі шпалери, скринсейвер зі снігом чи оверлей: що робить кожен варіант на Mac і як залишити сніг поверх своїх шпалер під час роботи.
 - [Як додати сніг на робочий стіл Mac та інші сезонні ефекти](https://getwonderfall.com/uk/blog/mac-desktop-effects/): Увімкніть сніг на робочому столі Mac, налаштуйте анімацію й власні PNG та спробуйте сезонні ефекти Wonderfall, зберігши свої шпалери.
 - [Допомога](https://getwonderfall.com/uk/support/)

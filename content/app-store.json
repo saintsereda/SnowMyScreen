@@ -1,11 +1,11 @@
 {
   "app_id": "6755106853",
   "bundle_id": "sereda.Snowflakes",
-  "checked_at": "2026-10-20",
-  "name": "SnowMyScreen",
-  "version": "1.1.2",
+  "checked_at": "2026-11-10",
+  "name": "Wonderfall: Desktop Effects",
+  "version": "1.2",
   "minimum_os": "14.6",
-  "release_date": "2026-01-05T15:10:55Z",
+  "release_date": "2026-11-09T15:33:04Z",
   "listing_source": "https://itunes.apple.com/lookup?id=6755106853&country=us",
   "listing_url": "https://apps.apple.com/app/id6755106853",
   "offer": {
@@ -16,7 +16,7 @@
   },
   "ratings": {
     "value": 5,
-    "count": 12,
+    "count": 11,
     "storefront": "ua",
     "source": "https://apps.apple.com/ua/app/snowmyscreen/id6755106853?see-all=reviews&platform=mac"
   },

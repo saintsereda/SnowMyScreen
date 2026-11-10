@@ -5,10 +5,10 @@
 ## Wonderfall for Mac
 - Requires macOS {minimum_os} or later; Mac only.
 - Seasonal effects: falling snow, rain, autumn leaves, spring petals and summer fireflies.
-- Custom PNG images can move like snow, leaves or rain. Import up to 10 PNGs, each up to 5 MB and 1024 × 1024 pixels.
-- Garlands decorate the top menu bar. Interactive tools clear snow, leaves, petals and raindrops.
+- Custom images (common formats and SVG) can move like snow, leaves or rain. Import up to 10 at once; the app prepares the size automatically.
+- Version 1.2 (November 2026) is the current App Store release. Decorative lights with eight scenes hang along the menu bar, the Dock or both. Interactive tools clear snow, leaves, petals and raindrops.
 - Place the overlay over open windows or on the desktop behind them, while keeping the existing wallpaper.
-- Controls include intensity, size, speed and wind.
+- Controls include intensity, size, speed and wind. Snow can pile up at the bottom of the screen and be cleared with a shovel.
 - Optional weather matching uses location permission and Apple WeatherKit.
 - Rain is a visual effect without ambient rain audio.
 - US store price checked on {checked_at}: {us_price}. Prices depend on the region and may change; the App Store is the source of pricing.
@@ -16,7 +16,7 @@
 
 ## Official product sources
 - [Product overview]({origin}/): Effects, review excerpts, setup steps and frequently asked questions.
-- [Setup and support]({origin}/support/): Menu bar controls, PNG import limits and troubleshooting.
+- [Setup and support]({origin}/support/): Menu bar controls, image import and troubleshooting.
 - [Privacy]({origin}/privacy.html): Local app storage, optional location and WeatherKit, and separate consent for website analytics.
 - [Press kit]({origin}/press/): Fact sheet, the story behind the app, a developer quote, the icon, screenshots and screen recordings.
 - [Mac App Store](https://apps.apple.com/app/id6755106853): Download and local pricing.

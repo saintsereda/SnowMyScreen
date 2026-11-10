@@ -104,7 +104,7 @@ def page(c, suffix, title, description, body, schemas=(), article=None, preview=
     feature_styles=''.join(f'<link rel="stylesheet" href="{asset(path)}">\n' for path in ('/css/features.css','/css/desktop-preview.css','/css/weather-switch.css')) if preview else f'<link rel="stylesheet" href="{asset("/css/desktop-preview.css")}">\n' if closing else ''
     hero_atmosphere='<div class="hero-atmosphere" aria-hidden="true"></div>\n' if preview else ''
     shooting_stars='<div class="shooting-stars" data-shooting-stars aria-hidden="true"></div>' if preview else ''
-    preview_script=''.join(f'<script src="{asset(path)}" defer></script>' for path in ('/js/preview.js','/js/weather-switch.js','/js/preview-perspective.js','/js/features.js','/js/shooting-star.js','/js/reviews.js','/js/faq.js','/js/release-countdown.js')) if preview else ''
+    preview_script=''.join(f'<script src="{asset(path)}" defer></script>' for path in ('/js/preview.js','/js/weather-switch.js','/js/preview-perspective.js','/js/features.js','/js/shooting-star.js','/js/reviews.js','/js/faq.js')) if preview else ''
     article_script=f'<script src="{asset("/js/article-media.js")}" defer></script>' if article else ''
     closing_script=f'<script src="{asset("/js/closing-screen.js")}" defer></script>' if closing else ''
     article_meta=f'<meta property="article:published_time" content="{article["published"]}T09:00:00+02:00"><meta property="article:modified_time" content="{article["updated"]}T09:00:00+02:00">' if article else ''
@@ -321,13 +321,8 @@ def reviews_section(c):
 <div class="reviews-heading wrap"><div><h2 id="reviews-title">{E(ui['title'])}</h2><a class="reviews-summary" href="{E(rating['source'])}" title="{E(ui['checked'].format(date=STORE_DATA['checked_at']))}"><span aria-hidden="true">★</span> {E(summary)} <span aria-hidden="true">↗</span></a></div></div>
 <div class="reviews-marquee" data-reviews-marquee role="group" aria-labelledby="reviews-title" tabindex="0"><div class="reviews-track" data-reviews-track>{''.join(cards)}</div></div></section>'''
 
-RELEASE_AT='2026-11-10T15:00:00Z'  # 16:00 Krakow, 17:00 Kyiv
-
-def release_countdown(c):
-    units=''.join(f'<span class="countdown-unit"><span class="countdown-value" data-unit="{key}">00</span><span class="countdown-label">{E(label)}</span></span>' for key,label in zip(('d','h','m','s'),c['updates_units']))
-    return (f'<p class="hero-update" data-release-countdown data-release-at="{RELEASE_AT}" data-released-text="{E(c["updates_released"])}">'
-            f'<span class="hero-update__text">{E(c["updates_soon"])}</span>'
-            f'<span class="hero-update__live" aria-hidden="true" hidden><span class="hero-update__label">{E(c["updates_countdown"])}</span><span class="countdown">{units}</span></span></p>')
+def release_note(c):
+    return f'<a class="hero-update" href="{url(c["lang"],"blog/snowmyscreen-is-now-wonderfall/")}">{E(c["updates_released"])} →</a>'
 
 def homepage(c):
     videos=json.loads((ROOT/'content/preview-videos.json').read_text())
@@ -340,7 +335,7 @@ def homepage(c):
         return ''.join(f' data-{attribute}="{E(path)}"' for attribute,path in [('video',values['src']),('poster',values['poster'])] if path)+f' data-menu-icon="{menu_symbol_asset(MENU_EFFECT_SYMBOLS[key])}"'
     buttons=''.join(f'<button class="theme-option theme-{key}" type="button" data-theme="{key}" data-description="{E(desc)}"{media_attrs(key)} aria-label="{E(name)}" aria-pressed="{"true" if key=="snow" else "false"}"><span class="theme-symbol" aria-hidden="true">{glyph}</span><span class="theme-name">{E(name)}</span></button>' for key,name,desc,glyph in c['themes'][:5])
     hero=f'<h1 class="hero__title">{E(c["hero_headline"])}</h1>'
-    body=f'''<section class="hero hero-with-preview"><div class="wrap hero__inner">{release_countdown(c)}{hero}<p class="hero-copy">{E(c['intro'])}</p><div class="hero-actions"><a class="button" href="{STORE}">{E(c['download'])}</a></div><p class="compat">{E(c['compat'])}</p></div></section>
+    body=f'''<section class="hero hero-with-preview"><div class="wrap hero__inner">{release_note(c)}{hero}<p class="hero-copy">{E(c['intro'])}</p><div class="hero-actions"><a class="button" href="{STORE}">{E(c['download'])}</a></div><p class="compat">{E(c['compat'])}</p></div></section>
 <section class="seasons-preview wrap" id="effects" aria-label="{E(c['screen_label'])}"><div class="preview video-preview" data-preview data-effect="snow"><div class="preview-media desktop-screen desktop-screen--video" role="group" aria-label="{E(c['screen_label'])}">{desktop_menu_bar()}<video class="effect-video desktop-screen__recording" data-effect-video src="{E(videos['snow']['src'] or '')}" poster="{E(videos['snow']['poster'] or '')}" muted loop playsinline preload="none" aria-label="{E(c['screen_label'])}"></video><div class="video-placeholder" data-video-placeholder hidden><span class="video-placeholder-mark" aria-hidden="true">▶</span><p class="video-placeholder-caption" data-video-caption>{E(c['themes'][0][1])}</p></div></div><div class="control-panel" hidden><div class="theme-picker" data-weather-switch role="group" aria-label="{E(c['preview_label'])}" hidden>{buttons}</div><p class="visually-hidden" data-theme-description aria-live="polite">{E(c['themes'][0][2])}</p></div></div></section>
 {feature_showcase(c)}
 {reviews_section(c)}

@@ -1,6 +1,102 @@
 {
   "articles": [
     {
+      "slug": "christmas-theme-mac",
+      "status": "published",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "en": {
+        "title": "How to Give Your Mac a Christmas Theme: Wallpaper, Snow and Lights",
+        "footer_label": "Christmas theme for your Mac",
+        "meta_title": "Christmas Theme for Your Mac: Snow and Lights | Wonderfall",
+        "description": "Turn your Mac or MacBook desktop into a Christmas scene: a festive wallpaper, falling snow, menu bar lights, a snow drift and a New Year variation.",
+        "summary": "Four steps from a plain wallpaper to a cozy Christmas desktop, plus a New Year version"
+      },
+      "uk": {
+        "title": "Різдвяне оформлення Mac: шпалери, сніг і гірлянда",
+        "footer_label": "Різдвяне оформлення Mac",
+        "meta_title": "Різдвяне оформлення Mac: сніг і гірлянда | Wonderfall",
+        "description": "Перетворіть робочий стіл Mac чи MacBook на різдвяну сцену: святкові шпалери, сніг, гірлянда в рядку меню, кучугура й новорічний варіант.",
+        "summary": "Чотири кроки від звичайних шпалер до затишного різдвяного робочого столу, плюс новорічний варіант"
+      },
+      "cover": {
+        "video": "/videos/snow-demo-1440p.mp4",
+        "poster": "/videos/snow-demo-1440p.jpg",
+        "alt": {
+          "en": "Falling snow over a desktop wallpaper",
+          "uk": "Сніг падає поверх шпалер робочого столу"
+        }
+      },
+      "inline": [
+        {
+          "after": "lights",
+          "video": "/videos/garland-showcase.mp4",
+          "poster": "/videos/garland-showcase.jpg",
+          "caption": {
+            "en": "Holiday lights hang along the menu bar above the snow.",
+            "uk": "Гірлянда висить уздовж рядка меню над снігом."
+          }
+        },
+        {
+          "after": "bank",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow builds a drift along the bottom, and the shovel digs it out.",
+            "uk": "Сніг наростає кучугурою внизу, а лопата її розкопує."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "snowmyscreen-is-now-wonderfall",
+      "status": "published",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
+      "en": {
+        "title": "SnowMyScreen Is Now Wonderfall: What’s New in Version 1.2",
+        "footer_label": "What’s new in Wonderfall 1.2",
+        "meta_title": "SnowMyScreen Is Now Wonderfall: What’s New in 1.2",
+        "description": "SnowMyScreen is now Wonderfall. Version 1.2 adds snow drifts and a shovel, Christmas lights with eight scenes, rain, leaves, petals and weather matching.",
+        "summary": "The new name, snow that piles up, decorative lights and four more seasons"
+      },
+      "uk": {
+        "title": "SnowMyScreen тепер Wonderfall: що нового у версії 1.2",
+        "footer_label": "Що нового у Wonderfall 1.2",
+        "meta_title": "SnowMyScreen тепер Wonderfall: що нового в 1.2",
+        "description": "SnowMyScreen тепер Wonderfall. У версії 1.2 кучугури й лопата, гірлянда з вісьмома сценами, дощ, листя, пелюстки та вибір за місцевою погодою.",
+        "summary": "Нова назва, сніг, що накопичується, гірлянда й ще чотири сезони"
+      },
+      "cover": {
+        "video": "/videos/garland-showcase.mp4",
+        "poster": "/videos/garland-showcase.jpg",
+        "alt": {
+          "en": "A string of glowing lights along the top of a desktop",
+          "uk": "Гірлянда світиться вздовж верхнього краю робочого столу"
+        }
+      },
+      "inline": [
+        {
+          "after": "winter",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow settles along the bottom of the screen, and the shovel clears it.",
+            "uk": "Сніг осідає внизу екрана, а лопата його прибирає."
+          }
+        },
+        {
+          "after": "seasons",
+          "video": "/videos/leaves-demo-1440p.mp4",
+          "poster": "/videos/leaves-demo-1440p.jpg",
+          "caption": {
+            "en": "Autumn leaves are one of four new seasons.",
+            "uk": "Осіннє листя є одним із чотирьох нових сезонів."
+          }
+        }
+      ]
+    },
+    {
       "slug": "mac-desktop-effects",
       "status": "published",
       "featured": true,
@@ -126,9 +222,9 @@
     },
     {
       "slug": "christmas-lights-mac-desktop",
-      "status": "draft",
-      "published": "2026-11-17",
-      "updated": "2026-11-17",
+      "status": "published",
+      "published": "2026-11-10",
+      "updated": "2026-11-10",
       "en": {
         "title": "How to Put Christmas Lights on Your Mac Desktop",
         "footer_label": "Christmas lights on your Mac",
@@ -159,6 +255,101 @@
           "caption": {
             "en": "Turn on Snow to add falling flakes below the lights.",
             "uk": "Увімкніть сніг, щоб під гірляндою падали сніжинки."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "snowman-mac-desktop",
+      "status": "draft",
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "en": {
+        "title": "How to Build a Snowman on Your Mac Desktop",
+        "footer_label": "Build a snowman on your desktop",
+        "meta_title": "Build a Snowman on Your Mac Desktop | Wonderfall",
+        "description": "Let snow pile up at the bottom of your Mac screen, roll snowballs, stack a snowman, throw snowballs at your windows and call a snowplow to clean up.",
+        "summary": "Roll, stack and throw: playing with the snow that piles up on your screen"
+      },
+      "uk": {
+        "title": "Як зліпити сніговика на робочому столі Mac",
+        "footer_label": "Сніговик на робочому столі",
+        "meta_title": "Сніговик на робочому столі Mac | Wonderfall",
+        "description": "Нехай сніг накопичується внизу екрана Mac: качайте сніжки, ліпіть сніговика, кидайте сніжки у вікна й викликайте снігоочисник, щоб прибрати.",
+        "summary": "Качати, складати й кидати: гра зі снігом, що накопичується на екрані"
+      },
+      "cover": {
+        "video": "/videos/cleaning-snow.mp4",
+        "poster": "/videos/cleaning-snow.jpg",
+        "alt": {
+          "en": "Snow piled along the bottom of a desktop",
+          "uk": "Кучугура снігу внизу робочого столу"
+        }
+      }
+    },
+    {
+      "slug": "wonderfall-1-3-snow-on-windows",
+      "status": "draft",
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "en": {
+        "title": "Wonderfall 1.3: Snow on Your Windows, Snowballs and a Snowplow",
+        "footer_label": "What’s new in Wonderfall 1.3",
+        "meta_title": "Wonderfall 1.3: Snow on Your Windows | Wonderfall",
+        "description": "Wonderfall 1.3 lets snow settle on top of your Mac windows and move with them, adds snowballs, a snowman, a snowplow and a leaf sweeper.",
+        "summary": "Snow that lands on your windows, and a snow bank you can play with"
+      },
+      "uk": {
+        "title": "Wonderfall 1.3: сніг на вікнах, сніжки й снігоочисник",
+        "footer_label": "Що нового у Wonderfall 1.3",
+        "meta_title": "Wonderfall 1.3: сніг на вікнах | Wonderfall",
+        "description": "У Wonderfall 1.3 сніг лягає на верхні краї вікон Mac і рухається з ними, а ще з’явилися сніжки, сніговик, снігоочисник і машинка для листя.",
+        "summary": "Сніг, що лягає на вікна, і кучугура, з якою можна гратися"
+      },
+      "cover": {
+        "video": "/videos/snow-1440p.mp4",
+        "poster": "/videos/snow-1440p.jpg",
+        "alt": {
+          "en": "Falling snow over a desktop wallpaper",
+          "uk": "Сніг падає поверх шпалер робочого столу"
+        }
+      }
+    },
+    {
+      "slug": "rain-on-mac-desktop",
+      "status": "draft",
+      "published": "2027-09-15",
+      "updated": "2027-09-15",
+      "en": {
+        "title": "How to Add a Rain Effect to Your Mac Desktop",
+        "footer_label": "Rain on your Mac desktop",
+        "meta_title": "Rain Effect on Your Mac Desktop | Wonderfall",
+        "description": "Add falling rain over your own Mac wallpaper, tune it from drizzle to shower, let raindrops gather on the glass and wipe them away with a squeegee.",
+        "summary": "Drizzle to shower, raindrops on the glass and a squeegee"
+      },
+      "uk": {
+        "title": "Як додати ефект дощу на робочий стіл Mac",
+        "footer_label": "Дощ на робочому столі Mac",
+        "meta_title": "Ефект дощу на робочому столі Mac | Wonderfall",
+        "description": "Додайте дощ поверх своїх шпалер Mac, налаштуйте його від мряки до зливи, дайте краплям зібратися на склі й витріть їх скребком.",
+        "summary": "Від мряки до зливи, краплі на склі та скребок"
+      },
+      "cover": {
+        "video": "/videos/rain-demo-1440p.mp4",
+        "poster": "/videos/rain-demo-1440p.jpg",
+        "alt": {
+          "en": "Rain falling over a desktop wallpaper",
+          "uk": "Дощ падає поверх шпалер робочого столу"
+        }
+      },
+      "inline": [
+        {
+          "after": "glass",
+          "video": "/videos/cleaning-rain.mp4",
+          "poster": "/videos/cleaning-rain.jpg",
+          "caption": {
+            "en": "Raindrops gather on the glass, and the squeegee wipes them away.",
+            "uk": "Краплі збираються на склі, а скребок їх витирає."
           }
         }
       ]
