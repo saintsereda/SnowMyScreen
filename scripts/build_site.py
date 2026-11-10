@@ -153,7 +153,7 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 <a class="skip-link" href="#main">{E(c['skip'])}</a>
 {hero_atmosphere}{navigation(c,suffix,preview)}
 <main id="main">{shooting_stars}{body}</main>
-<footer class="footer wrap"><div><a class="brand" href="{url(lang)}" data-brand-link>{brand_icon()}Wonderfall</a><p>{E(c['footer_line'])}</p></div>
+<footer class="footer wrap"><div><a class="brand" href="{url(lang)}" data-brand-link>{brand_icon()}Wonderfall</a><p>{E(c['footer_line'])}</p>{macbase_badge(c,preview)}</div>
 <nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}">{footer_groups(c,lang)}</nav></footer>
 </body></html>'''
 
@@ -193,6 +193,12 @@ def other_language(lang, suffix):
     other='uk' if lang=='en' else 'en'
     label='Читати українською' if lang=='en' else 'Read in English'
     return f'<a class="language-switch" href="{url(other,suffix)}" lang="{other}" hreflang="{other}">{label}</a>'
+
+def macbase_badge(c, on_dark):
+    """MacBase listing badge; the blue home footer needs the white-text variant."""
+    src='https://macbase.app/badge/featured-on-macbase'+('-dark' if on_dark else '')+'.svg'
+    return (f'<a class="footer-badge" href="https://macbase.app/apps/wonderfall?ref=badge" target="_blank" rel="noopener">'
+            f'<img src="{src}" alt="{E(c["macbase_badge_alt"])}" width="225" height="72" loading="lazy" decoding="async"></a>')
 
 def footer_group(key, title, *links):
     items=''.join(f'<li>{link}</li>' for link in links)
