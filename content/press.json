@@ -119,7 +119,7 @@
       ],
       [
         "Release",
-        "Version 1.2, November 10, 2026"
+        "Version 1.3, November 10, 2026"
       ],
       [
         "Platform",
@@ -145,21 +145,20 @@
     "about_title": "About Wonderfall",
     "about": [
       "Wonderfall brings snow, rain, falling leaves, petals, fireflies and string lights to your Mac desktop, over your own wallpaper.",
-      "Snow, leaves and petals pile up at the bottom of the screen, and raindrops form on the glass. A shovel, broom or squeegee clears them away. Clicks pass through the effects, so you keep working normally."
+      "Snow, leaves and petals pile up at the bottom of the screen and on top of open windows, and raindrops form on the glass. A shovel, broom or squeegee clears them away, and you can roll the snow into snowballs and a snowman. Clicks pass through the effects, so you keep working normally."
     ],
     "story_title": "The story",
     "story": [
       "Two winters ago it didn't snow in Kraków at all. Andrew Sereda missed it and wrote a tiny utility that let snow fall along the top of the screen, just to lift the mood. It was never meant to go anywhere, until someone on a work call noticed the snow and asked where they could get one. So it got finished and went on the Mac App Store as SnowMyScreen.",
-      "The next ideas came from nostalgia for the PC games Andrew played as a kid. Snow started piling up at the bottom of the screen, and then it needed a shovel. Version 1.2 adds rain, leaves, petals and fireflies, and a new name: Wonderfall."
+      "The next ideas came from nostalgia for the PC games Andrew played as a kid. Snow started piling up at the bottom of the screen, and then it needed a shovel. Version 1.2 adds rain, leaves, petals and fireflies, and a new name: Wonderfall. Version 1.3 lets snow settle on your windows and turns the snow bank into something you can play with."
     ],
-    "new_title": "What's new in 1.2",
+    "new_title": "What's new in 1.3",
     "new": [
-      "Rain, autumn leaves, flower petals and fireflies alongside snow",
-      "Snow banks, raindrops and leaf and petal piles you clear with a shovel, squeegee or broom",
-      "String lights along the menu bar, with winter, Halloween, New Year and holiday scenes",
-      "Your own images, including SVG, as falling shapes",
-      "Optional scenes that match your local weather",
-      "A new name and icon"
+      "Snow settles on top of open windows and moves with them; leaves and petals gather there too, and rain splashes on window edges",
+      "Play in the snow: roll snowballs, build a snowman with a beanie and scarf, or throw a snowball at the screen",
+      "A snowplow clears all snow and a leaf sweeper clears all leaves",
+      "Icons in the menu bar menu and improvements for several displays",
+      "From 1.2: rain, leaves, petals, fireflies, string lights with eight scenes, your own images and a new name"
     ],
     "quote_title": "From the developer",
     "quote": "The name is about the small magic of the seasons: “wonder” for that feeling, “fall” for things that fall.",
@@ -185,7 +184,7 @@
       ],
       [
         "Реліз",
-        "Версія 1.2, 10 листопада 2026 року"
+        "Версія 1.3, 10 листопада 2026 року"
       ],
       [
         "Платформа",
@@ -211,21 +210,20 @@
     "about_title": "Про Wonderfall",
     "about": [
       "Wonderfall додає на робочий стіл Mac сніг, дощ, осіннє листя, пелюстки, світлячків і гірлянду поверх ваших шпалер.",
-      "Сніг, листя й пелюстки накопичуються внизу екрана, а на склі з’являються краплі дощу. Їх можна прибрати лопатою, мітлою чи скребком. Кліки проходять крізь ефекти, тож працювати можна як завжди."
+      "Сніг, листя й пелюстки накопичуються внизу екрана й на верхніх краях відкритих вікон, а на склі з’являються краплі дощу. Їх можна прибрати лопатою, мітлою чи скребком, а зі снігу можна скачати сніжки й зліпити сніговика. Кліки проходять крізь ефекти, тож працювати можна як завжди."
     ],
     "story_title": "Історія",
     "story": [
       "Два роки тому в Кракові взимку зовсім не було снігу. Андрій Середа сумував за ним і написав маленьку утиліту, щоб сніг падав угорі екрана, просто для настрою. Вона не мала виходити за межі одного комп’ютера, поки на робочому дзвінку хтось не помітив сніг і не запитав, де такий взяти. Тож утиліту доробили, і вона з’явилася в Mac App Store як SnowMyScreen.",
-      "Наступні ідеї прийшли з ностальгії за іграми на ПК, у які Андрій грав у дитинстві. Сніг почав накопичуватися внизу екрана, а тоді знадобилася лопата. Версія 1.2 додає дощ, листя, пелюстки й світлячків і нову назву — Wonderfall."
+      "Наступні ідеї прийшли з ностальгії за іграми на ПК, у які Андрій грав у дитинстві. Сніг почав накопичуватися внизу екрана, а тоді знадобилася лопата. Версія 1.2 додає дощ, листя, пелюстки й світлячків і нову назву — Wonderfall. Версія 1.3 дає снігу осідати на вікнах і перетворює кучугуру на сніг, з яким можна гратися."
     ],
-    "new_title": "Що нового в 1.2",
+    "new_title": "Що нового в 1.3",
     "new": [
-      "Дощ, осіннє листя, пелюстки й світлячки на додачу до снігу",
-      "Замети, краплі, купи листя й пелюсток, які прибирають лопатою, скребком або мітлою",
-      "Гірлянда вздовж рядка меню зі сценами для зими, Гелловіну, Нового року та свят",
-      "Власні зображення, зокрема SVG, у ролі сніжинок",
-      "Необов’язковий добір сцени за місцевою погодою",
-      "Нова назва й іконка"
+      "Сніг осідає на верхніх краях відкритих вікон і рухається разом із ними; листя й пелюстки теж, а дощ розбризкується об краї вікон",
+      "Гра зі снігом: сніжки, сніговик у шапці й шарфі, сніжка, кинута в екран",
+      "Снігоочисник прибирає весь сніг, а машина для листя все листя",
+      "Іконки в меню рядка меню й покращення для кількох дисплеїв",
+      "З 1.2: дощ, листя, пелюстки, світлячки, гірлянда з вісьмома сценами, власні зображення й нова назва"
     ],
     "quote_title": "Слово розробника",
     "quote": "Назва — про маленьке диво пір року: «wonder» — це відчуття, «fall» — те, що падає.",

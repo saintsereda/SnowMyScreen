@@ -15,6 +15,8 @@ origin_parts = urlsplit(ORIGIN)
 assert origin_parts.scheme == 'https' and origin_parts.hostname and not origin_parts.path and not origin_parts.query and not origin_parts.fragment and not origin_parts.username, 'Set a plain HTTPS origin in content/site.json.'
 STORE_DATA = json.loads((ROOT/'content/app-store.json').read_text())
 STORE = 'https://apps.apple.com/app/id6755106853'
+# App Store Connect campaign link for blog pages, so App Analytics shows sales from the blog.
+BLOG_STORE = 'https://apps.apple.com/app/apple-store/id6755106853?pt=127454389&ct=blog&mt=8'
 UPDATED = SITE['content_updated']
 LANGS = ('en', 'uk')
 E = html.escape
@@ -86,7 +88,13 @@ def navigation(c, suffix='', preview=False):
 <noscript><nav class="site-navigation__fallback" aria-label="{E(ui['sections'])}">{links}</nav></noscript>
 </header>'''
 
-def page(c, suffix, title, description, body, schemas=(), article=None, preview=False):
+def page(c, suffix, *args, **kwargs):
+    out=_page(c, suffix, *args, **kwargs)
+    if suffix.startswith('blog/'):
+        out=out.replace(f'href="{STORE}"', f'href="{E(BLOG_STORE)}"')
+    return out
+
+def _page(c, suffix, title, description, body, schemas=(), article=None, preview=False):
     lang=c['lang']; canonical=ORIGIN+url(lang,suffix)
     webpage={'@type':'WebPage','@id':canonical+'#page','url':canonical,'name':title,
              'description':description,'inLanguage':lang,'isPartOf':{'@id':ORIGIN+'/#website'},
