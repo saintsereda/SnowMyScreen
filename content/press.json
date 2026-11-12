@@ -119,7 +119,7 @@
       ],
       [
         "Release",
-        "Version 1.3, November 10, 2026"
+        "Version 1.4, November 12, 2026"
       ],
       [
         "Platform",
@@ -127,7 +127,7 @@
       ],
       [
         "Price",
-        "US$1.99, one-time purchase on the Mac App Store"
+        "US$3.99, one-time purchase on the Mac App Store"
       ],
       [
         "Languages",
@@ -150,15 +150,16 @@
     "story_title": "The story",
     "story": [
       "Two winters ago it didn't snow in Kraków at all. Andrew Sereda missed it and wrote a tiny utility that let snow fall along the top of the screen, just to lift the mood. It was never meant to go anywhere, until someone on a work call noticed the snow and asked where they could get one. So it got finished and went on the Mac App Store as SnowMyScreen.",
-      "The next ideas came from nostalgia for the PC games Andrew played as a kid. Snow started piling up at the bottom of the screen, and then it needed a shovel. Version 1.2 adds rain, leaves, petals and fireflies, and a new name: Wonderfall. Version 1.3 lets snow settle on your windows and turns the snow bank into something you can play with."
+      "The next ideas came from nostalgia for the PC games Andrew played as a kid. Snow started piling up at the bottom of the screen, and then it needed a shovel. Version 1.2 adds rain, leaves, petals and fireflies, and a new name: Wonderfall. Version 1.3 lets snow settle on your windows and turns the snow bank into something you can play with, and 1.4 brings Santa and a Christmas tree to the desktop."
     ],
-    "new_title": "What's new in 1.3",
+    "new_title": "What's new in 1.4",
     "new": [
-      "Snow settles on top of open windows and moves with them; leaves and petals gather there too, and rain splashes on window edges",
-      "Play in the snow: roll snowballs, build a snowman with a beanie and scarf, or throw a snowball at the screen",
-      "A snowplow clears all snow and a leaf sweeper clears all leaves",
-      "Icons in the menu bar menu and improvements for several displays",
-      "From 1.2: rain, leaves, petals, fireflies, string lights with eight scenes, your own images and a new name"
+      "Santa and his reindeer fly across the screen now and then, with an optional sleigh sound",
+      "A decorated Christmas tree on the desktop, in three sizes",
+      "The shovel, squeegee and broom wait on a rack at the bottom of the screen",
+      "Heavier, hand-rolled snowman balls you can throw with a flick, a mitten pointer in snow play, and a snowplow that pushes snow",
+      "Keyboard shortcuts start a cleaning tool or snow play from any app, and Settings has a new sidebar",
+      "From 1.3: snow on top of open windows, snowballs, a snowman and a snowplow"
     ],
     "quote_title": "From the developer",
     "quote": "The name is about the small magic of the seasons: “wonder” for that feeling, “fall” for things that fall.",
@@ -184,7 +185,7 @@
       ],
       [
         "Реліз",
-        "Версія 1.3, 10 листопада 2026 року"
+        "Версія 1.4, 12 листопада 2026 року"
       ],
       [
         "Платформа",
@@ -192,7 +193,7 @@
       ],
       [
         "Ціна",
-        "1,99 $ у США, разова покупка в Mac App Store"
+        "3,99 $ у США, разова покупка в Mac App Store"
       ],
       [
         "Мови",
@@ -215,15 +216,16 @@
     "story_title": "Історія",
     "story": [
       "Два роки тому в Кракові взимку зовсім не було снігу. Андрій Середа сумував за ним і написав маленьку утиліту, щоб сніг падав угорі екрана, просто для настрою. Вона не мала виходити за межі одного комп’ютера, поки на робочому дзвінку хтось не помітив сніг і не запитав, де такий взяти. Тож утиліту доробили, і вона з’явилася в Mac App Store як SnowMyScreen.",
-      "Наступні ідеї прийшли з ностальгії за іграми на ПК, у які Андрій грав у дитинстві. Сніг почав накопичуватися внизу екрана, а тоді знадобилася лопата. Версія 1.2 додає дощ, листя, пелюстки й світлячків і нову назву — Wonderfall. Версія 1.3 дає снігу осідати на вікнах і перетворює кучугуру на сніг, з яким можна гратися."
+      "Наступні ідеї прийшли з ностальгії за іграми на ПК, у які Андрій грав у дитинстві. Сніг почав накопичуватися внизу екрана, а тоді знадобилася лопата. Версія 1.2 додає дощ, листя, пелюстки й світлячків і нову назву — Wonderfall. Версія 1.3 дає снігу осідати на вікнах і перетворює кучугуру на сніг, з яким можна гратися, а 1.4 приносить на робочий стіл Санту та ялинку."
     ],
-    "new_title": "Що нового в 1.3",
+    "new_title": "Що нового в 1.4",
     "new": [
-      "Сніг осідає на верхніх краях відкритих вікон і рухається разом із ними; листя й пелюстки теж, а дощ розбризкується об краї вікон",
-      "Гра зі снігом: сніжки, сніговик у шапці й шарфі, сніжка, кинута в екран",
-      "Снігоочисник прибирає весь сніг, а машина для листя все листя",
-      "Іконки в меню рядка меню й покращення для кількох дисплеїв",
-      "З 1.2: дощ, листя, пелюстки, світлячки, гірлянда з вісьмома сценами, власні зображення й нова назва"
+      "Санта з оленями час від часу пролітає екраном, за бажанням зі звуком саней",
+      "Прикрашена ялинка на робочому столі, трьох розмірів",
+      "Лопата, шкребок і мітла чекають на стійці внизу екрана",
+      "Важчі кулі для сніговика, наче зліплені вручну, які можна кинути змахом, курсор-рукавичка в грі зі снігом і снігоочисник, що штовхає сніг",
+      "Сполучення клавіш запускають інструмент прибирання чи гру зі снігом з будь-якої програми, а налаштування отримали бічну панель",
+      "З 1.3: сніг на верхніх краях відкритих вікон, сніжки, сніговик і снігоочисник"
     ],
     "quote_title": "Слово розробника",
     "quote": "Назва — про маленьке диво пір року: «wonder» — це відчуття, «fall» — те, що падає.",

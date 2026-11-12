@@ -316,6 +316,34 @@
       }
     },
     {
+      "slug": "wonderfall-1-4-santa-christmas-tree",
+      "status": "published",
+      "published": "2026-11-12",
+      "updated": "2026-11-12",
+      "en": {
+        "title": "Wonderfall 1.4: Santa, a Christmas Tree and a Rack for Your Tools",
+        "footer_label": "What’s new in Wonderfall 1.4",
+        "meta_title": "Wonderfall 1.4: Santa and a Christmas Tree | Wonderfall",
+        "description": "Wonderfall 1.4 sends Santa and his reindeer across your Mac screen, adds a Christmas tree, a tool rack, heavier snowmen and keyboard shortcuts.",
+        "summary": "Santa flies across your screen, a tree stands on your desktop, and your tools wait on a rack"
+      },
+      "uk": {
+        "title": "Wonderfall 1.4: Санта, ялинка й стійка для інструментів",
+        "footer_label": "Що нового у Wonderfall 1.4",
+        "meta_title": "Wonderfall 1.4: Санта та ялинка | Wonderfall",
+        "description": "У Wonderfall 1.4 екраном Mac пролітає Санта з оленями, на робочому столі стоїть ялинка, а ще є стійка з інструментами, важчі сніговики й сполучення клавіш.",
+        "summary": "Санта пролітає екраном, ялинка стоїть на робочому столі, а інструменти чекають на стійці"
+      },
+      "cover": {
+        "video": "/videos/snow-demo-1440p.mp4",
+        "poster": "/videos/snow-demo-1440p.jpg",
+        "alt": {
+          "en": "Falling snow over a desktop wallpaper",
+          "uk": "Сніг падає поверх шпалер робочого столу"
+        }
+      }
+    },
+    {
       "slug": "rain-on-mac-desktop",
       "status": "draft",
       "published": "2027-09-15",
