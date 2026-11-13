@@ -48,7 +48,7 @@ assert len(pages)==expected+1, f'Expected {expected} generated pages plus 404; g
 canonicals={};descriptions=set()
 for path,page in pages.items():
     assert page.lang in {'en','uk'}, path
-    for script in ('/js/analytics.js','/js/cookie-banner.js'):
+    for script in ('/js/analytics.js','/js/site-analytics.js','/js/cookie-banner.js'):
         assert sum(t=='script' and a.get('src')==script for t,a in page.tags)==1,(path,script)
     assert sum(t=='link' and a.get('href')=='/css/cookies.css' for t,a in page.tags)==1,path
     assert any(t=='button' and 'data-cookie-settings' in a for t,a in page.tags),path

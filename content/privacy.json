@@ -68,10 +68,11 @@
     "footer": "This privacy policy may be updated occasionally. The current version is always available here and in the Mac App Store.",
     "website": {
       "heading": "Website analytics & cookies",
-      "updated": "Website section updated: October 5, 2026",
+      "updated": "Website section updated: November 13, 2026",
       "storage": "The website uses local storage to remember your cookie choice (snowmyscreen_cookie_consent_v1) and, on the download page, your language preference (snowmyscreen-language). These preferences are saved on this device.",
       "analytics": "If you allow analytics, the website loads Google Analytics 4 (measurement ID G-VB76JMX2B6) to measure page visits and browser/device information. Google processes this usage data. The Google tag is not loaded before you opt in or while optional cookies are declined. Advertising consent remains disabled.",
       "cookies": "With analytics enabled, Google Analytics can store first-party _ga and _ga_VB76JMX2B6 cookies to distinguish browsers and sessions. These website statistics are separate from the desktop app's usage statistics.",
+      "counter": "The website also counts page views and App Store link clicks with its own cookieless counter. It uses no cookies or browser storage and no visitor ID, and it works whatever you choose in the banner. Each count stores only the day, the page path, a source label (such as the referring site or a campaign tag) and a country code, as daily totals; no IP address, user agent or full URL is saved. Counts are browser events, not people.",
       "choices": "Choose Accept all, Only necessary or Customize in the banner. You can reopen Cookie settings in the footer at any time. Turning analytics off removes Google Analytics cookies and reloads the page to stop the running tag. Clearing browser storage removes your saved choice.",
       "google": "Learn how Google handles this information:"
     },
@@ -152,10 +153,11 @@
     "footer": "Ця політика конфіденційності може час від часу оновлюватися. Поточна версія завжди доступна тут і в Mac App Store.",
     "website": {
       "heading": "Аналітика сайту та cookie",
-      "updated": "Розділ про сайт оновлено: 5 жовтня 2026 року",
+      "updated": "Розділ про сайт оновлено: 13 листопада 2026 року",
       "storage": "Сайт зберігає вибір щодо cookie (snowmyscreen_cookie_consent_v1) та, на сторінці завантаження, мовні налаштування (snowmyscreen-language) у локальному сховищі браузера. Ці налаштування залишаються на цьому пристрої.",
       "analytics": "Якщо ви дозволите аналітику, сайт завантажить Google Analytics 4 (ідентифікатор G-VB76JMX2B6) для вимірювання відвідувань сторінок та інформації про браузер і пристрій. Google обробляє ці дані використання. До вашої згоди та за відмови від необов’язкових cookie тег Google не завантажується. Згода на рекламу залишається вимкненою.",
       "cookies": "Коли аналітика дозволена, Google Analytics може зберігати cookie _ga та _ga_VB76JMX2B6 для розрізнення браузерів і сеансів. Статистика сайту не пов’язана зі статистикою використання застосунку.",
+      "counter": "Сайт також рахує перегляди сторінок і кліки за посиланнями на App Store власним лічильником без cookie. Він не використовує cookie чи сховище браузера та жодного ідентифікатора відвідувача, і працює незалежно від вашого вибору в банері. Кожен підрахунок зберігає лише день, шлях сторінки, мітку джерела (наприклад, сайт-реферер чи тег кампанії) та код країни у вигляді добових сум; IP-адреса, user agent і повна адреса сторінки не зберігаються. Це події браузера, а не люди.",
       "choices": "У банері виберіть «Прийняти всі», «Лише необхідні» або «Налаштувати». Ви можете знову відкрити «Налаштування cookie» у підвалі будь-коли. Вимкнення аналітики видаляє cookie Google Analytics і перезавантажує сторінку, щоб зупинити тег. Очищення сховища браузера видаляє збережений вибір.",
       "google": "Докладніше про обробку цієї інформації Google:"
     },
