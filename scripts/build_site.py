@@ -154,7 +154,8 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 <a class="skip-link" href="#main">{E(c['skip'])}</a>
 {hero_atmosphere}{navigation(c,suffix,preview)}
 <main id="main">{shooting_stars}{body}</main>
-<footer class="footer wrap"><div><a class="brand" href="{url(lang)}" data-brand-link>{brand_icon()}Wonderfall</a><p>{E(c['footer_line'])}</p><div class="footer-badges">{macbase_badge(c,preview)}{macpip_badge()}</div></div>
+{featured_on(c,preview)}
+<footer class="footer wrap"><div><a class="brand" href="{url(lang)}" data-brand-link>{brand_icon()}Wonderfall</a><p>{E(c['footer_line'])}</p></div>
 <nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}">{footer_groups(c,lang)}</nav></footer>
 </body></html>'''
 
@@ -200,6 +201,11 @@ def macbase_badge(c, on_dark):
     src='https://macbase.app/badge/featured-on-macbase'+('-dark' if on_dark else '')+'.svg'
     return (f'<a class="footer-badge" href="https://macbase.app/apps/wonderfall?ref=badge" target="_blank" rel="noopener">'
             f'<img src="{src}" alt="{E(c["macbase_badge_alt"])}" width="225" height="72" loading="lazy" decoding="async"></a>')
+
+def featured_on(c, on_dark):
+    """Listing badges in their own band right above the footer."""
+    return (f'<section class="featured-on wrap" aria-labelledby="featured-on-title"><h2 class="featured-on__title" id="featured-on-title">{E(c["featured_on"])}</h2>'
+            f'<div class="footer-badges">{macbase_badge(c,on_dark)}{macpip_badge()}</div></section>')
 
 def macpip_badge():
     """MacPip listing badge."""

@@ -484,7 +484,11 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
 .home-page .faq-list details,
 .home-page .footer { border-color: var(--line); }
 .footer nav { display: grid; grid-template-columns: repeat(4, auto); gap: 28px clamp(32px, 4vw, 56px); max-width: none; font-size: .875rem; }
-.footer-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 20px; }
+.featured-on { display: flex; flex-direction: column; align-items: center; gap: 20px; padding-block: 56px 48px; border-top: 1px solid #e6e1e5; text-align: center; }
+.home-page .featured-on { position: relative; z-index: 1; border-color: var(--line); }
+.featured-on .featured-on__title { margin: 0; font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.home-page .featured-on .featured-on__title { color: inherit; opacity: .75; }
+.footer-badges { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 24px; }
 .footer-badge { display: inline-block; }
 .footer-badge img { display: block; width: auto; height: 72px; }
 .footer-badge img[src*="macpip"] { height: 58px; }
