@@ -154,7 +154,7 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 <a class="skip-link" href="#main">{E(c['skip'])}</a>
 {hero_atmosphere}{navigation(c,suffix,preview)}
 <main id="main">{shooting_stars}{body}</main>
-{featured_on(c,preview)}
+{featured_on(c,preview) if preview else ""}
 <footer class="footer wrap"><div><a class="brand" href="{url(lang)}" data-brand-link>{brand_icon()}Wonderfall</a><p>{E(c['footer_line'])}</p></div>
 <nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}">{footer_groups(c,lang)}</nav></footer>
 </body></html>'''
