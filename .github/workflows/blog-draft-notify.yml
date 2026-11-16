@@ -1,0 +1,35 @@
+name: Blog draft to Telegram
+
+# The writer routine opens a PR from post/<id> with the blog-draft label.
+# pull_request_target runs this file from main, never the PR's copy, and the
+# PR text only reaches the script through env and a file, never the shell.
+on:
+  pull_request_target:
+    types: [opened, labeled]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: >-
+      startsWith(github.event.pull_request.head.ref, 'post/') &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      ((github.event.action == 'labeled' && github.event.label.name == 'blog-draft') ||
+       (github.event.action == 'opened' && contains(github.event.pull_request.labels.*.name, 'blog-draft')))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Send the draft to Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          printf '%s' "$PR_BODY" > "$RUNNER_TEMP/body.md"
+          python3 .github/scripts/blog_draft_notify.py --title "$PR_TITLE" --url "$PR_URL" --body-file "$RUNNER_TEMP/body.md"
