@@ -54,6 +54,15 @@
             "en": "Santa and his reindeer fly under the lights while you work.",
             "uk": "Санта з оленями пролітає під гірляндою, поки ви працюєте."
           }
+        },
+        {
+          "after": "lights",
+          "video": "/videos/lights-scenes.mp4",
+          "poster": "/videos/lights-scenes.jpg",
+          "caption": {
+            "en": "Switching scenes changes the whole string at once: Cozy Evening, Spring Bloom, Celebration.",
+            "uk": "Інша сцена одразу змінює всю гірлянду: Cozy Evening, Spring Bloom, Celebration."
+          }
         }
       ]
     },
@@ -101,6 +110,24 @@
           "caption": {
             "en": "Snow builds a drift along the bottom, and the shovel digs it out.",
             "uk": "Сніг наростає кучугурою внизу, а лопата її розкопує."
+          }
+        },
+        {
+          "after": "snow",
+          "video": "/videos/weather-settings.mp4",
+          "poster": "/videos/weather-settings.jpg",
+          "caption": {
+            "en": "Pick a theme and a preset, then fine-tune intensity, flake size, speed and wind.",
+            "uk": "Оберіть тему й пресет, а потім підлаштуйте інтенсивність, розмір сніжинок, швидкість і вітер."
+          }
+        },
+        {
+          "after": "new-year",
+          "video": "/videos/lights-scenes.mp4",
+          "poster": "/videos/lights-scenes.jpg",
+          "caption": {
+            "en": "Scenes switch the whole string at once; Celebration ends the clip with star bulbs.",
+            "uk": "Сцени змінюють усю гірлянду одразу; наприкінці увімкнено Celebration із зірками."
           }
         }
       ]
@@ -354,23 +381,14 @@
         "summary": "Качати, складати й кидати: гра зі снігом, що накопичується на екрані"
       },
       "cover": {
-        "video": "/videos/cleaning-snow.mp4",
-        "poster": "/videos/cleaning-snow.jpg",
+        "video": "/videos/snowman-building.mp4",
+        "poster": "/videos/snowman-building.jpg",
         "alt": {
-          "en": "Snow piled along the bottom of a desktop",
-          "uk": "Кучугура снігу внизу робочого столу"
+          "en": "Two snowmen built from rolled snowballs at the bottom of a desktop",
+          "uk": "Два сніговики зі скачаних куль унизу робочого столу"
         }
       },
       "inline": [
-        {
-          "after": "build",
-          "video": "/videos/snowman-building.mp4",
-          "poster": "/videos/snowman-building.jpg",
-          "caption": {
-            "en": "The mitten rolls snowballs along the bottom of the screen and stacks them into snowmen.",
-            "uk": "Рукавичка котить снігові кулі вздовж низу екрана й складає з них сніговиків."
-          }
-        },
         {
           "after": "windows",
           "video": "/videos/window-snow.mp4",
@@ -378,6 +396,15 @@
           "caption": {
             "en": "Snow settles on top of a window and slides off when you move it.",
             "uk": "Сніг лягає на верхній край вікна й обсипається, коли вікно рухають."
+          }
+        },
+        {
+          "after": "clear",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow builds a drift along the bottom, and the shovel digs it out.",
+            "uk": "Сніг наростає кучугурою внизу, а лопата її розкопує."
           }
         }
       ]
@@ -402,23 +429,14 @@
         "summary": "Сніг, що лягає на вікна, і кучугура, з якою можна гратися"
       },
       "cover": {
-        "video": "/videos/snow-1440p.mp4",
-        "poster": "/videos/snow-1440p.jpg",
+        "video": "/videos/window-snow.mp4",
+        "poster": "/videos/window-snow.jpg",
         "alt": {
-          "en": "Falling snow over a desktop wallpaper",
-          "uk": "Сніг падає поверх шпалер робочого столу"
+          "en": "Snow resting on top of a window falls off when the window moves",
+          "uk": "Сніг на верхньому краю вікна обсипається, коли вікно рухають"
         }
       },
       "inline": [
-        {
-          "after": "windows",
-          "video": "/videos/window-snow.mp4",
-          "poster": "/videos/window-snow.jpg",
-          "caption": {
-            "en": "Snow settles on top of a window and slides off when you move it.",
-            "uk": "Сніг лягає на верхній край вікна й обсипається, коли вікно рухають."
-          }
-        },
         {
           "after": "play",
           "video": "/videos/snowman-building.mp4",
@@ -450,21 +468,30 @@
         "summary": "Санта пролітає екраном, ялинка стоїть на робочому столі, а інструменти чекають на стійці"
       },
       "cover": {
-        "video": "/videos/snow-demo-1440p.mp4",
-        "poster": "/videos/snow-demo-1440p.jpg",
+        "video": "/videos/santa-flyover.mp4",
+        "poster": "/videos/santa-flyover.jpg",
         "alt": {
-          "en": "Falling snow over a desktop wallpaper",
-          "uk": "Сніг падає поверх шпалер робочого столу"
+          "en": "Santa and his reindeer fly across a snowy desktop under the lights",
+          "uk": "Санта з оленями летить над засніженим робочим столом під гірляндою"
         }
       },
       "inline": [
         {
-          "after": "santa",
-          "video": "/videos/santa-flyover.mp4",
-          "poster": "/videos/santa-flyover.jpg",
+          "after": "tree",
+          "video": "/videos/christmas-tree.mp4",
+          "poster": "/videos/christmas-tree.jpg",
           "caption": {
-            "en": "Santa and his reindeer fly under the lights while you work.",
-            "uk": "Санта з оленями пролітає під гірляндою, поки ви працюєте."
+            "en": "The tree stands at the bottom of the screen with its lights on while snow falls.",
+            "uk": "Ялинка стоїть унизу екрана з увімкненими вогниками, поки падає сніг."
+          }
+        },
+        {
+          "after": "snowman",
+          "video": "/videos/snowman-building.mp4",
+          "poster": "/videos/snowman-building.jpg",
+          "caption": {
+            "en": "The mitten rolls snowballs along the bottom of the screen and stacks them into snowmen.",
+            "uk": "Рукавичка котить снігові кулі вздовж низу екрана й складає з них сніговиків."
           }
         }
       ]
