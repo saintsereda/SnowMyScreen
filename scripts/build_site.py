@@ -204,12 +204,17 @@ def macbase_badge(c, on_dark):
 def featured_on(c, on_dark):
     """Listing badges in their own band right above the footer."""
     return (f'<section class="featured-on wrap" aria-labelledby="featured-on-title"><h2 class="featured-on__title" id="featured-on-title">{E(c["featured_on"])}</h2>'
-            f'<div class="footer-badges">{macbase_badge(c,on_dark)}{macpip_badge()}</div></section>')
+            f'<div class="footer-badges">{macbase_badge(c,on_dark)}{macpip_badge()}{foundrlist_badge()}</div></section>')
 
 def macpip_badge():
     """MacPip listing badge."""
     return ('<a class="footer-badge" href="https://macpip.com/apps/wonderfall?ref=badge" target="_blank" rel="noopener">'
             '<img src="https://macpip.com/badge/wonderfall.svg" alt="Listed on MacPip" width="204" height="58" loading="lazy" decoding="async"></a>')
+
+def foundrlist_badge():
+    """FoundrList listing badge."""
+    return ('<a class="footer-badge" href="https://foundrlist.com/product/wonderfall?utm_source=badge&amp;utm_medium=embed" target="_blank" rel="noopener">'
+            '<img src="https://foundrlist.com/api/badge/wonderfall" alt="Featured on FoundrList" width="150" height="48" loading="lazy" decoding="async"></a>')
 
 def footer_group(key, title, *links):
     items=''.join(f'<li>{link}</li>' for link in links)

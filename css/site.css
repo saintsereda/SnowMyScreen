@@ -491,7 +491,7 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
 .footer-badges { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 24px; }
 .footer-badge { display: inline-block; }
 .footer-badge img { display: block; width: auto; height: 72px; }
-.footer-badge img[src*="macpip"] { height: 58px; }
+.footer-badge img[src*="macpip"], .footer-badge img[src*="foundrlist"] { height: 58px; }
 .footer .footer-group__title { margin: 0 0 12px; font-size: .875rem; font-weight: 600; line-height: 1.4; }
 .footer-group ul { display: grid; justify-items: start; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .footer nav a, .footer nav [data-cookie-settings] { display: block; min-height: 0; padding: 0; color: inherit; font: inherit; line-height: 1.4; text-align: left; }
