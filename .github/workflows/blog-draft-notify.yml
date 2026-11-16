@@ -5,7 +5,9 @@ name: Blog draft to Telegram
 # PR text only reaches the script through env and a file, never the shell.
 on:
   pull_request_target:
-    types: [opened, labeled]
+    # gh pr create --label fires both opened and labeled; react to labeled only,
+    # or every draft arrives in Telegram twice.
+    types: [labeled]
 
 permissions:
   contents: read
@@ -15,8 +17,7 @@ jobs:
     if: >-
       startsWith(github.event.pull_request.head.ref, 'post/') &&
       github.event.pull_request.head.repo.full_name == github.repository &&
-      ((github.event.action == 'labeled' && github.event.label.name == 'blog-draft') ||
-       (github.event.action == 'opened' && contains(github.event.pull_request.labels.*.name, 'blog-draft')))
+      github.event.label.name == 'blog-draft'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
