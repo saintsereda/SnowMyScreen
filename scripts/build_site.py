@@ -142,6 +142,7 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 <link rel="stylesheet" href="{asset('/css/brand-icon.css')}">
 {feature_styles}<link rel="stylesheet" href="/css/cookies.css">
 <script src="/js/analytics.js" defer></script>
+<script src="/js/site-analytics.js" defer></script>
 <script src="/js/cookie-banner.js" defer></script>
 <script src="{asset('/js/navigation.js')}" defer></script>
 <script src="{asset('/js/app-store-link.js')}" defer></script>
