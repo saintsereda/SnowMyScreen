@@ -154,7 +154,6 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 <a class="skip-link" href="#main">{E(c['skip'])}</a>
 {hero_atmosphere}{navigation(c,suffix,preview)}
 <main id="main">{shooting_stars}{body}</main>
-{featured_on(c,preview) if preview else ""}
 <footer class="footer wrap"><div><a class="brand" href="{url(lang)}" data-brand-link>{brand_icon()}Wonderfall</a><p>{E(c['footer_line'])}</p></div>
 <nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}">{footer_groups(c,lang)}</nav></footer>
 </body></html>'''
@@ -368,7 +367,7 @@ def homepage(c):
 {reviews_section(c)}
 <div class="faq-region"><section class="section faq-section wrap" id="faq"><div><h2>{E(c['faq_title'])}</h2><a class="text-link" href="{url(c['lang'],'support/')}">{E(c['support'])} ↗</a></div><div class="faq-list">{faq}</div></section></div>
 {product_overview(c)}
-{closing_screen(c)}'''
+{featured_on(c,True)}{closing_screen(c)}'''
     faq_schema={'@type':'FAQPage','@id':ORIGIN+url(c['lang'])+'#faq','inLanguage':c['lang'],
                 'mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in c['faq']]}
     return page(c,'',c['title'],c['description'],body,[app_schema(c),faq_schema],preview=True)
