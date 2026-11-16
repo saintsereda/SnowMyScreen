@@ -45,6 +45,15 @@
             "en": "Snow builds a drift along the bottom of the screen, and the shovel digs it out.",
             "uk": "Сніг наростає кучугурою внизу екрана, а лопата її розкопує."
           }
+        },
+        {
+          "after": "santa",
+          "video": "/videos/santa-flyover.mp4",
+          "poster": "/videos/santa-flyover.jpg",
+          "caption": {
+            "en": "Santa and his reindeer fly under the lights while you work.",
+            "uk": "Санта з оленями пролітає під гірляндою, поки ви працюєте."
+          }
         }
       ]
     },
@@ -217,6 +226,15 @@
             "en": "Lights hang along the menu bar, in shapes from classic bulbs to cats and year figures.",
             "uk": "Гірлянда висить уздовж рядка меню: від класичних лампочок до котів і цифр року."
           }
+        },
+        {
+          "after": "setup",
+          "video": "/videos/weather-settings.mp4",
+          "poster": "/videos/weather-settings.jpg",
+          "caption": {
+            "en": "Pick a theme and a preset, then fine-tune intensity, flake size, speed and wind.",
+            "uk": "Оберіть тему й пресет, а потім підлаштуйте інтенсивність, розмір сніжинок, швидкість і вітер."
+          }
         }
       ]
     },
@@ -304,6 +322,15 @@
             "en": "Turn on Snow to add falling flakes below the lights.",
             "uk": "Увімкніть сніг, щоб під гірляндою падали сніжинки."
           }
+        },
+        {
+          "after": "scenes",
+          "video": "/videos/lights-scenes.mp4",
+          "poster": "/videos/lights-scenes.jpg",
+          "caption": {
+            "en": "Switching scenes changes the whole string at once: Cozy Evening, Spring Bloom, Celebration.",
+            "uk": "Інша сцена одразу змінює всю гірлянду: Cozy Evening, Spring Bloom, Celebration."
+          }
         }
       ]
     },
@@ -333,7 +360,27 @@
           "en": "Snow piled along the bottom of a desktop",
           "uk": "Кучугура снігу внизу робочого столу"
         }
-      }
+      },
+      "inline": [
+        {
+          "after": "build",
+          "video": "/videos/snowman-building.mp4",
+          "poster": "/videos/snowman-building.jpg",
+          "caption": {
+            "en": "The mitten rolls snowballs along the bottom of the screen and stacks them into snowmen.",
+            "uk": "Рукавичка котить снігові кулі вздовж низу екрана й складає з них сніговиків."
+          }
+        },
+        {
+          "after": "windows",
+          "video": "/videos/window-snow.mp4",
+          "poster": "/videos/window-snow.jpg",
+          "caption": {
+            "en": "Snow settles on top of a window and slides off when you move it.",
+            "uk": "Сніг лягає на верхній край вікна й обсипається, коли вікно рухають."
+          }
+        }
+      ]
     },
     {
       "slug": "wonderfall-1-3-snow-on-windows",
@@ -361,7 +408,27 @@
           "en": "Falling snow over a desktop wallpaper",
           "uk": "Сніг падає поверх шпалер робочого столу"
         }
-      }
+      },
+      "inline": [
+        {
+          "after": "windows",
+          "video": "/videos/window-snow.mp4",
+          "poster": "/videos/window-snow.jpg",
+          "caption": {
+            "en": "Snow settles on top of a window and slides off when you move it.",
+            "uk": "Сніг лягає на верхній край вікна й обсипається, коли вікно рухають."
+          }
+        },
+        {
+          "after": "play",
+          "video": "/videos/snowman-building.mp4",
+          "poster": "/videos/snowman-building.jpg",
+          "caption": {
+            "en": "The mitten rolls snowballs along the bottom of the screen and stacks them into snowmen.",
+            "uk": "Рукавичка котить снігові кулі вздовж низу екрана й складає з них сніговиків."
+          }
+        }
+      ]
     },
     {
       "slug": "wonderfall-1-4-santa-christmas-tree",
@@ -389,7 +456,18 @@
           "en": "Falling snow over a desktop wallpaper",
           "uk": "Сніг падає поверх шпалер робочого столу"
         }
-      }
+      },
+      "inline": [
+        {
+          "after": "santa",
+          "video": "/videos/santa-flyover.mp4",
+          "poster": "/videos/santa-flyover.jpg",
+          "caption": {
+            "en": "Santa and his reindeer fly under the lights while you work.",
+            "uk": "Санта з оленями пролітає під гірляндою, поки ви працюєте."
+          }
+        }
+      ]
     },
     {
       "slug": "rain-on-mac-desktop",
