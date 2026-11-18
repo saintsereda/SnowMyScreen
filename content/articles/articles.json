@@ -1,6 +1,45 @@
 {
   "articles": [
     {
+      "slug": "wonderfall-1-5-decorate-christmas-tree",
+      "status": "published",
+      "published": "2026-11-18",
+      "updated": "2026-11-18",
+      "en": {
+        "title": "Wonderfall 1.5: Decorate Your Own Christmas Tree, Lights That Sway in the Wind and New Cleaning Vehicles",
+        "footer_label": "What’s new in Wonderfall 1.5",
+        "meta_title": "Wonderfall 1.5: Decorate Your Christmas Tree | Wonderfall",
+        "description": "Wonderfall 1.5 lets you decorate the Christmas tree on your Mac desktop, makes the lights sway in the wind and lets you pick the vehicle that clears the snow.",
+        "summary": "Decorate your own tree, let the lights sway in the wind and pick the vehicle that clears the snow"
+      },
+      "uk": {
+        "title": "Wonderfall 1.5: прикрасьте власну ялинку, гірлянда гойдається від вітру, нові прибиральні машинки",
+        "footer_label": "Що нового у Wonderfall 1.5",
+        "meta_title": "Wonderfall 1.5: прикрасьте свою ялинку | Wonderfall",
+        "description": "У Wonderfall 1.5 ялинку на робочому столі Mac можна прикрасити самому, гірлянда гойдається від вітру, а сніг прибирає машинка, яку ви обрали.",
+        "summary": "Прикрасьте свою ялинку, дайте гірлянді гойдатися від вітру й оберіть машинку, що прибирає сніг"
+      },
+      "cover": {
+        "video": "/videos/christmas-tree.mp4",
+        "poster": "/videos/christmas-tree.jpg",
+        "alt": {
+          "en": "A pixel-art Christmas tree with a red bow on top stands at the bottom of a snowy desktop, with the mitten and shovel on the tool rack",
+          "uk": "Піксельна ялинка з червоним бантиком на верхівці стоїть унизу засніженого робочого столу, поруч на стійці рукавичка й лопата"
+        }
+      },
+      "inline": [
+        {
+          "after": "colors",
+          "video": "/videos/lights-scenes.mp4",
+          "poster": "/videos/lights-scenes.jpg",
+          "caption": {
+            "en": "Scenes in the Lights settings change the whole string at once (here Cozy Evening, Spring Bloom, Celebration). Picking a scene turns custom colors off.",
+            "uk": "Сцени в налаштуваннях гірлянди одразу змінюють її всю (тут Затишний вечір, Весняний цвіт і Свято; на записі англійський інтерфейс). Вибір сцени вимикає власні кольори."
+          }
+        }
+      ]
+    },
+    {
       "slug": "christmas-apps-mac",
       "status": "published",
       "published": "2026-11-16",
