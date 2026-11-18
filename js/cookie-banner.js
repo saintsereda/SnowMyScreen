@@ -1,4 +1,4 @@
-// Consent UI adapted from the Expensa website, localized for EN/UK pages.
+// Consent UI adapted from the Expensa website, localized for every site language.
 (function () {
     'use strict';
     const STORAGE_KEY = 'snowmyscreen_cookie_consent_v1';
@@ -40,13 +40,32 @@
             rejectAll: 'Лише необхідні',
             save: 'Зберегти',
             settings: 'Налаштування cookie'
+        },
+        de: {
+            necessary: 'Unbedingt notwendig',
+            necessaryDescription: 'Speichert deine Sprache und diese Cookie-Entscheidung auf deinem Gerät. Immer aktiv.',
+            analytics: 'Analyse',
+            analyticsDescription: 'Das optionale Google Analytics 4 hilft uns, Besuche zu verstehen und die Website zu verbessern. Aus, bis du es einschaltest.',
+            bannerTitle: 'Cookies & Speicher',
+            bannerText: 'Wir zählen Seitenaufrufe und App-Store-Klicks ohne Cookies. Notwendigen Speicher nutzen wir, um deine Einstellungen zu merken. Du kannst Google Analytics erlauben, damit wir die Website verbessern können.',
+            policy: 'Datenschutz & Cookies',
+            customize: 'Anpassen',
+            reject: 'Nur notwendige',
+            accept: 'Alle akzeptieren',
+            modalTitle: 'Cookie-Einstellungen',
+            close: 'Schließen',
+            modalIntro: 'Wähle, was die Website nutzen darf. Deine Entscheidung wird auf diesem Gerät gespeichert und lässt sich jederzeit ändern.',
+            rejectAll: 'Optionale Cookies ablehnen',
+            save: 'Einstellungen speichern',
+            settings: 'Cookie-Einstellungen'
         }
     };
     let language;
     let T;
 
     function localize() {
-        language = /^uk\b/i.test(document.documentElement.lang) ? 'uk' : 'en';
+        const code = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
+        language = STRINGS[code] ? code : 'en';
         T = STRINGS[language];
         document.querySelectorAll('[data-cookie-settings]').forEach(el => { el.textContent = T.settings; });
     }
@@ -86,7 +105,7 @@
         if (id) paragraph.id = id;
         paragraph.appendChild(document.createTextNode(' '));
         paragraph.appendChild(h('a', {
-            href: (language === 'uk' ? '/uk/' : '/') + 'privacy.html#website-cookies',
+            href: (language === 'en' ? '/' : '/' + language + '/') + 'privacy.html#website-cookies',
             text: T.policy
         }));
         return paragraph;

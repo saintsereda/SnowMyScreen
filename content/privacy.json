@@ -168,5 +168,90 @@
       "never": "Ваші імпортовані зображення, місцеперебування, результати запитів погоди та вміст екрана не входять до статистики й звітів, які ми надсилаємо.",
       "control": "Статистику використання можна будь-коли вимкнути в «Налаштування > Загальні». Звіти про збої наразі не можна вимкнути в застосунку."
     }
+  },
+  "de": {
+    "title": "Datenschutzerklärung",
+    "pageTitle": "Datenschutzerklärung - Wonderfall",
+    "effectiveDate": "Gültig ab: 31. Oktober 2026",
+    "intro": {
+      "heading": "Einleitung",
+      "text": "Wonderfall ist eine macOS-App, die jahreszeitliche Desktop-Effekte und dekorative Lichter hinzufügt. Deine Privatsphäre ist uns wichtig, und diese Erklärung beschreibt, wie wir mit deinen Informationen umgehen. Website-Analyse und Cookie-Einstellungen werden weiter unten beschrieben."
+    },
+    "shortVersion": {
+      "heading": "Die Kurzfassung",
+      "text1": "Deine importierten Bilder bleiben auf deinem Gerät, und der Wetterabgleich ist optional.",
+      "text2": "Die Desktop-App hat keine Konten und keine Werbe-SDKs. Sie sendet anonyme Nutzungsstatistiken, die du in den Einstellungen ausschalten kannst, sowie Absturzberichte. Ab Version 1.2 wird dein Standort, wenn du den lokalen Wetterabgleich einschaltest und den Ortungszugriff erlaubst, verwendet, um das Wetter über Apples Dienst WeatherKit abzufragen. Für die Website-Analyse triffst du eine eigene Entscheidung, wie unten beschrieben."
+    },
+    "dontCollect": {
+      "heading": "Datenschutz in der Desktop-App",
+      "items": [
+        "Keine Kontoregistrierung",
+        "Keine Werbe-SDKs",
+        "Kein Tracking über Apps oder Websites hinweg",
+        "Kein Hochladen importierter Bilder",
+        "Keine Bildschirmfotos oder Bildschirmaufnahmen",
+        "Kein Zugriff auf Mikrofon oder Kamera",
+        "Kein von der App gespeicherter Standortverlauf"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "Was auf deinem Mac bleibt",
+      "intro": "Die App speichert deine Einstellungen lokal auf deinem Gerät:",
+      "items": [
+        "Effektthema, Intensität und Tempo",
+        "Windrichtung und -stärke",
+        "Ausgewählte Formen und eigene Bilder",
+        "Platzierung der Effekte und Einstellungen der dekorativen Lichter",
+        "Spracheinstellung"
+      ],
+      "outro": "Einstellungen und importierte Bilder werden lokal gespeichert. Importierte Bilder werden von der App nie hochgeladen; Nutzungsstatistiken enthalten nur die unten beschriebenen Angaben. Du kannst die Einstellungen in den Einstellungen zurücksetzen und importierte Bilder in der Bildergalerie löschen. Beim Zurücksetzen der Einstellungen bleiben importierte Bilder erhalten. Das Entfernen der App entfernt nicht unbedingt ihre gespeicherten Einstellungen oder App-Daten."
+    },
+    "weather": {
+      "heading": "Optionaler Standort und Wetterabgleich",
+      "location": "Der Wetterabgleich ist standardmäßig ausgeschaltet. Wenn du ihn einschaltest und die Berechtigung erteilst, übermittelt macOS der App einen Standort. Die App fordert eine Genauigkeit auf Kilometerebene an; welche Genauigkeit tatsächlich geliefert wird, bestimmt macOS. Dieser Standort wird an Apples Dienst WeatherKit gesendet, um das aktuelle Wetter abzurufen und einen passenden dekorativen Effekt zu wählen. An den Entwickler wird er nicht gesendet.",
+      "storage": "Die App speichert weder Koordinaten noch einen Standortverlauf in ihren Einstellungen oder Bilddateien. Standort und Wetterergebnisse werden nur im Arbeitsspeicher verwendet, um Effekte auszuwählen. Solange die Funktion eingeschaltet ist, wird das Wetter normalerweise alle 30 Minuten aktualisiert und kann nach einer Änderung der Ortungsberechtigung oder einem Neustart der App erneut abgerufen werden.",
+      "control": "Du kannst den Wetterabgleich in der App ausschalten oder den Ortungszugriff in den Systemeinstellungen widerrufen. Beim Ausschalten der Funktion werden ihre geplanten Aktualisierungen beendet. Manuell gewählte Themen funktionieren auch ohne Ortungszugriff. Apple verarbeitet WeatherKit-Anfragen nach seinen eigenen Datenschutzrichtlinien; bei Bedarf ruft die App außerdem Quellenangaben von Apple Wetter ab.",
+      "appleWeather": "Apple Wetter & Datenschutz",
+      "applePrivacy": "Datenschutzrichtlinie von Apple"
+    },
+    "permissions": {
+      "heading": "Berechtigungen",
+      "text": "Die Ortungsberechtigung wird nur für den optionalen Wetterabgleich verwendet. PNG-Dateien wählst du über die Dateiauswahl des Systems aus; die App kopiert diese Bilder für die spätere Verwendung in ihren eigenen lokalen Speicher. Der Start bei der Anmeldung ist optional und kann in der App oder in den Systemeinstellungen geändert werden. Desktop-Effekte und Aufräumwerkzeuge benötigen keinen Zugriff auf Bildschirmaufnahme, Mikrofon oder Kamera."
+    },
+    "noInternet": {
+      "heading": "Offline-Effekte und Online-Dienste",
+      "text": "Manuell gewählte Themen, dekorative Lichter, importierte Bilder und die Geräusche der Werkzeuge funktionieren offline. Der lokale Wetterabgleich und die Quellenangaben von Apple Wetter benötigen eine Internetverbindung. Auch das Öffnen von Links zur Website und das Laden von Updates aus dem App Store nutzen das Internet. Nutzungsstatistiken und Absturzberichte werden gesendet, wenn dein Mac online ist."
+    },
+    "updates": {
+      "heading": "Updates",
+      "text": "Käufe und Updates werden über den Mac App Store abgewickelt. Apple steuert außerdem alle App-Diagnosedaten, die du über die Systemeinstellungen teilst. Diese Dienste unterliegen den Datenschutzrichtlinien von Apple."
+    },
+    "children": {
+      "heading": "Kinder",
+      "text": "Die Desktop-App hat keine Konten und keine Werbung. Nutzungsstatistiken und Absturzberichte funktionieren für alle Nutzer gleich. Der optionale Ortungszugriff nutzt für alle Nutzer dieselben Berechtigungseinstellungen des Systems. Für die Website-Analyse gilt weiterhin die separate Cookie-Entscheidung weiter unten."
+    },
+    "questions": {
+      "heading": "Fragen?",
+      "text": "Wenn du dem Support eine E-Mail schreibst, erhalten wir deine E-Mail-Adresse und die Angaben, die du mitschickst. Die Korrespondenz wird verwendet, um deine Anfrage zu beantworten und zu lösen, und für diesen Zweck aufbewahrt. Für Fragen zu dieser Erklärung oder um die Löschung deiner Support-Korrespondenz zu verlangen, wende dich an:",
+      "email": "E-Mail:"
+    },
+    "footer": "Diese Datenschutzerklärung kann gelegentlich aktualisiert werden. Die aktuelle Version findest du immer hier und im Mac App Store.",
+    "website": {
+      "heading": "Website-Analyse & Cookies",
+      "updated": "Website-Abschnitt aktualisiert: 13. November 2026",
+      "storage": "Die Website nutzt den lokalen Speicher, um deine Cookie-Entscheidung (snowmyscreen_cookie_consent_v1) und auf der Download-Seite deine Spracheinstellung (snowmyscreen-language) zu speichern. Diese Einstellungen werden auf diesem Gerät gespeichert.",
+      "analytics": "Wenn du die Analyse erlaubst, lädt die Website Google Analytics 4 (Mess-ID G-VB76JMX2B6), um Seitenaufrufe sowie Browser- und Geräteinformationen zu messen. Google verarbeitet diese Nutzungsdaten. Das Google-Tag wird nicht geladen, bevor du zustimmst oder solange optionale Cookies abgelehnt sind. Die Einwilligung für Werbung bleibt deaktiviert.",
+      "cookies": "Bei eingeschalteter Analyse kann Google Analytics die eigenen Cookies _ga und _ga_VB76JMX2B6 speichern, um Browser und Sitzungen zu unterscheiden. Diese Website-Statistiken sind von den Nutzungsstatistiken der Desktop-App getrennt.",
+      "counter": "Die Website zählt außerdem Seitenaufrufe und Klicks auf App-Store-Links mit einem eigenen Zähler ohne Cookies. Er nutzt weder Cookies noch Browserspeicher noch eine Besucherkennung und funktioniert unabhängig davon, was du im Banner auswählst. Jede Zählung speichert nur den Tag, den Seitenpfad, eine Quellenangabe (etwa die verweisende Website oder ein Kampagnen-Tag) und einen Ländercode als Tagessummen; IP-Adresse, User-Agent oder vollständige URL werden nicht gespeichert. Gezählt werden Browserereignisse, keine Personen.",
+      "choices": "Wähle im Banner „Alle akzeptieren“, „Nur notwendige“ oder „Anpassen“. Die Cookie-Einstellungen kannst du jederzeit über die Fußzeile erneut öffnen. Wenn du die Analyse ausschaltest, werden die Google-Analytics-Cookies entfernt und die Seite neu geladen, um das laufende Tag zu stoppen. Wenn du den Browserspeicher löschst, wird deine gespeicherte Entscheidung entfernt.",
+      "google": "So geht Google mit diesen Informationen um:"
+    },
+    "usageData": {
+      "heading": "Nutzungsstatistiken und Absturzberichte",
+      "statistics": "Die App sendet anonyme Nutzungsstatistiken an TelemetryDeck: welche Themen, Voreinstellungen, Lichter und Aufräumwerkzeuge verwendet werden, ob Optionen wie Wetterabgleich und Start bei der Anmeldung eingeschaltet sind, die Versionen von App und macOS, das Mac-Modell, die Anzahl der Displays und die auf deinem Mac eingestellte Region. Die Statistiken verwenden eine gehashte Kennung, nicht deinen Namen oder ein Konto. Sie helfen uns zu entscheiden, welche Funktionen wir verbessern.",
+      "crash": "Die App sendet außerdem Absturz- und Fehlerberichte, Sitzungsdaten und eine Stichprobe von Leistungsdaten an Sentry. Diese können die App-Version, Geräte- und Systemangaben sowie technische Informationen zum Fehler enthalten. Die standardmäßige Erfassung personenbezogener Daten ist ausgeschaltet.",
+      "never": "Deine importierten Bilder, dein Standort, Wetterergebnisse und Bildschirminhalte sind in den Statistiken und Berichten, die wir senden, nicht enthalten.",
+      "control": "Du kannst die Nutzungsstatistiken jederzeit unter Einstellungen > Allgemein ausschalten. Absturzberichte lassen sich in der App derzeit nicht ausschalten."
+    }
   }
 }

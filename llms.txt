@@ -50,4 +50,9 @@
 - [Конфіденційність](https://getwonderfall.com/uk/privacy.html)
 - [Прес-кіт](https://getwonderfall.com/uk/press/)
 
+## Auf Deutsch
+- [Effekte, Bewertungen und häufige Fragen](https://getwonderfall.com/de/)
+- [Support](https://getwonderfall.com/de/support/)
+- [Datenschutz](https://getwonderfall.com/de/privacy.html)
+
 Developer: Andrii Sereda, also known as Andrew Sereda. Contact: hello@andrewsereda.com.

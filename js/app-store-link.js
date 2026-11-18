@@ -14,10 +14,12 @@
     if (!/iPhone|iPad|iPod/.test(ua)) return;
     if (!/Barcelona|Instagram|FBAN|FBAV|FB_IAB|musical_ly|BytedanceWebview|TikTok/.test(ua)) return;
 
-    var uk = (document.documentElement.lang || '').indexOf('uk') === 0;
-    var NOTE = uk
-        ? 'Цей браузер не відкриває App Store. Натисніть ••• угорі й оберіть «Відкрити в браузері».'
-        : 'This browser won’t open the App Store. Tap ••• at the top and choose “Open in browser”.';
+    var NOTES = {
+        en: 'This browser won’t open the App Store. Tap ••• at the top and choose “Open in browser”.',
+        uk: 'Цей браузер не відкриває App Store. Натисніть ••• угорі й оберіть «Відкрити в браузері».',
+        de: 'Dieser Browser öffnet den App Store nicht. Tippe oben auf ••• und wähle „Im Browser öffnen“.'
+    };
+    var NOTE = NOTES[(document.documentElement.lang || '').slice(0, 2).toLowerCase()] || NOTES.en;
 
     function showNote() {
         if (document.getElementById('iab-note')) return;

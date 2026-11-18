@@ -10,6 +10,12 @@ SITE=json.loads((ROOT/'content/site.json').read_text())
 STORE_DATA=json.loads((ROOT/'content/app-store.json').read_text())
 ORIGIN=SITE['origin'].rstrip('/')
 ARTICLES={a['slug']:a for a in json.loads((ROOT/'content/articles/articles.json').read_text())['articles'] if a['status']=='published'}
+# Site languages are the content/<lang>.json files; blog guides and the press kit exist only in the
+# languages every published guide is written in.
+LANGS={p.stem for p in (ROOT/'content').glob('*.json') if json.loads(p.read_text()).get('lang')==p.stem}
+FULL_LANGS={lang for lang in LANGS if all(lang in a for a in ARTICLES.values())}
+assert {'en','uk'}<=FULL_LANGS<=LANGS
+def home(lang): return '/' if lang=='en' else f'/{lang}/'
 UI_BUILD=json.loads((ROOT/'content/ui-build.json').read_text())
 ui_sources={p.relative_to(ROOT).as_posix() for p in (ROOT/'src').rglob('*') if p.is_file()}
 ui_sources.update({'package.json','package-lock.json','scripts/build_ui.mjs','licenses/react-bits.md'})
@@ -43,11 +49,11 @@ pages={}
 for p in ROOT.rglob('*.html'):
     if any(part in {'content','.git','node_modules'} for part in p.relative_to(ROOT).parts):continue
     page=Page();page.feed(p.read_text());pages[p.resolve()]=page
-expected=11+2*len(ARTICLES)
+expected=3*len(LANGS)+len(FULL_LANGS)*(2+len(ARTICLES))+1
 assert len(pages)==expected+1, f'Expected {expected} generated pages plus 404; got {len(pages)}'
 canonicals={};descriptions=set()
 for path,page in pages.items():
-    assert page.lang in {'en','uk'}, path
+    assert page.lang in LANGS, path
     for script in ('/js/analytics.js','/js/site-analytics.js','/js/cookie-banner.js'):
         assert sum(t=='script' and a.get('src')==script for t,a in page.tags)==1,(path,script)
     assert sum(t=='link' and a.get('href')=='/css/cookies.css' for t,a in page.tags)==1,path
@@ -69,7 +75,9 @@ for path,page in pages.items():
         assert page.attr('meta','property','og:image','content')==[ORIGIN+'/images/wonderfall-icon.png'],path
         assert page.attr('meta','name','twitter:image','content')==[ORIGIN+'/images/wonderfall-icon.png'],path
         alternates={a['hreflang']:a['href'] for t,a in page.tags if t=='link' and a.get('hreflang')}
-        assert set(alternates)=={'en','uk','x-default'},path
+        suffix=urlsplit(canonical).path.removeprefix(home(page.lang))
+        assert set(alternates)==(FULL_LANGS if suffix.startswith(('blog/','press/')) else LANGS)|{'x-default'},path
+        assert alternates['x-default']==ORIGIN+'/'+suffix,path
         assert alternates[page.lang]==canonical,path
         for locale,link in alternates.items():
             peer=pages[target(urlsplit(link).path).resolve()]
@@ -116,7 +124,7 @@ for path,page in pages.items():
                 assert 'aggregateRating' not in item and 'review' not in item,'Imported App Store reviews are shown with attribution, not marked up as ratings collected by this site.'
                 locale=json.loads((ROOT/'content'/f'{page.lang}.json').read_text())
                 assert item['featureList']==locale['released_features'],path
-    if path in [(ROOT/'index.html').resolve(),(ROOT/'uk/index.html').resolve()]:
+    if path in [(ROOT/home(lang).lstrip('/')/'index.html').resolve() for lang in LANGS]:
         source=path.read_text()
         topics=[a['data-feature'] for t,a in page.tags if 'data-feature' in a]
         assert topics==['weather','displays','motion','cleaning','garlands','images','placement'],f'Keep the supporting points above the four feature stories: {path}'
@@ -162,7 +170,7 @@ sitemap=ET.parse(ROOT/'sitemap.xml')
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 locations={element.text for element in sitemap.findall('.//s:loc',ns)}
 assert locations==set(canonicals),f'Sitemap mismatch: {locations ^ set(canonicals)}'
-for feed in [ROOT/'blog/feed.xml',ROOT/'uk/blog/feed.xml']:
+for feed in [ROOT/home(lang).lstrip('/')/'blog/feed.xml' for lang in FULL_LANGS]:
     items=ET.parse(feed).findall('./channel/item');assert len(items)==len(ARTICLES),feed
     assert all(item.findtext('link') in locations for item in items),feed
 assert (ROOT/'CNAME').read_text().strip()==urlsplit(ORIGIN).hostname
@@ -173,4 +181,4 @@ assert f'href="{ORIGIN}/download.html"' in (ROOT/'download.html').read_text()
 assert not (ROOT/'js/notifications.js').exists(),'Fabricated purchase notifications must be removed'
 for p in (ROOT/'content').glob('*.json'):json.loads(p.read_text())
 for p in (ROOT/'js').glob('*.json'):json.loads(p.read_text())
-print(f'PASS: {len(pages)} pages, {len(locations)} canonical URLs; EN/UK metadata, JSON-LD, FAQ, attributed reviews, App Store facts, video fallback, local links, sitemap, RSS, consent assets and domain configuration.')
+print(f'PASS: {len(pages)} pages, {len(locations)} canonical URLs in {"/".join(sorted(LANGS))}; localized metadata, JSON-LD, FAQ, attributed reviews, App Store facts, video fallback, local links, sitemap, RSS, consent assets and domain configuration.')

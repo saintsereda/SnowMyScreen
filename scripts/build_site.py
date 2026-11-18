@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate crawlable EN/UK pages using only the Python standard library."""
+"""Generate crawlable localized pages using only the Python standard library."""
 from pathlib import Path
 import html
 import hashlib
@@ -18,7 +18,15 @@ STORE = 'https://apps.apple.com/app/id6755106853'
 # App Store Connect campaign link for blog pages, so App Analytics shows sales from the blog.
 BLOG_STORE = 'https://apps.apple.com/app/apple-store/id6755106853?pt=127454389&ct=blog&mt=8'
 UPDATED = SITE['content_updated']
-LANGS = ('en', 'uk')
+# Every locale gets the homepage, support and privacy. Blog guides and the press kit exist only in
+# FULL_LANGS; other locales link to the English versions of those pages.
+LOCALES = {
+    'en': {'label':'English', 'og':'en_US', 'font':'latin'},
+    'uk': {'label':'Українська', 'og':'uk_UA', 'font':'cyrillic'},
+    'de': {'label':'Deutsch', 'og':'de_DE', 'font':'latin'},
+}
+LANGS = tuple(LOCALES)
+FULL_LANGS = ('en', 'uk')
 E = html.escape
 # Each guide lives in content/articles/<slug>/{en,uk}.html; drafts stay out of the build.
 ARTICLES = sorted((a for a in json.loads((ROOT/'content/articles/articles.json').read_text())['articles'] if a['status']=='published'),
@@ -48,10 +56,13 @@ def brand_icon():
             f'</span>')
 
 def home(lang):
-    return '/' if lang == 'en' else '/uk/'
+    return '/' if lang == 'en' else f'/{lang}/'
+
+def page_langs(suffix):
+    return FULL_LANGS if suffix.startswith(('blog/','press/')) else LANGS
 
 def url(lang, suffix=''):
-    return home(lang) + suffix
+    return home(lang if lang in page_langs(suffix) else 'en') + suffix
 
 def dump(value):
     return json.dumps(value, ensure_ascii=False).replace('<', '\\u003c')
@@ -75,7 +86,7 @@ def navigation(c, suffix='', preview=False):
     mobile_items=[(f'{url(lang)}#{anchor}',label,'') for anchor,label in zip(('effects','features','faq'),c['nav'][:3])]
     mobile_items.extend([(url(lang,'blog/'),c['nav'][3],current),(STORE,c['short_cta'],'')])
     mobile_links=''.join(f'<li class="pill-col"><a class="pill-link" href="{href}"{state}><span class="pill-label">{E(label)}</span></a></li>' for href,label,state in mobile_items)
-    languages=''.join(f'<a href="{url(locale,suffix)}" lang="{locale}" hreflang="{locale}"'+(' aria-current="page"' if locale==lang else '')+f'>{label}</a>' for locale,label in (('en','English'),('uk','Українська')))
+    languages=''.join(f'<a href="{url(locale,suffix)}" lang="{locale}" hreflang="{locale}"'+(' aria-current="page"' if locale==lang else '')+f'>{LOCALES[locale]["label"]}</a>' for locale in page_langs(suffix))
     return f'''<header class="site-navigation{' has-hero' if preview else ''}" data-site-navigation data-nav-motion="{asset('/js/mobile-menu.js')}">
 <nav class="site-navigation__capsule" aria-label="{E(ui['main'])}">
 <a class="site-navigation__brand" href="{url(lang)}" aria-label="Wonderfall, {E(ui['home'])}" data-brand-link>{brand_icon()}<span class="site-navigation__wordmark">Wonderfall</span></a>
@@ -106,7 +117,8 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
             'alternateName':'Andrii Sereda','url':'https://github.com/saintsereda',
             'sameAs':['https://x.com/andrew_sereda','https://www.threads.com/@saintsereda']},
            webpage, *schemas]
-    alternates=''.join(f'<link rel="alternate" hreflang="{locale}" href="{ORIGIN+url(locale,suffix)}">' for locale in LANGS)
+    alternates=''.join(f'<link rel="alternate" hreflang="{locale}" href="{ORIGIN+url(locale,suffix)}">' for locale in page_langs(suffix))
+    other_locales=''.join(f'<meta property="og:locale:alternate" content="{LOCALES[locale]["og"]}">' for locale in page_langs(suffix) if locale!=lang)
     feed=url(lang,'blog/feed.xml')
     closing='data-closing-screen' in body
     feature_styles=''.join(f'<link rel="stylesheet" href="{asset(path)}">\n' for path in ('/css/features.css','/css/desktop-preview.css','/css/weather-switch.css')) if preview else f'<link rel="stylesheet" href="{asset("/css/desktop-preview.css")}">\n' if closing else ''
@@ -127,16 +139,16 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 <meta property="og:type" content="{'article' if article else 'website'}"><meta property="og:site_name" content="Wonderfall">
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(description)}">
 <meta property="og:url" content="{canonical}"><meta property="og:locale" content="{c['locale']}">
-<meta property="og:locale:alternate" content="{'uk_UA' if lang=='en' else 'en_US'}">
-<meta property="og:image" content="{ORIGIN}/images/wonderfall-icon.png"><meta property="og:image:width" content="1024"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="{'Wonderfall app icon' if lang=='en' else 'Іконка Wonderfall'}">
+{other_locales}
+<meta property="og:image" content="{ORIGIN}/images/wonderfall-icon.png"><meta property="og:image:width" content="1024"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="{E(c['icon_alt'])}">
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="{E(title)}">
 <meta name="twitter:description" content="{E(description)}"><meta name="twitter:image" content="{ORIGIN}/images/wonderfall-icon.png">
-<meta name="twitter:image:alt" content="{'Wonderfall app icon' if lang=='en' else 'Іконка Wonderfall'}">
+<meta name="twitter:image:alt" content="{E(c['icon_alt'])}">
 {article_meta}
 <link rel="icon" href="{asset('/images/favicon/favicon.ico')}"><link rel="apple-touch-icon" href="{asset('/images/favicon/apple-touch-icon.png')}">
 <link rel="manifest" href="{asset('/images/favicon/site.webmanifest')}"><meta name="theme-color" content="{'#3983dc' if preview else '#f8f7f3'}">
 <link rel="alternate" type="application/rss+xml" title="Wonderfall Blog ({lang})" href="{feed}">
-<link rel="preload" href="/fonts/nunito-{'latin' if lang=='en' else 'cyrillic'}.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/nunito-{LOCALES[lang]['font']}.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{asset('/css/site.css')}">
 <link rel="stylesheet" href="{asset('/css/navigation.css')}">
 <link rel="stylesheet" href="{asset('/css/brand-icon.css')}">
@@ -155,7 +167,7 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 {hero_atmosphere}{navigation(c,suffix,preview)}
 <main id="main">{shooting_stars}{body}</main>
 <footer class="footer wrap"><div><a class="brand" href="{url(lang)}" data-brand-link>{brand_icon()}Wonderfall</a><p>{E(c['footer_line'])}</p></div>
-<nav aria-label="{'Footer navigation' if lang=='en' else 'Навігація в підвалі'}">{footer_groups(c,lang)}</nav></footer>
+<nav aria-label="{E(c['footer_nav_label'])}">{footer_groups(c,lang)}</nav></footer>
 </body></html>'''
 
 def closing_screen(c, effect='snow'):
@@ -228,10 +240,12 @@ def footer_group(key, title, *links):
 def footer_groups(c, lang):
     guides,product,legal,connect=c['footer_groups']
     anchors=[f'<a href="{url(lang)}#{anchor}">{E(label)}</a>' for anchor,label in zip(('effects','features','faq'),c['nav'][:3])]
-    return (footer_group('guides',guides,*(f'<a href="{url(lang,"blog/"+a["slug"]+"/")}">{E(a[lang]["footer_label"])}</a>' for a in ARTICLES))
+    guide_group=footer_group('guides',guides,*(f'<a href="{url(lang,"blog/"+a["slug"]+"/")}">{E(a[lang]["footer_label"])}</a>' for a in ARTICLES)) if lang in FULL_LANGS else ''
+    press=PRESS[lang]['footer_label'] if lang in PRESS else c['press_label']
+    return (guide_group
         +footer_group('product',product,*anchors,f'<a href="{url(lang,"blog/")}">{E(c["nav"][3])}</a>',f'<a href="{url(lang,"support/")}">{E(c["support"])}</a>',f'<a href="{STORE}">App Store</a>')
         +footer_group('legal',legal,f'<a href="{url(lang,"privacy.html")}">{E(c["privacy"])}</a>',f'<button type="button" data-cookie-settings>{E(c["cookie_settings"])}</button>')
-        +footer_group('connect',connect,f'<a href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a>',f'<a href="{url(lang,"press/")}">{E(PRESS[lang]["footer_label"])}</a>','<a href="https://x.com/andrew_sereda">X</a>','<a href="https://www.threads.com/@saintsereda">Threads</a>'))
+        +footer_group('connect',connect,f'<a href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a>',f'<a href="{url(lang,"press/")}">{E(press)}</a>','<a href="https://x.com/andrew_sereda">X</a>','<a href="https://www.threads.com/@saintsereda">Threads</a>'))
 
 MENU_EFFECT_SYMBOLS = {'snow':'snowflake', 'rain':'cloud.rain', 'leaves':'leaf',
                        'petals':'camera.macro', 'fireflies':'sparkles'}
@@ -352,7 +366,7 @@ def reviews_section(c):
         cards.append(f'''<figure class="review-card" data-review-id="{review['id']}"><h3 lang="{review['language']}">{E(title)}</h3><blockquote lang="{review['language']}" cite="{E(review['source'])}">{E(review['excerpt'])}{ellipsis}</blockquote><figcaption><div class="review-card__byline"><span>{E(review['author'])}</span><span class="review-card__stars" role="img" aria-label="{E(rating)}">{stars}</span></div><span class="review-card__source">App Store · {E(ui['country'])}</span></figcaption></figure>''')
     rating=STORE_DATA['ratings']
     value=f'{rating["value"]:.1f}'
-    summary=ui['summary'].format(value=value.replace('.',',') if c['lang']=='uk' else value,count=rating['count'])
+    summary=ui['summary'].format(value=value.replace('.',c.get('decimal','.')),count=rating['count'])
     return f'''<section class="reviews-section section" id="reviews" aria-labelledby="reviews-title" data-reviews>
 <div class="reviews-heading wrap"><div><h2 id="reviews-title">{E(ui['title'])}</h2><a class="reviews-summary" href="{E(rating['source'])}" title="{E(ui['checked'].format(date=STORE_DATA['checked_at']))}"><span aria-hidden="true">★</span> {E(summary)} <span aria-hidden="true">↗</span></a></div></div>
 <div class="reviews-marquee" data-reviews-marquee role="group" aria-labelledby="reviews-title" tabindex="0"><div class="reviews-track" data-reviews-track>{''.join(cards)}</div></div></section>'''
@@ -403,21 +417,8 @@ def write(path,content):
     target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(content,encoding='utf-8')
 
-ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
-ET.register_namespace('xhtml', 'http://www.w3.org/1999/xhtml')
-ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'
-sitemap=ET.Element(ns+'urlset')
-for lang in LANGS:
-    c=json.loads((ROOT/'content'/f'{lang}.json').read_text())
-    substitutions={'store_name':STORE_DATA['name'],'version':STORE_DATA['version'],
-                   'minimum_os':STORE_DATA['minimum_os'],'us_price':f'US${STORE_DATA["offer"]["price"]:.2f}'}
-    for key in ('released_description','compat'):
-        c[key]=c[key].format(**substitutions)
-    c['product_facts']=[[label,value.format(**substitutions)] for label,value in c['product_facts']]
-    c['faq']=[[question,answer.format(**substitutions)] for question,answer in c['faq']]
-    c['support_intro']=c['support_intro'].format(**substitutions)
-    c['support_sections']=[[title,text.format(**substitutions)] for title,text in c['support_sections']]
-    write(url(lang,'index.html'),homepage(c))
+def write_blog(c):
+    lang=c['lang']
     collection={'@type':'CollectionPage','@id':ORIGIN+url(lang,'blog/')+'#collection','name':c['blog_meta_title'],'hasPart':[{'@id':ORIGIN+url(lang,'blog/'+a['slug']+'/')+'#article'} for a in ARTICLES]}
     rows=''.join(post_row(c,a) for a in ARTICLES)
     body=f'<section class="blog-heading wrap"><div><h1>{E(c["blog_title"])}</h1><p>{E(c["blog_intro"])}</p></div>{other_language(lang,"blog/")}</section><section class="wrap blog-list"><ol class="post-list">{rows}</ol><p><a class="text-link" href="{url(lang,"blog/feed.xml")}">RSS ↗</a></p></section>'+closing_screen(c,'rain')
@@ -439,13 +440,20 @@ for lang in LANGS:
         header=(f'<header class="article-header"><p class="post-meta"><time datetime="{a["published"]}">{E(human_date(lang,a["published"]))}</time> · {read_minutes(a,lang)}{updated}</p>'
                 f'<h1>{E(text["title"])}</h1><p class="article-summary">{E(text["description"])}</p><p class="byline">{E(c["author"])}</p>'
                 f'<a class="button" href="{STORE}">{E(c["download"])}</a></header>')
-        crumbs=f'<nav class="breadcrumbs" aria-label="{"Breadcrumb" if lang=="en" else "Шлях до сторінки"}"><a href="{url(lang,"blog/")}">{c["nav"][3]}</a> / <span>{E(text["title"])}</span></nav>'
+        crumbs=f'<nav class="breadcrumbs" aria-label="{E(c["breadcrumb_label"])}"><a href="{url(lang,"blog/")}">{c["nav"][3]}</a> / <span>{E(text["title"])}</span></nav>'
         body=f'<article class="article-page"><div class="article-top wrap">{crumbs}{other_language(lang,suffix)}</div>{header}{cover}<div class="prose article-body wrap">{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></div></article>'+closing_screen(c,'rain')
         write(url(lang,suffix+'index.html'),page(c,suffix,text['meta_title'],text['description'],body,[article_schema,breadcrumb],article=a))
-    sections=''.join(f'<section><h2>{E(title)}</h2><p>{E(text)}</p></section>' for title,text in c['support_sections'])
-    body=f'<div class="prose wrap"><h1>{E(c["support_title"])}</h1><p class="answer">{E(c["support_intro"])}</p>{sections}<p><a class="button" href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a></p></div>'
-    write(url(lang,'support/index.html'),page(c,'support/',c['support_title'],c['support_description'],body))
-    write(url(lang,'press/index.html'),press_page(c))
+    rss=ET.Element('rss',version='2.0'); channel=ET.SubElement(rss,'channel')
+    for name,text in [('title','Wonderfall Blog'),('link',ORIGIN+url(lang,'blog/')),('description',c['blog_description']),('language',lang)]:
+        ET.SubElement(channel,name).text=text
+    for a in ARTICLES:
+        item=ET.SubElement(channel,'item'); link=ORIGIN+url(lang,'blog/'+a['slug']+'/')
+        for name,text in [('title',a[lang]['title']),('link',link),('guid',link),('description',a[lang]['description']),('pubDate',rfc822(a['published']))]:
+            ET.SubElement(item,name).text=text
+    write(url(lang,'blog/feed.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n'+ET.tostring(rss,encoding='unicode'))
+
+def write_privacy(c):
+    lang=c['lang']
     # Generate both policies from the same template and localized privacy source.
     privacy=json.loads((ROOT/'content/privacy.json').read_text())[lang]
     def get(key):
@@ -456,23 +464,38 @@ for lang in LANGS:
     policy=(ROOT/'content/privacy-template.html').read_text()
     policy=re.sub(r'<(h1|h2|p|li|strong)([^>]*data-i18n="(privacy\.[^"]+)"[^>]*)>.*?</\1>',lambda m:f'<{m[1]}>{E(get(m[3]))}</{m[1]}>',policy,flags=re.S)
     policy=re.sub(r'<a([^>]*?) data-i18n="(privacy\.[^"]+)"([^>]*)>.*?</a>',lambda m:f'<a{m[1]}{m[3]}>{E(get(m[2]))}</a>',policy,flags=re.S)
-    privacy_description='How Wonderfall handles local app data, usage statistics, crash reports, optional location, website analytics and cookie choices.' if lang=='en' else 'Як Wonderfall зберігає локальні дані, збирає статистику використання та звіти про збої, використовує необов’язкову геолокацію, аналітику сайту та cookie.'
+    privacy_description=c['privacy_description']
     write(url(lang,'privacy.html'),page(c,'privacy.html',privacy['pageTitle'],privacy_description,'<div class="prose wrap">'+policy+'</div>'))
-    rss=ET.Element('rss',version='2.0'); channel=ET.SubElement(rss,'channel')
-    for name,text in [('title','Wonderfall Blog'),('link',ORIGIN+url(lang,'blog/')),('description',c['blog_description']),('language',lang)]:
-        ET.SubElement(channel,name).text=text
-    for a in ARTICLES:
-        item=ET.SubElement(channel,'item'); link=ORIGIN+url(lang,'blog/'+a['slug']+'/')
-        for name,text in [('title',a[lang]['title']),('link',link),('guid',link),('description',a[lang]['description']),('pubDate',rfc822(a['published']))]:
-            ET.SubElement(item,name).text=text
-    write(url(lang,'blog/feed.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n'+ET.tostring(rss,encoding='unicode'))
+
+ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+ET.register_namespace('xhtml', 'http://www.w3.org/1999/xhtml')
+ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'
+sitemap=ET.Element(ns+'urlset')
+for lang in LANGS:
+    c=json.loads((ROOT/'content'/f'{lang}.json').read_text())
+    substitutions={'store_name':STORE_DATA['name'],'version':STORE_DATA['version'],
+                   'minimum_os':STORE_DATA['minimum_os'],'us_price':f'US${STORE_DATA["offer"]["price"]:.2f}'}
+    for key in ('released_description','compat'):
+        c[key]=c[key].format(**substitutions)
+    c['product_facts']=[[label,value.format(**substitutions)] for label,value in c['product_facts']]
+    c['faq']=[[question,answer.format(**substitutions)] for question,answer in c['faq']]
+    c['support_intro']=c['support_intro'].format(**substitutions)
+    c['support_sections']=[[title,text.format(**substitutions)] for title,text in c['support_sections']]
+    write(url(lang,'index.html'),homepage(c))
+    if lang in FULL_LANGS: write_blog(c)
+    sections=''.join(f'<section><h2>{E(title)}</h2><p>{E(text)}</p></section>' for title,text in c['support_sections'])
+    body=f'<div class="prose wrap"><h1>{E(c["support_title"])}</h1><p class="answer">{E(c["support_intro"])}</p>{sections}<p><a class="button" href="mailto:hello@andrewsereda.com">{E(c["contact"])}</a></p></div>'
+    write(url(lang,'support/index.html'),page(c,'support/',c['support_title'],c['support_description'],body))
+    if lang in FULL_LANGS: write(url(lang,'press/index.html'),press_page(c))
+    write_privacy(c)
     for suffix in ('','blog/',*('blog/'+a['slug']+'/' for a in ARTICLES),'support/','press/','privacy.html'):
+        if lang not in page_langs(suffix): continue
         entry=ET.SubElement(sitemap,ns+'url'); ET.SubElement(entry,ns+'loc').text=ORIGIN+url(lang,suffix); ET.SubElement(entry,ns+'lastmod').text=UPDATED
-        for alternate in (*LANGS,'x-default'):
+        for alternate in (*page_langs(suffix),'x-default'):
             ET.SubElement(entry,'{http://www.w3.org/1999/xhtml}link',rel='alternate',hreflang=alternate,href=ORIGIN+url('en' if alternate=='x-default' else alternate,suffix))
 write('/sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n'+ET.tostring(sitemap,encoding='unicode')+'\n')
 write('/robots.txt','User-agent: *\nAllow: /\nDisallow: /content/\nDisallow: /scripts/\n\nSitemap: '+ORIGIN+'/sitemap.xml\n')
-guides={lang:'\n'.join(f'- [{a[lang]["title"]}]({ORIGIN}{url(lang,"blog/"+a["slug"]+"/")}): {a[lang]["description"]}' for a in ARTICLES) for lang in LANGS}
+guides={lang:'\n'.join(f'- [{a[lang]["title"]}]({ORIGIN}{url(lang,"blog/"+a["slug"]+"/")}): {a[lang]["description"]}' for a in ARTICLES) for lang in FULL_LANGS}
 write('/llms.txt',(ROOT/'content/llms-template.txt').read_text().format(origin=ORIGIN,**substitutions,checked_at=STORE_DATA['checked_at'],guides_en=guides['en'],guides_uk=guides['uk']))
 write('/download.html',(ROOT/'content/download-template.html').read_text().replace('__ORIGIN__',ORIGIN))
-print(f'Generated {11+2*len(ARTICLES)} static pages ({len(ARTICLES)} guides per language), 2 RSS feeds, sitemap.xml, robots.txt and llms.txt.')
+print(f'Generated {3*len(LANGS)+len(FULL_LANGS)*(2+len(ARTICLES))+1} static pages ({", ".join(LANGS)}; {len(ARTICLES)} guides in {"/".join(FULL_LANGS)}), {len(FULL_LANGS)} RSS feeds, sitemap.xml, robots.txt and llms.txt.')

@@ -1,0 +1,364 @@
+{
+  "lang": "de",
+  "locale": "de_DE",
+  "other_label": "English",
+  "skip": "Zum Inhalt springen",
+  "nav": [
+    "Effekte",
+    "Funktionen",
+    "FAQ",
+    "Blog"
+  ],
+  "download": "Im Mac App Store laden",
+  "short_cta": "Laden",
+  "title": "Desktop-Effekte für den Mac: Schnee, Regen & mehr | Wonderfall",
+  "description": "Desktop-Effekte für den Mac: Schnee, Regen, Blätter, Glühwürmchen, Lichterketten und eigene Bilder. Behalte dein Hintergrundbild und stimme die Bewegung mit Wonderfall ab.",
+  "hero": "Desktop-Effekte für den Mac.\nEine andere Jahreszeit.",
+  "hero_headline": "Ein bisschen Weihnachts\u00adzauber für deinen Mac",
+  "intro": "Schnee fällt, eine Lichterkette leuchtet am oberen Bildschirmrand, der Weihnachtsmann fliegt mit seinen Rentieren vorbei und auf deinem Schreibtisch steht ein Weihnachtsbaum. Regen, Blätter und Blüten warten auf den Rest des Jahres",
+  "compat": "Für macOS {minimum_os} und neuer",
+  "updates_released": "Wonderfall 1.4 ist da: Das ist neu",
+  "preview_label": "Wähle eine Stimmung",
+  "preview_note": "Wähle einen Effekt für die Vorschau. Dein Hintergrundbild bleibt, wie es ist",
+  "benefits_label": "Noch mehr Möglichkeiten, es zu deinem zu machen",
+  "benefits": [
+    "Behalte dein Hintergrundbild. Die Effekte erscheinen über oder hinter deinen Fenstern.",
+    "Hänge Lichter an die obere Menüleiste, unabhängig von den Wettereffekten.",
+    "Nutze eigene Bilder und passe die Bewegung an deinen Schreibtisch an."
+  ],
+  "showcase": {
+    "title": "Dein Schreibtisch. Dein kleines Wunder",
+    "weather_title": "Folge dem Wetter draußen",
+    "weather_text": "Passe den Effekt automatisch an das Wetter draußen an, mit jahreszeitlichen Effekten für klare Tage",
+    "weather_outside": "Draußen",
+    "weather_desktop": "Dein Schreibtisch",
+    "weather_snow": "Schnee",
+    "weather_rain": "Regen",
+    "weather_clear": "Klar im Herbst",
+    "weather_snow_description": "Draußen schneit es. Schneeflocken auf deinem Schreibtisch.",
+    "weather_rain_description": "Draußen regnet es. Regentropfen auf deinem Schreibtisch.",
+    "weather_clear_description": "Ein klarer Herbsttag. Blätter auf deinem Schreibtisch.",
+    "cleaning_title": "Ein bisschen Wetter. Ein bisschen Spiel",
+    "cleaning_text": "Schaufle den Schnee weg, fege Blätter und Blüten zusammen oder wische die Regentropfen ab. Sogar das Aufräumen des Schreibtischs kann Spaß machen",
+    "cleaning_snow": "Schnee schaufeln",
+    "cleaning_leaves": "Blätter fegen",
+    "cleaning_rain": "Tropfen wischen",
+    "cleaning_hint": "Zum Aufräumen ziehen. Auf Touchscreens seitlich wischen.",
+    "cleaning_clear": "Bildschirm freiräumen",
+    "cleaning_reset": "Wetter zurückholen",
+    "cleaning_cleared": "Alles frei. Hol das Wetter zurück, um es noch einmal zu versuchen.",
+    "garland_title": "Lass den oberen Rand leuchten",
+    "garland_text": "Eine Lichterkette entlang der oberen Menüleiste. Wähle Farben, Lampenformen und Animation, mit oder ohne Wetter",
+    "garland_menu": "Menüleiste",
+    "palette_warm": "Warme Lichter",
+    "palette_color": "Bunte Lichter",
+    "palette_ice": "Eisige Lichter",
+    "images_title": "Lass etwas Eigenes fallen",
+    "images_text": "Füge bis zu 10 Bilder hinzu und verwandle deine Motive in fallende Formen. Nutze eines oder misch mehrere",
+    "motion_title": "Finde dein perfektes Treiben",
+    "motion_text": "Stimme Intensität, Größe, Tempo und Wind fein ab",
+    "placement_title": "Genau da, wo du es willst",
+    "placement_text": "Über deinen Apps oder hinter deinen Fenstern. Auf dem ganzen Bildschirm oder nur als schmaler Streifen oben",
+    "placement_over": "Über Fenstern",
+    "placement_desktop": "Nur Schreibtisch",
+    "placement_over_description": "Schnee erscheint über geöffneten Fenstern.",
+    "placement_desktop_description": "Schnee bleibt hinter geöffneten Fenstern.",
+    "placement_strip": "Streifen oben",
+    "placement_strip_description": "Die Effekte bleiben am oberen Rand.",
+    "placement_full_description": "Die Effekte bedecken den ganzen Bildschirm.",
+    "displays_title": "Ein Display oder ein ganzer Arbeitsplatz",
+    "displays_text": "Wähle, welche angeschlossenen Bildschirme die Effekte zeigen",
+    "weather_label": "Probiere einen Wetterwechsel",
+    "cleaning_label": "Probiere ein Werkzeug",
+    "palette_label": "Wähle eine Lichterfarbe",
+    "garland_scenes_label": "Wähle eine Lichterszene",
+    "scene_winterNight": "Winternacht",
+    "scene_cozyEvening": "Gemütlicher Abend",
+    "scene_springBloom": "Frühlingsblüte",
+    "scene_celebration": "Feier",
+    "image_choose": "Bild auswählen",
+    "image_file_error": "Wähle ein PNG-, JPEG- oder WebP-Bild unter 5 MB.",
+    "image_ready": "Dein Bild fällt jetzt in der Vorschau.",
+    "placement_label": "Wähle, wo die Effekte erscheinen",
+    "displays_label": "Effekte auf zwei angeschlossenen Displays",
+    "cleaning_media_alt": "Herabgefallene Blätter sammeln sich am unteren Rand des Schreibtischs.",
+    "cleaning_snow_alt": "Eine Schaufel räumt fallenden Schnee vom Schreibtisch.",
+    "cleaning_leaves_alt": "Ein Besen fegt herabgefallene Blätter vom Schreibtisch.",
+    "cleaning_rain_alt": "Ein Abzieher wischt Regentropfen vom Schreibtisch.",
+    "garland_media_alt": "Verschiedene Lichterketten wechseln sich an der oberen Menüleiste ab.",
+    "garland_winterNight_alt": "Lichterkette mit Tannenbaum-Lampen funkelt am oberen Rand.",
+    "garland_cozyEvening_alt": "Warme Glühbirnen-Lichterkette leuchtet am oberen Rand.",
+    "garland_springBloom_alt": "Rosa Herz-Lichterkette funkelt am oberen Rand.",
+    "garland_celebration_alt": "Bunte Stern-Lichterkette funkelt am oberen Rand.",
+    "images_media_alt": "Eigene Motive als fallende Desktop-Effekte.",
+    "placement_media_alt": "Schnee über und hinter einem Browserfenster, mit unterschiedlich großen Flocken."
+  },
+  "preview_name": "Mach Platz für ein kleines Wunder.",
+  "preview_detail": "Derselbe Schreibtisch. Eine neue Stimmung.",
+  "effects_kicker": "Sechs Arten, die Szene zu gestalten",
+  "effects_title": "Mehr als ein Schneetag",
+  "effects_intro": "Wähle einen jahreszeitlichen Effekt oder eigene Motive und passe dann Intensität, Größe, Tempo und Wind an, bis es sich richtig anfühlt",
+  "themes": [
+    [
+      "snow",
+      "Winterschnee",
+      "Weiche Flocken, sanftes Treiben und ein bisschen Winterzauber. Wähle aus eingebauten Schneeflockenformen.",
+      "❄️"
+    ],
+    [
+      "rain",
+      "Regen",
+      "Vom leichten Nieseln bis zum stetigen Schauer. Stimme Wind, Tropfengröße und Intensität ab.",
+      "🌧️"
+    ],
+    [
+      "leaves",
+      "Herbstlaub",
+      "Bernsteinfarbene und rote Blätter wirbeln über deinen Schreibtisch, mit einer Brise, die du steuerst.",
+      "🍂"
+    ],
+    [
+      "petals",
+      "Frühlingsblüten",
+      "Zartrosa Blütenblätter schweben durch deinen Arbeitsplatz, für einen sanfteren Jahreszeitenwechsel.",
+      "🌸"
+    ],
+    [
+      "fireflies",
+      "Sommerglühwürmchen",
+      "Warme Lichtpunkte wandern über den Bildschirm und holen einen Sommerabend nach drinnen.",
+      "✨"
+    ],
+    [
+      "custom",
+      "Eigene Bilder",
+      "Importiere eigene Bilder und lass sie wie Schnee fallen, wie Blätter wirbeln oder wie Regen ziehen.",
+      "＋"
+    ]
+  ],
+  "features_kicker": "Kleine Details. Deine Stimmung.",
+  "features_title": "Damit es sich wie dein Schreibtisch anfühlt",
+  "features": [
+    [
+      "Behalte dein Hintergrundbild",
+      "Die Effekte sind transparente Ebenen. Behalte den Schreibtischhintergrund, den du schon magst."
+    ],
+    [
+      "Wähle, wo sie erscheinen",
+      "Zeige die Animation über geöffneten Fenstern oder auf dem Schreibtisch dahinter. Nutze den ganzen Bildschirm oder einen 150 Punkt hohen Streifen oben."
+    ],
+    [
+      "Stimme die Bewegung ab",
+      "Passe Intensität, Partikelgröße, Tempo und Wind an. Schnee, Blätter und Blüten haben zusätzlich Regler für das Treiben."
+    ],
+    [
+      "Ein bisschen Licht",
+      "Schmücke die obere Menüleiste mit Lichterketten. Wähle Farben, Lampenformen und eine ruhige, funkelnde, wellende oder laufende Animation."
+    ],
+    [
+      "Mach es zu deinem",
+      "Füge bis zu 10 Bilder auf einmal hinzu, wähle oder mische sie und such dir eine Bewegungsart aus. Gängige Formate und SVG funktionieren, transparente Hintergründe sehen am besten aus."
+    ],
+    [
+      "Bleib im Flow",
+      "Klicke durch die Effekte hindurch und arbeite ganz normal an deinem Mac. Steuere die Effekte über die Menüleiste und starte die App auf Wunsch bei der Anmeldung."
+    ]
+  ],
+  "steps_title": "Dein erster Schneefall in drei Schritten",
+  "steps": [
+    [
+      "Installieren und öffnen",
+      "Lade Wonderfall aus dem Mac App Store und öffne das Symbol in der Menüleiste."
+    ],
+    [
+      "Schneeflocken wählen",
+      "Wähle eine eingebaute Form oder importiere eigene Bilder oder SVG-Grafiken."
+    ],
+    [
+      "Feinabstimmung",
+      "Passe Größe, Tempo, Intensität und Wind an. Wähle Effekte über oder hinter den Fenstern."
+    ]
+  ],
+  "faq_title": "Was du dich vielleicht fragst",
+  "faq": [
+    [
+      "Was ist Wonderfall?",
+      "Wonderfall ist eine macOS-App für die Menüleiste, die animierte Effekte über den Schreibtisch legt: Schnee, Regen, Herbstlaub, Frühlingsblüten, Sommerglühwürmchen, eigene Bilder und dekorative Lichter."
+    ],
+    [
+      "Ist Wonderfall kostenlos?",
+      "Wonderfall ist kostenpflichtig und kostet im US-amerikanischen Mac App Store {us_price}. Die Preise unterscheiden sich je nach Region und können sich ändern; den aktuellen Preis findest du in deinem App Store."
+    ],
+    [
+      "Ist das ein Live-Hintergrundbild oder ein Bildschirmschoner?",
+      "Es ist eine Ebene über dem Schreibtisch. Dein Hintergrundbild bleibt, und die Animation kann hinter oder über geöffneten Fenstern erscheinen, während du deinen Mac benutzt. Den macOS-Bildschirmschoner ersetzt sie nicht."
+    ],
+    [
+      "Funktioniert es mit mehreren Displays?",
+      "Ja. Die App legt für jeden angeschlossenen Bildschirm eine eigene Ebene an und passt sie an, wenn sich die Display-Anordnung ändert."
+    ],
+    [
+      "Kann ich weiterhin auf meine Apps und den Schreibtisch klicken?",
+      "Ja. Die Effektfenster ignorieren Mausklicks, du klickst also einfach hindurch und nutzt deinen Mac ganz normal. Im Modus „Nur Schreibtisch“ liegen die Effekte hinter deinen Fenstern."
+    ],
+    [
+      "Kann ich eigene Bilder verwenden?",
+      "Ja. Importiere bis zu 10 Bilder in gängigen Formaten oder als SVG, über die Dateiauswahl oder per Drag-and-drop; um die Größe kümmert sich Wonderfall. Nutze eines oder mische mehrere, mit Bewegung wie Schnee, Blätter oder Regen."
+    ],
+    [
+      "Kann ich Weihnachtslichter ohne Schneefall hinzufügen?",
+      "Ja. Lichterketten haben eigene Einstellungen, getrennt von den Wettereffekten, sodass du die obere Menüleiste auch ohne Schneefall beleuchten kannst."
+    ],
+    [
+      "Hat der Regeneffekt Ton?",
+      "Der Regeneffekt ist eine rein visuelle Ebene über dem Schreibtisch. Regengeräusche oder Musik gehören nicht dazu."
+    ],
+    [
+      "Welche Macs werden unterstützt?",
+      "Wonderfall benötigt macOS {minimum_os} oder neuer. Es ist eine Mac-App, keine App für iPhone oder iPad."
+    ],
+    [
+      "Braucht die App eine Internetverbindung?",
+      "Desktop-Effekte, Einstellungen und eigene Bilder funktionieren lokal auf deinem Mac. Für Download und Updates brauchst du Internet. Der optionale Wetterabgleich benötigt ebenfalls Internet und die Ortungsfreigabe, um Apple WeatherKit zu nutzen."
+    ],
+    [
+      "Wie schalte ich die Effekte aus?",
+      "Schalte Wettereffekte oder Lichter über die Menüleiste aus oder beende die App. Der Start bei der Anmeldung ist eine eigene Einstellung."
+    ]
+  ],
+  "blog_title": "Ein bisschen Inspiration für deinen Arbeitsplatz",
+  "read": "Anleitung lesen",
+  "all_posts": "Alle Artikel",
+  "blog_meta_title": "Anleitungen für den Mac-Schreibtisch | Wonderfall",
+  "blog_description": "Praktische Anleitungen zur Gestaltung des Mac-Schreibtischs: Schnee- und Regeneffekte, jahreszeitliche Effekte, Lichterketten und eigene Bilder.",
+  "blog_intro": "Praktische Anleitungen für etwas mehr Stimmung auf deinem Mac",
+  "cta_title": "Eine kleine Änderung. Ein anderes Gefühl",
+  "cta_text": "Gib deinem Mac seine eigene Jahreszeit. Fang mit Schnee an und schau, wohin dich die Stimmung trägt",
+  "footer_line": "Jahreszeitliche Desktop-Effekte für den Mac",
+  "featured_on": "Vorgestellt auf",
+  "macbase_badge_alt": "Wonderfall wird auf MacBase vorgestellt",
+  "footer_groups": ["Anleitungen", "Produkt", "Rechtliches", "Kontakt"],
+  "privacy": "Datenschutzerklärung",
+  "support": "Support",
+  "contact": "Andrew schreiben",
+  "author": "Von Andrew Sereda, Entwickler von Wonderfall",
+  "support_title": "Wonderfall: Support und Einrichtung auf dem Mac",
+  "support_description": "Hilfe zu Wonderfall auf dem Mac: Steuerung über die Menüleiste, Themen, Effektebenen, eigene Bilder und Kontakt zum Entwickler.",
+  "support_intro": "Wähle über das Symbol in der Menüleiste einen jahreszeitlichen Effekt, passe seine Bewegung an, füge Lichterketten hinzu oder importiere eigene Bilder",
+  "support_sections": [
+    [
+      "Erste Schritte",
+      "Lade Wonderfall aus dem Mac App Store, öffne die App und klicke auf ihr Symbol in der Menüleiste, um unter „Wettereffekte“ ein Thema zu wählen. Das Einstellungsfenster muss nicht geöffnet bleiben."
+    ],
+    [
+      "Ich sehe keinen Effekt",
+      "Prüfe, ob die Wettereffekte eingeschaltet sind und die App läuft. Probiere „Ganzer Bildschirm“ und die Platzierung über dem Inhalt. Effekte im Modus „Nur Schreibtisch“ liegen hinter deinen Fenstern, ein maximiertes Fenster kann sie also verdecken. Erhöhe die Intensität, wenn der Effekt zu dezent ist."
+    ],
+    [
+      "Eigene Motive importieren",
+      "Wähle „Eigenes Bild“ und füge Bilder über die Dateiauswahl oder per Drag-and-drop in die Galerie hinzu. Das Limit liegt bei 10 Bildern; gängige Formate und SVG funktionieren, und Wonderfall passt die Größe automatisch an. Transparente Hintergründe ergeben saubere Kanten. Wähle eine Bewegung wie Schnee, Blätter oder Regen."
+    ],
+    [
+      "Lichter getrennt steuern",
+      "Mit den Lichterketten-Einstellungen schmückst du die obere Menüleiste. Lichter und Wettereffekte funktionieren unabhängig voneinander, die Lichter lassen sich also auch allein nutzen."
+    ],
+    [
+      "Automatischen Start ausschalten",
+      "Mit der Einstellung für den Start bei der Anmeldung legst du fest, ob die App beim Anmelden geöffnet wird. Beenden kannst du die App über die Menüleiste."
+    ],
+    [
+      "Kontakt zum Entwickler",
+      "Schreib an hello@andrewsereda.com und nenne deine macOS-Version, die App-Version, deine Display-Anordnung und die Schritte, mit denen sich das Problem wiederholen lässt. Hänge bitte keine persönlichen oder sensiblen Inhalte an."
+    ]
+  ],
+  "picker_title": "Wähle einen Effekt",
+  "picker_intro": "Was würde diesen Moment ein bisschen anders machen?",
+  "picker_footer": "Dein Hintergrundbild und geöffnete Fenster bleiben, wie sie sind.",
+  "folder_labels": [
+    "Notizen",
+    "Projekte",
+    "Fotos"
+  ],
+  "device_alt": "Display-Rahmen für Videos der jahreszeitlichen Effekte.",
+  "screen_label": "Videovorschau der jahreszeitlichen Effekte",
+  "desktop_label": "Schreibtisch",
+  "desktop_time": "Mo. 9:41",
+  "desktop_menu": [
+    "Ablage",
+    "Bearbeiten",
+    "Darstellung"
+  ],
+  "hero_line": "Desktop-Effekte für den Mac",
+  "hero_phrases": [
+    {
+      "text": "Winterschnee",
+      "icon": "❄️"
+    },
+    {
+      "text": "Regen",
+      "icon": "🌧️"
+    },
+    {
+      "text": "Herbstlaub",
+      "icon": "🍂"
+    },
+    {
+      "text": "Frühlingsblüten",
+      "icon": "🌸"
+    },
+    {
+      "text": "Sommerglühwürmchen",
+      "icon": "✨"
+    }
+  ],
+  "cookie_settings": "Cookie-Einstellungen",
+  "navigation_ui": {
+    "main": "Hauptnavigation",
+    "menu": "Menü",
+    "language": "Sprache wählen",
+    "sections": "Bereiche der Website",
+    "home": "Startseite"
+  },
+  "product_title": "Desktop-Effekte für den Mac. Dein Hintergrundbild bleibt",
+  "product_summary": "Wonderfall bringt animierten Schnee, Regen, Herbstlaub, Frühlingsblüten und Glühwürmchen auf deinen Mac-Schreibtisch. Lass die Effekte hinter deinen Fenstern oder über deine Apps ziehen, mit deinem eigenen Hintergrundbild darunter",
+  "product_facts": [
+    [
+      "Plattform",
+      "macOS {minimum_os}+"
+    ],
+    [
+      "Platzierung",
+      "Über Fenstern oder nur Schreibtisch"
+    ],
+    [
+      "Deine Motive",
+      "Bis zu 10 eigene Bilder, auch SVG"
+    ]
+  ],
+  "setup_link": "So bringst du Schnee auf deinen Mac-Schreibtisch (Englisch)",
+  "released_description": "Wonderfall ist eine Mac-App für die Menüleiste mit animiertem Schnee, Regen, Blättern, Blüten, Glühwürmchen, eigenen Bildern und dekorativen Lichtern. Dein Hintergrundbild bleibt erhalten; benötigt wird macOS {minimum_os} oder neuer.",
+  "released_features": [
+    "Animierter Schnee, Regen, Herbstlaub, Frühlingsblüten und Sommerglühwürmchen",
+    "Eigene Bilder mit mehreren Bewegungsarten",
+    "Dekorative Lichter mit acht Szenen an der Menüleiste oder am Dock",
+    "Schneehaufen, Regentropfen und Laubhaufen mit Schaufel, Abzieher und Besen",
+    "Schnee auf geöffneten Fenstern, Schneebälle, ein Schneemann und ein Schneepflug",
+    "Optionaler Wetterabgleich",
+    "Effekte über Fenstern oder nur auf dem Schreibtisch",
+    "Einstellbare Intensität, Größe, Tempo und Wind"
+  ],
+  "reviews_ui": {
+    "title": "Ein kleines Wunder, in ihren Worten",
+    "summary": "{value} von 5 · {count} Bewertungen in der Ukraine",
+    "rating": "Mit {rating} von 5 Sternen bewertet",
+    "country": "Ukraine",
+    "checked": "App Store Ukraine, geprüft am {date}"
+  },
+  "updated_label": "Aktualisiert",
+  "icon_alt": "App-Symbol von Wonderfall",
+  "footer_nav_label": "Fußzeilennavigation",
+  "breadcrumb_label": "Brotkrümelnavigation",
+  "decimal": ",",
+  "press_label": "Presse (Englisch)",
+  "privacy_description": "Wie Wonderfall mit lokalen App-Daten, Nutzungsstatistiken, Absturzberichten, optionalem Standort, Website-Analyse und Cookie-Einstellungen umgeht."
+}
