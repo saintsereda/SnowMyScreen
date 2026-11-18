@@ -1,0 +1,370 @@
+{
+  "lang": "pt",
+  "locale": "pt_BR",
+  "html_lang": "pt-BR",
+  "other_label": "English",
+  "skip": "Pular para o conteúdo",
+  "nav": [
+    "Efeitos",
+    "Recursos",
+    "Dúvidas",
+    "Blog"
+  ],
+  "download": "Baixar na Mac App Store",
+  "short_cta": "Baixar",
+  "title": "Efeitos para a mesa do Mac: neve, chuva e mais | Wonderfall",
+  "description": "Efeitos para a mesa do Mac: neve, chuva, folhas, vaga-lumes, luzes e suas próprias imagens. Mantenha seu papel de parede e ajuste o movimento com o Wonderfall.",
+  "hero": "Efeitos para a mesa do Mac.\nOutra estação.",
+  "hero_headline": "Um pouco da magia do Natal no seu Mac",
+  "intro": "A neve cai, um cordão de luzes brilha no alto da tela, o Papai Noel passa voando com as renas e uma árvore de Natal enfeita a sua mesa. Chuva, folhas e pétalas esperam pelo resto do ano",
+  "compat": "Para macOS {minimum_os} ou posterior",
+  "updates_released": "O Wonderfall 1.4 chegou: veja as novidades",
+  "preview_label": "Escolha um ambiente",
+  "preview_note": "Escolha um efeito para ver a prévia. Seu papel de parede continua do jeito que está",
+  "benefits_label": "Mais jeitos de deixar com a sua cara",
+  "benefits": [
+    "Mantenha seu papel de parede. Os efeitos aparecem sobre as janelas ou atrás delas.",
+    "Adicione luzes ao longo da barra de menus, independentemente dos efeitos de clima.",
+    "Use suas próprias imagens e ajuste o movimento do jeito que combina com a sua mesa."
+  ],
+  "showcase": {
+    "title": "Sua mesa. O seu tipo de encanto",
+    "weather_title": "Acompanhe o clima lá fora",
+    "weather_text": "Combine automaticamente com o clima lá fora, com efeitos da estação para os dias de céu limpo",
+    "weather_outside": "Lá fora",
+    "weather_desktop": "Sua mesa",
+    "weather_snow": "Nevando",
+    "weather_rain": "Chovendo",
+    "weather_clear": "Céu limpo no outono",
+    "weather_snow_description": "Neve lá fora. Flocos de neve na sua mesa.",
+    "weather_rain_description": "Chuva lá fora. Gotas de chuva na sua mesa.",
+    "weather_clear_description": "Um dia de outono com céu limpo. Folhas na sua mesa.",
+    "cleaning_title": "Um pouco de clima. Um pouco de diversão",
+    "cleaning_text": "Tire a neve com a pá, varra folhas e pétalas ou limpe as gotas de chuva. Até arrumar a mesa pode ser um pouco gostoso",
+    "cleaning_snow": "Tirar a neve",
+    "cleaning_leaves": "Varrer as folhas",
+    "cleaning_rain": "Limpar as gotas",
+    "cleaning_hint": "Arraste para limpar. Na tela sensível ao toque, deslize para o lado.",
+    "cleaning_clear": "Limpar a tela",
+    "cleaning_reset": "Trazer o clima de volta",
+    "cleaning_cleared": "Tudo limpo. Traga o clima de volta para tentar de novo.",
+    "garland_title": "Faça o alto da tela brilhar",
+    "garland_text": "Um cordão de luzes ao longo da barra de menus. Escolha as cores, o formato das lâmpadas e a animação, com ou sem os efeitos de clima",
+    "garland_menu": "Barra de menus",
+    "palette_warm": "Luzes quentes",
+    "palette_color": "Luzes coloridas",
+    "palette_ice": "Luzes geladas",
+    "images_title": "Deixe cair algo seu",
+    "images_text": "Use até 10 imagens e transforme suas artes em formas que caem. Use uma só ou misture várias",
+    "motion_title": "Encontre a queda perfeita",
+    "motion_text": "Ajuste a intensidade, o tamanho, a velocidade e o vento nos mínimos detalhes",
+    "placement_title": "Bem onde você quiser",
+    "placement_text": "Sobre os seus apps ou atrás das janelas. Na tela inteira ou só um pouco no alto",
+    "placement_over": "Sobre as janelas",
+    "placement_desktop": "Somente na mesa",
+    "placement_over_description": "A neve aparece sobre as janelas abertas.",
+    "placement_desktop_description": "A neve fica atrás das janelas abertas.",
+    "placement_strip": "Faixa superior",
+    "placement_strip_description": "Os efeitos ficam ao longo da borda superior.",
+    "placement_full_description": "Os efeitos cobrem a tela inteira.",
+    "displays_title": "Uma tela ou a escrivaninha inteira",
+    "displays_text": "Escolha quais telas conectadas recebem os efeitos",
+    "weather_label": "Experimente uma mudança de clima",
+    "cleaning_label": "Experimente uma ferramenta de limpeza",
+    "palette_label": "Escolha uma paleta de luzes",
+    "garland_scenes_label": "Escolha uma cena de luzes",
+    "scene_winterNight": "Noite de inverno",
+    "scene_cozyEvening": "Noite aconchegante",
+    "scene_springBloom": "Floração de primavera",
+    "scene_celebration": "Celebração",
+    "image_choose": "Escolher sua imagem",
+    "image_file_error": "Escolha uma imagem PNG, JPEG ou WebP com menos de 5 MB.",
+    "image_ready": "Sua imagem está caindo na prévia.",
+    "placement_label": "Escolha onde os efeitos aparecem",
+    "displays_label": "Efeitos em duas telas conectadas",
+    "cleaning_media_alt": "Folhas caídas acumuladas na parte de baixo da mesa.",
+    "cleaning_snow_alt": "Uma pá tira da mesa a neve que caiu.",
+    "cleaning_leaves_alt": "Uma vassoura varre as folhas caídas da mesa.",
+    "cleaning_rain_alt": "Um rodo limpa as gotas de chuva da mesa.",
+    "garland_media_alt": "Diferentes cordões de luzes se revezam ao longo da barra de menus.",
+    "garland_winterNight_alt": "Luzes em forma de árvore piscando ao longo da borda superior.",
+    "garland_cozyEvening_alt": "Lâmpadas de luz quente brilhando ao longo da borda superior.",
+    "garland_springBloom_alt": "Luzes em forma de coração rosa piscando ao longo da borda superior.",
+    "garland_celebration_alt": "Luzes coloridas em forma de estrela piscando ao longo da borda superior.",
+    "images_media_alt": "Artes personalizadas usadas como efeitos que caem na mesa.",
+    "placement_media_alt": "Neve sobre e atrás de uma janela do navegador, com flocos de tamanhos diferentes."
+  },
+  "preview_name": "Abra espaço para um pouco de encanto.",
+  "preview_detail": "A mesma mesa. Um novo ambiente.",
+  "effects_kicker": "Seis jeitos de criar o ambiente",
+  "effects_title": "Muito mais que um dia de neve",
+  "effects_intro": "Escolha um efeito da estação ou use suas próprias artes e depois ajuste a intensidade, o tamanho, a velocidade e o vento até encontrar o visual certo",
+  "themes": [
+    [
+      "snow",
+      "Neve de inverno",
+      "Flocos suaves, uma deriva tranquila e um pouco de magia de inverno. Escolha entre os formatos de floco incluídos.",
+      "❄️"
+    ],
+    [
+      "rain",
+      "Chuva",
+      "De uma garoa leve a uma chuva constante. Ajuste o vento, o tamanho das gotas e a intensidade.",
+      "🌧️"
+    ],
+    [
+      "leaves",
+      "Folhas de outono",
+      "Folhas âmbar e carmim rodopiam pela sua mesa com uma brisa que você controla.",
+      "🍂"
+    ],
+    [
+      "petals",
+      "Pétalas de primavera",
+      "Pétalas rosadas flutuam pelo seu espaço de trabalho para uma troca de estação mais suave.",
+      "🌸"
+    ],
+    [
+      "fireflies",
+      "Vaga-lumes de verão",
+      "Pontinhos de luz quente passeiam pela tela e trazem uma noite de verão para dentro de casa.",
+      "✨"
+    ],
+    [
+      "custom",
+      "Suas imagens",
+      "Importe suas próprias imagens e faça com que caiam como neve, rodopiem como folhas ou escorram como chuva.",
+      "＋"
+    ]
+  ],
+  "features_kicker": "Pequenos detalhes. O seu ambiente.",
+  "features_title": "Deixe a mesa com a sua cara",
+  "features": [
+    [
+      "Mantenha seu papel de parede",
+      "Os efeitos são camadas transparentes. Fique com o fundo de tela de que você já gosta."
+    ],
+    [
+      "Escolha onde aparecem",
+      "Mostre a animação sobre as janelas abertas ou na mesa, atrás delas. Use a tela inteira ou uma faixa de 150 pontos no alto."
+    ],
+    [
+      "Ajuste o movimento",
+      "Ajuste a intensidade, o tamanho das partículas, a velocidade e o vento. Neve, folhas e pétalas também têm controles de deriva."
+    ],
+    [
+      "Acrescente um pouco de luz",
+      "Enfeite a barra de menus com cordões de luzes. Escolha as cores, o formato das lâmpadas e uma animação constante, cintilante, em onda ou em sequência."
+    ],
+    [
+      "Do seu jeito",
+      "Adicione até 10 imagens de uma vez, selecione ou misture e escolha um estilo de movimento. Formatos comuns e SVG funcionam, e fundos transparentes ficam melhores."
+    ],
+    [
+      "Sem sair do ritmo",
+      "Clique através das camadas para usar o Mac. Controle os efeitos pela barra de menus e, se quiser, abra o app ao iniciar sessão."
+    ]
+  ],
+  "steps_title": "Sua primeira nevada em três passos",
+  "steps": [
+    [
+      "Instale e abra",
+      "Baixe o Wonderfall na Mac App Store e abra o ícone dele na barra de menus."
+    ],
+    [
+      "Escolha seus flocos",
+      "Escolha um formato incluído ou importe suas próprias imagens ou artes em SVG."
+    ],
+    [
+      "Deixe do jeito certo",
+      "Ajuste o tamanho, a velocidade, a intensidade e o vento. Escolha efeitos sobre as janelas ou atrás delas."
+    ]
+  ],
+  "faq_title": "Algumas coisas que você pode estar se perguntando",
+  "faq": [
+    [
+      "O que é o Wonderfall?",
+      "O Wonderfall é um app da barra de menus do macOS com animações sobre a mesa: neve, chuva, folhas de outono, pétalas de primavera, vaga-lumes de verão, suas próprias imagens e luzes decorativas."
+    ],
+    [
+      "O Wonderfall é gratuito?",
+      "O Wonderfall é um app pago, vendido por {us_price} na Mac App Store dos EUA. Os preços variam de acordo com a região e podem mudar; confira o preço atual na loja do seu país."
+    ],
+    [
+      "É um papel de parede animado ou um protetor de tela?",
+      "É uma camada sobre a mesa. Seu papel de parede continua no lugar, e a animação pode aparecer atrás ou sobre as janelas abertas enquanto você usa o Mac. Ele não substitui o protetor de tela do macOS."
+    ],
+    [
+      "Funciona com várias telas?",
+      "Sim. O app cria uma camada para cada tela conectada e atualiza as camadas quando a configuração das telas muda."
+    ],
+    [
+      "Ainda consigo clicar nos meus apps e na mesa?",
+      "Sim. As janelas das camadas ignoram o mouse, então você pode clicar através delas e usar o Mac normalmente. O modo Somente na mesa coloca os efeitos atrás das janelas."
+    ],
+    [
+      "Posso usar minhas próprias imagens?",
+      "Sim. Importe até 10 imagens em formatos comuns ou SVG, escolhendo os arquivos ou arrastando-os; o Wonderfall cuida do tamanho. Escolha uma ou misture várias, com movimento de neve, de folhas ou de chuva."
+    ],
+    [
+      "Posso colocar luzes de Natal sem a neve?",
+      "Sim. Os cordões de luzes têm controles separados dos efeitos de clima, então você pode iluminar a barra de menus sem a neve cair."
+    ],
+    [
+      "O efeito de chuva tem som?",
+      "O efeito de chuva é uma camada visual sobre a mesa. Ele não inclui som ambiente de chuva nem música."
+    ],
+    [
+      "Quais Macs são compatíveis?",
+      "O Wonderfall requer o macOS {minimum_os} ou posterior. É um app para Mac; não é um app para iPhone ou iPad."
+    ],
+    [
+      "Precisa de conexão com a internet?",
+      "Os efeitos, os ajustes e as imagens personalizadas funcionam localmente no seu Mac. Para baixar e atualizar é preciso internet. A combinação opcional com o clima também precisa de internet e da permissão de localização para usar o Apple WeatherKit."
+    ],
+    [
+      "Como desligo os efeitos?",
+      "Use os controles da barra de menus para desativar os efeitos de clima ou as luzes, ou encerre o app. Abrir ao iniciar sessão é um ajuste separado."
+    ]
+  ],
+  "blog_title": "Um pouco de inspiração para o seu espaço de trabalho",
+  "read": "Ler o guia",
+  "all_posts": "Todos os artigos",
+  "blog_meta_title": "Guias para a mesa do Mac e efeitos sazonais | Wonderfall",
+  "blog_description": "Guias práticos para personalizar a mesa do Mac: neve e chuva sobre a tela, efeitos sazonais, luzes decorativas e imagens personalizadas.",
+  "blog_intro": "Guias práticos para dar um pouco mais de atmosfera ao seu Mac. Comece pelo básico e depois deixe tudo do seu jeito",
+  "cta_title": "Uma pequena mudança. Uma sensação diferente",
+  "cta_text": "Dê ao seu Mac uma estação só dele. Comece com a neve e veja aonde a inspiração leva você",
+  "footer_line": "Efeitos sazonais para a mesa, feitos para o Mac",
+  "featured_on": "Destaque em",
+  "macbase_badge_alt": "Wonderfall em destaque no MacBase",
+  "footer_groups": [
+    "Guias",
+    "Produto",
+    "Jurídico",
+    "Contato"
+  ],
+  "privacy": "Política de privacidade",
+  "support": "Suporte",
+  "contact": "Falar com o Andrew",
+  "author": "Por Andrew Sereda, desenvolvedor do Wonderfall",
+  "support_title": "Suporte e configuração do Wonderfall para Mac",
+  "support_description": "Ajuda com o Wonderfall no Mac: controles da barra de menus, temas, camadas, importação de imagens e contato com o desenvolvedor.",
+  "support_intro": "Use o ícone da barra de menus para escolher um efeito sazonal, ajustar o movimento, adicionar cordões de luzes ou importar suas próprias imagens",
+  "support_sections": [
+    [
+      "Primeiros passos",
+      "Baixe o Wonderfall na Mac App Store, abra o app e clique no ícone dele na barra de menus para escolher um tema em “Efeitos de clima”. A janela de ajustes não precisa ficar aberta."
+    ],
+    [
+      "Não estou vendo nenhum efeito",
+      "Verifique se “Efeitos de clima” está ativado e se o app está aberto. Experimente “Toda a tela” e a posição “Sobre o conteúdo”. No modo “Somente na mesa”, os efeitos ficam atrás das janelas, então uma janela maximizada pode escondê-los. Aumente a intensidade se o efeito estiver discreto demais."
+    ],
+    [
+      "Importar suas próprias artes",
+      "Escolha “Sua imagem” e adicione imagens pelo seletor de arquivos ou arrastando-as para a galeria. O limite é de 10 imagens; formatos comuns e SVG funcionam, e o Wonderfall prepara o tamanho automaticamente. Fundos transparentes deixam as bordas limpas. Escolha um movimento de neve, de folhas ou de chuva."
+    ],
+    [
+      "Controlar as luzes separadamente",
+      "Os controles dos cordões de luzes permitem enfeitar a barra de menus. As luzes e os efeitos de clima funcionam de forma independente, então dá para usar as luzes sozinhas."
+    ],
+    [
+      "Desativar a abertura automática",
+      "Use o ajuste “Abrir ao iniciar sessão” para escolher se o app abre quando você inicia a sessão. Encerre o app pelos controles dele na barra de menus."
+    ],
+    [
+      "Falar com o desenvolvedor",
+      "Escreva para hello@andrewsereda.com informando a versão do macOS, a versão do app, a configuração das suas telas e os passos que reproduzem o problema. Evite anexar conteúdo pessoal ou sensível."
+    ]
+  ],
+  "picker_title": "Escolha um efeito",
+  "picker_intro": "O que deixaria este momento um pouco diferente?",
+  "picker_footer": "Seu papel de parede e suas janelas abertas continuam do jeito que estão.",
+  "folder_labels": [
+    "Notas",
+    "Projetos",
+    "Fotos"
+  ],
+  "device_alt": "Moldura de tela para os vídeos dos efeitos sazonais.",
+  "screen_label": "Prévia em vídeo do efeito sazonal",
+  "desktop_label": "Mesa",
+  "desktop_time": "seg. 9:41",
+  "desktop_menu": [
+    "Arquivo",
+    "Editar",
+    "Visualizar"
+  ],
+  "hero_line": "Efeitos para a mesa do Mac",
+  "hero_phrases": [
+    {
+      "text": "Neve de inverno",
+      "icon": "❄️"
+    },
+    {
+      "text": "Chuva",
+      "icon": "🌧️"
+    },
+    {
+      "text": "Folhas de outono",
+      "icon": "🍂"
+    },
+    {
+      "text": "Pétalas de primavera",
+      "icon": "🌸"
+    },
+    {
+      "text": "Vaga-lumes de verão",
+      "icon": "✨"
+    }
+  ],
+  "cookie_settings": "Ajustes de cookies",
+  "navigation_ui": {
+    "main": "Navegação principal",
+    "menu": "Menu",
+    "language": "Escolher idioma",
+    "sections": "Seções do site",
+    "home": "Início"
+  },
+  "product_title": "Efeitos para a mesa do Mac. Seu papel de parede fica",
+  "product_summary": "O Wonderfall adiciona neve, chuva, folhas de outono, pétalas de primavera e vaga-lumes animados à mesa do seu Mac. Deixe os efeitos atrás das janelas ou flutuando sobre os seus apps, com o seu próprio papel de parede por baixo",
+  "product_facts": [
+    [
+      "Plataforma",
+      "macOS {minimum_os}+"
+    ],
+    [
+      "Posição",
+      "Sobre as janelas ou somente na mesa"
+    ],
+    [
+      "Suas artes",
+      "Até 10 imagens personalizadas, incluindo SVG"
+    ]
+  ],
+  "setup_link": "Como colocar neve na mesa do seu Mac (em inglês)",
+  "released_description": "O Wonderfall é um app da barra de menus do Mac com neve, chuva, folhas, pétalas, vaga-lumes, imagens personalizadas e luzes decorativas animadas. Ele mantém o seu papel de parede atual e requer o macOS {minimum_os} ou posterior.",
+  "released_features": [
+    "Neve, chuva, folhas de outono, pétalas de primavera e vaga-lumes de verão animados",
+    "Imagens personalizadas com vários estilos de movimento",
+    "Luzes decorativas com oito cenas ao longo da barra de menus ou do Dock",
+    "Montes de neve, gotas de chuva e montes de folhas, com pá, rodo e vassoura",
+    "Neve sobre as janelas abertas, bolas de neve, boneco de neve e limpa-neve",
+    "Combinação opcional com o clima",
+    "Efeitos sobre as janelas ou somente na mesa",
+    "Intensidade, tamanho, velocidade e vento ajustáveis"
+  ],
+  "reviews_ui": {
+    "title": "Um pouco de encanto, nas palavras deles",
+    "summary": "{value} de 5 · {count} avaliações na Ucrânia",
+    "rating": "Nota {rating} de 5 estrelas",
+    "country": "Ucrânia",
+    "checked": "App Store da Ucrânia, consultada em {date}"
+  },
+  "updated_label": "Atualizado",
+  "icon_alt": "Ícone do app Wonderfall",
+  "footer_nav_label": "Navegação do rodapé",
+  "breadcrumb_label": "Trilha de navegação",
+  "decimal": ",",
+  "press_label": "Imprensa (em inglês)",
+  "privacy_description": "Como o Wonderfall trata os dados locais do app, as estatísticas de uso, os relatórios de falhas, a localização opcional, a análise do site e as escolhas de cookies."
+}

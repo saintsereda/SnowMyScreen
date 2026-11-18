@@ -71,8 +71,8 @@ html.has-bubble-menu, html.has-bubble-menu body { overflow: hidden; }
 .site-navigation__language { position: absolute; z-index: 2; top: 8px; right: 24px; border: 0; pointer-events: auto; }
 .site-navigation__language summary { list-style: none; font-size: 15px; font-weight: 750; letter-spacing: .02em; }
 .site-navigation__language summary::-webkit-details-marker { display: none; }
-.site-navigation__languages { position: absolute; top: calc(100% + 12px); right: 0; display: grid; gap: 4px; min-width: 172px; padding: 8px; border-radius: 20px; background: var(--nav-menu); box-shadow: 0 12px 36px #10193224; }
-.site-navigation__languages a { padding: 12px; border-radius: 12px; font-size: 15px; }
+.site-navigation__languages { position: absolute; top: calc(100% + 12px); right: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 4px; width: min(340px, calc(100vw - 32px)); padding: 8px; border-radius: 20px; background: var(--nav-menu); box-shadow: 0 12px 36px #10193224; }
+.site-navigation__languages a { padding: 10px 12px; border-radius: 12px; font-size: 15px; }
 .site-navigation__languages a:is(:hover, [aria-current]) { background: var(--nav-hover); }
 .site-navigation__toggle { display: none; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; margin-left: auto; padding: 0; border: 0; border-radius: 50%; color: inherit; background: transparent; }
 .site-navigation__toggle:hover { background: var(--nav-hover); }

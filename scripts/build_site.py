@@ -24,9 +24,22 @@ LOCALES = {
     'en': {'label':'English', 'og':'en_US', 'font':'latin'},
     'uk': {'label':'Українська', 'og':'uk_UA', 'font':'cyrillic'},
     'de': {'label':'Deutsch', 'og':'de_DE', 'font':'latin'},
+    'fr': {'label':'Français', 'og':'fr_FR', 'font':'latin'},
+    'es': {'label':'Español', 'og':'es_ES', 'font':'latin'},
+    'pt': {'label':'Português (Brasil)', 'og':'pt_BR', 'font':'latin', 'tag':'pt-BR'},
+    'pl': {'label':'Polski', 'og':'pl_PL', 'font':'latin'},
+    'cs': {'label':'Čeština', 'og':'cs_CZ', 'font':'latin'},
+    'tr': {'label':'Türkçe', 'og':'tr_TR', 'font':'latin'},
+    'ja': {'label':'日本語', 'og':'ja_JP', 'font':'latin'},
+    'zh': {'label':'简体中文', 'og':'zh_CN', 'font':'latin', 'tag':'zh-Hans'},
+    'hi': {'label':'हिन्दी', 'og':'hi_IN', 'font':'latin'},
 }
 LANGS = tuple(LOCALES)
 FULL_LANGS = ('en', 'uk')
+
+def tag(lang):
+    """BCP 47 tag for html lang, hreflang and inLanguage; the URL path keeps the short code."""
+    return LOCALES[lang].get('tag', lang)
 E = html.escape
 # Each guide lives in content/articles/<slug>/{en,uk}.html; drafts stay out of the build.
 ARTICLES = sorted((a for a in json.loads((ROOT/'content/articles/articles.json').read_text())['articles'] if a['status']=='published'),
@@ -86,7 +99,7 @@ def navigation(c, suffix='', preview=False):
     mobile_items=[(f'{url(lang)}#{anchor}',label,'') for anchor,label in zip(('effects','features','faq'),c['nav'][:3])]
     mobile_items.extend([(url(lang,'blog/'),c['nav'][3],current),(STORE,c['short_cta'],'')])
     mobile_links=''.join(f'<li class="pill-col"><a class="pill-link" href="{href}"{state}><span class="pill-label">{E(label)}</span></a></li>' for href,label,state in mobile_items)
-    languages=''.join(f'<a href="{url(locale,suffix)}" lang="{locale}" hreflang="{locale}"'+(' aria-current="page"' if locale==lang else '')+f'>{LOCALES[locale]["label"]}</a>' for locale in page_langs(suffix))
+    languages=''.join(f'<a href="{url(locale,suffix)}" lang="{tag(locale)}" hreflang="{tag(locale)}"'+(' aria-current="page"' if locale==lang else '')+f'>{LOCALES[locale]["label"]}</a>' for locale in page_langs(suffix))
     return f'''<header class="site-navigation{' has-hero' if preview else ''}" data-site-navigation data-nav-motion="{asset('/js/mobile-menu.js')}">
 <nav class="site-navigation__capsule" aria-label="{E(ui['main'])}">
 <a class="site-navigation__brand" href="{url(lang)}" aria-label="Wonderfall, {E(ui['home'])}" data-brand-link>{brand_icon()}<span class="site-navigation__wordmark">Wonderfall</span></a>
@@ -108,16 +121,16 @@ def page(c, suffix, *args, **kwargs):
 def _page(c, suffix, title, description, body, schemas=(), article=None, preview=False):
     lang=c['lang']; canonical=ORIGIN+url(lang,suffix)
     webpage={'@type':'WebPage','@id':canonical+'#page','url':canonical,'name':title,
-             'description':description,'inLanguage':lang,'isPartOf':{'@id':ORIGIN+'/#website'},
+             'description':description,'inLanguage':tag(lang),'isPartOf':{'@id':ORIGIN+'/#website'},
              'dateModified':UPDATED,'about':{'@id':ORIGIN+'/#app'}}
     if preview:webpage['mainEntity']={'@id':ORIGIN+'/#app'}
     graph=[{'@type':'WebSite','@id':ORIGIN+'/#website','name':'Wonderfall','alternateName':'SnowMyScreen',
-            'url':ORIGIN+'/','inLanguage':list(LANGS),'publisher':{'@id':ORIGIN+'/#andrew'}},
+            'url':ORIGIN+'/','inLanguage':[tag(locale) for locale in LANGS],'publisher':{'@id':ORIGIN+'/#andrew'}},
            {'@type':'Person','@id':ORIGIN+'/#andrew','name':'Andrew Sereda',
             'alternateName':'Andrii Sereda','url':'https://github.com/saintsereda',
             'sameAs':['https://x.com/andrew_sereda','https://www.threads.com/@saintsereda']},
            webpage, *schemas]
-    alternates=''.join(f'<link rel="alternate" hreflang="{locale}" href="{ORIGIN+url(locale,suffix)}">' for locale in page_langs(suffix))
+    alternates=''.join(f'<link rel="alternate" hreflang="{tag(locale)}" href="{ORIGIN+url(locale,suffix)}">' for locale in page_langs(suffix))
     other_locales=''.join(f'<meta property="og:locale:alternate" content="{LOCALES[locale]["og"]}">' for locale in page_langs(suffix) if locale!=lang)
     feed=url(lang,'blog/feed.xml')
     closing='data-closing-screen' in body
@@ -129,7 +142,7 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
     closing_script=f'<script src="{asset("/js/closing-screen.js")}" defer></script>' if closing else ''
     article_meta=f'<meta property="article:published_time" content="{article["published"]}T09:00:00+02:00"><meta property="article:modified_time" content="{article["updated"]}T09:00:00+02:00">' if article else ''
     return f'''<!doctype html>
-<html lang="{lang}">
+<html lang="{tag(lang)}">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(description)}">
@@ -392,7 +405,7 @@ def homepage(c):
 <div class="faq-region"><section class="section faq-section wrap" id="faq"><div><h2>{E(c['faq_title'])}</h2><a class="text-link" href="{url(c['lang'],'support/')}">{E(c['support'])} ↗</a></div><div class="faq-list">{faq}</div></section></div>
 {product_overview(c)}
 {featured_on(c,True)}{closing_screen(c)}'''
-    faq_schema={'@type':'FAQPage','@id':ORIGIN+url(c['lang'])+'#faq','inLanguage':c['lang'],
+    faq_schema={'@type':'FAQPage','@id':ORIGIN+url(c['lang'])+'#faq','inLanguage':tag(c['lang']),
                 'mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in c['faq']]}
     return page(c,'',c['title'],c['description'],body,[app_schema(c),faq_schema],preview=True)
 
@@ -471,6 +484,7 @@ ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
 ET.register_namespace('xhtml', 'http://www.w3.org/1999/xhtml')
 ns='{http://www.sitemaps.org/schemas/sitemap/0.9}'
 sitemap=ET.Element(ns+'urlset')
+other_languages=[]
 for lang in LANGS:
     c=json.loads((ROOT/'content'/f'{lang}.json').read_text())
     substitutions={'store_name':STORE_DATA['name'],'version':STORE_DATA['version'],
@@ -488,14 +502,17 @@ for lang in LANGS:
     write(url(lang,'support/index.html'),page(c,'support/',c['support_title'],c['support_description'],body))
     if lang in FULL_LANGS: write(url(lang,'press/index.html'),press_page(c))
     write_privacy(c)
+    if lang not in FULL_LANGS:
+        privacy_title=json.loads((ROOT/'content/privacy.json').read_text())[lang]['title']
+        other_languages.append(f'## {LOCALES[lang]["label"]}\n- [{c["title"]}]({ORIGIN}{url(lang)})\n- [{c["support_title"]}]({ORIGIN}{url(lang,"support/")})\n- [{privacy_title}]({ORIGIN}{url(lang,"privacy.html")})')
     for suffix in ('','blog/',*('blog/'+a['slug']+'/' for a in ARTICLES),'support/','press/','privacy.html'):
         if lang not in page_langs(suffix): continue
         entry=ET.SubElement(sitemap,ns+'url'); ET.SubElement(entry,ns+'loc').text=ORIGIN+url(lang,suffix); ET.SubElement(entry,ns+'lastmod').text=UPDATED
         for alternate in (*page_langs(suffix),'x-default'):
-            ET.SubElement(entry,'{http://www.w3.org/1999/xhtml}link',rel='alternate',hreflang=alternate,href=ORIGIN+url('en' if alternate=='x-default' else alternate,suffix))
+            ET.SubElement(entry,'{http://www.w3.org/1999/xhtml}link',rel='alternate',hreflang=tag(alternate) if alternate in LOCALES else alternate,href=ORIGIN+url('en' if alternate=='x-default' else alternate,suffix))
 write('/sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n'+ET.tostring(sitemap,encoding='unicode')+'\n')
 write('/robots.txt','User-agent: *\nAllow: /\nDisallow: /content/\nDisallow: /scripts/\n\nSitemap: '+ORIGIN+'/sitemap.xml\n')
 guides={lang:'\n'.join(f'- [{a[lang]["title"]}]({ORIGIN}{url(lang,"blog/"+a["slug"]+"/")}): {a[lang]["description"]}' for a in ARTICLES) for lang in FULL_LANGS}
-write('/llms.txt',(ROOT/'content/llms-template.txt').read_text().format(origin=ORIGIN,**substitutions,checked_at=STORE_DATA['checked_at'],guides_en=guides['en'],guides_uk=guides['uk']))
+write('/llms.txt',(ROOT/'content/llms-template.txt').read_text().format(origin=ORIGIN,**substitutions,checked_at=STORE_DATA['checked_at'],guides_en=guides['en'],other_languages='\n\n'.join(other_languages),guides_uk=guides['uk']))
 write('/download.html',(ROOT/'content/download-template.html').read_text().replace('__ORIGIN__',ORIGIN))
 print(f'Generated {3*len(LANGS)+len(FULL_LANGS)*(2+len(ARTICLES))+1} static pages ({", ".join(LANGS)}; {len(ARTICLES)} guides in {"/".join(FULL_LANGS)}), {len(FULL_LANGS)} RSS feeds, sitemap.xml, robots.txt and llms.txt.')

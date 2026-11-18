@@ -12,9 +12,13 @@ ORIGIN=SITE['origin'].rstrip('/')
 ARTICLES={a['slug']:a for a in json.loads((ROOT/'content/articles/articles.json').read_text())['articles'] if a['status']=='published'}
 # Site languages are the content/<lang>.json files; blog guides and the press kit exist only in the
 # languages every published guide is written in.
-LANGS={p.stem for p in (ROOT/'content').glob('*.json') if json.loads(p.read_text()).get('lang')==p.stem}
+LOCALE_FILES={p.stem:json.loads(p.read_text()) for p in (ROOT/'content').glob('*.json')}
+LANGS={code for code,c in LOCALE_FILES.items() if c.get('lang')==code}
 FULL_LANGS={lang for lang in LANGS if all(lang in a for a in ARTICLES.values())}
 assert {'en','uk'}<=FULL_LANGS<=LANGS
+# html lang / hreflang tag -> URL code (pt-BR -> pt, zh-Hans -> zh)
+CODE={LOCALE_FILES[code].get('html_lang',code):code for code in LANGS}
+TAGS=lambda codes:{tag for tag,code in CODE.items() if code in codes}
 def home(lang): return '/' if lang=='en' else f'/{lang}/'
 UI_BUILD=json.loads((ROOT/'content/ui-build.json').read_text())
 ui_sources={p.relative_to(ROOT).as_posix() for p in (ROOT/'src').rglob('*') if p.is_file()}
@@ -53,7 +57,8 @@ expected=3*len(LANGS)+len(FULL_LANGS)*(2+len(ARTICLES))+1
 assert len(pages)==expected+1, f'Expected {expected} generated pages plus 404; got {len(pages)}'
 canonicals={};descriptions=set()
 for path,page in pages.items():
-    assert page.lang in LANGS, path
+    assert page.lang in CODE, path
+    code=CODE[page.lang]
     for script in ('/js/analytics.js','/js/site-analytics.js','/js/cookie-banner.js'):
         assert sum(t=='script' and a.get('src')==script for t,a in page.tags)==1,(path,script)
     assert sum(t=='link' and a.get('href')=='/css/cookies.css' for t,a in page.tags)==1,path
@@ -75,8 +80,8 @@ for path,page in pages.items():
         assert page.attr('meta','property','og:image','content')==[ORIGIN+'/images/wonderfall-icon.png'],path
         assert page.attr('meta','name','twitter:image','content')==[ORIGIN+'/images/wonderfall-icon.png'],path
         alternates={a['hreflang']:a['href'] for t,a in page.tags if t=='link' and a.get('hreflang')}
-        suffix=urlsplit(canonical).path.removeprefix(home(page.lang))
-        assert set(alternates)==(FULL_LANGS if suffix.startswith(('blog/','press/')) else LANGS)|{'x-default'},path
+        suffix=urlsplit(canonical).path.removeprefix(home(code))
+        assert set(alternates)==TAGS(FULL_LANGS if suffix.startswith(('blog/','press/')) else LANGS)|{'x-default'},path
         assert alternates['x-default']==ORIGIN+'/'+suffix,path
         assert alternates[page.lang]==canonical,path
         for locale,link in alternates.items():
@@ -102,7 +107,7 @@ for path,page in pages.items():
         for item in graph:
             if item.get('@type')=='FAQPage':
                 details=sum(t=='details' and 'data-nav-language' not in a for t,a in page.tags)
-                locale=json.loads((ROOT/'content'/f'{page.lang}.json').read_text())
+                locale=LOCALE_FILES[code]
                 assert len(item['mainEntity'])==details==len(locale['faq']),path
                 source=path.read_text()
                 for q in item['mainEntity']:
@@ -122,7 +127,7 @@ for path,page in pages.items():
                 assert item['offers']['price']==STORE_DATA['offer']['price'],path
                 assert item['offers']['priceCurrency']==STORE_DATA['offer']['currency'],path
                 assert 'aggregateRating' not in item and 'review' not in item,'Imported App Store reviews are shown with attribution, not marked up as ratings collected by this site.'
-                locale=json.loads((ROOT/'content'/f'{page.lang}.json').read_text())
+                locale=LOCALE_FILES[code]
                 assert item['featureList']==locale['released_features'],path
     if path in [(ROOT/home(lang).lstrip('/')/'index.html').resolve() for lang in LANGS]:
         source=path.read_text()

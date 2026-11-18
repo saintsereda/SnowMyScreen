@@ -1,0 +1,365 @@
+{
+  "lang": "cs",
+  "locale": "cs_CZ",
+  "other_label": "English",
+  "skip": "Přejít na obsah",
+  "nav": [
+    "Efekty",
+    "Funkce",
+    "Časté dotazy",
+    "Blog"
+  ],
+  "download": "Stáhnout z Mac App Storu",
+  "short_cta": "Stáhnout",
+  "title": "Efekty na plochu Macu: sníh, déšť a další | Wonderfall",
+  "description": "Efekty na plochu Macu: sníh, déšť, listí, světlušky, světýlka a vlastní obrázky. Ponechte si tapetu a nalaďte pohyb ve Wonderfallu.",
+  "hero": "Efekty na plochu Macu.\nJiné roční období.",
+  "hero_headline": "Kousek vánočního kouzla pro váš Mac",
+  "intro": "Padá sníh, podél horního okraje obrazovky svítí girlanda, kolem proletí Santa se soby a na ploše stojí vánoční stromek. Déšť, listí a okvětní lístky čekají na zbytek roku",
+  "compat": "Pro macOS {minimum_os} a novější",
+  "updates_released": "Wonderfall 1.4 je venku: podívejte se, co je nového",
+  "preview_label": "Vyberte atmosféru",
+  "preview_note": "Vyberte efekt a podívejte se na náhled. Vaše tapeta zůstane přesně taková, jaká je",
+  "benefits_label": "Další způsoby, jak si ho přizpůsobit",
+  "benefits": [
+    "Ponechte si tapetu. Efekty se zobrazují nad okny nebo za nimi.",
+    "Přidejte světla podél horního řádku nabídek, nezávisle na efektech počasí.",
+    "Použijte vlastní obrázky a přizpůsobte pohyb své ploše."
+  ],
+  "showcase": {
+    "title": "Vaše plocha. Váš malý zázrak",
+    "weather_title": "Řiďte se počasím venku",
+    "weather_text": "Automaticky přizpůsobte efekt počasí venku, se sezónními efekty pro jasné dny",
+    "weather_outside": "Venku",
+    "weather_desktop": "Vaše plocha",
+    "weather_snow": "Sněží",
+    "weather_rain": "Prší",
+    "weather_clear": "Jasno na podzim",
+    "weather_snow_description": "Venku sněží. Sněhové vločky na vaší ploše.",
+    "weather_rain_description": "Venku prší. Dešťové kapky na vaší ploše.",
+    "weather_clear_description": "Jasný podzimní den. Listí na vaší ploše.",
+    "cleaning_title": "Trochu počasí. Trochu hraní",
+    "cleaning_text": "Odhrňte sníh, zameťte listí a okvětní lístky nebo setřete dešťové kapky. I úklid plochy může být trochu uspokojivý",
+    "cleaning_snow": "Odhrnout sníh",
+    "cleaning_leaves": "Zamést listí",
+    "cleaning_rain": "Setřít kapky",
+    "cleaning_hint": "Tažením uklidíte. Na dotykové obrazovce přejeďte do strany.",
+    "cleaning_clear": "Vyčistit obrazovku",
+    "cleaning_reset": "Vrátit počasí",
+    "cleaning_cleared": "Hotovo. Vraťte počasí a zkuste to znovu.",
+    "garland_title": "Rozzařte horní okraj",
+    "garland_text": "Řetěz světel podél horního řádku nabídek. Vyberte barvy, tvary žárovek a animaci, s počasím nebo bez něj",
+    "garland_menu": "Řádek nabídek",
+    "palette_warm": "Teplá světla",
+    "palette_color": "Barevná světla",
+    "palette_ice": "Ledová světla",
+    "images_title": "Ať padá něco vašeho",
+    "images_text": "Přidejte až 10 obrázků a proměňte své motivy v padající tvary. Použijte jeden, nebo jich smíchejte několik",
+    "motion_title": "Najděte svůj ideální pohyb",
+    "motion_text": "Dolaďte intenzitu, velikost, rychlost a vítr",
+    "placement_title": "Přesně tam, kde to chcete",
+    "placement_text": "Nad aplikacemi, nebo za okny. Přes celou obrazovku, nebo jen v úzkém pruhu nahoře",
+    "placement_over": "Nad okny",
+    "placement_desktop": "Pouze na ploše",
+    "placement_over_description": "Sníh se zobrazuje nad otevřenými okny.",
+    "placement_desktop_description": "Sníh zůstává za otevřenými okny.",
+    "placement_strip": "Horní pruh",
+    "placement_strip_description": "Efekty zůstávají u horního okraje.",
+    "placement_full_description": "Efekty pokrývají celou obrazovku.",
+    "displays_title": "Jeden displej, nebo celý stůl",
+    "displays_text": "Vyberte, na kterých připojených obrazovkách se efekty zobrazí",
+    "weather_label": "Vyzkoušejte změnu počasí",
+    "cleaning_label": "Vyzkoušejte úklidový nástroj",
+    "palette_label": "Vyberte barvy světel",
+    "garland_scenes_label": "Vyberte světelnou scénu",
+    "scene_winterNight": "Zimní noc",
+    "scene_cozyEvening": "Útulný večer",
+    "scene_springBloom": "Jarní květy",
+    "scene_celebration": "Oslava",
+    "image_choose": "Vybrat obrázek",
+    "image_file_error": "Vyberte obrázek PNG, JPEG nebo WebP menší než 5 MB.",
+    "image_ready": "Váš obrázek teď padá v náhledu.",
+    "placement_label": "Vyberte, kde se efekty zobrazí",
+    "displays_label": "Efekty na dvou připojených displejích",
+    "cleaning_media_alt": "Spadané listí nahromaděné podél spodního okraje plochy.",
+    "cleaning_snow_alt": "Lopata odhrnuje padající sníh z plochy.",
+    "cleaning_leaves_alt": "Koště zametá spadané listí z plochy.",
+    "cleaning_rain_alt": "Stěrka stírá dešťové kapky z plochy.",
+    "garland_media_alt": "Různé girlandy se střídají podél horního řádku nabídek.",
+    "garland_winterNight_alt": "Girlanda se světly ve tvaru stromečků třpytí u horního okraje.",
+    "garland_cozyEvening_alt": "Girlanda s teplými žárovkami svítí u horního okraje.",
+    "garland_springBloom_alt": "Girlanda s růžovými srdíčky třpytí u horního okraje.",
+    "garland_celebration_alt": "Girlanda s barevnými hvězdičkami třpytí u horního okraje.",
+    "images_media_alt": "Vlastní motivy jako padající efekty na ploše.",
+    "placement_media_alt": "Sníh nad oknem prohlížeče i za ním, s vločkami různé velikosti."
+  },
+  "preview_name": "Udělejte místo malému zázraku.",
+  "preview_detail": "Stejná plocha. Nová atmosféra.",
+  "effects_kicker": "Šest způsobů, jak navodit atmosféru",
+  "effects_title": "Víc než sněhový den",
+  "effects_intro": "Vyberte sezónní efekt nebo vlastní motivy a pak upravte intenzitu, velikost, rychlost a vítr, dokud vám výsledek nebude sedět",
+  "themes": [
+    [
+      "snow",
+      "Zimní sníh",
+      "Měkké vločky, jemné unášení a kousek zimního kouzla. Vybírejte z vestavěných tvarů sněhových vloček.",
+      "❄️"
+    ],
+    [
+      "rain",
+      "Déšť",
+      "Od lehkého mrholení po vytrvalou přeháňku. Nalaďte vítr, velikost kapek a intenzitu.",
+      "🌧️"
+    ],
+    [
+      "leaves",
+      "Podzimní listí",
+      "Jantarové a karmínové listy poletují po ploše ve větru, který ovládáte vy.",
+      "🍂"
+    ],
+    [
+      "petals",
+      "Jarní okvětní lístky",
+      "Růžové okvětní lístky se vznášejí vaším pracovním prostorem a změna ročního období je hned jemnější.",
+      "🌸"
+    ],
+    [
+      "fireflies",
+      "Letní světlušky",
+      "Teplé světelné body putují po obrazovce a přinášejí letní večer dovnitř.",
+      "✨"
+    ],
+    [
+      "custom",
+      "Vlastní obrázky",
+      "Importujte vlastní obrázky a nechte je padat jako sníh, poletovat jako listí nebo stékat jako déšť.",
+      "＋"
+    ]
+  ],
+  "features_kicker": "Drobné detaily. Vaše atmosféra.",
+  "features_title": "Aby plocha byla opravdu vaše",
+  "features": [
+    [
+      "Ponechte si tapetu",
+      "Efekty jsou průhledné vrstvy. Pozadí plochy, které máte rádi, zůstane."
+    ],
+    [
+      "Vyberte, kde se zobrazí",
+      "Zobrazte animaci nad otevřenými okny, nebo na ploše za nimi. Použijte celou obrazovku, nebo pruh vysoký 150 bodů nahoře."
+    ],
+    [
+      "Nalaďte pohyb",
+      "Upravte intenzitu, velikost částic, rychlost a vítr. Sníh, listí a okvětní lístky mají navíc nastavení unášení."
+    ],
+    [
+      "Přidejte trochu světla",
+      "Ozdobte horní řádek nabídek girlandami. Vyberte barvy, tvary žárovek a animaci: stálé svícení, třpyt, vlnu nebo běžící světla."
+    ],
+    [
+      "Po svém",
+      "Přidejte až 10 obrázků najednou, vyberte je nebo smíchejte a zvolte styl pohybu. Fungují běžné formáty i SVG a nejlépe vypadá průhledné pozadí."
+    ],
+    [
+      "Pracujte nerušeně",
+      "Klikejte skrz vrstvy a používejte Mac jako obvykle. Efekty ovládejte z řádku nabídek a případně je nechte spouštět při přihlášení."
+    ]
+  ],
+  "steps_title": "Vaše první sněžení ve třech krocích",
+  "steps": [
+    [
+      "Nainstalujte a otevřete",
+      "Stáhněte Wonderfall z Mac App Storu a otevřete jeho ikonu v řádku nabídek."
+    ],
+    [
+      "Vyberte sněhové vločky",
+      "Vyberte vestavěný tvar nebo importujte vlastní obrázky či grafiku SVG."
+    ],
+    [
+      "Doladění",
+      "Upravte velikost, rychlost, intenzitu a vítr. Zvolte efekty nad okny, nebo za nimi."
+    ]
+  ],
+  "faq_title": "Na co se možná ptáte",
+  "faq": [
+    [
+      "Co je Wonderfall?",
+      "Wonderfall je aplikace pro řádek nabídek macOS, která přes plochu zobrazuje animované efekty: sníh, déšť, podzimní listí, jarní okvětní lístky, letní světlušky, vaše vlastní obrázky a ozdobná světla."
+    ],
+    [
+      "Je Wonderfall zdarma?",
+      "Wonderfall je placená aplikace, v americkém Mac App Storu stojí {us_price}. Ceny se liší podle regionu a mohou se měnit; aktuální cenu najdete ve svém App Storu."
+    ],
+    [
+      "Je to živá tapeta, nebo spořič obrazovky?",
+      "Je to vrstva přes plochu. Vaše tapeta zůstává na místě a animace se může zobrazovat za otevřenými okny nebo nad nimi, zatímco Mac používáte. Spořič obrazovky macOS nenahrazuje."
+    ],
+    [
+      "Funguje s více displeji?",
+      "Ano. Aplikace vytvoří vrstvu pro každou připojenou obrazovku a aktualizuje ji, když se uspořádání displejů změní."
+    ],
+    [
+      "Mohu dál klikat na aplikace a plochu?",
+      "Ano. Okna s efekty ignorují kliknutí myší, takže klikáte skrz ně a Mac používáte normálně. V režimu „Pouze na ploše“ jsou efekty za vašimi okny."
+    ],
+    [
+      "Mohu použít vlastní obrázky?",
+      "Ano. Importujte až 10 obrázků v běžných formátech nebo SVG, výběrem souborů nebo přetažením; o velikost se postará Wonderfall. Použijte jeden, nebo jich smíchejte několik, s pohybem jako sníh, listí nebo déšť."
+    ],
+    [
+      "Mohu přidat vánoční světýlka bez sněžení?",
+      "Ano. Girlandy mají vlastní nastavení, oddělené od efektů počasí, takže horní řádek nabídek můžete rozsvítit i bez sněžení."
+    ],
+    [
+      "Má efekt deště zvuk?",
+      "Efekt deště je čistě vizuální vrstva přes plochu. Zvuky deště ani hudbu neobsahuje."
+    ],
+    [
+      "Které Macy jsou podporované?",
+      "Wonderfall vyžaduje macOS {minimum_os} nebo novější. Je to aplikace pro Mac, ne pro iPhone nebo iPad."
+    ],
+    [
+      "Potřebuje připojení k internetu?",
+      "Efekty na ploše, nastavení a vlastní obrázky fungují lokálně na vašem Macu. Stažení a aktualizace vyžadují internet. Volitelné přizpůsobení počasí také potřebuje internet a povolení k poloze, aby mohlo používat Apple WeatherKit."
+    ],
+    [
+      "Jak efekty vypnout?",
+      "Efekty počasí nebo světla vypněte v řádku nabídek, případně aplikaci ukončete. Spouštění při přihlášení je samostatné nastavení."
+    ]
+  ],
+  "blog_title": "Trocha inspirace pro váš pracovní prostor",
+  "read": "Přečíst návod",
+  "all_posts": "Všechny články",
+  "blog_meta_title": "Návody k ploše Macu | Wonderfall",
+  "blog_description": "Praktické návody k přizpůsobení plochy Macu: sníh a déšť přes plochu, sezónní efekty, ozdobná světla a vlastní obrázky.",
+  "blog_intro": "Praktické návody, jak dodat Macu trochu víc atmosféry",
+  "cta_title": "Malá změna. Jiný pocit",
+  "cta_text": "Dopřejte svému Macu vlastní roční období. Začněte sněhem a uvidíte, kam vás nálada zavede",
+  "footer_line": "Sezónní efekty na plochu, vytvořené pro Mac",
+  "featured_on": "Představeno na",
+  "macbase_badge_alt": "Wonderfall je představen na MacBase",
+  "footer_groups": ["Návody", "Produkt", "Právní informace", "Kontakt"],
+  "privacy": "Zásady ochrany soukromí",
+  "support": "Podpora",
+  "contact": "Napsat Andrewovi",
+  "author": "Autor: Andrew Sereda, vývojář Wonderfallu",
+  "support_title": "Wonderfall pro Mac: podpora a nastavení",
+  "support_description": "Pomoc s Wonderfallem na Macu: ovládání z řádku nabídek, motivy, vrstvy efektů, import obrázků a kontakt na vývojáře.",
+  "support_intro": "Pomocí ikony v řádku nabídek vyberte sezónní efekt, upravte jeho pohyb, přidejte girlandy nebo importujte vlastní obrázky",
+  "support_sections": [
+    [
+      "Začínáme",
+      "Stáhněte Wonderfall z Mac App Storu, otevřete aplikaci a klikněte na její ikonu v řádku nabídek. V části „Efekty počasí“ vyberte motiv. Okno nastavení nemusí zůstat otevřené."
+    ],
+    [
+      "Nevidím žádný efekt",
+      "Zkontrolujte, že jsou „Efekty počasí“ zapnuté a aplikace běží. Vyzkoušejte „Celá obrazovka“ a umístění „Nad obsahem“. Efekty v režimu „Pouze na ploše“ jsou za vašimi okny, takže je maximalizované okno může zakrýt. Pokud je efekt příliš nenápadný, zvyšte intenzitu."
+    ],
+    [
+      "Import vlastních motivů",
+      "Zvolte „Váš obrázek“ a přidejte obrázky výběrem souborů nebo přetažením do galerie. Limit je 10 obrázků; fungují běžné formáty i SVG a Wonderfall velikost připraví automaticky. Průhledné pozadí dává čisté okraje. Zvolte pohyb jako sníh, listí nebo déšť."
+    ],
+    [
+      "Samostatné ovládání světel",
+      "Nastavení girlandy vám umožní ozdobit horní řádek nabídek. Světla a efekty počasí fungují nezávisle, takže světla můžete používat i samostatně."
+    ],
+    [
+      "Vypnutí automatického spouštění",
+      "Volbou „Spustit při přihlášení“ určíte, zda se aplikace otevře po přihlášení. Aplikaci ukončíte z řádku nabídek."
+    ],
+    [
+      "Kontakt na vývojáře",
+      "Napište na hello@andrewsereda.com a uveďte verzi macOS, verzi aplikace, uspořádání displejů a kroky, které problém vyvolají. Nepřikládejte osobní ani citlivý obsah."
+    ]
+  ],
+  "picker_title": "Vyberte efekt",
+  "picker_intro": "Co by tuhle chvíli udělalo trochu jinou?",
+  "picker_footer": "Vaše tapeta a otevřená okna zůstanou přesně tak, jak jsou.",
+  "folder_labels": [
+    "Poznámky",
+    "Projekty",
+    "Fotky"
+  ],
+  "device_alt": "Rámeček displeje pro videa sezónních efektů.",
+  "screen_label": "Náhled videa sezónních efektů",
+  "desktop_label": "Plocha",
+  "desktop_time": "po 9:41",
+  "desktop_menu": [
+    "Soubor",
+    "Úpravy",
+    "Zobrazení"
+  ],
+  "hero_line": "Efekty na plochu Macu",
+  "hero_phrases": [
+    {
+      "text": "Zimní sníh",
+      "icon": "❄️"
+    },
+    {
+      "text": "Déšť",
+      "icon": "🌧️"
+    },
+    {
+      "text": "Podzimní listí",
+      "icon": "🍂"
+    },
+    {
+      "text": "Jarní okvětní lístky",
+      "icon": "🌸"
+    },
+    {
+      "text": "Letní světlušky",
+      "icon": "✨"
+    }
+  ],
+  "cookie_settings": "Nastavení cookies",
+  "navigation_ui": {
+    "main": "Hlavní navigace",
+    "menu": "Nabídka",
+    "language": "Vybrat jazyk",
+    "sections": "Sekce webu",
+    "home": "Domů"
+  },
+  "product_title": "Efekty na plochu Macu. Vaše tapeta zůstane",
+  "product_summary": "Wonderfall přidá na plochu Macu animovaný sníh, déšť, podzimní listí, jarní okvětní lístky a světlušky. Nechte efekty za okny, nebo je nechte plout nad aplikacemi, s vaší vlastní tapetou pod nimi",
+  "product_facts": [
+    [
+      "Platforma",
+      "macOS {minimum_os}+"
+    ],
+    [
+      "Umístění",
+      "Nad okny nebo pouze na ploše"
+    ],
+    [
+      "Vaše motivy",
+      "Až 10 vlastních obrázků, včetně SVG"
+    ]
+  ],
+  "setup_link": "Jak přidat sníh na plochu Macu (anglicky)",
+  "released_description": "Wonderfall je aplikace pro řádek nabídek Macu s animovaným sněhem, deštěm, listím, okvětními lístky, světluškami, vlastními obrázky a ozdobnými světly. Zachová vaši stávající tapetu a vyžaduje macOS {minimum_os} nebo novější.",
+  "released_features": [
+    "Animovaný sníh, déšť, podzimní listí, jarní okvětní lístky a letní světlušky",
+    "Vlastní obrázky s několika styly pohybu",
+    "Ozdobná světla s osmi scénami podél řádku nabídek nebo Docku",
+    "Závěje, dešťové kapky a hromady listí s lopatou, stěrkou a koštětem",
+    "Sníh na otevřených oknech, sněhové koule, sněhulák a sněžný pluh",
+    "Volitelné přizpůsobení počasí",
+    "Efekty nad okny nebo pouze na ploše",
+    "Nastavitelná intenzita, velikost, rychlost a vítr"
+  ],
+  "reviews_ui": {
+    "title": "Malý zázrak jejich slovy",
+    "summary": "{value} z 5 · {count} hodnocení na Ukrajině",
+    "rating": "Hodnocení {rating} z 5 hvězdiček",
+    "country": "Ukrajina",
+    "checked": "App Store Ukrajina, ověřeno {date}"
+  },
+  "updated_label": "Aktualizováno",
+  "icon_alt": "Ikona aplikace Wonderfall",
+  "footer_nav_label": "Navigace v zápatí",
+  "breadcrumb_label": "Drobečková navigace",
+  "decimal": ",",
+  "press_label": "Pro média (anglicky)",
+  "privacy_description": "Jak Wonderfall nakládá s lokálními daty aplikace, statistikami používání, hlášeními o pádech, volitelnou polohou, analytikou webu a volbou cookies.",
+  "html_lang": "cs"
+}

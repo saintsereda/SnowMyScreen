@@ -34,9 +34,6 @@
 - [Конфіденційність]({origin}/uk/privacy.html)
 - [Прес-кіт]({origin}/uk/press/)
 
-## Auf Deutsch
-- [Effekte, Bewertungen und häufige Fragen]({origin}/de/)
-- [Support]({origin}/de/support/)
-- [Datenschutz]({origin}/de/privacy.html)
+{other_languages}
 
 Developer: Andrii Sereda, also known as Andrew Sereda. Contact: hello@andrewsereda.com.

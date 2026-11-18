@@ -253,5 +253,770 @@
       "never": "Deine importierten Bilder, dein Standort, Wetterergebnisse und Bildschirminhalte sind in den Statistiken und Berichten, die wir senden, nicht enthalten.",
       "control": "Du kannst die Nutzungsstatistiken jederzeit unter Einstellungen > Allgemein ausschalten. Absturzberichte lassen sich in der App derzeit nicht ausschalten."
     }
+  },
+  "fr": {
+    "title": "Politique de confidentialité",
+    "pageTitle": "Politique de confidentialité - Wonderfall",
+    "effectiveDate": "Date d’entrée en vigueur : 31 octobre 2026",
+    "intro": {
+      "heading": "Introduction",
+      "text": "Wonderfall est une application macOS qui ajoute des effets de saison et des lumières décoratives sur le bureau. Votre confidentialité nous importe, et cette politique explique comment nous traitons vos informations. L’analyse du site web et les choix relatifs aux cookies sont décrits plus bas."
+    },
+    "shortVersion": {
+      "heading": "En bref",
+      "text1": "Vos images importées restent sur votre appareil, et l’adaptation à la météo est facultative.",
+      "text2": "L’app pour le bureau n’a ni compte ni SDK publicitaire. Elle envoie des statistiques d’utilisation anonymes, que vous pouvez désactiver dans les Réglages, ainsi que des rapports de plantage. À partir de la version 1.2, si vous activez l’adaptation à la météo locale et autorisez l’accès à la localisation, votre position est utilisée pour demander la météo au service WeatherKit d’Apple. L’analyse du site web nécessite un choix distinct, décrit plus bas."
+    },
+    "dontCollect": {
+      "heading": "Confidentialité dans l’app pour le bureau",
+      "items": [
+        "Aucune création de compte",
+        "Aucun SDK publicitaire",
+        "Aucun suivi entre apps ou sites web",
+        "Aucun envoi des images importées",
+        "Aucune capture ni aucun enregistrement de l’écran",
+        "Aucun accès au micro ni à la caméra",
+        "Aucun historique de localisation conservé par l’app"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "Ce qui reste sur votre Mac",
+      "intro": "L’app enregistre vos préférences localement sur votre appareil :",
+      "items": [
+        "Thème de l’effet, intensité et vitesse",
+        "Direction et force du vent",
+        "Formes sélectionnées et images personnelles",
+        "Emplacement des effets et réglages des lumières décoratives",
+        "Préférence de langue"
+      ],
+      "outro": "Les réglages et les images importées sont stockés localement. L’app n’envoie jamais les images importées ; les statistiques d’utilisation ne comprennent que les options décrites ci-dessous. Vous pouvez réinitialiser les préférences dans les Réglages et supprimer les images importées depuis la galerie d’images. La réinitialisation des préférences conserve les images importées. Supprimer l’app ne supprime pas nécessairement ses préférences enregistrées ni ses données."
+    },
+    "weather": {
+      "heading": "Localisation facultative et adaptation à la météo",
+      "location": "L’adaptation à la météo est désactivée par défaut. Lorsque vous l’activez et donnez votre autorisation, macOS fournit une position à l’app. L’app demande une précision de l’ordre du kilomètre ; c’est macOS qui détermine la précision fournie. Cette position est envoyée au service WeatherKit d’Apple pour obtenir la météo actuelle et choisir un effet décoratif adapté. Elle n’est pas envoyée au développeur.",
+      "storage": "L’app n’enregistre ni coordonnées ni historique de localisation dans ses préférences ou ses fichiers d’images. La position et les résultats météo sont utilisés en mémoire pour choisir les effets. Tant que la fonction est activée, la météo est normalement actualisée toutes les 30 minutes et peut l’être de nouveau après un changement d’autorisation de localisation ou au redémarrage de l’app.",
+      "control": "Vous pouvez désactiver l’adaptation à la météo dans l’app ou retirer l’accès à la localisation dans Réglages Système. Désactiver la fonction annule ses mises à jour programmées. Les thèmes choisis manuellement continuent de fonctionner sans accès à la localisation. Apple traite les requêtes WeatherKit conformément à ses propres politiques de confidentialité ; l’app récupère aussi, si nécessaire, les ressources d’attribution de Météo d’Apple.",
+      "appleWeather": "Météo d’Apple et confidentialité",
+      "applePrivacy": "Politique de confidentialité d’Apple"
+    },
+    "permissions": {
+      "heading": "Autorisations",
+      "text": "L’autorisation de localisation sert uniquement à l’adaptation facultative à la météo. Vous choisissez des fichiers PNG avec le sélecteur de fichiers du système ; l’app copie ces images dans son propre stockage local pour les réutiliser. L’ouverture à la connexion est facultative et peut être modifiée dans l’app ou dans Réglages Système. Les effets et les outils de nettoyage ne nécessitent pas l’accès à l’enregistrement de l’écran, au micro ni à la caméra."
+    },
+    "noInternet": {
+      "heading": "Effets hors ligne et services en ligne",
+      "text": "Les thèmes manuels, les lumières décoratives, les images importées et les sons de nettoyage fonctionnent hors ligne. L’adaptation à la météo locale et l’attribution de Météo d’Apple nécessitent une connexion Internet. L’ouverture des liens vers le site web et le téléchargement des mises à jour de l’App Store utilisent aussi Internet. Les statistiques d’utilisation et les rapports de plantage sont envoyés lorsque votre Mac est en ligne."
+    },
+    "updates": {
+      "heading": "Mises à jour",
+      "text": "Les achats et les mises à jour sont gérés par le Mac App Store. Apple contrôle aussi les diagnostics d’app que vous choisissez de partager via les réglages du système. Ces services suivent les politiques de confidentialité d’Apple."
+    },
+    "children": {
+      "heading": "Enfants",
+      "text": "L’app pour le bureau n’a ni compte ni publicité. Les statistiques d’utilisation et les rapports de plantage fonctionnent de la même manière pour tous les utilisateurs. L’accès facultatif à la localisation utilise les mêmes contrôles d’autorisation du système pour tous les utilisateurs. L’analyse du site web reste soumise au choix distinct relatif aux cookies décrit ci-dessous."
+    },
+    "questions": {
+      "heading": "Des questions ?",
+      "text": "Si vous écrivez à l’assistance, nous recevons votre adresse e-mail et les informations que vous choisissez d’inclure. Les échanges avec l’assistance servent à répondre à votre demande et à la résoudre, et sont conservés à cette fin. Pour toute question sur cette politique ou pour demander la suppression de vos échanges avec l’assistance, écrivez à :",
+      "email": "E-mail :"
+    },
+    "footer": "Cette politique de confidentialité peut être mise à jour de temps en temps. La version actuelle est toujours disponible ici et sur le Mac App Store.",
+    "website": {
+      "heading": "Analyse du site web et cookies",
+      "updated": "Section du site web mise à jour le 13 novembre 2026",
+      "storage": "Le site web utilise le stockage local pour mémoriser votre choix relatif aux cookies (snowmyscreen_cookie_consent_v1) et, sur la page de téléchargement, votre préférence de langue (snowmyscreen-language). Ces préférences sont enregistrées sur cet appareil.",
+      "analytics": "Si vous autorisez l’analyse, le site web charge Google Analytics 4 (ID de mesure G-VB76JMX2B6) pour mesurer les visites des pages et les informations sur le navigateur et l’appareil. Google traite ces données d’utilisation. La balise Google n’est pas chargée avant votre consentement ni tant que les cookies facultatifs sont refusés. Le consentement publicitaire reste désactivé.",
+      "cookies": "Lorsque l’analyse est activée, Google Analytics peut stocker les cookies propriétaires _ga et _ga_VB76JMX2B6 pour distinguer les navigateurs et les sessions. Ces statistiques du site web sont distinctes des statistiques d’utilisation de l’app pour le bureau.",
+      "counter": "Le site web compte aussi les pages vues et les clics sur les liens vers l’App Store avec son propre compteur sans cookies. Il n’utilise ni cookies, ni stockage du navigateur, ni identifiant de visiteur, et il fonctionne quel que soit votre choix dans le bandeau. Chaque comptage enregistre uniquement le jour, le chemin de la page, une étiquette de source (comme le site référent ou une balise de campagne) et un code pays, sous forme de totaux quotidiens ; aucune adresse IP, aucun agent utilisateur ni aucune URL complète n’est enregistré. Les comptages correspondent à des événements de navigateur, pas à des personnes.",
+      "choices": "Choisissez Tout accepter, Nécessaires uniquement ou Personnaliser dans le bandeau. Vous pouvez rouvrir les Réglages des cookies dans le pied de page à tout moment. Désactiver l’analyse supprime les cookies Google Analytics et recharge la page pour arrêter la balise en cours. Effacer le stockage du navigateur supprime votre choix enregistré.",
+      "google": "Découvrez comment Google traite ces informations :"
+    },
+    "usageData": {
+      "heading": "Statistiques d’utilisation et rapports de plantage",
+      "statistics": "L’app envoie des statistiques d’utilisation anonymes à TelemetryDeck : les thèmes, préréglages, lumières et outils de nettoyage utilisés, si des options comme l’adaptation à la météo et l’ouverture à la connexion sont activées, les versions de l’app et de macOS, le modèle de Mac, le nombre d’écrans et la région définie sur votre Mac. Les statistiques utilisent un identifiant haché, et non votre nom ou un compte. Elles nous aident à choisir les fonctionnalités à améliorer.",
+      "crash": "L’app envoie aussi à Sentry des rapports de plantage et d’erreur, des données de session et un échantillon de données de performance. Ils peuvent inclure la version de l’app, des détails sur l’appareil et le système, ainsi que des informations techniques sur la panne. La collecte par défaut des données personnelles est désactivée.",
+      "never": "Vos images importées, votre position, les résultats météo et le contenu de votre écran ne figurent pas dans les statistiques ni dans les rapports que nous envoyons.",
+      "control": "Vous pouvez désactiver les statistiques d’utilisation à tout moment dans Réglages > Général. Les rapports de plantage ne peuvent pas être désactivés dans l’app pour le moment."
+    }
+  },
+  "es": {
+    "title": "Política de privacidad",
+    "pageTitle": "Política de privacidad - Wonderfall",
+    "effectiveDate": "Fecha de entrada en vigor: 31 de octubre de 2026",
+    "intro": {
+      "heading": "Introducción",
+      "text": "Wonderfall es una aplicación para macOS que añade efectos de temporada y luces decorativas al escritorio. Tu privacidad nos importa, y esta política explica cómo tratamos tu información. La analítica del sitio web y las preferencias de cookies se describen más abajo."
+    },
+    "shortVersion": {
+      "heading": "En resumen",
+      "text1": "Las imágenes que importas se quedan en tu dispositivo, y la adaptación al tiempo es opcional.",
+      "text2": "La app de escritorio no tiene cuentas ni SDK de publicidad. Envía estadísticas de uso anónimas, que puedes desactivar en Ajustes, e informes de fallos. En la versión 1.2 y posteriores, si activas la adaptación al tiempo local y permites el acceso a la ubicación, tu ubicación se usa para pedir el tiempo al servicio WeatherKit de Apple. La analítica del sitio web requiere una elección aparte, descrita más abajo."
+    },
+    "dontCollect": {
+      "heading": "Privacidad en la app de escritorio",
+      "items": [
+        "Sin registro de cuentas",
+        "Sin SDK de publicidad",
+        "Sin seguimiento entre apps ni sitios web",
+        "Sin subida de las imágenes importadas",
+        "Sin capturas ni grabaciones de la pantalla",
+        "Sin acceso al micrófono ni a la cámara",
+        "Sin historial de ubicaciones guardado por la app"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "Lo que se queda en tu Mac",
+      "intro": "La app guarda tus preferencias localmente en tu dispositivo:",
+      "items": [
+        "Tema del efecto, intensidad y velocidad",
+        "Dirección y fuerza del viento",
+        "Formas seleccionadas e imágenes propias",
+        "Posición de los efectos y ajustes de las luces decorativas",
+        "Preferencia de idioma"
+      ],
+      "outro": "Los ajustes y las imágenes importadas se guardan localmente. La app nunca sube las imágenes importadas; las estadísticas de uso solo incluyen las opciones descritas más abajo. Puedes restablecer las preferencias en Ajustes y eliminar las imágenes importadas desde la galería de imágenes. Restablecer las preferencias conserva las imágenes importadas. Eliminar la app no elimina necesariamente sus preferencias guardadas ni sus datos."
+    },
+    "weather": {
+      "heading": "Ubicación opcional y adaptación al tiempo",
+      "location": "La adaptación al tiempo está desactivada por defecto. Cuando la activas y das permiso, macOS proporciona una ubicación a la app. La app solicita una precisión del orden de un kilómetro; macOS decide la precisión que proporciona. Esta ubicación se envía al servicio WeatherKit de Apple para obtener el tiempo actual y elegir un efecto decorativo acorde. No se envía al desarrollador.",
+      "storage": "La app no guarda coordenadas ni un historial de ubicaciones en sus preferencias ni en sus archivos de imagen. La ubicación y los resultados del tiempo se usan en memoria para elegir los efectos. Mientras la función está activada, el tiempo se actualiza normalmente cada 30 minutos y puede volver a actualizarse tras un cambio en el permiso de ubicación o al reiniciar la app.",
+      "control": "Puedes desactivar la adaptación al tiempo en la app o retirar el acceso a la ubicación en Ajustes del Sistema. Desactivar la función cancela sus actualizaciones programadas. Los temas manuales siguen funcionando sin acceso a la ubicación. Apple procesa las solicitudes de WeatherKit según sus propias políticas de privacidad; la app también obtiene los recursos de atribución de Tiempo de Apple cuando es necesario.",
+      "appleWeather": "Tiempo de Apple y privacidad",
+      "applePrivacy": "Política de privacidad de Apple"
+    },
+    "permissions": {
+      "heading": "Permisos",
+      "text": "El permiso de ubicación solo se usa para la adaptación opcional al tiempo. Tú eliges los archivos PNG con el selector de archivos del sistema; la app copia esas imágenes en su propio almacenamiento local para usarlas después. Abrir al iniciar sesión es opcional y se puede cambiar en la app o en Ajustes del Sistema. Los efectos y las herramientas de limpieza no necesitan acceso a la grabación de pantalla, al micrófono ni a la cámara."
+    },
+    "noInternet": {
+      "heading": "Efectos sin conexión y servicios en línea",
+      "text": "Los temas manuales, las luces decorativas, las imágenes importadas y los sonidos de limpieza funcionan sin conexión. La adaptación al tiempo local y la atribución de Tiempo de Apple necesitan conexión a Internet. Abrir enlaces al sitio web y descargar actualizaciones del App Store también usa Internet. Las estadísticas de uso y los informes de fallos se envían cuando tu Mac está conectado."
+    },
+    "updates": {
+      "heading": "Actualizaciones",
+      "text": "Las compras y las actualizaciones las gestiona el Mac App Store. Apple también controla los diagnósticos de apps que decidas compartir a través de los ajustes del sistema. Estos servicios siguen las políticas de privacidad de Apple."
+    },
+    "children": {
+      "heading": "Menores",
+      "text": "La app de escritorio no tiene cuentas ni publicidad. Las estadísticas de uso y los informes de fallos funcionan igual para todos los usuarios. El acceso opcional a la ubicación usa los mismos controles de permisos del sistema para todos los usuarios. La analítica del sitio web sigue sujeta a la elección de cookies aparte que se describe más abajo."
+    },
+    "questions": {
+      "heading": "¿Tienes preguntas?",
+      "text": "Si escribes al soporte, recibimos tu dirección de correo electrónico y la información que decidas incluir. La correspondencia de soporte se usa para responder a tu solicitud y resolverla, y se conserva con ese fin. Para preguntar sobre esta política o solicitar la eliminación de la correspondencia de soporte, escribe a:",
+      "email": "Correo electrónico:"
+    },
+    "footer": "Esta política de privacidad puede actualizarse de vez en cuando. La versión actual está siempre disponible aquí y en el Mac App Store.",
+    "website": {
+      "heading": "Analítica del sitio web y cookies",
+      "updated": "Sección del sitio web actualizada el 13 de noviembre de 2026",
+      "storage": "El sitio web usa el almacenamiento local para recordar tu elección de cookies (snowmyscreen_cookie_consent_v1) y, en la página de descarga, tu preferencia de idioma (snowmyscreen-language). Estas preferencias se guardan en este dispositivo.",
+      "analytics": "Si permites la analítica, el sitio web carga Google Analytics 4 (ID de medición G-VB76JMX2B6) para medir las visitas a las páginas y la información del navegador y del dispositivo. Google procesa estos datos de uso. La etiqueta de Google no se carga antes de que des tu consentimiento ni mientras las cookies opcionales estén rechazadas. El consentimiento publicitario sigue desactivado.",
+      "cookies": "Con la analítica activada, Google Analytics puede guardar las cookies propias _ga y _ga_VB76JMX2B6 para distinguir navegadores y sesiones. Estas estadísticas del sitio web son independientes de las estadísticas de uso de la app de escritorio.",
+      "counter": "El sitio web también cuenta las páginas vistas y los clics en enlaces al App Store con su propio contador sin cookies. No usa cookies, ni almacenamiento del navegador, ni ID de visitante, y funciona elijas lo que elijas en el banner. Cada recuento guarda solo el día, la ruta de la página, una etiqueta de origen (como el sitio de referencia o una etiqueta de campaña) y un código de país, como totales diarios; no se guarda ninguna dirección IP, agente de usuario ni URL completa. Los recuentos son eventos del navegador, no personas.",
+      "choices": "Elige Aceptar todas, Solo necesarias o Personalizar en el banner. Puedes volver a abrir Ajustes de cookies en el pie de página en cualquier momento. Desactivar la analítica elimina las cookies de Google Analytics y recarga la página para detener la etiqueta en ejecución. Borrar el almacenamiento del navegador elimina tu elección guardada.",
+      "google": "Descubre cómo trata Google esta información:"
+    },
+    "usageData": {
+      "heading": "Estadísticas de uso e informes de fallos",
+      "statistics": "La app envía estadísticas de uso anónimas a TelemetryDeck: qué temas, preajustes, luces y herramientas de limpieza se usan, si opciones como la adaptación al tiempo y abrir al iniciar sesión están activadas, las versiones de la app y de macOS, el modelo de Mac, el número de pantallas y la región configurada en tu Mac. Las estadísticas usan un identificador cifrado mediante hash, no tu nombre ni una cuenta. Nos ayudan a decidir qué funciones mejorar.",
+      "crash": "La app también envía a Sentry informes de fallos y errores, datos de sesión y una muestra de datos de rendimiento. Pueden incluir la versión de la app, detalles del dispositivo y del sistema, e información técnica sobre el fallo. La recopilación predeterminada de datos personales está desactivada.",
+      "never": "Tus imágenes importadas, tu ubicación, los resultados del tiempo y el contenido de tu pantalla no se incluyen en las estadísticas ni en los informes que enviamos.",
+      "control": "Puedes desactivar las estadísticas de uso en cualquier momento en Ajustes > Ajustes generales. Por ahora, los informes de fallos no se pueden desactivar en la app."
+    }
+  },
+  "pt": {
+    "title": "Política de privacidade",
+    "pageTitle": "Política de privacidade - Wonderfall",
+    "effectiveDate": "Data de vigência: 31 de outubro de 2026",
+    "intro": {
+      "heading": "Introdução",
+      "text": "O Wonderfall é um aplicativo para macOS que adiciona efeitos sazonais e luzes decorativas à mesa. Sua privacidade é importante para nós, e esta política explica como tratamos suas informações. A análise do site e as escolhas de cookies estão descritas abaixo."
+    },
+    "shortVersion": {
+      "heading": "Resumindo",
+      "text1": "As imagens que você importa ficam no seu dispositivo, e a combinação com o clima é opcional.",
+      "text2": "O app para a mesa não tem contas nem SDKs de publicidade. Ele envia estatísticas de uso anônimas, que você pode desativar nos Ajustes, e relatórios de falhas. Na versão 1.2 e posteriores, se você ativar a combinação com o clima local e permitir o acesso à localização, sua localização é usada para solicitar o clima ao serviço WeatherKit da Apple. A análise do site exige uma escolha separada, descrita abaixo."
+    },
+    "dontCollect": {
+      "heading": "Privacidade no app para a mesa",
+      "items": [
+        "Nenhum cadastro de conta",
+        "Nenhum SDK de publicidade",
+        "Nenhum rastreamento entre apps ou sites",
+        "Nenhum envio das imagens importadas",
+        "Nenhuma captura ou gravação da tela",
+        "Nenhum acesso ao microfone ou à câmera",
+        "Nenhum histórico de localização guardado pelo app"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "O que fica no seu Mac",
+      "intro": "O app salva suas preferências localmente no seu dispositivo:",
+      "items": [
+        "Tema do efeito, intensidade e velocidade",
+        "Direção e força do vento",
+        "Formatos selecionados e imagens personalizadas",
+        "Posição dos efeitos e ajustes das luzes decorativas",
+        "Preferência de idioma"
+      ],
+      "outro": "Os ajustes e as imagens importadas são armazenados localmente. O app nunca envia as imagens importadas; as estatísticas de uso incluem apenas as opções descritas abaixo. Você pode redefinir as preferências nos Ajustes e apagar as imagens importadas na galeria de imagens. Redefinir as preferências mantém as imagens importadas. Remover o app não remove necessariamente as preferências salvas nem os dados do app."
+    },
+    "weather": {
+      "heading": "Localização opcional e combinação com o clima",
+      "location": "A combinação com o clima vem desativada por padrão. Quando você a ativa e concede permissão, o macOS fornece uma localização ao app. O app solicita precisão na casa do quilômetro; o macOS controla a precisão que fornece. Essa localização é enviada ao serviço WeatherKit da Apple para obter o clima atual e escolher um efeito decorativo correspondente. Ela não é enviada ao desenvolvedor.",
+      "storage": "O app não salva coordenadas nem um histórico de localização nas preferências ou nos arquivos de imagem. A localização e os resultados do clima são usados na memória para escolher os efeitos. Enquanto o recurso estiver ativado, o clima normalmente é atualizado a cada 30 minutos e pode ser atualizado de novo após uma mudança na permissão de localização ou quando o app é reiniciado.",
+      "control": "Você pode desativar a combinação com o clima no app ou revogar o acesso à localização nos Ajustes do Sistema. Desativar o recurso cancela as atualizações programadas. Os temas manuais continuam funcionando sem acesso à localização. A Apple processa as solicitações do WeatherKit conforme as próprias políticas de privacidade; o app também obtém os recursos de atribuição do Tempo da Apple quando necessário.",
+      "appleWeather": "Tempo da Apple e privacidade",
+      "applePrivacy": "Política de Privacidade da Apple"
+    },
+    "permissions": {
+      "heading": "Permissões",
+      "text": "A permissão de localização é usada apenas para a combinação opcional com o clima. Você escolhe arquivos PNG pelo seletor de arquivos do sistema; o app copia essas imagens para o próprio armazenamento local para usar depois. Abrir ao iniciar sessão é opcional e pode ser alterado no app ou nos Ajustes do Sistema. Os efeitos e as ferramentas de limpeza não exigem acesso à Gravação de Tela, ao microfone ou à câmera."
+    },
+    "noInternet": {
+      "heading": "Efeitos offline e serviços online",
+      "text": "Os temas manuais, as luzes decorativas, as imagens importadas e os sons de limpeza funcionam offline. A combinação com o clima local e a atribuição do Tempo da Apple precisam de conexão com a internet. Abrir links do site e baixar atualizações da App Store também usa a internet. As estatísticas de uso e os relatórios de falhas são enviados quando o seu Mac está online."
+    },
+    "updates": {
+      "heading": "Atualizações",
+      "text": "As compras e as atualizações são feitas pela Mac App Store. A Apple também controla os diagnósticos de apps que você escolhe compartilhar pelos ajustes do sistema. Esses serviços seguem as políticas de privacidade da Apple."
+    },
+    "children": {
+      "heading": "Crianças",
+      "text": "O app para a mesa não tem contas nem publicidade. As estatísticas de uso e os relatórios de falhas funcionam da mesma forma para todos os usuários. O acesso opcional à localização usa os mesmos controles de permissão do sistema para todos os usuários. A análise do site continua sujeita à escolha separada de cookies descrita abaixo."
+    },
+    "questions": {
+      "heading": "Dúvidas?",
+      "text": "Se você enviar um e-mail ao suporte, recebemos o seu endereço de e-mail e as informações que você decidir incluir. A correspondência do suporte é usada para responder e resolver a sua solicitação e é mantida para essa finalidade. Para perguntar sobre esta política ou pedir a exclusão da correspondência do suporte, entre em contato:",
+      "email": "E-mail:"
+    },
+    "footer": "Esta política de privacidade pode ser atualizada ocasionalmente. A versão atual está sempre disponível aqui e na Mac App Store.",
+    "website": {
+      "heading": "Análise do site e cookies",
+      "updated": "Seção do site atualizada em 13 de novembro de 2026",
+      "storage": "O site usa o armazenamento local para lembrar a sua escolha de cookies (snowmyscreen_cookie_consent_v1) e, na página de download, a sua preferência de idioma (snowmyscreen-language). Essas preferências são salvas neste dispositivo.",
+      "analytics": "Se você permitir a análise, o site carrega o Google Analytics 4 (ID de métricas G-VB76JMX2B6) para medir as visitas às páginas e informações do navegador e do dispositivo. O Google processa esses dados de uso. A tag do Google não é carregada antes de você consentir nem enquanto os cookies opcionais estiverem recusados. O consentimento para publicidade continua desativado.",
+      "cookies": "Com a análise ativada, o Google Analytics pode armazenar os cookies primários _ga e _ga_VB76JMX2B6 para distinguir navegadores e sessões. Essas estatísticas do site são separadas das estatísticas de uso do app para a mesa.",
+      "counter": "O site também conta visualizações de página e cliques em links da App Store com um contador próprio sem cookies. Ele não usa cookies, armazenamento do navegador nem ID de visitante, e funciona seja qual for a sua escolha no banner. Cada contagem guarda apenas o dia, o caminho da página, um rótulo de origem (como o site de referência ou uma tag de campanha) e um código de país, como totais diários; nenhum endereço IP, user agent ou URL completo é salvo. As contagens são eventos do navegador, não pessoas.",
+      "choices": "Escolha Aceitar todos, Somente necessários ou Personalizar no banner. Você pode reabrir os Ajustes de cookies no rodapé a qualquer momento. Desativar a análise remove os cookies do Google Analytics e recarrega a página para parar a tag em execução. Limpar o armazenamento do navegador remove a escolha salva.",
+      "google": "Saiba como o Google trata essas informações:"
+    },
+    "usageData": {
+      "heading": "Estatísticas de uso e relatórios de falhas",
+      "statistics": "O app envia estatísticas de uso anônimas ao TelemetryDeck: quais temas, predefinições, luzes e ferramentas de limpeza são usados, se opções como a combinação com o clima e abrir ao iniciar sessão estão ativadas, as versões do app e do macOS, o modelo do Mac, o número de telas e a região definida no seu Mac. As estatísticas usam um identificador com hash, não o seu nome nem uma conta. Elas nos ajudam a decidir quais recursos melhorar.",
+      "crash": "O app também envia ao Sentry relatórios de falhas e erros, dados de sessão e uma amostra de dados de desempenho. Eles podem incluir a versão do app, detalhes do dispositivo e do sistema e informações técnicas sobre a falha. A coleta padrão de dados pessoais está desativada.",
+      "never": "Suas imagens importadas, sua localização, os resultados do clima e o conteúdo da sua tela não são incluídos nas estatísticas nem nos relatórios que enviamos.",
+      "control": "Você pode desativar as estatísticas de uso a qualquer momento em Ajustes > Ajustes gerais. No momento, os relatórios de falhas não podem ser desativados no app."
+    }
+  },
+  "pl": {
+    "title": "Polityka prywatności",
+    "pageTitle": "Polityka prywatności - Wonderfall",
+    "effectiveDate": "Data wejścia w życie: 31 października 2026 r.",
+    "intro": {
+      "heading": "Wprowadzenie",
+      "text": "Wonderfall to aplikacja dla macOS, która dodaje sezonowe efekty na pulpit i ozdobne lampki. Twoja prywatność jest dla nas ważna, a ta polityka wyjaśnia, jak postępujemy z Twoimi informacjami. Analityka witryny i wybór dotyczący cookies są opisane poniżej."
+    },
+    "shortVersion": {
+      "heading": "W skrócie",
+      "text1": "Zaimportowane obrazy pozostają na Twoim urządzeniu, a dopasowanie do pogody jest opcjonalne.",
+      "text2": "Aplikacja na komputer nie ma kont ani reklamowych SDK. Wysyła anonimowe statystyki użycia, które możesz wyłączyć w Ustawieniach, oraz raporty o awariach. W wersji 1.2 i nowszych, jeśli włączysz dopasowanie do lokalnej pogody i zezwolisz na dostęp do lokalizacji, Twoja lokalizacja jest używana do pobrania pogody z usługi Apple WeatherKit. Analityka witryny wymaga osobnej decyzji, opisanej poniżej."
+    },
+    "dontCollect": {
+      "heading": "Prywatność w aplikacji na komputer",
+      "items": [
+        "Bez rejestracji konta",
+        "Bez reklamowych SDK",
+        "Bez śledzenia w innych aplikacjach i witrynach",
+        "Bez wysyłania zaimportowanych obrazów",
+        "Bez zrzutów ekranu pulpitu i nagrań ekranu",
+        "Bez dostępu do mikrofonu i kamery",
+        "Aplikacja nie przechowuje historii lokalizacji"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "Co zostaje na Twoim Macu",
+      "intro": "Aplikacja zapisuje Twoje preferencje lokalnie na urządzeniu:",
+      "items": [
+        "Motyw efektu, intensywność i prędkość",
+        "Kierunek i siłę wiatru",
+        "Wybrane kształty i własne obrazy",
+        "Położenie nakładki i ustawienia ozdobnych lampek",
+        "Preferowany język"
+      ],
+      "outro": "Ustawienia i zaimportowane obrazy są przechowywane lokalnie. Aplikacja nigdy nie wysyła zaimportowanych obrazów; statystyki użycia obejmują tylko opcje opisane poniżej. Preferencje możesz zresetować w Ustawieniach, a zaimportowane obrazy usunąć z galerii obrazów. Zresetowanie preferencji nie usuwa zaimportowanych obrazów. Usunięcie aplikacji nie musi oznaczać usunięcia jej zapisanych preferencji ani danych."
+    },
+    "weather": {
+      "heading": "Opcjonalna lokalizacja i dopasowanie do pogody",
+      "location": "Dopasowanie do pogody jest domyślnie wyłączone. Gdy je włączysz i udzielisz zgody, macOS przekazuje aplikacji lokalizację. Aplikacja prosi o dokładność na poziomie kilometra; to macOS decyduje, jaką dokładność zapewni. Lokalizacja jest wysyłana do usługi Apple WeatherKit, aby pobrać aktualną pogodę i wybrać pasujący efekt dekoracyjny. Nie jest wysyłana do twórcy aplikacji.",
+      "storage": "Aplikacja nie zapisuje współrzędnych ani historii lokalizacji w swoich preferencjach ani plikach obrazów. Lokalizacja i dane o pogodzie są używane w pamięci do wyboru efektów. Gdy funkcja jest włączona, pogoda jest zwykle odświeżana co 30 minut i może zostać odświeżona ponownie po zmianie zgody na dostęp do lokalizacji lub po ponownym uruchomieniu aplikacji.",
+      "control": "Możesz wyłączyć dopasowanie do pogody w aplikacji lub cofnąć dostęp do lokalizacji w Ustawieniach systemowych. Wyłączenie funkcji anuluje zaplanowane aktualizacje. Motywy wybierane ręcznie działają bez dostępu do lokalizacji. Apple przetwarza zapytania WeatherKit zgodnie z własnymi zasadami prywatności; w razie potrzeby aplikacja pobiera też materiały z oznaczeniem źródła Apple Pogoda.",
+      "appleWeather": "Apple Pogoda i prywatność",
+      "applePrivacy": "Polityka prywatności Apple"
+    },
+    "permissions": {
+      "heading": "Uprawnienia",
+      "text": "Zgoda na dostęp do lokalizacji jest używana wyłącznie do opcjonalnego dopasowania do pogody. Pliki PNG wybierasz w systemowym oknie wyboru plików; aplikacja kopiuje te obrazy do własnego lokalnego magazynu do późniejszego użycia. Uruchamianie przy logowaniu jest opcjonalne i można je zmienić w aplikacji lub w Ustawieniach systemowych. Efekty na pulpicie i narzędzia do sprzątania nie wymagają dostępu do nagrywania ekranu, mikrofonu ani kamery."
+    },
+    "noInternet": {
+      "heading": "Efekty offline i usługi online",
+      "text": "Motywy wybierane ręcznie, ozdobne lampki, zaimportowane obrazy i dźwięki sprzątania działają offline. Dopasowanie do lokalnej pogody i oznaczenie źródła Apple Pogoda wymagają połączenia z internetem. Otwieranie linków do witryny i pobieranie aktualizacji z App Store także korzysta z internetu. Statystyki użycia i raporty o awariach są wysyłane, gdy Twój Mac jest online."
+    },
+    "updates": {
+      "heading": "Aktualizacje",
+      "text": "Zakupy i aktualizacje obsługuje Mac App Store. Apple kontroluje również diagnostykę aplikacji, którą zdecydujesz się udostępniać w ustawieniach systemu. Usługi te podlegają zasadom prywatności Apple."
+    },
+    "children": {
+      "heading": "Dzieci",
+      "text": "Aplikacja na komputer nie ma kont ani reklam. Statystyki użycia i raporty o awariach działają tak samo dla wszystkich użytkowników. Opcjonalny dostęp do lokalizacji korzysta z tych samych systemowych ustawień zgody dla wszystkich użytkowników. Analityka witryny nadal zależy od osobnego wyboru dotyczącego cookies opisanego poniżej."
+    },
+    "questions": {
+      "heading": "Pytania?",
+      "text": "Jeśli napiszesz do pomocy technicznej, otrzymamy Twój adres e-mail i informacje, które zdecydujesz się podać. Korespondencja z pomocą techniczną służy do odpowiedzi na Twoje zgłoszenie i jego rozwiązania i jest przechowywana w tym celu. Aby zapytać o tę politykę lub poprosić o usunięcie korespondencji z pomocą techniczną, skontaktuj się:",
+      "email": "E-mail:"
+    },
+    "footer": "Ta polityka prywatności może być od czasu do czasu aktualizowana. Aktualna wersja jest zawsze dostępna tutaj i w Mac App Store.",
+    "website": {
+      "heading": "Analityka witryny i cookies",
+      "updated": "Sekcja o witrynie zaktualizowana: 13 listopada 2026 r.",
+      "storage": "Witryna używa pamięci lokalnej, aby zapamiętać Twój wybór dotyczący cookies (snowmyscreen_cookie_consent_v1) oraz, na stronie pobierania, Twój preferowany język (snowmyscreen-language). Te preferencje są zapisywane na tym urządzeniu.",
+      "analytics": "Jeśli zezwolisz na analitykę, witryna wczytuje Google Analytics 4 (identyfikator pomiaru G-VB76JMX2B6), aby mierzyć odwiedziny stron oraz informacje o przeglądarce i urządzeniu. Google przetwarza te dane o użyciu. Tag Google nie jest wczytywany, zanim wyrazisz zgodę, ani gdy opcjonalne cookies są odrzucone. Zgoda na cele reklamowe pozostaje wyłączona.",
+      "cookies": "Gdy analityka jest włączona, Google Analytics może zapisywać własne cookies _ga i _ga_VB76JMX2B6, aby rozróżniać przeglądarki i sesje. Te statystyki witryny są oddzielone od statystyk użycia aplikacji na komputer.",
+      "counter": "Witryna liczy też wyświetlenia stron i kliknięcia linków do App Store własnym licznikiem bez cookies. Nie używa cookies, pamięci przeglądarki ani identyfikatora odwiedzającego i działa niezależnie od tego, co wybierzesz w banerze. Każdy zliczony wpis przechowuje tylko dzień, ścieżkę strony, etykietę źródła (na przykład witrynę odsyłającą lub tag kampanii) i kod kraju, jako dzienne sumy; nie jest zapisywany adres IP, user agent ani pełny adres URL. Liczone są zdarzenia w przeglądarce, a nie osoby.",
+      "choices": "Wybierz w banerze „Zaakceptuj wszystkie”, „Tylko niezbędne” lub „Dostosuj”. „Ustawienia cookies” możesz w każdej chwili otworzyć ponownie w stopce. Wyłączenie analityki usuwa cookies Google Analytics i przeładowuje stronę, aby zatrzymać działający tag. Wyczyszczenie pamięci przeglądarki usuwa zapisany wybór.",
+      "google": "Dowiedz się, jak Google postępuje z tymi informacjami:"
+    },
+    "usageData": {
+      "heading": "Statystyki użycia i raporty o awariach",
+      "statistics": "Aplikacja wysyła anonimowe statystyki użycia do TelemetryDeck: których motywów, ustawień wstępnych, lampek i narzędzi do sprzątania używasz, czy włączone są opcje takie jak dopasowanie do pogody i uruchamianie przy logowaniu, wersje aplikacji i macOS, model Maca, liczbę ekranów i region ustawiony na Macu. Statystyki używają zahaszowanego identyfikatora, a nie Twojego imienia ani konta. Pomagają nam zdecydować, które funkcje ulepszyć.",
+      "crash": "Aplikacja wysyła też raporty o awariach i błędach, dane sesji oraz próbkę danych o wydajności do Sentry. Mogą one zawierać wersję aplikacji, szczegóły urządzenia i systemu oraz informacje techniczne o błędzie. Domyślne zbieranie danych osobowych jest wyłączone.",
+      "never": "Zaimportowane obrazy, lokalizacja, dane o pogodzie i zawartość ekranu nie trafiają do wysyłanych przez nas statystyk ani raportów.",
+      "control": "Statystyki użycia możesz w każdej chwili wyłączyć w Ustawieniach > Ogólne. Raportów o awariach nie można obecnie wyłączyć w aplikacji."
+    }
+  },
+  "cs": {
+    "title": "Zásady ochrany soukromí",
+    "pageTitle": "Zásady ochrany soukromí - Wonderfall",
+    "effectiveDate": "Datum účinnosti: 31. října 2026",
+    "intro": {
+      "heading": "Úvod",
+      "text": "Wonderfall je aplikace pro macOS, která přidává sezónní efekty na plochu a ozdobná světla. Vaše soukromí je pro nás důležité a tyto zásady vysvětlují, jak s vašimi informacemi zacházíme. Analytika webu a volba cookies jsou popsány níže."
+    },
+    "shortVersion": {
+      "heading": "Ve zkratce",
+      "text1": "Importované obrázky zůstávají ve vašem zařízení a přizpůsobení počasí je volitelné.",
+      "text2": "Aplikace pro počítač nemá účty ani reklamní SDK. Odesílá anonymní statistiky používání, které můžete vypnout v Nastavení, a hlášení o pádech. Ve verzi 1.2 a novější se v případě, že zapnete přizpůsobení místnímu počasí a povolíte přístup k poloze, vaše poloha použije k vyžádání počasí ze služby Apple WeatherKit. Analytika webu vyžaduje samostatnou volbu, popsanou níže."
+    },
+    "dontCollect": {
+      "heading": "Soukromí v aplikaci pro počítač",
+      "items": [
+        "Žádná registrace účtu",
+        "Žádné reklamní SDK",
+        "Žádné sledování napříč aplikacemi nebo weby",
+        "Žádné nahrávání importovaných obrázků",
+        "Žádné snímky ani záznamy obrazovky",
+        "Žádný přístup k mikrofonu ani kameře",
+        "Aplikace neukládá historii polohy"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "Co zůstává ve vašem Macu",
+      "intro": "Aplikace ukládá vaše předvolby lokálně ve vašem zařízení:",
+      "items": [
+        "Motiv efektu, intenzitu a rychlost",
+        "Směr a sílu větru",
+        "Vybrané tvary a vlastní obrázky",
+        "Umístění vrstvy a nastavení ozdobných světel",
+        "Preferovaný jazyk"
+      ],
+      "outro": "Nastavení a importované obrázky jsou uloženy lokálně. Aplikace importované obrázky nikdy nenahrává; statistiky používání obsahují jen volby popsané níže. Předvolby můžete obnovit v Nastavení a importované obrázky smazat z galerie obrázků. Obnovení předvoleb importované obrázky zachová. Odstranění aplikace nemusí nutně odstranit její uložené předvolby ani data."
+    },
+    "weather": {
+      "heading": "Volitelná poloha a přizpůsobení počasí",
+      "location": "Přizpůsobení počasí je ve výchozím stavu vypnuté. Když ho zapnete a udělíte oprávnění, macOS aplikaci poskytne polohu. Aplikace žádá přesnost na úrovni kilometrů; jakou přesnost poskytne, určuje macOS. Tato poloha se odesílá do služby Apple WeatherKit, aby se získalo aktuální počasí a vybral odpovídající dekorativní efekt. Vývojáři se neodesílá.",
+      "storage": "Aplikace neukládá souřadnice ani historii polohy do svých předvoleb ani souborů obrázků. Poloha a údaje o počasí se k výběru efektů používají jen v paměti. Když je funkce zapnutá, počasí se obvykle obnovuje každých 30 minut a může se obnovit znovu po změně oprávnění k poloze nebo po restartu aplikace.",
+      "control": "Přizpůsobení počasí můžete vypnout v aplikaci nebo odebrat přístup k poloze v Nastavení systému. Vypnutím funkce se zruší její naplánované aktualizace. Ručně zvolené motivy fungují i bez přístupu k poloze. Apple zpracovává požadavky WeatherKit podle vlastních zásad ochrany soukromí; aplikace v případě potřeby také načítá materiály s uvedením zdroje Apple Počasí.",
+      "appleWeather": "Apple Počasí a soukromí",
+      "applePrivacy": "Zásady ochrany soukromí Apple"
+    },
+    "permissions": {
+      "heading": "Oprávnění",
+      "text": "Oprávnění k poloze se používá pouze pro volitelné přizpůsobení počasí. Soubory PNG vybíráte v systémovém dialogu pro výběr souborů; aplikace tyto obrázky zkopíruje do vlastního lokálního úložiště pro pozdější použití. Spouštění při přihlášení je volitelné a dá se změnit v aplikaci nebo v Nastavení systému. Efekty na ploše a úklidové nástroje nevyžadují přístup k nahrávání obrazovky, mikrofonu ani kameře."
+    },
+    "noInternet": {
+      "heading": "Efekty offline a online služby",
+      "text": "Ručně zvolené motivy, ozdobná světla, importované obrázky a zvuky úklidu fungují offline. Přizpůsobení místnímu počasí a uvedení zdroje Apple Počasí vyžadují připojení k internetu. Otevírání odkazů na web a stahování aktualizací z App Storu také využívá internet. Statistiky používání a hlášení o pádech se odesílají, když je váš Mac online."
+    },
+    "updates": {
+      "heading": "Aktualizace",
+      "text": "Nákupy a aktualizace zajišťuje Mac App Store. Apple také spravuje diagnostiku aplikací, kterou se rozhodnete sdílet v nastavení systému. Tyto služby se řídí zásadami ochrany soukromí společnosti Apple."
+    },
+    "children": {
+      "heading": "Děti",
+      "text": "Aplikace pro počítač nemá účty ani reklamy. Statistiky používání a hlášení o pádech fungují pro všechny uživatele stejně. Volitelný přístup k poloze používá pro všechny uživatele stejná systémová oprávnění. Analytika webu nadále podléhá samostatné volbě cookies popsané níže."
+    },
+    "questions": {
+      "heading": "Máte dotazy?",
+      "text": "Pokud napíšete podpoře, obdržíme vaši e-mailovou adresu a informace, které se rozhodnete uvést. Korespondence s podporou slouží k odpovědi na váš požadavek a jeho vyřešení a pro tento účel je uchovávána. Chcete-li se zeptat na tyto zásady nebo požádat o smazání korespondence s podporou, kontaktujte:",
+      "email": "E-mail:"
+    },
+    "footer": "Tyto zásady ochrany soukromí mohou být občas aktualizovány. Aktuální verze je vždy k dispozici zde a v Mac App Storu.",
+    "website": {
+      "heading": "Analytika webu a cookies",
+      "updated": "Část o webu aktualizována: 13. listopadu 2026",
+      "storage": "Web používá místní úložiště k zapamatování vaší volby cookies (snowmyscreen_cookie_consent_v1) a na stránce ke stažení také preferovaného jazyka (snowmyscreen-language). Tyto předvolby se ukládají v tomto zařízení.",
+      "analytics": "Pokud analytiku povolíte, web načte Google Analytics 4 (ID měření G-VB76JMX2B6), aby měřil návštěvy stránek a informace o prohlížeči a zařízení. Google tato data o používání zpracovává. Značka Google se nenačte, dokud nedáte souhlas, ani když jsou volitelné cookies odmítnuté. Souhlas pro reklamní účely zůstává vypnutý.",
+      "cookies": "Při zapnuté analytice může Google Analytics ukládat cookies první strany _ga a _ga_VB76JMX2B6 k rozlišení prohlížečů a relací. Tyto statistiky webu jsou oddělené od statistik používání aplikace pro počítač.",
+      "counter": "Web také počítá zobrazení stránek a kliknutí na odkazy do App Storu vlastním počítadlem bez cookies. Nepoužívá cookies, úložiště prohlížeče ani identifikátor návštěvníka a funguje bez ohledu na to, co v banneru zvolíte. Každý záznam ukládá pouze den, cestu stránky, označení zdroje (například odkazující web nebo značku kampaně) a kód země, jako denní součty; IP adresa, user agent ani úplná adresa URL se neukládají. Počítají se události v prohlížeči, ne lidé.",
+      "choices": "V banneru zvolte „Přijmout vše“, „Jen nezbytné“ nebo „Přizpůsobit“. „Nastavení cookies“ můžete kdykoli znovu otevřít v zápatí. Vypnutím analytiky se odstraní cookies Google Analytics a stránka se znovu načte, aby se spuštěná značka zastavila. Vymazáním úložiště prohlížeče se odstraní vaše uložená volba.",
+      "google": "Jak Google s těmito informacemi zachází:"
+    },
+    "usageData": {
+      "heading": "Statistiky používání a hlášení o pádech",
+      "statistics": "Aplikace odesílá anonymní statistiky používání do TelemetryDeck: které motivy, předvolby, světla a úklidové nástroje se používají, zda jsou zapnuté volby jako přizpůsobení počasí a spouštění při přihlášení, verze aplikace a macOS, model Macu, počet displejů a oblast nastavenou na vašem Macu. Statistiky používají hašovaný identifikátor, ne vaše jméno ani účet. Pomáhají nám rozhodnout, které funkce vylepšit.",
+      "crash": "Aplikace také odesílá hlášení o pádech a chybách, data relací a vzorek údajů o výkonu do Sentry. Mohou obsahovat verzi aplikace, podrobnosti o zařízení a systému a technické informace o selhání. Výchozí shromažďování osobních údajů je vypnuté.",
+      "never": "Vaše importované obrázky, poloha, údaje o počasí a obsah obrazovky nejsou součástí statistik ani hlášení, které odesíláme.",
+      "control": "Statistiky používání můžete kdykoli vypnout v Nastavení > Obecné. Hlášení o pádech nelze v aplikaci v současnosti vypnout."
+    }
+  },
+  "tr": {
+    "title": "Gizlilik Politikası",
+    "pageTitle": "Gizlilik Politikası - Wonderfall",
+    "effectiveDate": "Yürürlük Tarihi: 31 Ekim 2026",
+    "intro": {
+      "heading": "Giriş",
+      "text": "Wonderfall, mevsimlik masaüstü efektleri ve dekoratif ışıklar ekleyen bir macOS uygulamasıdır. Gizliliğiniz bizim için önemlidir; bu politika bilgilerinizi nasıl ele aldığımızı açıklar. Web sitesi analizi ve çerez tercihleri aşağıda açıklanmıştır."
+    },
+    "shortVersion": {
+      "heading": "Kısaca",
+      "text1": "İçe aktardığınız görseller cihazınızda kalır ve hava durumu eşleştirmesi isteğe bağlıdır.",
+      "text2": "Masaüstü uygulamasında hesap veya reklam SDK'sı yoktur. Uygulama, Ayarlar'dan kapatabileceğiniz anonim kullanım istatistikleri ve çökme raporları gönderir. 1.2 ve sonraki sürümlerde, yerel hava durumu eşleştirmesini açar ve konum erişimine izin verirseniz konumunuz, Apple'ın WeatherKit hizmetinden hava durumu istemek için kullanılır. Web sitesi analizi, aşağıda açıklanan ayrı bir tercih gerektirir."
+    },
+    "dontCollect": {
+      "heading": "Masaüstü Uygulamasında Gizlilik",
+      "items": [
+        "Hesap kaydı yok",
+        "Reklam SDK'sı yok",
+        "Uygulamalar veya web siteleri arasında izleme yok",
+        "İçe aktarılan görseller yüklenmez",
+        "Masaüstü ekran görüntüsü veya ekran kaydı yok",
+        "Mikrofon veya kamera erişimi yok",
+        "Uygulama konum geçmişi saklamaz"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "Mac'inizde Kalanlar",
+      "intro": "Uygulama tercihlerinizi cihazınızda yerel olarak kaydeder:",
+      "items": [
+        "Efekt teması, yoğunluk ve hız",
+        "Rüzgâr yönü ve gücü",
+        "Seçilen şekiller ve özel görseller",
+        "Katman yerleşimi ve dekoratif ışık ayarları",
+        "Dil tercihi"
+      ],
+      "outro": "Ayarlar ve içe aktarılan görseller yerel olarak saklanır. İçe aktarılan görseller uygulama tarafından hiçbir zaman yüklenmez; kullanım istatistikleri yalnızca aşağıda açıklanan seçenekleri içerir. Tercihleri Ayarlar'dan sıfırlayabilir, içe aktarılan görselleri görsel galerisinden silebilirsiniz. Tercihleri sıfırlamak içe aktarılan görselleri korur. Uygulamayı kaldırmak, kayıtlı tercihlerini veya uygulama verilerini her zaman kaldırmaz."
+    },
+    "weather": {
+      "heading": "İsteğe Bağlı Konum ve Hava Durumu Eşleştirmesi",
+      "location": "Hava durumu eşleştirmesi varsayılan olarak kapalıdır. Bunu açıp izin verdiğinizde macOS uygulamaya bir konum sağlar. Uygulama kilometre düzeyinde doğruluk ister; sağlanan doğruluğu macOS belirler. Bu konum, güncel hava durumunu almak ve uygun bir dekoratif efekt seçmek için Apple'ın WeatherKit hizmetine gönderilir. Geliştiriciye gönderilmez.",
+      "storage": "Uygulama koordinatları veya konum geçmişini tercihlerine ya da görsel dosyalarına kaydetmez. Konum ve hava durumu sonuçları, efekt seçmek için bellekte kullanılır. Özellik açıkken hava durumu normalde 30 dakikada bir yenilenir; konum izni değiştiğinde veya uygulama yeniden başlatıldığında tekrar yenilenebilir.",
+      "control": "Hava durumu eşleştirmesini uygulamadan kapatabilir veya konum erişimini Sistem Ayarları'ndan geri alabilirsiniz. Özelliği kapatmak planlanmış güncellemelerini iptal eder. Elle seçilen temalar konum erişimi olmadan da çalışır. Apple, WeatherKit isteklerini kendi gizlilik politikalarına göre işler; uygulama gerektiğinde Apple Hava Durumu kaynak gösterimi öğelerini de alır.",
+      "appleWeather": "Apple Hava Durumu ve Gizlilik",
+      "applePrivacy": "Apple Gizlilik Politikası"
+    },
+    "permissions": {
+      "heading": "İzinler",
+      "text": "Konum izni yalnızca isteğe bağlı hava durumu eşleştirmesi için kullanılır. PNG dosyalarını sistemin dosya seçicisiyle siz seçersiniz; uygulama bu görselleri daha sonra kullanmak üzere kendi yerel depolama alanına kopyalar. Oturum açıldığında başlatma isteğe bağlıdır ve uygulamadan veya Sistem Ayarları'ndan değiştirilebilir. Masaüstü efektleri ve temizlik araçları Ekran Kaydı, mikrofon veya kamera erişimi gerektirmez."
+    },
+    "noInternet": {
+      "heading": "Çevrimdışı Efektler ve Çevrimiçi Hizmetler",
+      "text": "Elle seçilen temalar, dekoratif ışıklar, içe aktarılan görseller ve temizlik sesleri çevrimdışı çalışır. Yerel hava durumu eşleştirmesi ve Apple Hava Durumu kaynak gösterimi internet bağlantısı gerektirir. Web sitesi bağlantılarını açmak ve App Store güncellemelerini indirmek de internet kullanır. Kullanım istatistikleri ve çökme raporları Mac'iniz çevrimiçiyken gönderilir."
+    },
+    "updates": {
+      "heading": "Güncellemeler",
+      "text": "Satın alma ve güncellemeler Mac App Store tarafından yürütülür. Sistem ayarları üzerinden paylaşmayı seçtiğiniz uygulama tanılama verilerini de Apple yönetir. Bu hizmetler Apple'ın gizlilik politikalarına tabidir."
+    },
+    "children": {
+      "heading": "Çocuklar",
+      "text": "Masaüstü uygulamasında hesap veya reklam yoktur. Kullanım istatistikleri ve çökme raporları tüm kullanıcılar için aynı şekilde çalışır. İsteğe bağlı konum erişimi, tüm kullanıcılar için aynı sistem izin denetimlerini kullanır. Web sitesi analizi, aşağıdaki ayrı çerez tercihine tabi olmaya devam eder."
+    },
+    "questions": {
+      "heading": "Sorularınız mı var?",
+      "text": "Desteğe e-posta gönderirseniz e-posta adresinizi ve paylaşmayı seçtiğiniz bilgileri alırız. Destek yazışmaları talebinize yanıt vermek ve talebinizi çözmek için kullanılır ve bu amaçla saklanır. Bu politika hakkında soru sormak veya destek yazışmalarının silinmesini istemek için iletişime geçin:",
+      "email": "E-posta:"
+    },
+    "footer": "Bu gizlilik politikası zaman zaman güncellenebilir. Güncel sürüm her zaman burada ve Mac App Store'da bulunur.",
+    "website": {
+      "heading": "Web sitesi analizi ve çerezler",
+      "updated": "Web sitesi bölümü güncellendi: 13 Kasım 2026",
+      "storage": "Web sitesi, çerez tercihinizi (snowmyscreen_cookie_consent_v1) ve indirme sayfasında dil tercihinizi (snowmyscreen-language) hatırlamak için yerel depolamayı kullanır. Bu tercihler bu cihazda kaydedilir.",
+      "analytics": "Analize izin verirseniz web sitesi, sayfa ziyaretlerini ve tarayıcı/cihaz bilgilerini ölçmek için Google Analytics 4'ü (ölçüm kimliği G-VB76JMX2B6) yükler. Bu kullanım verilerini Google işler. Google etiketi, siz onay vermeden önce veya isteğe bağlı çerezler reddedilmişken yüklenmez. Reklam onayı devre dışı kalır.",
+      "cookies": "Analiz açıkken Google Analytics, tarayıcıları ve oturumları ayırt etmek için birinci taraf _ga ve _ga_VB76JMX2B6 çerezlerini saklayabilir. Bu web sitesi istatistikleri, masaüstü uygulamasının kullanım istatistiklerinden ayrıdır.",
+      "counter": "Web sitesi ayrıca sayfa görüntülemelerini ve App Store bağlantısı tıklamalarını kendi çerezsiz sayacıyla sayar. Bu sayaç çerez, tarayıcı depolaması veya ziyaretçi kimliği kullanmaz ve banner'da ne seçerseniz seçin çalışır. Her sayım yalnızca günü, sayfa yolunu, bir kaynak etiketini (yönlendiren site veya kampanya etiketi gibi) ve bir ülke kodunu günlük toplamlar olarak saklar; IP adresi, kullanıcı aracısı veya tam URL kaydedilmez. Sayılanlar kişiler değil, tarayıcı olaylarıdır.",
+      "choices": "Banner'da “Tümünü kabul et”, “Yalnızca gerekli” veya “Özelleştir” seçeneğini belirleyin. “Çerez ayarları” bölümünü istediğiniz zaman alt bilgiden yeniden açabilirsiniz. Analizi kapatmak Google Analytics çerezlerini kaldırır ve çalışan etiketi durdurmak için sayfayı yeniden yükler. Tarayıcı depolamasını temizlemek kayıtlı tercihinizi kaldırır.",
+      "google": "Google'ın bu bilgileri nasıl ele aldığını öğrenin:"
+    },
+    "usageData": {
+      "heading": "Kullanım İstatistikleri ve Çökme Raporları",
+      "statistics": "Uygulama, TelemetryDeck'e anonim kullanım istatistikleri gönderir: hangi temaların, ön ayarların, ışıkların ve temizlik araçlarının kullanıldığı, hava durumu eşleştirmesi ve oturum açıldığında başlatma gibi seçeneklerin açık olup olmadığı, uygulama ve macOS sürümleri, Mac modeli, ekran sayısı ve Mac'inizde ayarlı bölge. İstatistikler adınızı veya bir hesabı değil, karma (hash) bir tanımlayıcı kullanır. Hangi özellikleri geliştireceğimize karar vermemize yardımcı olur.",
+      "crash": "Uygulama ayrıca çökme ve hata raporlarını, oturum verilerini ve performans verilerinden bir örneği Sentry'ye gönderir. Bunlar uygulama sürümünü, cihaz ve sistem ayrıntılarını ve hatayla ilgili teknik bilgileri içerebilir. Kişisel verilerin varsayılan olarak toplanması kapalıdır.",
+      "never": "İçe aktardığınız görseller, konumunuz, hava durumu sonuçları ve ekran içeriği gönderdiğimiz istatistiklere veya raporlara dahil edilmez.",
+      "control": "Kullanım istatistiklerini istediğiniz zaman Ayarlar > Genel'den kapatabilirsiniz. Çökme raporları şu anda uygulamadan kapatılamaz."
+    }
+  },
+  "ja": {
+    "title": "プライバシーポリシー",
+    "pageTitle": "プライバシーポリシー - Wonderfall",
+    "effectiveDate": "発効日：2026年10月31日",
+    "intro": {
+      "heading": "はじめに",
+      "text": "Wonderfallは、季節のデスクトップエフェクトと飾りのライトを加えるmacOSアプリケーションです。私たちはお客様のプライバシーを大切にしており、本ポリシーでは情報の取り扱いについて説明します。ウェブサイトのアナリティクスとCookieの選択については、後述します。"
+    },
+    "shortVersion": {
+      "heading": "概要",
+      "text1": "読み込んだ画像はお使いのデバイスにとどまり、天気連動はオプションです。",
+      "text2": "デスクトップアプリにはアカウントも広告SDKもありません。匿名の利用統計（設定でオフにできます）とクラッシュレポートを送信します。バージョン1.2以降では、現地の天気連動をオンにして位置情報へのアクセスを許可すると、お客様の位置情報がAppleのWeatherKitサービスへの天気の問い合わせに使われます。ウェブサイトのアナリティクスについては、後述のとおり別途選択が必要です。"
+    },
+    "dontCollect": {
+      "heading": "デスクトップアプリのプライバシー",
+      "items": [
+        "アカウント登録なし",
+        "広告SDKなし",
+        "アプリやウェブサイトをまたいだトラッキングなし",
+        "読み込んだ画像のアップロードなし",
+        "デスクトップのスクリーンショットや画面収録なし",
+        "マイクやカメラへのアクセスなし",
+        "アプリによる位置情報の履歴の保存なし"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "Macにとどまる情報",
+      "intro": "アプリは、お客様の環境設定をデバイス上にローカルに保存します：",
+      "items": [
+        "エフェクトのテーマ、強さ、速度",
+        "風向きと風の強さ",
+        "選択した形と自分の画像",
+        "オーバーレイの配置と飾りのライトの設定",
+        "言語の設定"
+      ],
+      "outro": "設定と読み込んだ画像はローカルに保存されます。読み込んだ画像がアプリによってアップロードされることはなく、利用統計には後述の項目のみが含まれます。環境設定は設定画面でリセットでき、読み込んだ画像は画像ギャラリーから削除できます。環境設定をリセットしても、読み込んだ画像は残ります。アプリを削除しても、保存された環境設定やアプリのデータが削除されるとは限りません。"
+    },
+    "weather": {
+      "heading": "オプションの位置情報と天気連動",
+      "location": "天気連動は初期状態ではオフです。オンにして許可すると、macOSがアプリに位置情報を提供します。アプリはキロメートル単位の精度を要求しますが、提供される精度はmacOSが決定します。この位置情報は、現在の天気を取得して合った飾りのエフェクトを選ぶために、AppleのWeatherKitサービスに送信されます。開発者には送信されません。",
+      "storage": "アプリは、座標や位置情報の履歴を環境設定や画像ファイルに保存しません。位置情報と天気の結果は、エフェクトを選ぶためにメモリ上で使われます。この機能がオンの間、天気は通常30分ごとに更新され、位置情報の許可が変わったときやアプリの再起動時にも更新されることがあります。",
+      "control": "天気連動はアプリでオフにでき、位置情報へのアクセスはシステム設定で取り消せます。機能をオフにすると、予定されていた更新は取り消されます。手動で選ぶテーマは位置情報へのアクセスなしで引き続き使えます。WeatherKitへのリクエストは、Apple独自のプライバシーポリシーに基づいてAppleが処理します。また、アプリは必要に応じてApple Weatherの帰属表示リソースを取得します。",
+      "appleWeather": "Apple Weatherとプライバシー",
+      "applePrivacy": "Appleのプライバシーポリシー"
+    },
+    "permissions": {
+      "heading": "アクセス許可",
+      "text": "位置情報の許可は、オプションの天気連動にのみ使われます。PNGファイルはシステムのファイル選択画面で選びます。アプリはそれらの画像を後で使うために自身のローカルストレージにコピーします。ログイン時の起動はオプションで、アプリまたはシステム設定で変更できます。デスクトップエフェクトと掃除ツールに、画面収録、マイク、カメラへのアクセスは必要ありません。"
+    },
+    "noInternet": {
+      "heading": "オフラインで使えるエフェクトとオンラインサービス",
+      "text": "手動で選ぶテーマ、飾りのライト、読み込んだ画像、掃除のサウンドはオフラインで動作します。現地の天気連動とApple Weatherの帰属表示にはインターネット接続が必要です。ウェブサイトのリンクを開くことやApp Storeのアップデートのダウンロードにもインターネットを使います。利用統計とクラッシュレポートは、Macがオンラインのときに送信されます。"
+    },
+    "updates": {
+      "heading": "アップデート",
+      "text": "購入とアップデートはMac App Storeが処理します。システム設定を通じて共有を選んだアプリの診断情報も、Appleが管理します。これらのサービスにはAppleのプライバシーポリシーが適用されます。"
+    },
+    "children": {
+      "heading": "お子様について",
+      "text": "デスクトップアプリにはアカウントも広告もありません。利用統計とクラッシュレポートは、すべてのユーザーに対して同じように機能します。オプションの位置情報へのアクセスには、すべてのユーザーに同じシステムの許可設定が使われます。ウェブサイトのアナリティクスは、後述の別途のCookieの選択に従います。"
+    },
+    "questions": {
+      "heading": "ご質問は？",
+      "text": "サポートにメールをお送りいただいた場合、私たちはお客様のメールアドレスと、お客様が記載した情報を受け取ります。サポートとのやり取りは、お問い合わせへの回答と解決のために使用し、その目的のために保管します。本ポリシーについてのご質問や、サポートとのやり取りの削除のご依頼は、以下までご連絡ください：",
+      "email": "メール："
+    },
+    "footer": "本プライバシーポリシーは随時更新される場合があります。最新版はいつでもこのページとMac App Storeでご覧いただけます。",
+    "website": {
+      "heading": "ウェブサイトのアナリティクスとCookie",
+      "updated": "ウェブサイトに関する項目の更新日：2026年11月13日",
+      "storage": "ウェブサイトは、Cookieに関するお客様の選択（snowmyscreen_cookie_consent_v1）と、ダウンロードページでは言語の設定（snowmyscreen-language）を記憶するためにローカルストレージを使用します。これらの設定はこのデバイスに保存されます。",
+      "analytics": "アナリティクスを許可すると、ウェブサイトはページの訪問数とブラウザ・デバイスの情報を測定するためにGoogle Analytics 4（測定ID G-VB76JMX2B6）を読み込みます。この利用データはGoogleが処理します。オプトインする前や、オプションのCookieを拒否している間は、Googleタグは読み込まれません。広告に関する同意は引き続き無効のままです。",
+      "cookies": "アナリティクスが有効な場合、Google Analyticsはブラウザとセッションを区別するために、ファーストパーティCookieの_gaと_ga_VB76JMX2B6を保存することがあります。これらのウェブサイトの統計は、デスクトップアプリの利用統計とは別のものです。",
+      "counter": "ウェブサイトは、Cookieを使わない独自のカウンターでもページビューとApp Storeへのリンクのクリック数を数えています。Cookie、ブラウザのストレージ、訪問者IDは一切使わず、バナーでの選択に関係なく動作します。各カウントには、日付、ページのパス、参照元ラベル（参照元サイトやキャンペーンタグなど）、国コードのみが日ごとの合計として保存され、IPアドレス、ユーザーエージェント、完全なURLは保存されません。カウントはブラウザのイベントであり、人数ではありません。",
+      "choices": "バナーで「すべて許可」「必要なもののみ」「カスタマイズ」のいずれかを選んでください。フッターの「Cookieの設定」から、いつでも設定を開き直せます。アナリティクスをオフにすると、Google AnalyticsのCookieが削除され、実行中のタグを停止するためにページが再読み込みされます。ブラウザのストレージを消去すると、保存された選択も削除されます。",
+      "google": "Googleによるこの情報の取り扱いについて："
+    },
+    "usageData": {
+      "heading": "利用統計とクラッシュレポート",
+      "statistics": "アプリは匿名の利用統計をTelemetryDeckに送信します。内容は、使用されたテーマ、プリセット、ライト、掃除ツール、天気連動やログイン時の起動などのオプションがオンかどうか、アプリとmacOSのバージョン、Macのモデル、ディスプレイの数、Macに設定された地域です。統計にはハッシュ化された識別子が使われ、お客様の名前やアカウントは使われません。どの機能を改善するかを判断するのに役立てています。",
+      "crash": "アプリは、クラッシュやエラーのレポート、セッションデータ、パフォーマンスデータの一部もSentryに送信します。これらには、アプリのバージョン、デバイスとシステムの詳細、障害に関する技術的な情報が含まれることがあります。個人データのデフォルトでの収集はオフになっています。",
+      "never": "読み込んだ画像、位置情報、天気の結果、画面の内容は、私たちが送信する統計やレポートには含まれません。",
+      "control": "利用統計は「設定」>「一般」でいつでもオフにできます。クラッシュレポートは現在、アプリ内でオフにすることはできません。"
+    }
+  },
+  "zh": {
+    "title": "隐私政策",
+    "pageTitle": "隐私政策 - Wonderfall",
+    "effectiveDate": "生效日期：2026 年 10 月 31 日",
+    "intro": {
+      "heading": "简介",
+      "text": "Wonderfall 是一款为桌面添加应季特效和装饰彩灯的 macOS 应用程序。我们重视你的隐私，本政策说明我们如何处理你的信息。网站分析和 Cookie 选择将在下文说明。"
+    },
+    "shortVersion": {
+      "heading": "简要说明",
+      "text1": "你导入的图片保留在你的设备上，天气匹配为可选功能。",
+      "text2": "桌面 App 没有账户，也没有广告 SDK。它会发送匿名使用统计（你可以在设置中关闭）和崩溃报告。在 1.2 及更高版本中，如果你开启当地天气匹配并允许位置访问，你的位置将用于向 Apple 的 WeatherKit 服务请求天气。网站分析需要另行选择，详见下文。"
+    },
+    "dontCollect": {
+      "heading": "桌面 App 中的隐私",
+      "items": [
+        "无需注册账户",
+        "无广告 SDK",
+        "不跨 App 或网站追踪",
+        "不上传导入的图片",
+        "不截取桌面屏幕快照，也不录制屏幕",
+        "不访问麦克风或摄像头",
+        "App 不存储位置历史记录"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "保留在你 Mac 上的内容",
+      "intro": "App 会将你的偏好设置保存在你的设备本地：",
+      "items": [
+        "特效主题、强度和速度",
+        "风向和风力",
+        "所选形状和自定图片",
+        "叠加层位置和装饰彩灯设置",
+        "语言偏好"
+      ],
+      "outro": "设置和导入的图片均存储在本地。App 绝不会上传导入的图片；使用统计仅包含下文所述的选项。你可以在设置中还原偏好设置，并在图片图库中删除导入的图片。还原偏好设置不会删除导入的图片。移除 App 不一定会移除其已存储的偏好设置或 App 数据。"
+    },
+    "weather": {
+      "heading": "可选的位置和天气匹配",
+      "location": "天气匹配默认关闭。当你开启该功能并授予权限后，macOS 会向 App 提供位置。App 请求的是公里级精度；实际提供的精度由 macOS 控制。该位置会被发送到 Apple 的 WeatherKit 服务，用于获取当前天气并选择相匹配的装饰特效。它不会被发送给开发者。",
+      "storage": "App 不会将坐标或位置历史记录保存到其偏好设置或图片文件中。位置和天气结果仅在内存中用于选择特效。在该功能开启期间，天气通常每 30 分钟刷新一次，并可能在位置权限变更后或 App 重新启动时再次刷新。",
+      "control": "你可以在 App 中关闭天气匹配，或在“系统设置”中撤销位置访问权限。关闭该功能会取消其计划中的更新。手动选择的主题无需位置访问即可继续使用。Apple 依据其自身的隐私政策处理 WeatherKit 请求；App 也会在需要时获取 Apple 天气的来源标注资源。",
+      "appleWeather": "Apple 天气与隐私",
+      "applePrivacy": "Apple 隐私政策"
+    },
+    "permissions": {
+      "heading": "权限",
+      "text": "位置权限仅用于可选的天气匹配。你通过系统文件选择器选择 PNG 文件；App 会将这些图片复制到自己的本地存储中以供日后使用。登录时启动为可选项，可在 App 或“系统设置”中更改。桌面特效和清扫工具不需要屏幕录制、麦克风或摄像头访问权限。"
+    },
+    "noInternet": {
+      "heading": "离线特效与在线服务",
+      "text": "手动选择的主题、装饰彩灯、导入的图片和清扫音效均可离线使用。当地天气匹配和 Apple 天气来源标注需要联网。打开网站链接和下载 App Store 更新也会使用互联网。使用统计和崩溃报告会在你的 Mac 联网时发送。"
+    },
+    "updates": {
+      "heading": "更新",
+      "text": "购买和更新由 Mac App Store 处理。你选择通过系统设置共享的任何 App 诊断信息也由 Apple 控制。这些服务遵循 Apple 的隐私政策。"
+    },
+    "children": {
+      "heading": "儿童",
+      "text": "桌面 App 没有账户，也没有广告。使用统计和崩溃报告对所有用户的运作方式相同。可选的位置访问对所有用户使用相同的系统权限控制。网站分析仍取决于下文单独的 Cookie 选择。"
+    },
+    "questions": {
+      "heading": "有疑问？",
+      "text": "如果你通过电子邮件联系支持，我们会收到你的电子邮件地址以及你选择提供的信息。支持往来邮件用于回复和解决你的请求，并为此目的而保留。如需咨询本政策或请求删除支持往来邮件，请联系：",
+      "email": "电子邮件："
+    },
+    "footer": "本隐私政策可能会不时更新。最新版本始终可在此处和 Mac App Store 中查看。",
+    "website": {
+      "heading": "网站分析与 Cookie",
+      "updated": "网站部分更新日期：2026 年 11 月 13 日",
+      "storage": "本网站使用本地存储来记住你的 Cookie 选择（snowmyscreen_cookie_consent_v1），并在下载页面记住你的语言偏好（snowmyscreen-language）。这些偏好保存在此设备上。",
+      "analytics": "如果你允许分析，网站会加载 Google Analytics 4（衡量 ID G-VB76JMX2B6），用于统计页面访问以及浏览器和设备信息。Google 会处理这些使用数据。在你选择同意之前，或在你拒绝可选 Cookie 期间，Google 代码不会加载。广告同意始终保持停用。",
+      "cookies": "开启分析后，Google Analytics 可能会存储第一方 Cookie _ga 和 _ga_VB76JMX2B6，用于区分浏览器和会话。这些网站统计与桌面 App 的使用统计相互独立。",
+      "counter": "本网站还使用自有的无 Cookie 计数器统计页面浏览量和 App Store 链接点击次数。它不使用 Cookie、浏览器存储或访客 ID，并且无论你在横幅中如何选择都会运行。每次计数仅以每日总数的形式存储日期、页面路径、来源标签（例如引荐网站或推广活动标签）和国家/地区代码；不保存 IP 地址、用户代理或完整网址。计数反映的是浏览器事件，而非人数。",
+      "choices": "请在横幅中选择“全部接受”、“仅必要”或“自定”。你可以随时在页脚重新打开“Cookie 设置”。关闭分析会移除 Google Analytics Cookie，并重新加载页面以停止正在运行的代码。清除浏览器存储会移除你已保存的选择。",
+      "google": "了解 Google 如何处理这些信息："
+    },
+    "usageData": {
+      "heading": "使用统计和崩溃报告",
+      "statistics": "App 会向 TelemetryDeck 发送匿名使用统计：使用了哪些主题、预设、彩灯和清扫工具，天气匹配和登录时启动等选项是否开启，App 和 macOS 版本、Mac 机型、显示器数量以及你的 Mac 上设置的地区。统计使用经过哈希处理的标识符，而不是你的姓名或账户。这些统计帮助我们决定改进哪些功能。",
+      "crash": "App 还会向 Sentry 发送崩溃和错误报告、会话数据以及部分性能数据样本。这些内容可能包括 App 版本、设备和系统详细信息，以及有关故障的技术信息。个人数据的默认收集已关闭。",
+      "never": "你导入的图片、位置、天气结果和屏幕内容均不包含在我们发送的统计或报告中。",
+      "control": "你可以随时在“设置”>“通用”中关闭使用统计。崩溃报告目前无法在 App 中关闭。"
+    }
+  },
+  "hi": {
+    "title": "गोपनीयता नीति",
+    "pageTitle": "गोपनीयता नीति - Wonderfall",
+    "effectiveDate": "प्रभावी तिथि: 31 अक्टूबर 2026",
+    "intro": {
+      "heading": "परिचय",
+      "text": "Wonderfall एक macOS ऐप्लिकेशन है जो डेस्कटॉप पर मौसमी इफ़ेक्ट और सजावटी लाइटें जोड़ता है। आपकी गोपनीयता हमारे लिए महत्वपूर्ण है, और यह नीति बताती है कि हम आपकी जानकारी को कैसे संभालते हैं। वेबसाइट एनालिटिक्स और कुकी विकल्पों के बारे में नीचे बताया गया है।"
+    },
+    "shortVersion": {
+      "heading": "संक्षेप में",
+      "text1": "आपकी इंपोर्ट की गई इमेज आपके डिवाइस पर ही रहती हैं, और मौसम मिलान वैकल्पिक है।",
+      "text2": "डेस्कटॉप ऐप में कोई अकाउंट या विज्ञापन SDK नहीं है। यह अनाम उपयोग आँकड़े भेजता है, जिन्हें आप सेटिंग्ज़ में बंद कर सकते हैं, और क्रैश रिपोर्ट भेजता है। वर्शन 1.2 और उसके बाद, अगर आप स्थानीय मौसम मिलान चालू करते हैं और लोकेशन ऐक्सेस की अनुमति देते हैं, तो आपकी लोकेशन का इस्तेमाल Apple की WeatherKit सेवा से मौसम की जानकारी माँगने के लिए होता है। वेबसाइट एनालिटिक्स के लिए अलग से चुनाव करना होता है, जिसके बारे में नीचे बताया गया है।"
+    },
+    "dontCollect": {
+      "heading": "डेस्कटॉप ऐप में गोपनीयता",
+      "items": [
+        "कोई अकाउंट रजिस्ट्रेशन नहीं",
+        "कोई विज्ञापन SDK नहीं",
+        "ऐप्स या वेबसाइटों में कोई ट्रैकिंग नहीं",
+        "इंपोर्ट की गई इमेज अपलोड नहीं होतीं",
+        "कोई डेस्कटॉप स्क्रीनशॉट या स्क्रीन रिकॉर्डिंग नहीं",
+        "माइक्रोफ़ोन या कैमरे का कोई ऐक्सेस नहीं",
+        "ऐप लोकेशन हिस्ट्री सेव नहीं करता"
+      ]
+    },
+    "staysOnMac": {
+      "heading": "आपके Mac पर क्या रहता है",
+      "intro": "ऐप आपकी प्राथमिकताएँ आपके डिवाइस पर लोकल रूप से सेव करता है:",
+      "items": [
+        "इफ़ेक्ट की थीम, तीव्रता और गति",
+        "हवा की दिशा और ताकत",
+        "चुने गए आकार और आपकी अपनी इमेज",
+        "ओवरले का स्थान और सजावटी लाइटों की सेटिंग्ज़",
+        "भाषा की प्राथमिकता"
+      ],
+      "outro": "सेटिंग्ज़ और इंपोर्ट की गई इमेज लोकल रूप से स्टोर होती हैं। ऐप इंपोर्ट की गई इमेज कभी अपलोड नहीं करता; उपयोग के आँकड़ों में सिर्फ़ नीचे बताए गए विकल्प शामिल होते हैं। आप सेटिंग्ज़ में प्राथमिकताएँ रीसेट कर सकते हैं और इमेज गैलरी से इंपोर्ट की गई इमेज डिलीट कर सकते हैं। प्राथमिकताएँ रीसेट करने पर इंपोर्ट की गई इमेज बनी रहती हैं। ऐप हटाने से उसकी सेव की गई प्राथमिकताएँ या ऐप डेटा ज़रूरी नहीं कि हट जाएँ।"
+    },
+    "weather": {
+      "heading": "वैकल्पिक लोकेशन और मौसम मिलान",
+      "location": "मौसम मिलान डिफ़ॉल्ट रूप से बंद रहता है। जब आप इसे चालू करते हैं और अनुमति देते हैं, तो macOS ऐप को एक लोकेशन देता है। ऐप किलोमीटर-स्तर की सटीकता माँगता है; दी जाने वाली सटीकता macOS तय करता है। यह लोकेशन मौजूदा मौसम पाने और उससे मेल खाता सजावटी इफ़ेक्ट चुनने के लिए Apple की WeatherKit सेवा को भेजी जाती है। इसे डेवलपर को नहीं भेजा जाता।",
+      "storage": "ऐप निर्देशांक या लोकेशन हिस्ट्री को अपनी प्राथमिकताओं या इमेज फ़ाइलों में सेव नहीं करता। लोकेशन और मौसम के नतीजे इफ़ेक्ट चुनने के लिए मेमोरी में इस्तेमाल होते हैं। जब तक यह सुविधा चालू है, मौसम आम तौर पर हर 30 मिनट में रिफ़्रेश होता है, और लोकेशन अनुमति बदलने के बाद या ऐप दोबारा शुरू होने पर फिर से रिफ़्रेश हो सकता है।",
+      "control": "आप ऐप में मौसम मिलान बंद कर सकते हैं या सिस्टम सेटिंग्ज़ में लोकेशन ऐक्सेस वापस ले सकते हैं। सुविधा बंद करने पर उसके तय अपडेट रद्द हो जाते हैं। मैन्युअल थीम लोकेशन ऐक्सेस के बिना भी काम करती रहती हैं। Apple, WeatherKit अनुरोधों को अपनी गोपनीयता नीतियों के तहत प्रोसेस करता है; ज़रूरत पड़ने पर ऐप Apple Weather के एट्रिब्यूशन संसाधन भी प्राप्त करता है।",
+      "appleWeather": "Apple Weather और गोपनीयता",
+      "applePrivacy": "Apple गोपनीयता नीति"
+    },
+    "permissions": {
+      "heading": "अनुमतियाँ",
+      "text": "लोकेशन अनुमति का इस्तेमाल सिर्फ़ वैकल्पिक मौसम मिलान के लिए होता है। आप सिस्टम फ़ाइल पिकर से PNG फ़ाइलें चुनते हैं; ऐप बाद में इस्तेमाल के लिए उन इमेज को अपने लोकल स्टोरेज में कॉपी करता है। लॉग इन पर खुलना वैकल्पिक है और इसे ऐप या सिस्टम सेटिंग्ज़ में बदला जा सकता है। डेस्कटॉप इफ़ेक्ट और सफ़ाई टूल के लिए स्क्रीन रिकॉर्डिंग, माइक्रोफ़ोन या कैमरे के ऐक्सेस की ज़रूरत नहीं है।"
+    },
+    "noInternet": {
+      "heading": "ऑफ़लाइन इफ़ेक्ट और ऑनलाइन सेवाएँ",
+      "text": "मैन्युअल थीम, सजावटी लाइटें, इंपोर्ट की गई इमेज और सफ़ाई की आवाज़ें ऑफ़लाइन काम करती हैं। स्थानीय मौसम मिलान और Apple Weather एट्रिब्यूशन के लिए इंटरनेट कनेक्शन ज़रूरी है। वेबसाइट लिंक खोलने और App Store अपडेट डाउनलोड करने में भी इंटरनेट इस्तेमाल होता है। उपयोग के आँकड़े और क्रैश रिपोर्ट तब भेजी जाती हैं जब आपका Mac ऑनलाइन होता है।"
+    },
+    "updates": {
+      "heading": "अपडेट",
+      "text": "ख़रीदारी और अपडेट Mac App Store संभालता है। सिस्टम सेटिंग्ज़ के ज़रिए आप जो भी ऐप डायग्नोस्टिक्स साझा करना चुनते हैं, उन्हें भी Apple नियंत्रित करता है। ये सेवाएँ Apple की गोपनीयता नीतियों का पालन करती हैं।"
+    },
+    "children": {
+      "heading": "बच्चे",
+      "text": "डेस्कटॉप ऐप में कोई अकाउंट या विज्ञापन नहीं है। उपयोग के आँकड़े और क्रैश रिपोर्ट सभी उपयोगकर्ताओं के लिए एक ही तरह काम करते हैं। वैकल्पिक लोकेशन ऐक्सेस सभी उपयोगकर्ताओं के लिए एक जैसे सिस्टम अनुमति कंट्रोल इस्तेमाल करता है। वेबसाइट एनालिटिक्स नीचे दिए गए अलग कुकी विकल्प पर निर्भर रहता है।"
+    },
+    "questions": {
+      "heading": "कोई सवाल?",
+      "text": "अगर आप सहायता के लिए ईमेल करते हैं, तो हमें आपका ईमेल पता और वह जानकारी मिलती है जो आप शामिल करना चुनते हैं। सहायता से जुड़े पत्राचार का इस्तेमाल आपके अनुरोध का जवाब देने और उसे हल करने के लिए होता है और उसी मकसद से रखा जाता है। इस नीति के बारे में पूछने या सहायता पत्राचार को डिलीट करवाने के लिए संपर्क करें:",
+      "email": "ईमेल:"
+    },
+    "footer": "यह गोपनीयता नीति समय-समय पर अपडेट हो सकती है। मौजूदा वर्शन हमेशा यहाँ और Mac App Store में उपलब्ध रहता है।",
+    "website": {
+      "heading": "वेबसाइट एनालिटिक्स और कुकी",
+      "updated": "वेबसाइट सेक्शन अपडेट किया गया: 13 नवंबर 2026",
+      "storage": "वेबसाइट आपकी कुकी पसंद (snowmyscreen_cookie_consent_v1) और डाउनलोड पेज पर आपकी भाषा की प्राथमिकता (snowmyscreen-language) याद रखने के लिए लोकल स्टोरेज का इस्तेमाल करती है। ये प्राथमिकताएँ इसी डिवाइस पर सेव होती हैं।",
+      "analytics": "अगर आप एनालिटिक्स की अनुमति देते हैं, तो वेबसाइट पेज विज़िट और ब्राउज़र/डिवाइस की जानकारी मापने के लिए Google Analytics 4 (मेज़रमेंट ID G-VB76JMX2B6) लोड करती है। Google इस उपयोग डेटा को प्रोसेस करता है। आपके सहमति देने से पहले या जब तक वैकल्पिक कुकी अस्वीकार हैं, Google टैग लोड नहीं होता। विज्ञापन सहमति बंद ही रहती है।",
+      "cookies": "एनालिटिक्स चालू होने पर, Google Analytics ब्राउज़र और सेशन में अंतर करने के लिए फ़र्स्ट-पार्टी _ga और _ga_VB76JMX2B6 कुकी स्टोर कर सकता है। ये वेबसाइट आँकड़े डेस्कटॉप ऐप के उपयोग आँकड़ों से अलग हैं।",
+      "counter": "वेबसाइट अपने खुद के बिना-कुकी काउंटर से पेज व्यू और App Store लिंक पर क्लिक भी गिनती है। यह न कुकी, न ब्राउज़र स्टोरेज और न ही कोई विज़िटर ID इस्तेमाल करता है, और बैनर में आप जो भी चुनें, यह काम करता है। हर गिनती में सिर्फ़ दिन, पेज पाथ, एक सोर्स लेबल (जैसे रेफ़र करने वाली साइट या कैंपेन टैग) और देश का कोड, रोज़ाना के कुल योग के रूप में स्टोर होता है; कोई IP पता, यूज़र एजेंट या पूरा URL सेव नहीं होता। गिनतियाँ ब्राउज़र इवेंट हैं, लोग नहीं।",
+      "choices": "बैनर में \"सभी स्वीकार करें\", \"सिर्फ़ ज़रूरी\" या \"अनुकूलित करें\" चुनें। आप फ़ुटर में \"कुकी सेटिंग्ज़\" को कभी भी फिर से खोल सकते हैं। एनालिटिक्स बंद करने पर Google Analytics कुकी हट जाती हैं और चल रहे टैग को रोकने के लिए पेज फिर से लोड होता है। ब्राउज़र स्टोरेज साफ़ करने पर आपकी सेव की गई पसंद हट जाती है।",
+      "google": "जानें कि Google इस जानकारी को कैसे संभालता है:"
+    },
+    "usageData": {
+      "heading": "उपयोग के आँकड़े और क्रैश रिपोर्ट",
+      "statistics": "ऐप TelemetryDeck को अनाम उपयोग आँकड़े भेजता है: कौन-सी थीम, प्रीसेट, लाइटें और सफ़ाई टूल इस्तेमाल होते हैं, मौसम मिलान और लॉग इन पर खुलने जैसे विकल्प चालू हैं या नहीं, ऐप और macOS के वर्शन, Mac मॉडल, डिस्प्ले की संख्या और आपके Mac पर सेट किया गया क्षेत्र। आँकड़ों में एक हैश किया गया आइडेंटिफ़ायर इस्तेमाल होता है, आपका नाम या कोई अकाउंट नहीं। इनसे हमें यह तय करने में मदद मिलती है कि किन फ़ीचर को बेहतर बनाना है।",
+      "crash": "ऐप Sentry को क्रैश और एरर रिपोर्ट, सेशन डेटा और परफ़ॉर्मेंस डेटा का एक नमूना भी भेजता है। इनमें ऐप वर्शन, डिवाइस और सिस्टम की जानकारी, और गड़बड़ी के बारे में तकनीकी जानकारी शामिल हो सकती है। निजी डेटा का डिफ़ॉल्ट संग्रह बंद है।",
+      "never": "आपकी इंपोर्ट की गई इमेज, लोकेशन, मौसम के नतीजे और स्क्रीन की सामग्री हमारे भेजे जाने वाले आँकड़ों या रिपोर्ट में शामिल नहीं होती।",
+      "control": "आप सेटिंग्ज़ > सामान्य में कभी भी उपयोग के आँकड़े बंद कर सकते हैं। क्रैश रिपोर्ट को फ़िलहाल ऐप में बंद नहीं किया जा सकता।"
+    }
   }
 }

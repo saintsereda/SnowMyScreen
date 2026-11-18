@@ -1,0 +1,370 @@
+{
+  "lang": "es",
+  "locale": "es_ES",
+  "html_lang": "es",
+  "other_label": "English",
+  "skip": "Ir al contenido",
+  "nav": [
+    "Efectos",
+    "Funciones",
+    "Preguntas",
+    "Blog"
+  ],
+  "download": "Descargar en el Mac App Store",
+  "short_cta": "Descargar",
+  "title": "Efectos de escritorio para Mac: nieve, lluvia y más | Wonderfall",
+  "description": "Efectos de escritorio para Mac: nieve, lluvia, hojas, luciérnagas, luces y tus propias imágenes. Conserva tu fondo de pantalla y ajusta el movimiento con Wonderfall.",
+  "hero": "Efectos de escritorio para Mac.\nOtra estación.",
+  "hero_headline": "Un poco de magia navideña para tu Mac",
+  "intro": "Cae la nieve, una guirnalda brilla en la parte superior de la pantalla, Papá Noel pasa volando con sus renos y un árbol de Navidad aparece en tu escritorio. La lluvia, las hojas y los pétalos esperan el resto del año",
+  "compat": "Para macOS {minimum_os} o posterior",
+  "updates_released": "Ya está aquí Wonderfall 1.4: descubre las novedades",
+  "preview_label": "Elige un ambiente",
+  "preview_note": "Elige un efecto para verlo. Tu fondo de pantalla se queda tal cual",
+  "benefits_label": "Más formas de hacerlo tuyo",
+  "benefits": [
+    "Conserva tu fondo de pantalla. Los efectos aparecen sobre tus ventanas o detrás de ellas.",
+    "Añade luces a lo largo de la barra de menús, con independencia de los efectos del tiempo.",
+    "Usa tus propias imágenes y ajusta el movimiento a tu escritorio."
+  ],
+  "showcase": {
+    "title": "Tu escritorio. Tu forma de maravillarte",
+    "weather_title": "Sigue el tiempo que hace fuera",
+    "weather_text": "Adapta el efecto automáticamente al tiempo que hace fuera, con efectos de temporada para los días despejados",
+    "weather_outside": "Fuera",
+    "weather_desktop": "Tu escritorio",
+    "weather_snow": "Nieva",
+    "weather_rain": "Llueve",
+    "weather_clear": "Despejado en otoño",
+    "weather_snow_description": "Nieve fuera. Copos en tu escritorio.",
+    "weather_rain_description": "Lluvia fuera. Gotas en tu escritorio.",
+    "weather_clear_description": "Un día despejado de otoño. Hojas en tu escritorio.",
+    "cleaning_title": "Un poco de tiempo. Un poco de juego",
+    "cleaning_text": "Quita la nieve con la pala, barre las hojas y los pétalos o limpia las gotas de lluvia. Hasta despejar el escritorio puede resultar satisfactorio",
+    "cleaning_snow": "Quitar la nieve",
+    "cleaning_leaves": "Barrer las hojas",
+    "cleaning_rain": "Limpiar las gotas",
+    "cleaning_hint": "Arrastra para limpiar. En pantallas táctiles, desliza de lado.",
+    "cleaning_clear": "Limpiar la pantalla",
+    "cleaning_reset": "Recuperar el tiempo",
+    "cleaning_cleared": "Todo limpio. Recupera el tiempo para volver a probar.",
+    "garland_title": "Ilumina el borde superior",
+    "garland_text": "Una guirnalda de luces a lo largo de la barra de menús. Elige los colores, la forma de las bombillas y la animación, con o sin efectos del tiempo",
+    "garland_menu": "Barra de menús",
+    "palette_warm": "Luces cálidas",
+    "palette_color": "Luces de colores",
+    "palette_ice": "Luces heladas",
+    "images_title": "Haz que caiga algo tuyo",
+    "images_text": "Añade hasta 10 imágenes y convierte tus diseños en formas que caen. Usa una sola o mezcla varias",
+    "motion_title": "Encuentra la caída perfecta",
+    "motion_text": "Ajusta con precisión la intensidad, el tamaño, la velocidad y el viento",
+    "placement_title": "Justo donde lo quieres",
+    "placement_text": "Sobre tus apps o detrás de tus ventanas. En toda la pantalla o solo un poco en la parte superior",
+    "placement_over": "Sobre las ventanas",
+    "placement_desktop": "Solo en el escritorio",
+    "placement_over_description": "La nieve aparece sobre las ventanas abiertas.",
+    "placement_desktop_description": "La nieve se queda detrás de las ventanas abiertas.",
+    "placement_strip": "Franja superior",
+    "placement_strip_description": "Los efectos se quedan en el borde superior.",
+    "placement_full_description": "Los efectos cubren toda la pantalla.",
+    "displays_title": "Una pantalla o toda tu mesa",
+    "displays_text": "Elige qué pantallas conectadas muestran los efectos",
+    "weather_label": "Prueba un cambio de tiempo",
+    "cleaning_label": "Prueba una herramienta de limpieza",
+    "palette_label": "Elige una paleta de luces",
+    "garland_scenes_label": "Elige una escena de luces",
+    "scene_winterNight": "Noche de invierno",
+    "scene_cozyEvening": "Velada acogedora",
+    "scene_springBloom": "Floración primaveral",
+    "scene_celebration": "Celebración",
+    "image_choose": "Elegir tu imagen",
+    "image_file_error": "Elige una imagen PNG, JPEG o WebP de menos de 5 MB.",
+    "image_ready": "Tu imagen ya cae en la vista previa.",
+    "placement_label": "Elige dónde aparecen los efectos",
+    "displays_label": "Efectos en dos pantallas conectadas",
+    "cleaning_media_alt": "Hojas caídas acumuladas en la parte inferior del escritorio.",
+    "cleaning_snow_alt": "Una pala retira la nieve caída del escritorio.",
+    "cleaning_leaves_alt": "Una escoba barre las hojas caídas del escritorio.",
+    "cleaning_rain_alt": "Un limpiacristales quita las gotas de lluvia del escritorio.",
+    "garland_media_alt": "Distintas guirnaldas de luces se turnan a lo largo de la barra de menús.",
+    "garland_winterNight_alt": "Luces de guirnalda con forma de árbol parpadean a lo largo del borde superior.",
+    "garland_cozyEvening_alt": "Una guirnalda de bombillas cálidas brilla a lo largo del borde superior.",
+    "garland_springBloom_alt": "Una guirnalda de corazones rosas parpadea a lo largo del borde superior.",
+    "garland_celebration_alt": "Una guirnalda de estrellas de colores parpadea a lo largo del borde superior.",
+    "images_media_alt": "Diseños propios usados como efectos que caen sobre el escritorio.",
+    "placement_media_alt": "Nieve sobre y detrás de una ventana del navegador, con copos de distintos tamaños."
+  },
+  "preview_name": "Haz sitio a un poco de magia.",
+  "preview_detail": "El mismo escritorio. Otro ambiente.",
+  "effects_kicker": "Seis formas de crear ambiente",
+  "effects_title": "Mucho más que un día de nieve",
+  "effects_intro": "Elige un efecto de temporada o usa tus propios diseños, y ajusta la intensidad, el tamaño, la velocidad y el viento hasta dar con el aspecto que te encaje",
+  "themes": [
+    [
+      "snow",
+      "Nieve de invierno",
+      "Copos suaves, una deriva tranquila y un poco de magia invernal. Elige entre las formas de copo incluidas.",
+      "❄️"
+    ],
+    [
+      "rain",
+      "Lluvia",
+      "Desde una llovizna ligera hasta un chaparrón constante. Ajusta el viento, el tamaño de las gotas y la intensidad.",
+      "🌧️"
+    ],
+    [
+      "leaves",
+      "Hojas de otoño",
+      "Hojas ámbar y carmesí revolotean por tu escritorio con una brisa que tú controlas.",
+      "🍂"
+    ],
+    [
+      "petals",
+      "Pétalos de primavera",
+      "Pétalos rosados flotan por tu espacio de trabajo para un cambio de estación más suave.",
+      "🌸"
+    ],
+    [
+      "fireflies",
+      "Luciérnagas de verano",
+      "Puntos de luz cálida recorren la pantalla y traen una noche de verano a tu escritorio.",
+      "✨"
+    ],
+    [
+      "custom",
+      "Tus imágenes",
+      "Importa tus propias imágenes y haz que caigan como nieve, revoloteen como hojas o se deslicen como lluvia.",
+      "＋"
+    ]
+  ],
+  "features_kicker": "Pequeños detalles. Tu ambiente.",
+  "features_title": "Que se sienta como tu escritorio",
+  "features": [
+    [
+      "Conserva tu fondo de pantalla",
+      "Los efectos son capas transparentes. Mantén el fondo de escritorio que ya te encanta."
+    ],
+    [
+      "Elige dónde aparecen",
+      "Muestra la animación sobre las ventanas abiertas o en el escritorio, detrás de ellas. Usa toda la pantalla o una franja de 150 puntos en la parte superior."
+    ],
+    [
+      "Ajusta el movimiento",
+      "Regula la intensidad, el tamaño de las partículas, la velocidad y el viento. La nieve, las hojas y los pétalos también tienen controles de deriva."
+    ],
+    [
+      "Añade un poco de luz",
+      "Decora la barra de menús con guirnaldas. Elige los colores, la forma de las bombillas y una animación constante, de centelleo, en onda o en secuencia."
+    ],
+    [
+      "Hazlo tuyo",
+      "Añade hasta 10 imágenes a la vez, selecciónalas o combínalas y elige un estilo de movimiento. Funcionan los formatos habituales y SVG, y los fondos transparentes quedan mejor."
+    ],
+    [
+      "Sigue a lo tuyo",
+      "Haz clic a través de las capas para usar tu Mac. Controla los efectos desde la barra de menús y, si quieres, haz que la app se abra al iniciar sesión."
+    ]
+  ],
+  "steps_title": "Tu primera nevada en tres pasos",
+  "steps": [
+    [
+      "Instala y abre",
+      "Descarga Wonderfall del Mac App Store y abre su icono en la barra de menús."
+    ],
+    [
+      "Elige tus copos",
+      "Escoge una forma incluida o importa tus propias imágenes o diseños SVG."
+    ],
+    [
+      "Déjalo a tu gusto",
+      "Ajusta el tamaño, la velocidad, la intensidad y el viento. Elige efectos sobre las ventanas o detrás de ellas."
+    ]
+  ],
+  "faq_title": "Algunas cosas que quizá te preguntes",
+  "faq": [
+    [
+      "¿Qué es Wonderfall?",
+      "Wonderfall es una app de la barra de menús de macOS que añade animaciones al escritorio: nieve, lluvia, hojas de otoño, pétalos de primavera, luciérnagas de verano, tus propias imágenes y luces decorativas."
+    ],
+    [
+      "¿Wonderfall es gratis?",
+      "Wonderfall es una app de pago, con un precio de {us_price} en el Mac App Store de EE. UU. Los precios varían según la región y pueden cambiar; consulta tu tienda local para ver el precio actual."
+    ],
+    [
+      "¿Es un fondo de pantalla animado o un salvapantallas?",
+      "Es una capa sobre el escritorio. Tu fondo de pantalla se queda donde está, y la animación puede aparecer detrás o encima de las ventanas abiertas mientras usas el Mac. No sustituye al salvapantallas de macOS."
+    ],
+    [
+      "¿Funciona con varias pantallas?",
+      "Sí. La app crea una capa para cada pantalla conectada y las actualiza cuando cambia la configuración de pantallas."
+    ],
+    [
+      "¿Puedo seguir haciendo clic en mis apps y en el escritorio?",
+      "Sí. Las ventanas de las capas ignoran el ratón, así que puedes hacer clic a través de ellas y usar el Mac con normalidad. El modo Solo en el escritorio coloca los efectos detrás de tus ventanas."
+    ],
+    [
+      "¿Puedo usar mis propias imágenes?",
+      "Sí. Importa hasta 10 imágenes en formatos habituales o SVG, eligiendo archivos o arrastrándolos; Wonderfall se encarga del tamaño. Elige una o combina varias, con movimiento de nieve, de hojas o de lluvia."
+    ],
+    [
+      "¿Puedo poner luces de Navidad sin nieve?",
+      "Sí. Las guirnaldas tienen controles independientes de los efectos del tiempo, así que puedes iluminar la barra de menús sin que nieve."
+    ],
+    [
+      "¿El efecto de lluvia tiene sonido?",
+      "El efecto de lluvia es una capa visual sobre el escritorio. No incluye sonido ambiente de lluvia ni música."
+    ],
+    [
+      "¿Qué Mac son compatibles?",
+      "Wonderfall requiere macOS {minimum_os} o posterior. Es una app para Mac; no es una app para iPhone ni para iPad."
+    ],
+    [
+      "¿Necesita conexión a Internet?",
+      "Los efectos, los ajustes y las imágenes propias funcionan en local en tu Mac. Para descargar y actualizar se necesita Internet. La adaptación opcional al tiempo también necesita Internet y permiso de ubicación para usar Apple WeatherKit."
+    ],
+    [
+      "¿Cómo desactivo los efectos?",
+      "Usa los controles de la barra de menús para desactivar los efectos del tiempo o las luces, o sal de la app. Abrir al iniciar sesión es un ajuste aparte."
+    ]
+  ],
+  "blog_title": "Un poco de inspiración para tu espacio de trabajo",
+  "read": "Leer la guía",
+  "all_posts": "Todos los artículos",
+  "blog_meta_title": "Guías para el escritorio del Mac y efectos de temporada | Wonderfall",
+  "blog_description": "Guías prácticas para personalizar el escritorio del Mac: nieve y lluvia superpuestas, efectos de temporada, luces decorativas e imágenes propias.",
+  "blog_intro": "Guías prácticas para darle a tu Mac un poco más de ambiente. Empieza por lo básico y después hazlo a tu manera",
+  "cta_title": "Un pequeño cambio. Otra sensación",
+  "cta_text": "Dale a tu Mac una estación propia. Empieza con la nieve y deja que el ánimo te lleve",
+  "footer_line": "Efectos de temporada para el escritorio, hechos para Mac",
+  "featured_on": "Destacado en",
+  "macbase_badge_alt": "Wonderfall destacado en MacBase",
+  "footer_groups": [
+    "Guías",
+    "Producto",
+    "Legal",
+    "Contacto"
+  ],
+  "privacy": "Política de privacidad",
+  "support": "Soporte",
+  "contact": "Contactar con Andrew",
+  "author": "Por Andrew Sereda, desarrollador de Wonderfall",
+  "support_title": "Soporte y configuración de Wonderfall para Mac",
+  "support_description": "Ayuda con Wonderfall en Mac: controles de la barra de menús, temas, capas, importación de imágenes y contacto con el desarrollador.",
+  "support_intro": "Usa el icono de la barra de menús para elegir un efecto de temporada, ajustar su movimiento, añadir guirnaldas o importar tus propias imágenes",
+  "support_sections": [
+    [
+      "Primeros pasos",
+      "Descarga Wonderfall del Mac App Store, abre la app y haz clic en su icono de la barra de menús para elegir un tema en «Efectos del tiempo». La ventana de ajustes no tiene que quedarse abierta."
+    ],
+    [
+      "No veo ningún efecto",
+      "Comprueba que «Efectos del tiempo» está activado y que la app está abierta. Prueba «Toda la pantalla» y la posición «Sobre el contenido». En el modo «Solo en el escritorio» los efectos quedan detrás de las ventanas, así que una ventana maximizada puede taparlos. Sube la intensidad si el efecto es demasiado sutil."
+    ],
+    [
+      "Importar tus propios diseños",
+      "Elige «Tu imagen» y añade imágenes con el selector de archivos o arrastrándolas a la galería. El límite es de 10 imágenes; funcionan los formatos habituales y SVG, y Wonderfall prepara el tamaño automáticamente. Los fondos transparentes dejan bordes limpios. Elige un movimiento de nieve, de hojas o de lluvia."
+    ],
+    [
+      "Controlar las luces por separado",
+      "Los controles de las guirnaldas te permiten decorar la barra de menús. Las luces y los efectos del tiempo funcionan de forma independiente, así que puedes usar las luces solas."
+    ],
+    [
+      "Desactivar el inicio automático",
+      "Usa el ajuste «Abrir al iniciar sesión» para decidir si la app se abre al iniciar sesión. Sal de la app desde sus controles de la barra de menús."
+    ],
+    [
+      "Contactar con el desarrollador",
+      "Escribe a hello@andrewsereda.com indicando tu versión de macOS, la versión de la app, tu configuración de pantallas y los pasos que reproducen el problema. Evita adjuntar contenido personal o sensible."
+    ]
+  ],
+  "picker_title": "Elige un efecto",
+  "picker_intro": "¿Qué haría que este momento fuera un poco distinto?",
+  "picker_footer": "Tu fondo de pantalla y tus ventanas abiertas se quedan tal cual.",
+  "folder_labels": [
+    "Notas",
+    "Proyectos",
+    "Fotos"
+  ],
+  "device_alt": "Marco de pantalla para los vídeos de efectos de temporada.",
+  "screen_label": "Vista previa en vídeo del efecto de temporada",
+  "desktop_label": "Escritorio",
+  "desktop_time": "lun 9:41",
+  "desktop_menu": [
+    "Archivo",
+    "Edición",
+    "Visualización"
+  ],
+  "hero_line": "Efectos de escritorio para Mac",
+  "hero_phrases": [
+    {
+      "text": "Nieve de invierno",
+      "icon": "❄️"
+    },
+    {
+      "text": "Lluvia",
+      "icon": "🌧️"
+    },
+    {
+      "text": "Hojas de otoño",
+      "icon": "🍂"
+    },
+    {
+      "text": "Pétalos de primavera",
+      "icon": "🌸"
+    },
+    {
+      "text": "Luciérnagas de verano",
+      "icon": "✨"
+    }
+  ],
+  "cookie_settings": "Ajustes de cookies",
+  "navigation_ui": {
+    "main": "Navegación principal",
+    "menu": "Menú",
+    "language": "Elegir idioma",
+    "sections": "Secciones del sitio",
+    "home": "Inicio"
+  },
+  "product_title": "Efectos de escritorio para Mac. Tu fondo de pantalla se queda",
+  "product_summary": "Wonderfall añade nieve, lluvia, hojas de otoño, pétalos de primavera y luciérnagas animados al escritorio de tu Mac. Deja los efectos detrás de tus ventanas o haz que floten sobre tus apps, con tu propio fondo de pantalla debajo",
+  "product_facts": [
+    [
+      "Plataforma",
+      "macOS {minimum_os}+"
+    ],
+    [
+      "Posición",
+      "Sobre las ventanas o solo en el escritorio"
+    ],
+    [
+      "Tus diseños",
+      "Hasta 10 imágenes propias, SVG incluido"
+    ]
+  ],
+  "setup_link": "Cómo añadir nieve al escritorio de tu Mac (en inglés)",
+  "released_description": "Wonderfall es una app de la barra de menús para Mac con nieve, lluvia, hojas, pétalos, luciérnagas, imágenes propias y luces decorativas animadas. Conserva tu fondo de pantalla actual y requiere macOS {minimum_os} o posterior.",
+  "released_features": [
+    "Nieve, lluvia, hojas de otoño, pétalos de primavera y luciérnagas de verano animados",
+    "Imágenes propias con varios estilos de movimiento",
+    "Luces decorativas con ocho escenas a lo largo de la barra de menús o del Dock",
+    "Montones de nieve, gotas de lluvia y montones de hojas con pala, limpiacristales y escoba",
+    "Nieve sobre las ventanas abiertas, bolas de nieve, un muñeco de nieve y una quitanieves",
+    "Adaptación opcional al tiempo",
+    "Efectos sobre las ventanas o solo en el escritorio",
+    "Intensidad, tamaño, velocidad y viento ajustables"
+  ],
+  "reviews_ui": {
+    "title": "Un poco de magia, en sus palabras",
+    "summary": "{value} de 5 · {count} valoraciones en Ucrania",
+    "rating": "Valoración de {rating} de 5 estrellas",
+    "country": "Ucrania",
+    "checked": "App Store de Ucrania, consultado el {date}"
+  },
+  "updated_label": "Actualizado",
+  "icon_alt": "Icono de la app Wonderfall",
+  "footer_nav_label": "Navegación del pie de página",
+  "breadcrumb_label": "Ruta de navegación",
+  "decimal": ",",
+  "press_label": "Prensa (en inglés)",
+  "privacy_description": "Cómo trata Wonderfall los datos locales de la app, las estadísticas de uso, los informes de fallos, la ubicación opcional, la analítica del sitio web y las preferencias de cookies."
+}
