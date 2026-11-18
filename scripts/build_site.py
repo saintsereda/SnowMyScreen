@@ -183,7 +183,7 @@ def _page(c, suffix, title, description, body, schemas=(), article=None, preview
 <nav aria-label="{E(c['footer_nav_label'])}">{footer_groups(c,lang)}</nav></footer>
 </body></html>'''
 
-def closing_screen(c, effect='snow'):
+def closing_screen(c, effect='closing'):
     """The closing call to action, on a MacBook display that rises from behind the footer."""
     media=json.loads((ROOT/'content/preview-videos.json').read_text())[effect]
     return (f'<section class="closing-screen" data-closing-screen aria-labelledby="closing-title"><div class="closing-screen__stage"><div class="closing-screen__device"><div class="closing-screen__display desktop-screen desktop-screen--video">'

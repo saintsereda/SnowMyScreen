@@ -66,6 +66,8 @@
   transform: scale(var(--recording-zoom));
   transform-origin: center bottom;
 }
+/* The Christmas snow recording has no menu bar; its garland hangs from the very top edge. */
+.preview[data-effect="snow"] .desktop-screen__recording { --recording-zoom: 1; }
 
 /* Expensa's scroll-linked tilt, applied to the video, menu bar and pause control together. */
 .video-preview.has-perspective .preview-media {

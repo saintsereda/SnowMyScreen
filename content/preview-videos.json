@@ -1,5 +1,6 @@
 {
   "snow": { "src": "/videos/snow-christmas-1440p.mp4", "poster": "/videos/snow-christmas-1440p.jpg" },
+  "closing": { "src": "/videos/snow-demo-1440p.mp4", "poster": "/videos/snow-demo-1440p.jpg" },
   "rain": { "src": "/videos/rain-demo-1440p.mp4", "poster": "/videos/rain-demo-1440p.jpg" },
   "leaves": { "src": "/videos/leaves-demo-1440p.mp4", "poster": "/videos/leaves-demo-1440p.jpg" },
   "petals": { "src": "/videos/petals-demo-1440p.mp4", "poster": "/videos/petals-demo-1440p.jpg" },
