@@ -34,4 +34,6 @@
 - [Конфіденційність]({origin}/uk/privacy.html)
 - [Прес-кіт]({origin}/uk/press/)
 
+{other_languages}
+
 Developer: Andrii Sereda, also known as Andrew Sereda. Contact: hello@andrewsereda.com.

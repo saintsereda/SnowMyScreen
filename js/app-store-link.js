@@ -14,10 +14,21 @@
     if (!/iPhone|iPad|iPod/.test(ua)) return;
     if (!/Barcelona|Instagram|FBAN|FBAV|FB_IAB|musical_ly|BytedanceWebview|TikTok/.test(ua)) return;
 
-    var uk = (document.documentElement.lang || '').indexOf('uk') === 0;
-    var NOTE = uk
-        ? 'Цей браузер не відкриває App Store. Натисніть ••• угорі й оберіть «Відкрити в браузері».'
-        : 'This browser won’t open the App Store. Tap ••• at the top and choose “Open in browser”.';
+    var NOTES = {
+        en: 'This browser won’t open the App Store. Tap ••• at the top and choose “Open in browser”.',
+        uk: 'Цей браузер не відкриває App Store. Натисніть ••• угорі й оберіть «Відкрити в браузері».',
+        de: 'Dieser Browser öffnet den App Store nicht. Tippe oben auf ••• und wähle „Im Browser öffnen“.',
+        fr: "Ce navigateur n’ouvre pas l’App Store. Touchez ••• en haut et choisissez « Ouvrir dans le navigateur ».",
+        es: "Este navegador no abre el App Store. Toca ••• arriba y elige «Abrir en el navegador».",
+        pt: "Este navegador não abre a App Store. Toque em ••• no topo e escolha “Abrir no navegador”.",
+        pl: "Ta przeglądarka nie otworzy App Store. Stuknij ••• u góry i wybierz „Otwórz w przeglądarce”.",
+        cs: "Tento prohlížeč App Store neotevře. Klepněte nahoře na ••• a zvolte „Otevřít v prohlížeči“.",
+        tr: "Bu tarayıcı App Store'u açmıyor. Üstteki ••• simgesine dokunun ve “Tarayıcıda aç” seçeneğini belirleyin.",
+        ja: "このブラウザではApp Storeを開けません。上部の「•••」をタップし、「ブラウザで開く」を選んでください。",
+        zh: "此浏览器无法打开 App Store。请轻点顶部的 •••，然后选择“在浏览器中打开”。",
+        hi: "यह ब्राउज़र App Store नहीं खोल सकता। ऊपर ••• पर टैप करें और “ब्राउज़र में खोलें” चुनें।"
+    };
+    var NOTE = NOTES[(document.documentElement.lang || '').slice(0, 2).toLowerCase()] || NOTES.en;
 
     function showNote() {
         if (document.getElementById('iab-note')) return;

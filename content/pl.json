@@ -1,0 +1,365 @@
+{
+  "lang": "pl",
+  "locale": "pl_PL",
+  "other_label": "English",
+  "skip": "Przejdź do treści",
+  "nav": [
+    "Efekty",
+    "Funkcje",
+    "FAQ",
+    "Blog"
+  ],
+  "download": "Pobierz z Mac App Store",
+  "short_cta": "Pobierz",
+  "title": "Efekty na pulpit Maca: śnieg, deszcz i więcej | Wonderfall",
+  "description": "Efekty na pulpit Maca: śnieg, deszcz, liście, świetliki, lampki i Twoje własne obrazy. Zachowaj swoją tapetę i dopasuj ruch w Wonderfall.",
+  "hero": "Efekty na pulpit Maca.\nInna pora roku.",
+  "hero_headline": "Odrobina świątecznej magii na Twoim Macu",
+  "intro": "Pada śnieg, wzdłuż górnej krawędzi ekranu świeci girlanda, Mikołaj przelatuje z reniferami, a na pulpicie stoi choinka. Deszcz, liście i płatki czekają na resztę roku",
+  "compat": "Dla macOS {minimum_os} i nowszych",
+  "updates_released": "Wonderfall 1.4 już jest: zobacz, co nowego",
+  "preview_label": "Wybierz nastrój",
+  "preview_note": "Wybierz efekt, aby zobaczyć podgląd. Twoja tapeta pozostaje bez zmian",
+  "benefits_label": "Jeszcze więcej sposobów, by było po Twojemu",
+  "benefits": [
+    "Zachowaj swoją tapetę. Efekty pojawiają się nad oknami lub za nimi.",
+    "Dodaj lampki wzdłuż górnego paska menu, niezależnie od efektów pogody.",
+    "Użyj własnych obrazów i dopasuj ruch do swojego pulpitu."
+  ],
+  "showcase": {
+    "title": "Twój pulpit. Twoja odrobina cudu",
+    "weather_title": "Podążaj za pogodą za oknem",
+    "weather_text": "Automatycznie dopasuj efekt do pogody za oknem, z sezonowymi efektami na pogodne dni",
+    "weather_outside": "Za oknem",
+    "weather_desktop": "Twój pulpit",
+    "weather_snow": "Śnieg",
+    "weather_rain": "Deszcz",
+    "weather_clear": "Pogodnie jesienią",
+    "weather_snow_description": "Za oknem pada śnieg. Płatki śniegu na Twoim pulpicie.",
+    "weather_rain_description": "Za oknem pada deszcz. Krople deszczu na Twoim pulpicie.",
+    "weather_clear_description": "Pogodny jesienny dzień. Liście na Twoim pulpicie.",
+    "cleaning_title": "Trochę pogody. Trochę zabawy",
+    "cleaning_text": "Odgarnij śnieg, zamieć liście i płatki albo zetrzyj krople deszczu. Nawet sprzątanie pulpitu może sprawić trochę frajdy",
+    "cleaning_snow": "Odgarnij śnieg",
+    "cleaning_leaves": "Zamieć liście",
+    "cleaning_rain": "Zetrzyj krople",
+    "cleaning_hint": "Przeciągnij, aby posprzątać. Na ekranie dotykowym przesuń palcem w bok.",
+    "cleaning_clear": "Wyczyść ekran",
+    "cleaning_reset": "Przywróć pogodę",
+    "cleaning_cleared": "Czysto. Przywróć pogodę, aby spróbować jeszcze raz.",
+    "garland_title": "Rozświetl górną krawędź",
+    "garland_text": "Girlanda lampek wzdłuż górnego paska menu. Wybierz kolory, kształty żarówek i animację, z pogodą lub bez niej",
+    "garland_menu": "Pasek menu",
+    "palette_warm": "Ciepłe lampki",
+    "palette_color": "Kolorowe lampki",
+    "palette_ice": "Lodowe lampki",
+    "images_title": "Niech spada coś Twojego",
+    "images_text": "Dodaj do 10 obrazów i zamień swoje grafiki w spadające kształty. Użyj jednego albo wymieszaj kilka",
+    "motion_title": "Znajdź swój idealny ruch",
+    "motion_text": "Dostrój intensywność, rozmiar, prędkość i wiatr",
+    "placement_title": "Dokładnie tam, gdzie chcesz",
+    "placement_text": "Nad aplikacjami albo za oknami. Na całym ekranie albo tylko wąskim pasem u góry",
+    "placement_over": "Nad oknami",
+    "placement_desktop": "Tylko pulpit",
+    "placement_over_description": "Śnieg pojawia się nad otwartymi oknami.",
+    "placement_desktop_description": "Śnieg zostaje za otwartymi oknami.",
+    "placement_strip": "Górny pasek",
+    "placement_strip_description": "Efekty zostają przy górnej krawędzi.",
+    "placement_full_description": "Efekty pokrywają cały ekran.",
+    "displays_title": "Jeden ekran albo całe biurko",
+    "displays_text": "Wybierz, na których podłączonych ekranach mają być efekty",
+    "weather_label": "Wypróbuj zmianę pogody",
+    "cleaning_label": "Wypróbuj narzędzie do sprzątania",
+    "palette_label": "Wybierz kolory lampek",
+    "garland_scenes_label": "Wybierz scenę świetlną",
+    "scene_winterNight": "Zimowa noc",
+    "scene_cozyEvening": "Przytulny wieczór",
+    "scene_springBloom": "Wiosenne kwitnienie",
+    "scene_celebration": "Świętowanie",
+    "image_choose": "Wybierz obraz",
+    "image_file_error": "Wybierz obraz PNG, JPEG lub WebP mniejszy niż 5 MB.",
+    "image_ready": "Twój obraz spada teraz w podglądzie.",
+    "placement_label": "Wybierz, gdzie pojawiają się efekty",
+    "displays_label": "Efekty na dwóch podłączonych ekranach",
+    "cleaning_media_alt": "Opadłe liście zebrane wzdłuż dolnej krawędzi pulpitu.",
+    "cleaning_snow_alt": "Łopata odgarnia padający śnieg z pulpitu.",
+    "cleaning_leaves_alt": "Miotła zamiata opadłe liście z pulpitu.",
+    "cleaning_rain_alt": "Ściągaczka ściera krople deszczu z pulpitu.",
+    "garland_media_alt": "Różne girlandy lampek zmieniają się wzdłuż górnego paska menu.",
+    "garland_winterNight_alt": "Girlanda z lampkami w kształcie choinek migocze przy górnej krawędzi.",
+    "garland_cozyEvening_alt": "Girlanda z ciepłymi żarówkami świeci przy górnej krawędzi.",
+    "garland_springBloom_alt": "Girlanda z różowymi serduszkami migocze przy górnej krawędzi.",
+    "garland_celebration_alt": "Girlanda z kolorowymi gwiazdkami migocze przy górnej krawędzi.",
+    "images_media_alt": "Własne grafiki jako spadające efekty na pulpicie.",
+    "placement_media_alt": "Śnieg nad oknem przeglądarki i za nim, z płatkami różnej wielkości."
+  },
+  "preview_name": "Zrób miejsce na odrobinę cudu.",
+  "preview_detail": "Ten sam pulpit. Nowy nastrój.",
+  "effects_kicker": "Sześć sposobów na nastrój",
+  "effects_title": "Więcej niż śnieżny dzień",
+  "effects_intro": "Wybierz efekt sezonowy albo własne grafiki, a potem zmień intensywność, rozmiar, prędkość i wiatr, aż wszystko będzie wyglądać tak, jak lubisz",
+  "themes": [
+    [
+      "snow",
+      "Zimowy śnieg",
+      "Miękkie płatki, łagodny dryf i odrobina zimowej magii. Wybierz jeden z wbudowanych kształtów płatków śniegu.",
+      "❄️"
+    ],
+    [
+      "rain",
+      "Deszcz",
+      "Od lekkiej mżawki po równą ulewę. Dostosuj wiatr, rozmiar kropli i intensywność.",
+      "🌧️"
+    ],
+    [
+      "leaves",
+      "Jesienne liście",
+      "Bursztynowe i karmazynowe liście wirują po pulpicie na wietrze, którym sterujesz.",
+      "🍂"
+    ],
+    [
+      "petals",
+      "Wiosenne płatki",
+      "Różowe płatki unoszą się nad Twoim miejscem pracy, by zmiana pory roku była łagodniejsza.",
+      "🌸"
+    ],
+    [
+      "fireflies",
+      "Letnie świetliki",
+      "Ciepłe punkciki światła wędrują po ekranie i przynoszą do domu letni wieczór.",
+      "✨"
+    ],
+    [
+      "custom",
+      "Twoje obrazy",
+      "Zaimportuj własne obrazy i pozwól im padać jak śnieg, wirować jak liście albo spływać jak deszcz.",
+      "＋"
+    ]
+  ],
+  "features_kicker": "Małe detale. Twój nastrój.",
+  "features_title": "Żeby pulpit był naprawdę Twój",
+  "features": [
+    [
+      "Zachowaj swoją tapetę",
+      "Efekty to przezroczyste nakładki. Zostaw tło pulpitu, które już lubisz."
+    ],
+    [
+      "Wybierz, gdzie się pojawiają",
+      "Wyświetlaj animację nad otwartymi oknami albo na pulpicie za nimi. Użyj całego ekranu albo pasa o wysokości 150 punktów u góry."
+    ],
+    [
+      "Dostrój ruch",
+      "Dostosuj intensywność, rozmiar cząsteczek, prędkość i wiatr. Śnieg, liście i płatki mają też ustawienia dryfowania."
+    ],
+    [
+      "Dodaj trochę światła",
+      "Udekoruj górny pasek menu girlandami. Wybierz kolory, kształty żarówek i animację: stałe światło, migotanie, falę lub pościg."
+    ],
+    [
+      "Po Twojemu",
+      "Dodaj do 10 obrazów naraz, wybierz je lub wymieszaj i ustaw styl ruchu. Obsługiwane są popularne formaty i SVG, a najlepiej wyglądają przezroczyste tła."
+    ],
+    [
+      "Nie wybijaj się z rytmu",
+      "Klikaj przez nakładki i korzystaj z Maca jak zwykle. Steruj efektami z paska menu i w razie potrzeby uruchamiaj aplikację przy logowaniu."
+    ]
+  ],
+  "steps_title": "Twój pierwszy śnieg w trzech krokach",
+  "steps": [
+    [
+      "Zainstaluj i otwórz",
+      "Pobierz Wonderfall z Mac App Store i otwórz jego ikonę na pasku menu."
+    ],
+    [
+      "Wybierz płatki śniegu",
+      "Wybierz wbudowany kształt albo zaimportuj własne obrazy lub grafiki SVG."
+    ],
+    [
+      "Dopasuj do siebie",
+      "Dostosuj rozmiar, prędkość, intensywność i wiatr. Wybierz efekty nad oknami lub za nimi."
+    ]
+  ],
+  "faq_title": "Kilka rzeczy, o które możesz zapytać",
+  "faq": [
+    [
+      "Czym jest Wonderfall?",
+      "Wonderfall to aplikacja na pasek menu macOS, która nakłada na pulpit animowane efekty: śnieg, deszcz, jesienne liście, wiosenne płatki, letnie świetliki, Twoje własne obrazy i ozdobne lampki."
+    ],
+    [
+      "Czy Wonderfall jest darmowy?",
+      "Wonderfall jest płatny. W amerykańskim Mac App Store kosztuje {us_price}. Ceny różnią się w zależności od regionu i mogą się zmieniać; aktualną cenę sprawdzisz w swoim App Store."
+    ],
+    [
+      "Czy to żywa tapeta albo wygaszacz ekranu?",
+      "To nakładka na pulpit. Twoja tapeta zostaje na miejscu, a animacja może pojawiać się za otwartymi oknami lub nad nimi, gdy korzystasz z Maca. Nie zastępuje wygaszacza ekranu macOS."
+    ],
+    [
+      "Czy działa z wieloma ekranami?",
+      "Tak. Aplikacja tworzy nakładkę dla każdego podłączonego ekranu i aktualizuje nakładki, gdy zmienia się układ ekranów."
+    ],
+    [
+      "Czy nadal mogę klikać aplikacje i pulpit?",
+      "Tak. Okna nakładek ignorują kliknięcia myszą, więc klikasz przez nie i korzystasz z Maca normalnie. W trybie „Tylko pulpit” efekty są za Twoimi oknami."
+    ],
+    [
+      "Czy mogę użyć własnych obrazów?",
+      "Tak. Zaimportuj do 10 obrazów w popularnych formatach lub SVG, wybierając pliki albo przeciągając je; o rozmiar zadba Wonderfall. Wybierz jeden lub wymieszaj kilka, z ruchem jak śnieg, liście albo deszcz."
+    ],
+    [
+      "Czy mogę dodać świąteczne lampki bez śniegu?",
+      "Tak. Girlandy mają ustawienia niezależne od efektów pogody, więc możesz rozświetlić górny pasek menu bez padającego śniegu."
+    ],
+    [
+      "Czy efekt deszczu ma dźwięk?",
+      "Efekt deszczu to wyłącznie wizualna nakładka na pulpit. Nie zawiera odgłosów deszczu ani muzyki."
+    ],
+    [
+      "Które Maki są obsługiwane?",
+      "Wonderfall wymaga macOS {minimum_os} lub nowszego. To aplikacja na Maca, a nie na iPhone’a czy iPada."
+    ],
+    [
+      "Czy potrzebne jest połączenie z internetem?",
+      "Efekty na pulpicie, ustawienia i własne obrazy działają lokalnie na Twoim Macu. Pobieranie i aktualizacje wymagają internetu. Opcjonalne dopasowanie do pogody również wymaga internetu i zgody na dostęp do lokalizacji, aby korzystać z Apple WeatherKit."
+    ],
+    [
+      "Jak wyłączyć efekty?",
+      "Wyłącz efekty pogody lub lampki z paska menu albo zamknij aplikację. Uruchamianie przy logowaniu to osobne ustawienie."
+    ]
+  ],
+  "blog_title": "Trochę inspiracji dla Twojego miejsca pracy",
+  "read": "Przeczytaj poradnik",
+  "all_posts": "Wszystkie artykuły",
+  "blog_meta_title": "Poradniki o pulpicie Maca | Wonderfall",
+  "blog_description": "Praktyczne poradniki o personalizacji pulpitu Maca: nakładki ze śniegiem i deszczem, efekty sezonowe, ozdobne lampki i własne obrazy.",
+  "blog_intro": "Praktyczne poradniki, jak dodać Macowi trochę nastroju",
+  "cta_title": "Mała zmiana. Inny nastrój",
+  "cta_text": "Daj swojemu Macowi własną porę roku. Zacznij od śniegu i zobacz, dokąd zaprowadzi Cię nastrój",
+  "footer_line": "Sezonowe efekty na pulpit, stworzone dla Maca",
+  "featured_on": "Polecane w",
+  "macbase_badge_alt": "Wonderfall polecany w MacBase",
+  "footer_groups": ["Poradniki", "Produkt", "Informacje prawne", "Kontakt"],
+  "privacy": "Polityka prywatności",
+  "support": "Pomoc",
+  "contact": "Napisz do Andrew",
+  "author": "Autor: Andrew Sereda, twórca Wonderfall",
+  "support_title": "Wonderfall na Macu: pomoc i konfiguracja",
+  "support_description": "Pomoc dotycząca Wonderfall na Macu: sterowanie z paska menu, motywy, nakładki, import obrazów i kontakt z twórcą.",
+  "support_intro": "Kliknij ikonę na pasku menu, aby wybrać efekt sezonowy, dostosować jego ruch, dodać girlandy lub zaimportować własne obrazy",
+  "support_sections": [
+    [
+      "Pierwsze kroki",
+      "Pobierz Wonderfall z Mac App Store, otwórz aplikację i kliknij jej ikonę na pasku menu, aby wybrać motyw w sekcji „Efekty pogody”. Okno ustawień nie musi pozostać otwarte."
+    ],
+    [
+      "Nie widzę efektu",
+      "Sprawdź, czy „Efekty pogody” są włączone i czy aplikacja działa. Wypróbuj „Pełny ekran” i położenie „Nad zawartością”. Efekty w trybie „Tylko pulpit” są za Twoimi oknami, więc zmaksymalizowane okno może je zasłaniać. Zwiększ intensywność, jeśli efekt jest zbyt subtelny."
+    ],
+    [
+      "Import własnych grafik",
+      "Wybierz „Twój obraz” i dodaj obrazy za pomocą okna wyboru plików lub przeciągając je do galerii. Limit to 10 obrazów; obsługiwane są popularne formaty i SVG, a Wonderfall automatycznie dopasowuje rozmiar. Przezroczyste tła dają czyste krawędzie. Wybierz ruch jak śnieg, liście albo deszcz."
+    ],
+    [
+      "Osobne sterowanie lampkami",
+      "Ustawienia girlandy pozwalają udekorować górny pasek menu. Lampki i efekty pogody działają niezależnie, więc lampek można używać samodzielnie."
+    ],
+    [
+      "Wyłączanie automatycznego uruchamiania",
+      "W ustawieniu „Uruchamiaj przy logowaniu” zdecydujesz, czy aplikacja ma się otwierać po zalogowaniu. Aplikację zamkniesz z paska menu."
+    ],
+    [
+      "Kontakt z twórcą",
+      "Napisz na hello@andrewsereda.com i podaj wersję macOS, wersję aplikacji, układ ekranów oraz kroki, które powodują problem. Nie załączaj treści osobistych ani poufnych."
+    ]
+  ],
+  "picker_title": "Wybierz efekt",
+  "picker_intro": "Co sprawi, że ta chwila będzie trochę inna?",
+  "picker_footer": "Twoja tapeta i otwarte okna pozostają bez zmian.",
+  "folder_labels": [
+    "Notatki",
+    "Projekty",
+    "Zdjęcia"
+  ],
+  "device_alt": "Ramka ekranu dla filmów z efektami sezonowymi.",
+  "screen_label": "Podgląd wideo efektów sezonowych",
+  "desktop_label": "Pulpit",
+  "desktop_time": "pon. 9:41",
+  "desktop_menu": [
+    "Plik",
+    "Edycja",
+    "Widok"
+  ],
+  "hero_line": "Efekty na pulpit Maca",
+  "hero_phrases": [
+    {
+      "text": "Zimowy śnieg",
+      "icon": "❄️"
+    },
+    {
+      "text": "Deszcz",
+      "icon": "🌧️"
+    },
+    {
+      "text": "Jesienne liście",
+      "icon": "🍂"
+    },
+    {
+      "text": "Wiosenne płatki",
+      "icon": "🌸"
+    },
+    {
+      "text": "Letnie świetliki",
+      "icon": "✨"
+    }
+  ],
+  "cookie_settings": "Ustawienia cookies",
+  "navigation_ui": {
+    "main": "Nawigacja główna",
+    "menu": "Menu",
+    "language": "Wybierz język",
+    "sections": "Sekcje witryny",
+    "home": "Strona główna"
+  },
+  "product_title": "Efekty na pulpit Maca. Twoja tapeta zostaje",
+  "product_summary": "Wonderfall dodaje do pulpitu Maca animowany śnieg, deszcz, jesienne liście, wiosenne płatki i świetliki. Zostaw efekty za oknami albo pozwól im unosić się nad aplikacjami, z Twoją własną tapetą pod spodem",
+  "product_facts": [
+    [
+      "Platforma",
+      "macOS {minimum_os}+"
+    ],
+    [
+      "Położenie",
+      "Nad oknami lub tylko pulpit"
+    ],
+    [
+      "Twoje grafiki",
+      "Do 10 własnych obrazów, także SVG"
+    ]
+  ],
+  "setup_link": "Jak dodać śnieg na pulpit Maca (po angielsku)",
+  "released_description": "Wonderfall to aplikacja na pasek menu Maca z animowanym śniegiem, deszczem, liśćmi, płatkami, świetlikami, własnymi obrazami i ozdobnymi lampkami. Zachowuje Twoją obecną tapetę i wymaga macOS {minimum_os} lub nowszego.",
+  "released_features": [
+    "Animowany śnieg, deszcz, jesienne liście, wiosenne płatki i letnie świetliki",
+    "Własne obrazy z kilkoma stylami ruchu",
+    "Ozdobne lampki z ośmioma scenami wzdłuż paska menu lub Docka",
+    "Zaspy, krople deszczu i sterty liści, a do tego łopata, ściągaczka i miotła",
+    "Śnieg na otwartych oknach, śnieżki, bałwan i pług śnieżny",
+    "Opcjonalne dopasowanie do pogody",
+    "Efekty nad oknami lub tylko na pulpicie",
+    "Regulowana intensywność, rozmiar, prędkość i wiatr"
+  ],
+  "reviews_ui": {
+    "title": "Odrobina cudu ich słowami",
+    "summary": "{value} na 5 · {count} ocen w Ukrainie",
+    "rating": "Ocena: {rating} na 5 gwiazdek",
+    "country": "Ukraina",
+    "checked": "App Store Ukraina, sprawdzono {date}"
+  },
+  "updated_label": "Zaktualizowano",
+  "icon_alt": "Ikona aplikacji Wonderfall",
+  "footer_nav_label": "Nawigacja w stopce",
+  "breadcrumb_label": "Ścieżka nawigacji",
+  "decimal": ",",
+  "press_label": "Dla prasy (po angielsku)",
+  "privacy_description": "Jak Wonderfall postępuje z lokalnymi danymi aplikacji, statystykami użycia, raportami o awariach, opcjonalną lokalizacją, analityką witryny i wyborem dotyczącym cookies.",
+  "html_lang": "pl"
+}

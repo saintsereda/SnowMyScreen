@@ -14,8 +14,8 @@
   "title": "Mac Desktop Effects: Snow, Rain & More | Wonderfall",
   "description": "Desktop effects for Mac: snow, rain, leaves, fireflies, lights and your own images. Keep your wallpaper and tune the motion with Wonderfall.",
   "hero": "Mac desktop effects.\nA different season.",
-  "hero_headline": "A little wonder for your Mac",
-  "intro": "Snow, rain, falling leaves, drifting petals and summer fireflies. Bring a little of the outside to your Mac with desktop effects you can make your own",
+  "hero_headline": "A little Christmas magic for your Mac",
+  "intro": "Snow falls, a garland glows along the top of the screen, Santa and his reindeer fly past and a Christmas tree stands on your desktop. Rain, leaves and petals wait for the rest of the year",
   "compat": "For macOS {minimum_os} and later",
   "updates_released": "Wonderfall 1.4 is out: see what’s new",
   "preview_label": "Choose an atmosphere",
@@ -354,5 +354,9 @@
     "country": "Ukraine",
     "checked": "App Store Ukraine, checked {date}"
   },
-  "updated_label": "Updated"
+  "updated_label": "Updated",
+  "icon_alt": "Wonderfall app icon",
+  "footer_nav_label": "Footer navigation",
+  "breadcrumb_label": "Breadcrumb",
+  "privacy_description": "How Wonderfall handles local app data, usage statistics, crash reports, optional location, website analytics and cookie choices."
 }

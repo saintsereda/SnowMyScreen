@@ -1,4 +1,4 @@
-// Consent UI adapted from the Expensa website, localized for EN/UK pages.
+// Consent UI adapted from the Expensa website, localized for every site language.
 (function () {
     'use strict';
     const STORAGE_KEY = 'snowmyscreen_cookie_consent_v1';
@@ -40,13 +40,194 @@
             rejectAll: 'Лише необхідні',
             save: 'Зберегти',
             settings: 'Налаштування cookie'
+        },
+        de: {
+            necessary: 'Unbedingt notwendig',
+            necessaryDescription: 'Speichert deine Sprache und diese Cookie-Entscheidung auf deinem Gerät. Immer aktiv.',
+            analytics: 'Analyse',
+            analyticsDescription: 'Das optionale Google Analytics 4 hilft uns, Besuche zu verstehen und die Website zu verbessern. Aus, bis du es einschaltest.',
+            bannerTitle: 'Cookies & Speicher',
+            bannerText: 'Wir zählen Seitenaufrufe und App-Store-Klicks ohne Cookies. Notwendigen Speicher nutzen wir, um deine Einstellungen zu merken. Du kannst Google Analytics erlauben, damit wir die Website verbessern können.',
+            policy: 'Datenschutz & Cookies',
+            customize: 'Anpassen',
+            reject: 'Nur notwendige',
+            accept: 'Alle akzeptieren',
+            modalTitle: 'Cookie-Einstellungen',
+            close: 'Schließen',
+            modalIntro: 'Wähle, was die Website nutzen darf. Deine Entscheidung wird auf diesem Gerät gespeichert und lässt sich jederzeit ändern.',
+            rejectAll: 'Optionale Cookies ablehnen',
+            save: 'Einstellungen speichern',
+            settings: 'Cookie-Einstellungen'
+        },
+        fr: {
+            necessary: "Strictement nécessaires",
+            necessaryDescription: "Mémorisent votre langue et ce choix relatif aux cookies sur votre appareil. Toujours actifs.",
+            analytics: "Analyse",
+            analyticsDescription: "Google Analytics 4, facultatif, nous aide à comprendre les visites et à améliorer le site. Désactivé tant que vous ne l’activez pas.",
+            bannerTitle: "Cookies et stockage",
+            bannerText: "Nous comptons les pages vues et les clics vers l’App Store sans cookies. Nous utilisons un stockage essentiel pour mémoriser vos préférences. Vous pouvez autoriser Google Analytics pour nous aider à améliorer le site.",
+            policy: "Confidentialité et cookies",
+            customize: "Personnaliser",
+            reject: "Nécessaires uniquement",
+            accept: "Tout accepter",
+            modalTitle: "Préférences de cookies",
+            close: "Fermer",
+            modalIntro: "Choisissez ce que le site peut utiliser. Votre préférence est enregistrée sur cet appareil. Vous pouvez la modifier à tout moment.",
+            rejectAll: "Refuser les cookies facultatifs",
+            save: "Enregistrer les préférences",
+            settings: "Réglages des cookies"
+        },
+        es: {
+            necessary: "Estrictamente necesarias",
+            necessaryDescription: "Recuerdan tu idioma y esta elección de cookies en tu dispositivo. Siempre activas.",
+            analytics: "Analítica",
+            analyticsDescription: "Google Analytics 4, opcional, nos ayuda a entender las visitas y a mejorar el sitio. Desactivado hasta que lo actives.",
+            bannerTitle: "Cookies y almacenamiento",
+            bannerText: "Contamos las páginas vistas y los clics al App Store sin cookies. Usamos almacenamiento esencial para recordar tus preferencias. Puedes permitir Google Analytics para ayudarnos a mejorar el sitio.",
+            policy: "Privacidad y cookies",
+            customize: "Personalizar",
+            reject: "Solo necesarias",
+            accept: "Aceptar todas",
+            modalTitle: "Preferencias de cookies",
+            close: "Cerrar",
+            modalIntro: "Elige qué puede usar el sitio. Tu preferencia se guarda en este dispositivo. Puedes cambiarla en cualquier momento.",
+            rejectAll: "Rechazar cookies opcionales",
+            save: "Guardar preferencias",
+            settings: "Ajustes de cookies"
+        },
+        pt: {
+            necessary: "Estritamente necessários",
+            necessaryDescription: "Lembram o seu idioma e esta escolha de cookies no seu dispositivo. Sempre ativos.",
+            analytics: "Análise",
+            analyticsDescription: "O Google Analytics 4, opcional, nos ajuda a entender as visitas e melhorar o site. Fica desativado até você ativá-lo.",
+            bannerTitle: "Cookies e armazenamento",
+            bannerText: "Contamos visualizações de página e cliques na App Store sem cookies. Usamos armazenamento essencial para lembrar as suas preferências. Você pode permitir o Google Analytics para nos ajudar a melhorar o site.",
+            policy: "Privacidade e cookies",
+            customize: "Personalizar",
+            reject: "Somente necessários",
+            accept: "Aceitar todos",
+            modalTitle: "Preferências de cookies",
+            close: "Fechar",
+            modalIntro: "Escolha o que o site pode usar. A sua preferência fica salva neste dispositivo. Você pode mudá-la a qualquer momento.",
+            rejectAll: "Recusar cookies opcionais",
+            save: "Salvar preferências",
+            settings: "Ajustes de cookies"
+        },
+        pl: {
+            necessary: "Niezbędne",
+            necessaryDescription: "Zapamiętują język i ten wybór dotyczący cookies na Twoim urządzeniu. Zawsze włączone.",
+            analytics: "Analityka",
+            analyticsDescription: "Opcjonalne Google Analytics 4 pomaga nam zrozumieć odwiedziny i ulepszać witrynę. Wyłączone, dopóki go nie włączysz.",
+            bannerTitle: "Cookies i pamięć",
+            bannerText: "Liczymy wyświetlenia stron i kliknięcia w App Store bez cookies. Niezbędnej pamięci używamy, aby zapamiętać Twoje preferencje. Możesz zezwolić na Google Analytics, aby pomóc nam ulepszać witrynę.",
+            policy: "Prywatność i cookies",
+            customize: "Dostosuj",
+            reject: "Tylko niezbędne",
+            accept: "Zaakceptuj wszystkie",
+            modalTitle: "Preferencje cookies",
+            close: "Zamknij",
+            modalIntro: "Wybierz, z czego witryna może korzystać. Twój wybór zostanie zapisany na tym urządzeniu i możesz go zmienić w każdej chwili.",
+            rejectAll: "Odrzuć opcjonalne cookies",
+            save: "Zapisz preferencje",
+            settings: "Ustawienia cookies"
+        },
+        cs: {
+            necessary: "Nezbytně nutné",
+            necessaryDescription: "Pamatují si jazyk a tuto volbu cookies ve vašem zařízení. Vždy zapnuté.",
+            analytics: "Analytika",
+            analyticsDescription: "Volitelné Google Analytics 4 nám pomáhá porozumět návštěvám a vylepšovat web. Vypnuté, dokud je nezapnete.",
+            bannerTitle: "Cookies a úložiště",
+            bannerText: "Zobrazení stránek a kliknutí do App Storu počítáme bez cookies. Nezbytné úložiště používáme k zapamatování vašich předvoleb. Můžete povolit Google Analytics a pomoci nám web vylepšovat.",
+            policy: "Soukromí a cookies",
+            customize: "Přizpůsobit",
+            reject: "Jen nezbytné",
+            accept: "Přijmout vše",
+            modalTitle: "Předvolby cookies",
+            close: "Zavřít",
+            modalIntro: "Vyberte, co smí web používat. Vaše volba se uloží v tomto zařízení a můžete ji kdykoli změnit.",
+            rejectAll: "Odmítnout volitelné cookies",
+            save: "Uložit předvolby",
+            settings: "Nastavení cookies"
+        },
+        tr: {
+            necessary: "Kesinlikle gerekli",
+            necessaryDescription: "Dilinizi ve bu çerez tercihinizi cihazınızda hatırlar. Her zaman açık.",
+            analytics: "Analiz",
+            analyticsDescription: "İsteğe bağlı Google Analytics 4, ziyaretleri anlamamıza ve siteyi geliştirmemize yardımcı olur. Siz açana kadar kapalıdır.",
+            bannerTitle: "Çerezler ve depolama",
+            bannerText: "Sayfa görüntülemelerini ve App Store tıklamalarını çerez kullanmadan sayıyoruz. Tercihlerinizi hatırlamak için gerekli depolamayı kullanıyoruz. Siteyi geliştirmemize yardımcı olmak için Google Analytics'e izin verebilirsiniz.",
+            policy: "Gizlilik ve çerezler",
+            customize: "Özelleştir",
+            reject: "Yalnızca gerekli",
+            accept: "Tümünü kabul et",
+            modalTitle: "Çerez tercihleri",
+            close: "Kapat",
+            modalIntro: "Sitenin neleri kullanabileceğini seçin. Tercihiniz bu cihazda kaydedilir ve istediğiniz zaman değiştirebilirsiniz.",
+            rejectAll: "İsteğe bağlı çerezleri reddet",
+            save: "Tercihleri kaydet",
+            settings: "Çerez ayarları"
+        },
+        ja: {
+            necessary: "必須",
+            necessaryDescription: "言語とこのCookieの選択をお使いのデバイスに記憶します。常にオンです。",
+            analytics: "アナリティクス",
+            analyticsDescription: "オプションのGoogle Analytics 4は、訪問状況を把握してサイトを改善するのに役立ちます。有効にするまでオフのままです。",
+            bannerTitle: "Cookieとストレージ",
+            bannerText: "ページビューとApp Storeへのクリック数は、Cookieを使わずに数えています。設定を記憶するために必須のストレージを使用します。サイトの改善のために、Google Analyticsを許可することもできます。",
+            policy: "プライバシーとCookie",
+            customize: "カスタマイズ",
+            reject: "必要なもののみ",
+            accept: "すべて許可",
+            modalTitle: "Cookieの設定",
+            close: "閉じる",
+            modalIntro: "サイトが使用できるものを選んでください。設定はこのデバイスに保存され、いつでも変更できます。",
+            rejectAll: "オプションのCookieを拒否",
+            save: "設定を保存",
+            settings: "Cookieの設定"
+        },
+        zh: {
+            necessary: "必要",
+            necessaryDescription: "在你的设备上记住你的语言和本次 Cookie 选择。始终开启。",
+            analytics: "分析",
+            analyticsDescription: "可选的 Google Analytics 4 帮助我们了解访问情况并改进网站。在你开启前保持关闭。",
+            bannerTitle: "Cookie 与存储",
+            bannerText: "我们不使用 Cookie 统计页面浏览量和 App Store 点击次数。我们使用必要的存储来记住你的偏好。你可以允许 Google Analytics，帮助我们改进网站。",
+            policy: "隐私与 Cookie",
+            customize: "自定",
+            reject: "仅必要",
+            accept: "全部接受",
+            modalTitle: "Cookie 偏好设置",
+            close: "关闭",
+            modalIntro: "选择网站可以使用的内容。你的偏好会保存在此设备上，可随时更改。",
+            rejectAll: "拒绝可选 Cookie",
+            save: "保存偏好设置",
+            settings: "Cookie 设置"
+        },
+        hi: {
+            necessary: "बेहद ज़रूरी",
+            necessaryDescription: "आपके डिवाइस पर आपकी भाषा और यह कुकी पसंद याद रखती हैं। हमेशा चालू।",
+            analytics: "एनालिटिक्स",
+            analyticsDescription: "वैकल्पिक Google Analytics 4 हमें विज़िट समझने और साइट बेहतर बनाने में मदद करता है। जब तक आप इसे चालू न करें, यह बंद रहता है।",
+            bannerTitle: "कुकी और स्टोरेज",
+            bannerText: "हम पेज व्यू और App Store क्लिक बिना कुकी के गिनते हैं। आपकी प्राथमिकताएँ याद रखने के लिए हम ज़रूरी स्टोरेज इस्तेमाल करते हैं। साइट को बेहतर बनाने में मदद के लिए आप Google Analytics की अनुमति दे सकते हैं।",
+            policy: "गोपनीयता और कुकी",
+            customize: "अनुकूलित करें",
+            reject: "सिर्फ़ ज़रूरी",
+            accept: "सभी स्वीकार करें",
+            modalTitle: "कुकी प्राथमिकताएँ",
+            close: "बंद करें",
+            modalIntro: "चुनें कि साइट क्या इस्तेमाल कर सकती है। आपकी पसंद इसी डिवाइस पर सेव होती है। आप इसे कभी भी बदल सकते हैं।",
+            rejectAll: "वैकल्पिक कुकी अस्वीकार करें",
+            save: "प्राथमिकताएँ सेव करें",
+            settings: "कुकी सेटिंग्ज़"
         }
     };
     let language;
     let T;
 
     function localize() {
-        language = /^uk\b/i.test(document.documentElement.lang) ? 'uk' : 'en';
+        const code = (document.documentElement.lang || '').slice(0, 2).toLowerCase();
+        language = STRINGS[code] ? code : 'en';
         T = STRINGS[language];
         document.querySelectorAll('[data-cookie-settings]').forEach(el => { el.textContent = T.settings; });
     }
@@ -86,7 +267,7 @@
         if (id) paragraph.id = id;
         paragraph.appendChild(document.createTextNode(' '));
         paragraph.appendChild(h('a', {
-            href: (language === 'uk' ? '/uk/' : '/') + 'privacy.html#website-cookies',
+            href: (language === 'en' ? '/' : '/' + language + '/') + 'privacy.html#website-cookies',
             text: T.policy
         }));
         return paragraph;

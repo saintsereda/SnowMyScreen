@@ -52,4 +52,54 @@
 - [Конфіденційність](https://getwonderfall.com/uk/privacy.html)
 - [Прес-кіт](https://getwonderfall.com/uk/press/)
 
+## Deutsch
+- [Desktop-Effekte für den Mac: Schnee, Regen & mehr | Wonderfall](https://getwonderfall.com/de/)
+- [Wonderfall: Support und Einrichtung auf dem Mac](https://getwonderfall.com/de/support/)
+- [Datenschutzerklärung](https://getwonderfall.com/de/privacy.html)
+
+## Français
+- [Effets de bureau pour Mac : neige, pluie et plus | Wonderfall](https://getwonderfall.com/fr/)
+- [Assistance et configuration de Wonderfall pour Mac](https://getwonderfall.com/fr/support/)
+- [Politique de confidentialité](https://getwonderfall.com/fr/privacy.html)
+
+## Español
+- [Efectos de escritorio para Mac: nieve, lluvia y más | Wonderfall](https://getwonderfall.com/es/)
+- [Soporte y configuración de Wonderfall para Mac](https://getwonderfall.com/es/support/)
+- [Política de privacidad](https://getwonderfall.com/es/privacy.html)
+
+## Português (Brasil)
+- [Efeitos para a mesa do Mac: neve, chuva e mais | Wonderfall](https://getwonderfall.com/pt/)
+- [Suporte e configuração do Wonderfall para Mac](https://getwonderfall.com/pt/support/)
+- [Política de privacidade](https://getwonderfall.com/pt/privacy.html)
+
+## Polski
+- [Efekty na pulpit Maca: śnieg, deszcz i więcej | Wonderfall](https://getwonderfall.com/pl/)
+- [Wonderfall na Macu: pomoc i konfiguracja](https://getwonderfall.com/pl/support/)
+- [Polityka prywatności](https://getwonderfall.com/pl/privacy.html)
+
+## Čeština
+- [Efekty na plochu Macu: sníh, déšť a další | Wonderfall](https://getwonderfall.com/cs/)
+- [Wonderfall pro Mac: podpora a nastavení](https://getwonderfall.com/cs/support/)
+- [Zásady ochrany soukromí](https://getwonderfall.com/cs/privacy.html)
+
+## Türkçe
+- [Mac Masaüstü Efektleri: Kar, Yağmur ve Fazlası | Wonderfall](https://getwonderfall.com/tr/)
+- [Mac için Wonderfall: Destek ve Kurulum](https://getwonderfall.com/tr/support/)
+- [Gizlilik Politikası](https://getwonderfall.com/tr/privacy.html)
+
+## 日本語
+- [Macのデスクトップエフェクト：雪、雨など | Wonderfall](https://getwonderfall.com/ja/)
+- [Wonderfallのサポートとセットアップ（Mac）](https://getwonderfall.com/ja/support/)
+- [プライバシーポリシー](https://getwonderfall.com/ja/privacy.html)
+
+## 简体中文
+- [Mac 桌面特效：雪、雨等 | Wonderfall](https://getwonderfall.com/zh/)
+- [Wonderfall 支持与设置（Mac）](https://getwonderfall.com/zh/support/)
+- [隐私政策](https://getwonderfall.com/zh/privacy.html)
+
+## हिन्दी
+- [Mac डेस्कटॉप इफ़ेक्ट: बर्फ़, बारिश और बहुत कुछ | Wonderfall](https://getwonderfall.com/hi/)
+- [Mac पर Wonderfall: सहायता और सेटअप](https://getwonderfall.com/hi/support/)
+- [गोपनीयता नीति](https://getwonderfall.com/hi/privacy.html)
+
 Developer: Andrii Sereda, also known as Andrew Sereda. Contact: hello@andrewsereda.com.

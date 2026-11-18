@@ -1,0 +1,370 @@
+{
+  "lang": "zh",
+  "html_lang": "zh-Hans",
+  "locale": "zh_CN",
+  "other_label": "English",
+  "skip": "跳到内容",
+  "nav": [
+    "特效",
+    "功能",
+    "常见问题",
+    "博客"
+  ],
+  "download": "在 Mac App Store 获取",
+  "short_cta": "下载",
+  "title": "Mac 桌面特效：雪、雨等 | Wonderfall",
+  "description": "Mac 桌面特效：雪、雨、落叶、萤火虫、彩灯，还有你自己的图片。保留原有墙纸，用 Wonderfall 调出你喜欢的动态。",
+  "hero": "Mac 桌面特效。\n换个季节。",
+  "hero_headline": "给你的 Mac 添一点圣诞魔法",
+  "intro": "雪花飘落，屏幕顶端亮起彩灯，圣诞老人驾着驯鹿飞过，桌面上立着一棵圣诞树。雨、落叶和花瓣，留给一年中的其他时候",
+  "compat": "适用于 macOS {minimum_os} 或更高版本",
+  "updates_released": "Wonderfall 1.4 已推出：看看有什么新内容",
+  "preview_label": "选择一种氛围",
+  "preview_note": "选择一种特效来预览。你自己的墙纸保持原样",
+  "benefits_label": "更多个性化方式",
+  "benefits": [
+    "保留你的墙纸。特效可以显示在窗口上方，也可以在窗口后方。",
+    "沿顶部菜单栏挂上彩灯，与天气特效互不影响。",
+    "使用你自己的图片，并按你的桌面调整动态。"
+  ],
+  "showcase": {
+    "title": "你的桌面，你的小奇妙",
+    "weather_title": "跟着窗外的天气走",
+    "weather_text": "自动匹配窗外的天气，晴天时显示应季特效",
+    "weather_outside": "窗外",
+    "weather_desktop": "你的桌面",
+    "weather_snow": "下雪",
+    "weather_rain": "下雨",
+    "weather_clear": "秋日晴天",
+    "weather_snow_description": "窗外下雪，桌面飘雪花。",
+    "weather_rain_description": "窗外下雨，桌面落雨滴。",
+    "weather_clear_description": "秋高气爽，桌面飘落叶。",
+    "cleaning_title": "一点天气，一点乐趣",
+    "cleaning_text": "铲雪，扫走落叶和花瓣，或者刮掉雨滴。就连清理桌面，也能带来一点小小的满足感",
+    "cleaning_snow": "铲雪",
+    "cleaning_leaves": "扫落叶",
+    "cleaning_rain": "刮雨滴",
+    "cleaning_hint": "拖移即可清理。触屏设备上请左右轻扫。",
+    "cleaning_clear": "清理屏幕",
+    "cleaning_reset": "让天气回来",
+    "cleaning_cleared": "已全部清理。让天气回来，再试一次。",
+    "garland_title": "点亮屏幕顶端",
+    "garland_text": "沿顶部菜单栏挂起一串彩灯。可选择颜色、灯泡形状和动画，搭配天气特效或单独使用都可以",
+    "garland_menu": "菜单栏",
+    "palette_warm": "暖色灯光",
+    "palette_color": "多彩灯光",
+    "palette_ice": "冰蓝灯光",
+    "images_title": "让你自己的东西飘落",
+    "images_text": "最多添加 10 张图片，让你的作品变成飘落的形状。用一张，或者让几张混在一起",
+    "motion_title": "调出最合适的飘落感",
+    "motion_text": "细调强度、大小、速度和风",
+    "placement_title": "想放哪里就放哪里",
+    "placement_text": "显示在 App 上方，或藏在窗口后方。铺满整个屏幕，或只在顶部占一小条",
+    "placement_over": "窗口上方",
+    "placement_desktop": "仅桌面",
+    "placement_over_description": "雪花显示在已打开的窗口上方。",
+    "placement_desktop_description": "雪花停留在已打开的窗口后方。",
+    "placement_strip": "顶部条带",
+    "placement_strip_description": "特效只沿屏幕顶端显示。",
+    "placement_full_description": "特效铺满整个屏幕。",
+    "displays_title": "一台显示器，或整张桌子",
+    "displays_text": "选择在哪些已连接的屏幕上显示特效",
+    "weather_label": "试试天气变化",
+    "cleaning_label": "试试清扫工具",
+    "palette_label": "选择灯光配色",
+    "garland_scenes_label": "选择灯光场景",
+    "scene_winterNight": "冬日夜晚",
+    "scene_cozyEvening": "温馨夜晚",
+    "scene_springBloom": "春日花开",
+    "scene_celebration": "庆典",
+    "image_choose": "选择你的图片",
+    "image_file_error": "请选择小于 5 MB 的 PNG、JPEG 或 WebP 图片。",
+    "image_ready": "你的图片正在预览中飘落。",
+    "placement_label": "选择特效的显示位置",
+    "displays_label": "两台已连接显示器上的特效",
+    "cleaning_media_alt": "落叶堆积在桌面底部。",
+    "cleaning_snow_alt": "用铲子清除桌面上飘落的雪。",
+    "cleaning_leaves_alt": "用扫帚扫走桌面上的落叶。",
+    "cleaning_rain_alt": "用刮水器刮掉桌面上的雨滴。",
+    "garland_media_alt": "不同的彩灯沿顶部菜单栏轮流亮起。",
+    "garland_winterNight_alt": "树形彩灯沿屏幕顶端闪烁。",
+    "garland_cozyEvening_alt": "暖色灯泡彩灯沿屏幕顶端发光。",
+    "garland_springBloom_alt": "粉色爱心彩灯沿屏幕顶端闪烁。",
+    "garland_celebration_alt": "多彩星星彩灯沿屏幕顶端闪烁。",
+    "images_media_alt": "自定图片用作桌面上的飘落特效。",
+    "placement_media_alt": "雪花显示在浏览器窗口的上方和后方，雪花大小各不相同。"
+  },
+  "preview_name": "给一点小奇妙留个位置。",
+  "preview_detail": "还是那个桌面，换了一种氛围。",
+  "effects_kicker": "六种方式营造氛围",
+  "effects_title": "不只是下雪天",
+  "effects_intro": "选择一种应季特效，或者用你自己的作品，再调整强度、大小、速度和风，找到感觉对的样子",
+  "themes": [
+    [
+      "snow",
+      "冬日飞雪",
+      "柔软的雪花轻轻飘落，带来一点冬日魔法。可从内建的雪花形状中选择。",
+      "❄️"
+    ],
+    [
+      "rain",
+      "雨",
+      "从蒙蒙细雨到持续降雨。可调整风、雨滴大小和强度。",
+      "🌧️"
+    ],
+    [
+      "leaves",
+      "秋日落叶",
+      "琥珀色和深红色的叶子随风翻飞，掠过你的桌面，风由你掌控。",
+      "🍂"
+    ],
+    [
+      "petals",
+      "春日花瓣",
+      "淡粉色花瓣在你的工作区飘过，换季也变得温柔起来。",
+      "🌸"
+    ],
+    [
+      "fireflies",
+      "夏日萤火虫",
+      "温暖的光点在屏幕上游走，把夏日傍晚带进室内。",
+      "✨"
+    ],
+    [
+      "custom",
+      "你自己的图片",
+      "导入你自己的图片，让它们像雪一样飘落、像叶子一样翻飞，或像雨一样落下。",
+      "＋"
+    ]
+  ],
+  "features_kicker": "细节虽小，氛围由你。",
+  "features_title": "让桌面更像你",
+  "features": [
+    [
+      "保留你的墙纸",
+      "特效是透明的叠加层。你喜欢的桌面背景保持不变。"
+    ],
+    [
+      "选择显示位置",
+      "动画可以显示在已打开的窗口上方，也可以显示在窗口后方的桌面上。可铺满整个屏幕，或只占顶部 150 点高的条带。"
+    ],
+    [
+      "调整动态",
+      "调整强度、粒子大小、速度和风。雪、落叶和花瓣还可以调整飘移效果。"
+    ],
+    [
+      "添一点光",
+      "用彩灯装饰顶部菜单栏。可选择颜色、灯泡形状，以及常亮、闪烁、波浪或追逐动画。"
+    ],
+    [
+      "打造你的专属风格",
+      "一次最多添加 10 张图片，可单选或混合使用，并选择动态风格。支持常见格式和 SVG，透明背景效果最佳。"
+    ],
+    [
+      "不打断你的工作",
+      "点按可穿透叠加层，照常使用 Mac。在菜单栏中控制特效，还可以选择登录时启动。"
+    ]
+  ],
+  "steps_title": "三步迎来第一场雪",
+  "steps": [
+    [
+      "安装并打开",
+      "从 Mac App Store 下载 Wonderfall，然后打开它的菜单栏图标。"
+    ],
+    [
+      "选择雪花",
+      "选择内建形状，或导入你自己的图片或 SVG 作品。"
+    ],
+    [
+      "调到刚刚好",
+      "调整大小、速度、强度和风。选择让特效显示在窗口上方或后方。"
+    ]
+  ],
+  "faq_title": "你可能想知道的几件事",
+  "faq": [
+    [
+      "Wonderfall 是什么？",
+      "Wonderfall 是一款 macOS 菜单栏 App，可在桌面上叠加动画效果：雪、雨、秋日落叶、春日花瓣、夏日萤火虫、你自己的图片和装饰彩灯。"
+    ],
+    [
+      "Wonderfall 免费吗？",
+      "Wonderfall 是付费下载 App，在美国 Mac App Store 的标价为 {us_price}。价格因地区而异，且可能会变动；请在你所在地区的商店查看当前价格。"
+    ],
+    [
+      "它是动态墙纸还是屏幕保护程序？",
+      "它是桌面叠加层。你现有的墙纸保持不变，在你使用 Mac 时，动画可以显示在已打开的窗口后方或上方。它不会取代 macOS 的屏幕保护程序。"
+    ],
+    [
+      "支持多台显示器吗？",
+      "支持。App 会为每个已连接的屏幕创建一个叠加层，并在显示器设置变化时更新叠加层。"
+    ],
+    [
+      "我还能点按 App 和桌面吗？",
+      "可以。叠加层窗口不响应鼠标事件，所以你可以直接点按穿过它们，照常使用 Mac。“仅桌面”模式会把特效放在窗口后方。"
+    ],
+    [
+      "可以用我自己的图片吗？",
+      "可以。选择文件或直接拖入，即可导入最多 10 张常见格式或 SVG 图片；Wonderfall 会自动处理尺寸。可以选一张，也可以混合多张，并选择像雪、像落叶或像雨的动态。"
+    ],
+    [
+      "可以只挂圣诞彩灯，不下雪吗？",
+      "可以。彩灯与天气特效分开控制，所以你可以只点亮顶部菜单栏，不让雪落下。"
+    ],
+    [
+      "下雨特效有声音吗？",
+      "下雨特效是桌面上的视觉叠加层，不包含雨声环境音或音乐。"
+    ],
+    [
+      "支持哪些 Mac？",
+      "Wonderfall 需要 macOS {minimum_os} 或更高版本。这是一款 Mac App，不是 iPhone 或 iPad App。"
+    ],
+    [
+      "需要联网吗？",
+      "桌面特效、设置和自定图片都在你的 Mac 上本地运行。下载和更新需要联网。可选的天气匹配功能也需要联网和位置权限，以使用 Apple WeatherKit。"
+    ],
+    [
+      "怎样关闭特效？",
+      "使用菜单栏中的控制项关闭天气特效或彩灯，或者退出 App。登录时启动是单独的设置。"
+    ]
+  ],
+  "blog_title": "为你的工作区添一点灵感",
+  "read": "阅读指南",
+  "all_posts": "所有文章",
+  "blog_meta_title": "Mac 桌面指南与应季特效 | Wonderfall",
+  "blog_description": "Mac 桌面个性化实用指南：雪和雨的叠加效果、应季特效、装饰彩灯和自定图片。",
+  "blog_intro": "让你的 Mac 多一点氛围的实用指南。从基础开始，再按自己的喜好设置",
+  "cta_title": "小小改变，不一样的感觉",
+  "cta_text": "给你的 Mac 一个专属的季节。从雪开始，再看心情变换",
+  "footer_line": "为 Mac 打造的应季桌面特效",
+  "featured_on": "推荐平台",
+  "macbase_badge_alt": "Wonderfall 获 MacBase 推荐",
+  "footer_groups": [
+    "指南",
+    "产品",
+    "法律信息",
+    "联系"
+  ],
+  "privacy": "隐私政策",
+  "support": "支持",
+  "contact": "联系 Andrew",
+  "author": "作者：Andrew Sereda，Wonderfall 开发者",
+  "support_title": "Wonderfall 支持与设置（Mac）",
+  "support_description": "获取 Mac 版 Wonderfall 的帮助：菜单栏控制、主题、叠加层、图片导入，以及联系开发者。",
+  "support_intro": "通过菜单栏图标选择应季特效、调整动态、添加彩灯或导入你自己的图片",
+  "support_sections": [
+    [
+      "开始使用",
+      "从 Mac App Store 下载 Wonderfall，打开 App，然后点按它的菜单栏图标，在“天气特效”中选择主题。设置窗口无需一直开着。"
+    ],
+    [
+      "我看不到特效",
+      "请检查“天气特效”已开启，并且 App 正在运行。试试“整个屏幕”和“显示在内容上方”的位置设置。“仅桌面”特效位于窗口后方，所以最大化的窗口可能会把它挡住。如果特效太不明显，可以调高强度。"
+    ],
+    [
+      "导入自定作品",
+      "选择“您的图片”，然后通过文件选择器添加图片，或把图片拖入图库。最多可添加 10 张图片；支持常见格式和 SVG，Wonderfall 会自动处理尺寸。透明背景能让边缘更干净。可选择像雪、像落叶或像雨的动态。"
+    ],
+    [
+      "单独控制彩灯",
+      "通过彩灯控制项可以装饰顶部菜单栏。彩灯和天气特效互相独立，因此可以只使用彩灯。"
+    ],
+    [
+      "关闭自动启动",
+      "使用“登录时启动”设置来选择登录时是否打开 App。可通过菜单栏控制项退出 App。"
+    ],
+    [
+      "联系开发者",
+      "请发送电子邮件至 hello@andrewsereda.com，并附上你的 macOS 版本、App 版本、显示器设置以及能重现问题的步骤。请避免附加个人或敏感内容。"
+    ]
+  ],
+  "picker_title": "选择一种特效",
+  "picker_intro": "什么能让此刻感觉有点不一样？",
+  "picker_footer": "你的墙纸和已打开的窗口都保持原样。",
+  "folder_labels": [
+    "笔记",
+    "项目",
+    "照片"
+  ],
+  "device_alt": "用于播放应季特效视频的显示器边框。",
+  "screen_label": "应季特效视频预览",
+  "desktop_label": "桌面",
+  "desktop_time": "周一 9:41",
+  "desktop_menu": [
+    "文件",
+    "编辑",
+    "显示"
+  ],
+  "hero_line": "Mac 桌面特效",
+  "hero_phrases": [
+    {
+      "text": "冬日飞雪",
+      "icon": "❄️"
+    },
+    {
+      "text": "雨",
+      "icon": "🌧️"
+    },
+    {
+      "text": "秋日落叶",
+      "icon": "🍂"
+    },
+    {
+      "text": "春日花瓣",
+      "icon": "🌸"
+    },
+    {
+      "text": "夏日萤火虫",
+      "icon": "✨"
+    }
+  ],
+  "cookie_settings": "Cookie 设置",
+  "navigation_ui": {
+    "main": "主导航",
+    "menu": "菜单",
+    "language": "选择语言",
+    "sections": "网站栏目",
+    "home": "首页"
+  },
+  "product_title": "Mac 桌面特效，墙纸保持不变",
+  "product_summary": "Wonderfall 为你的 Mac 桌面添加雪、雨、秋日落叶、春日花瓣和萤火虫动画。特效可以留在窗口后方，也可以飘过你的 App 上方，底下始终是你自己的墙纸",
+  "product_facts": [
+    [
+      "平台",
+      "macOS {minimum_os} 或更高版本"
+    ],
+    [
+      "位置",
+      "窗口上方或仅桌面"
+    ],
+    [
+      "你的作品",
+      "最多 10 张自定图片，支持 SVG"
+    ]
+  ],
+  "setup_link": "如何在 Mac 桌面上添加飘雪效果（英文）",
+  "released_description": "Wonderfall 是一款 Mac 菜单栏 App，提供雪、雨、落叶、花瓣、萤火虫、自定图片和装饰彩灯动画。它保留你现有的墙纸，需要 macOS {minimum_os} 或更高版本。",
+  "released_features": [
+    "雪、雨、秋日落叶、春日花瓣和夏日萤火虫动画",
+    "自定图片，支持多种动态风格",
+    "装饰彩灯，沿菜单栏或程序坞提供八种场景",
+    "积雪、雨滴和落叶堆，配有铲子、刮水器和扫帚",
+    "已打开窗口上的积雪、雪球、雪人和扫雪车",
+    "可选的天气匹配",
+    "特效可显示在窗口上方或仅在桌面",
+    "可调整强度、大小、速度和风"
+  ],
+  "reviews_ui": {
+    "title": "一点小奇妙，听听他们怎么说",
+    "summary": "{value} 分（满分 5 分）· 乌克兰 {count} 个评分",
+    "rating": "评分 {rating} 星（满分 5 星）",
+    "country": "乌克兰",
+    "checked": "App Store 乌克兰，查看于 {date}"
+  },
+  "updated_label": "更新于",
+  "icon_alt": "Wonderfall App 图标",
+  "footer_nav_label": "页脚导航",
+  "breadcrumb_label": "面包屑导航",
+  "decimal": ".",
+  "press_label": "媒体资料（英文）",
+  "privacy_description": "Wonderfall 如何处理本地 App 数据、使用统计、崩溃报告、可选的位置信息、网站分析和 Cookie 选择。"
+}

@@ -1,0 +1,365 @@
+{
+  "lang": "tr",
+  "locale": "tr_TR",
+  "other_label": "English",
+  "skip": "İçeriğe geç",
+  "nav": [
+    "Efektler",
+    "Özellikler",
+    "SSS",
+    "Blog"
+  ],
+  "download": "Mac App Store'dan indirin",
+  "short_cta": "İndir",
+  "title": "Mac Masaüstü Efektleri: Kar, Yağmur ve Fazlası | Wonderfall",
+  "description": "Mac için masaüstü efektleri: kar, yağmur, yapraklar, ateş böcekleri, ışıklar ve kendi görselleriniz. Duvar kâğıdınızı koruyun, hareketi Wonderfall ile ayarlayın.",
+  "hero": "Mac için masaüstü efektleri.\nBaşka bir mevsim.",
+  "hero_headline": "Mac'inize biraz yılbaşı büyüsü",
+  "intro": "Kar yağıyor, ekranın üst kenarında bir ışık zinciri parlıyor, Noel Baba ve geyikleri uçarak geçiyor, masaüstünüzde bir yılbaşı ağacı duruyor. Yağmur, yapraklar ve taç yapraklar yılın geri kalanını bekliyor",
+  "compat": "macOS {minimum_os} ve sonrası için",
+  "updates_released": "Wonderfall 1.4 çıktı: yeniliklere göz atın",
+  "preview_label": "Bir atmosfer seçin",
+  "preview_note": "Önizlemek için bir efekt seçin. Duvar kâğıdınız olduğu gibi kalır",
+  "benefits_label": "Kendinize göre ayarlamanın daha fazla yolu",
+  "benefits": [
+    "Duvar kâğıdınızı koruyun. Efektler pencerelerinizin üzerinde veya arkasında görünür.",
+    "Hava efektlerinden bağımsız olarak üst menü çubuğu boyunca ışıklar ekleyin.",
+    "Kendi görsellerinizi kullanın ve hareketi masaüstünüze göre ayarlayın."
+  ],
+  "showcase": {
+    "title": "Sizin masaüstünüz. Sizin küçük mucizeniz",
+    "weather_title": "Dışarıdaki havaya uyun",
+    "weather_text": "Efekti dışarıdaki havaya otomatik olarak uyarlayın; açık günler için mevsimlik efektler de var",
+    "weather_outside": "Dışarıda",
+    "weather_desktop": "Masaüstünüz",
+    "weather_snow": "Karlı",
+    "weather_rain": "Yağmurlu",
+    "weather_clear": "Sonbaharda açık hava",
+    "weather_snow_description": "Dışarıda kar var. Masaüstünüzde kar taneleri.",
+    "weather_rain_description": "Dışarıda yağmur var. Masaüstünüzde yağmur damlaları.",
+    "weather_clear_description": "Açık bir sonbahar günü. Masaüstünüzde yapraklar.",
+    "cleaning_title": "Biraz hava durumu. Biraz oyun",
+    "cleaning_text": "Karı kürekleyin, yaprakları ve taç yaprakları süpürün ya da yağmur damlalarını silin. Masaüstünü temizlemek bile biraz keyifli olabilir",
+    "cleaning_snow": "Karı küre",
+    "cleaning_leaves": "Yaprakları süpür",
+    "cleaning_rain": "Damlaları sil",
+    "cleaning_hint": "Temizlemek için sürükleyin. Dokunmatik ekranda yana kaydırın.",
+    "cleaning_clear": "Ekranı temizle",
+    "cleaning_reset": "Havayı geri getir",
+    "cleaning_cleared": "Tertemiz. Tekrar denemek için havayı geri getirin.",
+    "garland_title": "Üst kenarı parlatın",
+    "garland_text": "Üst menü çubuğu boyunca bir ışık zinciri. Renkleri, ampul şekillerini ve animasyonu seçin; hava efektleriyle ya da onlarsız",
+    "garland_menu": "Menü çubuğu",
+    "palette_warm": "Sıcak ışıklar",
+    "palette_color": "Renkli ışıklar",
+    "palette_ice": "Buzlu ışıklar",
+    "images_title": "Size ait bir şey yağsın",
+    "images_text": "En fazla 10 görsel ekleyin ve çizimlerinizi düşen şekillere dönüştürün. Birini kullanın ya da birkaçını karıştırın",
+    "motion_title": "Size en uygun akışı bulun",
+    "motion_text": "Yoğunluğu, boyutu, hızı ve rüzgârı ince ayarlayın",
+    "placement_title": "Tam istediğiniz yerde",
+    "placement_text": "Uygulamalarınızın üzerinde ya da pencerelerinizin arkasında. Tüm ekranda ya da yalnızca üstte ince bir şeritte",
+    "placement_over": "Pencerelerin üzerinde",
+    "placement_desktop": "Yalnızca masaüstünde",
+    "placement_over_description": "Kar açık pencerelerin üzerinde görünür.",
+    "placement_desktop_description": "Kar açık pencerelerin arkasında kalır.",
+    "placement_strip": "Üst şerit",
+    "placement_strip_description": "Efektler üst kenar boyunca kalır.",
+    "placement_full_description": "Efektler tüm ekranı kaplar.",
+    "displays_title": "Tek ekran ya da koca bir masa",
+    "displays_text": "Efektlerin hangi bağlı ekranlarda görüneceğini seçin",
+    "weather_label": "Bir hava değişikliği deneyin",
+    "cleaning_label": "Bir temizlik aracı deneyin",
+    "palette_label": "Bir ışık paleti seçin",
+    "garland_scenes_label": "Bir ışık sahnesi seçin",
+    "scene_winterNight": "Kış gecesi",
+    "scene_cozyEvening": "Rahat bir akşam",
+    "scene_springBloom": "Bahar çiçekleri",
+    "scene_celebration": "Kutlama",
+    "image_choose": "Görselinizi seçin",
+    "image_file_error": "5 MB'tan küçük bir PNG, JPEG veya WebP görseli seçin.",
+    "image_ready": "Görseliniz şimdi önizlemede yağıyor.",
+    "placement_label": "Efektlerin nerede görüneceğini seçin",
+    "displays_label": "Bağlı iki ekranda efektler",
+    "cleaning_media_alt": "Masaüstünün alt kenarı boyunca toplanmış dökülen yapraklar.",
+    "cleaning_snow_alt": "Bir kürek masaüstündeki yağan karı temizliyor.",
+    "cleaning_leaves_alt": "Bir süpürge masaüstündeki dökülen yaprakları süpürüyor.",
+    "cleaning_rain_alt": "Bir cam sileceği masaüstündeki yağmur damlalarını siliyor.",
+    "garland_media_alt": "Üst menü çubuğu boyunca sırayla değişen farklı ışık zincirleri.",
+    "garland_winterNight_alt": "Üst kenar boyunca parıldayan ağaç şeklinde ışıklar.",
+    "garland_cozyEvening_alt": "Üst kenar boyunca parlayan sıcak ampullü ışık zinciri.",
+    "garland_springBloom_alt": "Üst kenar boyunca parıldayan pembe kalp şeklinde ışıklar.",
+    "garland_celebration_alt": "Üst kenar boyunca parıldayan rengârenk yıldız şeklinde ışıklar.",
+    "images_media_alt": "Masaüstünde düşen efekt olarak kullanılan özel çizimler.",
+    "placement_media_alt": "Farklı boyutlarda tanelerle bir tarayıcı penceresinin üzerinde ve arkasında kar."
+  },
+  "preview_name": "Küçük bir mucizeye yer açın.",
+  "preview_detail": "Aynı masaüstü. Yeni bir atmosfer.",
+  "effects_kicker": "Havayı değiştirmenin altı yolu",
+  "effects_title": "Karlı bir günden fazlası",
+  "effects_intro": "Mevsimlik bir efekt seçin ya da kendi çizimlerinizi getirin, ardından yoğunluğu, boyutu, hızı ve rüzgârı içinize sinene kadar ayarlayın",
+  "themes": [
+    [
+      "snow",
+      "Kış karı",
+      "Yumuşak taneler, hafif süzülme ve biraz kış büyüsü. Yerleşik kar tanesi şekilleri arasından seçin.",
+      "❄️"
+    ],
+    [
+      "rain",
+      "Yağmur",
+      "Hafif çiselemeden düzenli bir sağanağa. Rüzgârı, damla boyutunu ve yoğunluğu ayarlayın.",
+      "🌧️"
+    ],
+    [
+      "leaves",
+      "Sonbahar yaprakları",
+      "Kehribar ve kızıl yapraklar, sizin kontrol ettiğiniz bir esintiyle masaüstünüzde savrulur.",
+      "🍂"
+    ],
+    [
+      "petals",
+      "Bahar taç yaprakları",
+      "Pembe taç yapraklar çalışma alanınızda süzülür ve mevsim geçişini yumuşatır.",
+      "🌸"
+    ],
+    [
+      "fireflies",
+      "Yaz ateş böcekleri",
+      "Sıcak ışık noktaları ekranda gezinir ve bir yaz akşamını içeri getirir.",
+      "✨"
+    ],
+    [
+      "custom",
+      "Kendi görselleriniz",
+      "Kendi görsellerinizi içe aktarın; kar gibi yağsınlar, yaprak gibi savrulsunlar ya da yağmur gibi aksınlar.",
+      "＋"
+    ]
+  ],
+  "features_kicker": "Küçük ayrıntılar. Sizin atmosferiniz.",
+  "features_title": "Masaüstünüz gerçekten sizin olsun",
+  "features": [
+    [
+      "Duvar kâğıdınızı koruyun",
+      "Efektler şeffaf katmanlardır. Sevdiğiniz masaüstü arka planı yerinde kalır."
+    ],
+    [
+      "Nerede görüneceğini seçin",
+      "Animasyonu açık pencerelerin üzerinde ya da arkalarındaki masaüstünde gösterin. Tüm ekranı veya üstte 150 pt yüksekliğinde bir şeridi kullanın."
+    ],
+    [
+      "Hareketi ayarlayın",
+      "Yoğunluğu, parçacık boyutunu, hızı ve rüzgârı ayarlayın. Kar, yapraklar ve taç yapraklar için süzülme ayarları da var."
+    ],
+    [
+      "Biraz ışık ekleyin",
+      "Üst menü çubuğunu ışık zincirleriyle süsleyin. Renkleri, ampul şekillerini ve sabit, parıltı, dalga ya da kovalamaca animasyonunu seçin."
+    ],
+    [
+      "Size özel",
+      "Aynı anda en fazla 10 görsel ekleyin, aralarından seçin ya da karıştırın ve bir hareket stili belirleyin. Yaygın biçimler ve SVG desteklenir; en iyi sonucu şeffaf arka planlar verir."
+    ],
+    [
+      "Akışınızı bozmayın",
+      "Katmanların içinden tıklayarak Mac'inizi her zamanki gibi kullanın. Efektleri menü çubuğundan yönetin, isterseniz oturum açıldığında başlatın."
+    ]
+  ],
+  "steps_title": "Üç adımda ilk kar yağışınız",
+  "steps": [
+    [
+      "Yükleyin ve açın",
+      "Wonderfall'u Mac App Store'dan indirin ve menü çubuğundaki simgesini açın."
+    ],
+    [
+      "Kar tanelerinizi seçin",
+      "Yerleşik bir şekil seçin ya da kendi görsellerinizi veya SVG çizimlerinizi içe aktarın."
+    ],
+    [
+      "Tam kıvamında ayarlayın",
+      "Boyutu, hızı, yoğunluğu ve rüzgârı ayarlayın. Efektleri pencerelerin üzerinde ya da arkasında gösterin."
+    ]
+  ],
+  "faq_title": "Merak ediyor olabileceğiniz birkaç şey",
+  "faq": [
+    [
+      "Wonderfall nedir?",
+      "Wonderfall, masaüstüne animasyonlu katmanlar ekleyen bir macOS menü çubuğu uygulamasıdır: kar, yağmur, sonbahar yaprakları, bahar taç yaprakları, yaz ateş böcekleri, kendi görselleriniz ve dekoratif ışıklar."
+    ],
+    [
+      "Wonderfall ücretsiz mi?",
+      "Wonderfall ücretli bir uygulamadır; ABD Mac App Store'daki fiyatı {us_price}. Fiyatlar bölgeye göre farklılık gösterir ve değişebilir; güncel fiyat için kendi mağazanıza bakın."
+    ],
+    [
+      "Hareketli duvar kâğıdı mı, ekran koruyucu mu?",
+      "Bir masaüstü katmanıdır. Mevcut duvar kâğıdınız yerinde kalır, animasyon ise siz Mac'inizi kullanırken açık pencerelerin arkasında veya üzerinde görünebilir. macOS ekran koruyucusunun yerini almaz."
+    ],
+    [
+      "Birden fazla ekranla çalışır mı?",
+      "Evet. Uygulama bağlı her ekran için bir katman oluşturur ve ekran düzeni değiştiğinde katmanları günceller."
+    ],
+    [
+      "Uygulamalarıma ve masaüstüne tıklamaya devam edebilir miyim?",
+      "Evet. Katman pencereleri fare tıklamalarını yok sayar; böylece içlerinden tıklayıp Mac'inizi normal şekilde kullanabilirsiniz. “Yalnızca masaüstünde” modu efektleri pencerelerinizin arkasına yerleştirir."
+    ],
+    [
+      "Kendi görsellerimi kullanabilir miyim?",
+      "Evet. Dosyaları seçerek veya sürükleyip bırakarak yaygın biçimlerde ya da SVG olarak en fazla 10 görsel içe aktarın; boyutlandırmayı Wonderfall halleder. Birini seçin ya da birkaçını karıştırın; kar, yaprak veya yağmur gibi hareket etsinler."
+    ],
+    [
+      "Kar yağışı olmadan yılbaşı ışıkları ekleyebilir miyim?",
+      "Evet. Işık zincirlerinin hava efektlerinden ayrı kontrolleri vardır; üst menü çubuğunu kar yağışı olmadan da aydınlatabilirsiniz."
+    ],
+    [
+      "Yağmur efektinin sesi var mı?",
+      "Yağmur efekti yalnızca görsel bir masaüstü katmanıdır. Yağmur sesi veya müzik içermez."
+    ],
+    [
+      "Hangi Mac'ler destekleniyor?",
+      "Wonderfall, macOS {minimum_os} veya sonrasını gerektirir. Bu bir Mac uygulamasıdır; iPhone veya iPad uygulaması değildir."
+    ],
+    [
+      "İnternet bağlantısı gerekiyor mu?",
+      "Masaüstü efektleri, ayarlar ve kendi görselleriniz Mac'inizde yerel olarak çalışır. İndirme ve güncelleme için internet gerekir. İsteğe bağlı hava durumu eşleştirmesi de Apple WeatherKit'i kullanmak için internet ve konum izni gerektirir."
+    ],
+    [
+      "Efektleri nasıl kapatırım?",
+      "Hava efektlerini veya ışıkları menü çubuğundan kapatın ya da uygulamadan çıkın. Oturum açıldığında başlatma ayrı bir ayardır."
+    ]
+  ],
+  "blog_title": "Çalışma alanınız için biraz ilham",
+  "read": "Rehberi okuyun",
+  "all_posts": "Tüm yazılar",
+  "blog_meta_title": "Mac Masaüstü Rehberleri | Wonderfall",
+  "blog_description": "Mac masaüstünü kişiselleştirmek için pratik rehberler: kar ve yağmur katmanları, mevsimlik efektler, dekoratif ışıklar ve kendi görselleriniz.",
+  "blog_intro": "Mac'inize biraz daha atmosfer katmak için pratik rehberler",
+  "cta_title": "Küçük bir değişiklik. Bambaşka bir his",
+  "cta_text": "Mac'inize kendine ait bir mevsim verin. Karla başlayın, gerisini ruh halinize bırakın",
+  "footer_line": "Mac için mevsimlik masaüstü efektleri",
+  "featured_on": "Şurada tanıtıldı",
+  "macbase_badge_alt": "Wonderfall, MacBase'de yer alıyor",
+  "footer_groups": ["Rehberler", "Ürün", "Yasal", "İletişim"],
+  "privacy": "Gizlilik politikası",
+  "support": "Destek",
+  "contact": "Andrew'a yazın",
+  "author": "Yazan: Andrew Sereda, Wonderfall geliştiricisi",
+  "support_title": "Mac için Wonderfall: Destek ve Kurulum",
+  "support_description": "Mac'te Wonderfall ile ilgili yardım: menü çubuğu kontrolleri, temalar, katmanlar, görsel içe aktarma ve geliştiriciyle iletişim.",
+  "support_intro": "Menü çubuğu simgesini kullanarak mevsimlik bir efekt seçin, hareketini ayarlayın, ışık zinciri ekleyin veya kendi görsellerinizi içe aktarın",
+  "support_sections": [
+    [
+      "Başlarken",
+      "Wonderfall'u Mac App Store'dan indirin, uygulamayı açın ve “Hava efektleri” bölümünden bir tema seçmek için menü çubuğundaki simgesine tıklayın. Ayarlar penceresinin açık kalması gerekmez."
+    ],
+    [
+      "Efekti göremiyorum",
+      "“Hava efektleri” seçeneğinin açık olduğunu ve uygulamanın çalıştığını kontrol edin. “Tüm ekran” ve “İçeriğin üzerinde” yerleşimini deneyin. “Yalnızca masaüstünde” modundaki efektler pencerelerinizin arkasında kalır, bu yüzden tam ekran büyütülmüş bir pencere onları gizleyebilir. Efekt çok belirsizse yoğunluğu artırın."
+    ],
+    [
+      "Kendi çizimlerinizi içe aktarma",
+      "“Görseliniz” seçeneğini seçin ve resimleri dosya seçiciyle ya da galeriye sürükleyerek ekleyin. Sınır 10 görseldir; yaygın biçimler ve SVG desteklenir, Wonderfall boyutu otomatik olarak hazırlar. Şeffaf arka planlar temiz kenarlar sağlar. Kar, yaprak veya yağmur gibi bir hareket seçin."
+    ],
+    [
+      "Işıkları ayrı kontrol etme",
+      "Işık zinciri kontrolleriyle üst menü çubuğunu süsleyebilirsiniz. Işıklar ve hava efektleri birbirinden bağımsız çalışır, bu yüzden ışıkları tek başına da kullanabilirsiniz."
+    ],
+    [
+      "Otomatik başlatmayı kapatma",
+      "Uygulamanın oturum açtığınızda açılıp açılmayacağını “Oturum açıldığında başlat” ayarıyla seçin. Uygulamadan menü çubuğu kontrollerinden çıkabilirsiniz."
+    ],
+    [
+      "Geliştiriciyle iletişim",
+      "hello@andrewsereda.com adresine macOS sürümünüzü, uygulama sürümünü, ekran düzeninizi ve sorunu yeniden oluşturan adımları yazın. Kişisel veya hassas içerik eklemekten kaçının."
+    ]
+  ],
+  "picker_title": "Bir efekt seçin",
+  "picker_intro": "Bu anı biraz farklı kılacak ne olurdu?",
+  "picker_footer": "Duvar kâğıdınız ve açık pencereleriniz olduğu gibi kalır.",
+  "folder_labels": [
+    "Notlar",
+    "Projeler",
+    "Fotoğraflar"
+  ],
+  "device_alt": "Mevsimlik efekt videoları için ekran çerçevesi.",
+  "screen_label": "Mevsimlik efekt videosu önizlemesi",
+  "desktop_label": "Masaüstü",
+  "desktop_time": "Pzt 9:41",
+  "desktop_menu": [
+    "Dosya",
+    "Düzen",
+    "Görüntü"
+  ],
+  "hero_line": "Mac için masaüstü efektleri",
+  "hero_phrases": [
+    {
+      "text": "Kış karı",
+      "icon": "❄️"
+    },
+    {
+      "text": "Yağmur",
+      "icon": "🌧️"
+    },
+    {
+      "text": "Sonbahar yaprakları",
+      "icon": "🍂"
+    },
+    {
+      "text": "Bahar taç yaprakları",
+      "icon": "🌸"
+    },
+    {
+      "text": "Yaz ateş böcekleri",
+      "icon": "✨"
+    }
+  ],
+  "cookie_settings": "Çerez ayarları",
+  "navigation_ui": {
+    "main": "Ana gezinme",
+    "menu": "Menü",
+    "language": "Dil seçin",
+    "sections": "Site bölümleri",
+    "home": "Ana sayfa"
+  },
+  "product_title": "Mac için masaüstü efektleri. Duvar kâğıdınız yerinde kalır",
+  "product_summary": "Wonderfall, Mac masaüstünüze animasyonlu kar, yağmur, sonbahar yaprakları, bahar taç yaprakları ve ateş böcekleri ekler. Efektleri pencerelerinizin arkasında tutun ya da uygulamalarınızın üzerinde süzülmelerine izin verin; altta hep kendi duvar kâğıdınız durur",
+  "product_facts": [
+    [
+      "Platform",
+      "macOS {minimum_os}+"
+    ],
+    [
+      "Yerleşim",
+      "Pencerelerin üzerinde veya yalnızca masaüstünde"
+    ],
+    [
+      "Çizimleriniz",
+      "SVG dahil en fazla 10 özel görsel"
+    ]
+  ],
+  "setup_link": "Mac masaüstünüze nasıl kar eklenir (İngilizce)",
+  "released_description": "Wonderfall; animasyonlu kar, yağmur, yapraklar, taç yapraklar, ateş böcekleri, özel görseller ve dekoratif ışıklar sunan bir Mac menü çubuğu uygulamasıdır. Mevcut duvar kâğıdınızı korur ve macOS {minimum_os} veya sonrasını gerektirir.",
+  "released_features": [
+    "Animasyonlu kar, yağmur, sonbahar yaprakları, bahar taç yaprakları ve yaz ateş böcekleri",
+    "Birden fazla hareket stiliyle özel görseller",
+    "Menü çubuğu veya Dock boyunca sekiz sahneli dekoratif ışıklar",
+    "Kürek, cam sileceği ve süpürgeyle kar yığınları, yağmur damlaları ve yaprak yığınları",
+    "Açık pencerelerde kar, kartopları, bir kardan adam ve bir kar küreme aracı",
+    "İsteğe bağlı hava durumu eşleştirmesi",
+    "Pencerelerin üzerinde veya yalnızca masaüstünde efektler",
+    "Ayarlanabilir yoğunluk, boyut, hız ve rüzgâr"
+  ],
+  "reviews_ui": {
+    "title": "Küçük bir mucize, onların sözleriyle",
+    "summary": "5 üzerinden {value} · Ukrayna'da {count} puan",
+    "rating": "5 üzerinden {rating} yıldız",
+    "country": "Ukrayna",
+    "checked": "App Store Ukrayna, kontrol tarihi: {date}"
+  },
+  "updated_label": "Güncellendi",
+  "icon_alt": "Wonderfall uygulama simgesi",
+  "footer_nav_label": "Alt bilgi gezinmesi",
+  "breadcrumb_label": "İçerik haritası",
+  "decimal": ",",
+  "press_label": "Basın (İngilizce)",
+  "privacy_description": "Wonderfall'un yerel uygulama verilerini, kullanım istatistiklerini, çökme raporlarını, isteğe bağlı konumu, web sitesi analizini ve çerez tercihlerini nasıl ele aldığı.",
+  "html_lang": "tr"
+}
