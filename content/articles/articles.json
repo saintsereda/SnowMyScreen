@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "christmas-screensaver-mac",
+      "status": "published",
+      "published": "2026-11-19",
+      "updated": "2026-11-19",
+      "en": {
+        "title": "Christmas Screensaver for Mac: Built-in Options and a Festive Desktop While You Work",
+        "footer_label": "Christmas screensaver for Mac",
+        "meta_title": "Christmas Screensaver for Mac: Your Options | Wonderfall",
+        "description": "Make a Christmas screensaver on your Mac from your own photos, check old downloads before you open them, and keep snow and lights on screen while you work.",
+        "summary": "Your own holiday photos as a screen saver, what to know about old downloads, and a festive screen while you work"
+      },
+      "uk": {
+        "title": "Різдвяна заставка для Mac: вбудовані варіанти й святковий робочий стіл під час роботи",
+        "footer_label": "Різдвяна заставка для Mac",
+        "meta_title": "Різдвяна заставка для Mac: усі варіанти | Wonderfall",
+        "description": "Зробіть різдвяну заставку на Mac із власних фото, перевірте старі завантажені файли й залиште сніг і гірлянду на екрані, поки ви працюєте.",
+        "summary": "Ваші святкові фото як заставка, що знати про старі завантаження і святковий екран під час роботи"
+      },
+      "cover": {
+        "video": "/videos/snow-christmas-1440p.mp4",
+        "poster": "/videos/snow-christmas-1440p.jpg",
+        "alt": {
+          "en": "A Mac desktop decorated for Christmas while apps are open: lights along the top, Santa’s sleigh, a pixel-art tree, snowmen and snow on the window tops",
+          "uk": "Робочий стіл Mac у різдвяному вбранні, поки відкрито програми: гірлянда вгорі, сани Санти, піксельна ялинка, сніговики й сніг на верхніх краях вікон"
+        }
+      },
+      "inline": [
+        {
+          "after": "setup",
+          "video": "/videos/garland-showcase.mp4",
+          "poster": "/videos/garland-showcase.jpg",
+          "caption": {
+            "en": "Christmas lights hang along the menu bar while snow falls below.",
+            "uk": "Гірлянда висить уздовж рядка меню, а під нею падає сніг."
+          }
+        },
+        {
+          "after": "santa",
+          "video": "/videos/santa-flyover.mp4",
+          "poster": "/videos/santa-flyover.jpg",
+          "caption": {
+            "en": "Santa and his reindeer fly under the lights while the Settings window is open.",
+            "uk": "Санта з оленями пролітає під гірляндою, поки відкрито вікно налаштувань."
+          }
+        }
+      ]
+    },
+    {
       "slug": "wonderfall-1-5-decorate-christmas-tree",
       "status": "published",
       "published": "2026-11-18",

@@ -24,6 +24,7 @@
 
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
+- [Christmas Screensaver for Mac: Built-in Options and a Festive Desktop While You Work](https://getwonderfall.com/blog/christmas-screensaver-mac/): Make a Christmas screensaver on your Mac from your own photos, check old downloads before you open them, and keep snow and lights on screen while you work.
 - [Wonderfall 1.5: Decorate Your Own Christmas Tree, Lights That Sway in the Wind and New Cleaning Vehicles](https://getwonderfall.com/blog/wonderfall-1-5-decorate-christmas-tree/): Wonderfall 1.5 lets you decorate the Christmas tree on your Mac desktop, makes the lights sway in the wind and lets you pick the vehicle that clears the snow.
 - [Christmas Apps for Mac in 2026: Lights, Snow, Santa and Trees Compared](https://getwonderfall.com/blog/christmas-apps-mac/): 15 Christmas apps for Mac compared: where the lights hang, whether snow falls over your windows, which add a tree or Santa, and which are free.
 - [Wonderfall 1.4: Santa, a Christmas Tree and a Rack for Your Tools](https://getwonderfall.com/blog/wonderfall-1-4-santa-christmas-tree/): Wonderfall 1.4 sends Santa and his reindeer across your Mac screen, adds a Christmas tree, a tool rack, heavier snowmen and keyboard shortcuts.
@@ -38,6 +39,7 @@
 ## Українською
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)
 - [Посібники](https://getwonderfall.com/uk/blog/)
+- [Різдвяна заставка для Mac: вбудовані варіанти й святковий робочий стіл під час роботи](https://getwonderfall.com/uk/blog/christmas-screensaver-mac/): Зробіть різдвяну заставку на Mac із власних фото, перевірте старі завантажені файли й залиште сніг і гірлянду на екрані, поки ви працюєте.
 - [Wonderfall 1.5: прикрасьте власну ялинку, гірлянда гойдається від вітру, нові прибиральні машинки](https://getwonderfall.com/uk/blog/wonderfall-1-5-decorate-christmas-tree/): У Wonderfall 1.5 ялинку на робочому столі Mac можна прикрасити самому, гірлянда гойдається від вітру, а сніг прибирає машинка, яку ви обрали.
 - [Різдвяні застосунки для Mac 2026: гірлянди, сніг, Санта та ялинки](https://getwonderfall.com/uk/blog/christmas-apps-mac/): Порівнюємо 15 різдвяних застосунків для Mac: де висить гірлянда, чи падає сніг поверх вікон, у яких є ялинка чи Санта і які з них безкоштовні.
 - [Wonderfall 1.4: Санта, ялинка й стійка для інструментів](https://getwonderfall.com/uk/blog/wonderfall-1-4-santa-christmas-tree/): У Wonderfall 1.4 екраном Mac пролітає Санта з оленями, на робочому столі стоїть ялинка, а ще є стійка з інструментами, важчі сніговики й сполучення клавіш.
