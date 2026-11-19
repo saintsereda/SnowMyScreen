@@ -356,20 +356,20 @@
       "slug": "christmas-lights-mac-desktop",
       "status": "published",
       "published": "2026-11-10",
-      "updated": "2026-11-10",
+      "updated": "2026-11-19",
       "en": {
-        "title": "How to Put Christmas Lights on Your Mac Desktop",
+        "title": "How to Put Christmas Lights on Your Mac Screen",
         "footer_label": "Christmas lights on your Mac",
-        "meta_title": "Christmas Lights for Your Mac Desktop | Wonderfall",
-        "description": "Hang animated Christmas lights along your Mac menu bar, pick a scene, colors and glow, and keep them over your windows or only on the desktop.",
-        "summary": "String lights along the menu bar, from Winter Night to Holiday Lights"
+        "meta_title": "Christmas Lights on Your Mac Screen | Wonderfall",
+        "description": "Hang animated Christmas lights along your Mac menu bar, pick a scene or your own colors, let them sway, and see what works for the screen border.",
+        "summary": "Menu bar lights with scenes, your own colors, sway and a Christmas style, plus what to do about the screen border"
       },
       "uk": {
-        "title": "Як повісити новорічну гірлянду на робочий стіл Mac",
+        "title": "Як повісити новорічну гірлянду на екран Mac",
         "footer_label": "Новорічна гірлянда на Mac",
-        "meta_title": "Новорічна гірлянда на робочому столі Mac | Wonderfall",
-        "description": "Повісьте анімовану гірлянду вздовж рядка меню Mac, оберіть сцену, кольори й сяйво та покажіть її поверх вікон або лише на робочому столі.",
-        "summary": "Гірлянда вздовж рядка меню: від «Зимової ночі» до «Святкових вогнів»"
+        "meta_title": "Новорічна гірлянда на екрані Mac | Wonderfall",
+        "description": "Повісьте анімовану гірлянду вздовж рядка меню Mac: сцени, власні кольори, гойдання від вітру, різдвяне оформлення й що робити з краєм екрана.",
+        "summary": "Гірлянда вздовж рядка меню: сцени, свої кольори, вітер і різдвяне оформлення, а ще що робити з краєм екрана"
       },
       "cover": {
         "video": "/videos/garland-showcase.mp4",
@@ -385,8 +385,8 @@
           "video": "/videos/snow-1440p.mp4",
           "poster": "/videos/snow-1440p.jpg",
           "caption": {
-            "en": "Turn on Snow to add falling flakes below the lights.",
-            "uk": "Увімкніть сніг, щоб під гірляндою падали сніжинки."
+            "en": "Turn on Snow to add falling flakes to your desktop.",
+            "uk": "Увімкніть сніг, щоб на робочому столі падали сніжинки."
           }
         },
         {
@@ -395,7 +395,25 @@
           "poster": "/videos/lights-scenes.jpg",
           "caption": {
             "en": "Switching scenes changes the whole string at once: Cozy Evening, Spring Bloom, Celebration.",
-            "uk": "Інша сцена одразу змінює всю гірлянду: Cozy Evening, Spring Bloom, Celebration."
+            "uk": "Інша сцена одразу змінює всю гірлянду: тут Затишний вечір, Весняний цвіт і Свято (на записі англійський інтерфейс)."
+          }
+        },
+        {
+          "after": "border",
+          "video": "/videos/placement-top-strip.mp4",
+          "poster": "/videos/placement-top-strip.jpg",
+          "caption": {
+            "en": "With the Top strip weather area, snow falls only near the top of the screen.",
+            "uk": "З областю «Верхня смуга» сніг падає лише біля верхнього краю екрана."
+          }
+        },
+        {
+          "after": "tree",
+          "video": "/videos/christmas-tree.mp4",
+          "poster": "/videos/christmas-tree.jpg",
+          "caption": {
+            "en": "The Christmas tree stands on the snow at the bottom of the screen; its lights follow the palette and animation of your menu bar lights.",
+            "uk": "Різдвяна ялинка стоїть на снігу внизу екрана; її вогники повторюють палітру й анімацію гірлянди."
           }
         }
       ]
