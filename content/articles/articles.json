@@ -88,6 +88,34 @@
       ]
     },
     {
+      "slug": "wonderfall-1-6-penguins-snowman-wardrobe",
+      "status": "published",
+      "published": "2026-11-19",
+      "updated": "2026-11-19",
+      "en": {
+        "title": "Wonderfall 1.6: Penguins, a Snowman Wardrobe and More Christmas Trees",
+        "footer_label": "What’s new in Wonderfall 1.6",
+        "meta_title": "Wonderfall 1.6: Penguins and a Snowman Wardrobe | Wonderfall",
+        "description": "Wonderfall 1.6 brings penguins to your Mac desktop, a wardrobe to dress up your snowman, and more Christmas trees you decorate in place.",
+        "summary": "Penguins slide across the snow, snowmen get hats and scarves, and more trees stand on your desktop"
+      },
+      "uk": {
+        "title": "Wonderfall 1.6: пінгвіни, гардероб сніговика й більше ялинок",
+        "footer_label": "Що нового у Wonderfall 1.6",
+        "meta_title": "Wonderfall 1.6: пінгвіни й гардероб сніговика | Wonderfall",
+        "description": "У Wonderfall 1.6 робочим столом Mac ковзають пінгвіни, сніговика можна вбрати в гардеробі, а ялинок стало більше, і кожну можна прикрасити на місці.",
+        "summary": "Пінгвіни ковзають снігом, сніговики отримують шапки й шарфи, а ялинок на робочому столі стає більше"
+      },
+      "cover": {
+        "video": "/videos/christmas-tree.mp4",
+        "poster": "/videos/christmas-tree.jpg",
+        "alt": {
+          "en": "A pixel-art Christmas tree with a red bow on top stands at the bottom of a snowy desktop, with the mitten and shovel on the tool rack",
+          "uk": "Піксельна ялинка з червоним бантиком на верхівці стоїть унизу засніженого робочого столу, поруч на стійці рукавичка й лопата"
+        }
+      }
+    },
+    {
       "slug": "christmas-apps-mac",
       "status": "published",
       "published": "2026-11-16",

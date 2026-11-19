@@ -6,12 +6,12 @@
 - Requires macOS 14.6 or later; Mac only.
 - Seasonal effects: falling snow, rain, autumn leaves, spring petals and summer fireflies.
 - Custom images (common formats and SVG) can move like snow, leaves or rain. Import up to 10 at once; the app prepares the size automatically.
-- Version 1.4 (November 2026) is the current App Store release. Santa and his reindeer fly across the screen now and then, a decorated Christmas tree can stand on the desktop, cleaning tools wait on a rack at the bottom of the screen, and keyboard shortcuts start a cleaning tool or snow play from any app. Earlier releases added snow that settles on top of open windows, the snow bank can be rolled into snowballs and a snowman, and a snowplow clears it. Decorative lights with eight scenes hang along the menu bar, the Dock or both. Interactive tools clear snow, leaves, petals and raindrops.
+- Version 1.6 (November 2026) is the current App Store release. Penguins waddle and slide across the snow when called from the menu, a Snowman Wardrobe dresses the snowmen you build, and a Decoration Inventory places more Christmas trees that can be decorated in place. Version 1.5 added tree ornaments, lights that sway in the wind and a choice of cleaning vehicles. In 1.4, Santa and his reindeer fly across the screen now and then, a decorated Christmas tree can stand on the desktop, cleaning tools wait on a rack at the bottom of the screen, and keyboard shortcuts start a cleaning tool or snow play from any app. Earlier releases added snow that settles on top of open windows, the snow bank can be rolled into snowballs and a snowman, and a snowplow clears it. Decorative lights with eight scenes hang along the menu bar, the Dock or both. Interactive tools clear snow, leaves, petals and raindrops.
 - Place the overlay over open windows or on the desktop behind them, while keeping the existing wallpaper.
 - Controls include intensity, size, speed and wind. Snow can pile up at the bottom of the screen and be cleared with a shovel.
 - Optional weather matching uses location permission and Apple WeatherKit.
 - Rain is a visual effect without ambient rain audio.
-- US store price checked on 2026-11-12: US$3.99. Prices depend on the region and may change; the App Store is the source of pricing.
+- US store price checked on 2026-11-19: US$3.99. Prices depend on the region and may change; the App Store is the source of pricing.
 - The app is a desktop overlay, not a replacement for wallpaper or the macOS screensaver.
 
 ## Official product sources
@@ -25,6 +25,7 @@
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
 - [Christmas Screensaver for Mac: Built-in Options and a Festive Desktop While You Work](https://getwonderfall.com/blog/christmas-screensaver-mac/): Make a Christmas screensaver on your Mac from your own photos, check old downloads before you open them, and keep snow and lights on screen while you work.
+- [Wonderfall 1.6: Penguins, a Snowman Wardrobe and More Christmas Trees](https://getwonderfall.com/blog/wonderfall-1-6-penguins-snowman-wardrobe/): Wonderfall 1.6 brings penguins to your Mac desktop, a wardrobe to dress up your snowman, and more Christmas trees you decorate in place.
 - [Wonderfall 1.5: Decorate Your Own Christmas Tree, Lights That Sway in the Wind and New Cleaning Vehicles](https://getwonderfall.com/blog/wonderfall-1-5-decorate-christmas-tree/): Wonderfall 1.5 lets you decorate the Christmas tree on your Mac desktop, makes the lights sway in the wind and lets you pick the vehicle that clears the snow.
 - [Christmas Apps for Mac in 2026: Lights, Snow, Santa and Trees Compared](https://getwonderfall.com/blog/christmas-apps-mac/): 15 Christmas apps for Mac compared: where the lights hang, whether snow falls over your windows, which add a tree or Santa, and which are free.
 - [Wonderfall 1.4: Santa, a Christmas Tree and a Rack for Your Tools](https://getwonderfall.com/blog/wonderfall-1-4-santa-christmas-tree/): Wonderfall 1.4 sends Santa and his reindeer across your Mac screen, adds a Christmas tree, a tool rack, heavier snowmen and keyboard shortcuts.
@@ -40,6 +41,7 @@
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)
 - [Посібники](https://getwonderfall.com/uk/blog/)
 - [Різдвяна заставка для Mac: вбудовані варіанти й святковий робочий стіл під час роботи](https://getwonderfall.com/uk/blog/christmas-screensaver-mac/): Зробіть різдвяну заставку на Mac із власних фото, перевірте старі завантажені файли й залиште сніг і гірлянду на екрані, поки ви працюєте.
+- [Wonderfall 1.6: пінгвіни, гардероб сніговика й більше ялинок](https://getwonderfall.com/uk/blog/wonderfall-1-6-penguins-snowman-wardrobe/): У Wonderfall 1.6 робочим столом Mac ковзають пінгвіни, сніговика можна вбрати в гардеробі, а ялинок стало більше, і кожну можна прикрасити на місці.
 - [Wonderfall 1.5: прикрасьте власну ялинку, гірлянда гойдається від вітру, нові прибиральні машинки](https://getwonderfall.com/uk/blog/wonderfall-1-5-decorate-christmas-tree/): У Wonderfall 1.5 ялинку на робочому столі Mac можна прикрасити самому, гірлянда гойдається від вітру, а сніг прибирає машинка, яку ви обрали.
 - [Різдвяні застосунки для Mac 2026: гірлянди, сніг, Санта та ялинки](https://getwonderfall.com/uk/blog/christmas-apps-mac/): Порівнюємо 15 різдвяних застосунків для Mac: де висить гірлянда, чи падає сніг поверх вікон, у яких є ялинка чи Санта і які з них безкоштовні.
 - [Wonderfall 1.4: Санта, ялинка й стійка для інструментів](https://getwonderfall.com/uk/blog/wonderfall-1-4-santa-christmas-tree/): У Wonderfall 1.4 екраном Mac пролітає Санта з оленями, на робочому столі стоїть ялинка, а ще є стійка з інструментами, важчі сніговики й сполучення клавіш.
