@@ -185,20 +185,20 @@
       "slug": "christmas-theme-mac",
       "status": "published",
       "published": "2026-11-10",
-      "updated": "2026-11-10",
+      "updated": "2026-11-20",
       "en": {
-        "title": "How to Give Your Mac a Christmas Theme: Wallpaper, Snow and Lights",
-        "footer_label": "Christmas theme for your Mac",
-        "meta_title": "Christmas Theme for Your Mac: Snow and Lights | Wonderfall",
-        "description": "Turn your Mac or MacBook desktop into a Christmas scene: a festive wallpaper, falling snow, menu bar lights, a snow drift and a New Year variation.",
-        "summary": "Four steps from a plain wallpaper to a cozy Christmas desktop, plus a New Year version"
+        "title": "Christmas Wallpaper for Mac Is Not Enough: Make Your Own Animated Christmas Desktop",
+        "footer_label": "Animated Christmas desktop for Mac",
+        "meta_title": "Christmas MacBook Wallpaper, Brought to Life | Wonderfall",
+        "description": "Keep any Christmas wallpaper on your Mac or MacBook and add a moving scene you tune yourself: snow, menu bar lights, a decorated tree, Santa and snow drifts.",
+        "summary": "Keep your wallpaper and build a moving Christmas scene on top: snow, lights, a decorated tree, Santa and three ready-made looks"
       },
       "uk": {
-        "title": "Різдвяне оформлення Mac: шпалери, сніг і гірлянда",
-        "footer_label": "Різдвяне оформлення Mac",
-        "meta_title": "Різдвяне оформлення Mac: сніг і гірлянда | Wonderfall",
-        "description": "Перетворіть робочий стіл Mac чи MacBook на різдвяну сцену: святкові шпалери, сніг, гірлянда в рядку меню, кучугура й новорічний варіант.",
-        "summary": "Чотири кроки від звичайних шпалер до затишного різдвяного робочого столу, плюс новорічний варіант"
+        "title": "Різдвяних шпалер для Mac замало: зберіть власний анімований різдвяний робочий стіл",
+        "footer_label": "Анімований різдвяний робочий стіл",
+        "meta_title": "Різдвяні шпалери для MacBook, що оживають | Wonderfall",
+        "description": "Залиште будь-які різдвяні шпалери на Mac чи MacBook і додайте поверх рухому сцену, яку налаштовуєте самі: сніг, гірлянду, ялинку, Санту й кучугури.",
+        "summary": "Залиште свої шпалери й зберіть поверх рухому різдвяну сцену: сніг, гірлянда, прикрашена ялинка, Санта й три готові образи"
       },
       "cover": {
         "video": "/videos/snow-demo-1440p.mp4",
@@ -210,12 +210,39 @@
       },
       "inline": [
         {
+          "after": "snow",
+          "video": "/videos/weather-settings.mp4",
+          "poster": "/videos/weather-settings.jpg",
+          "caption": {
+            "en": "Pick a theme and a preset, then fine-tune intensity, flake size, speed and wind.",
+            "uk": "Оберіть тему й пресет, а потім підлаштуйте інтенсивність, розмір сніжинок, швидкість і вітер."
+          }
+        },
+        {
           "after": "lights",
           "video": "/videos/garland-showcase.mp4",
           "poster": "/videos/garland-showcase.jpg",
           "caption": {
-            "en": "Holiday lights hang along the menu bar above the snow.",
-            "uk": "Гірлянда висить уздовж рядка меню над снігом."
+            "en": "Colorful star-shaped lights hang along the menu bar above the snow.",
+            "uk": "Різнокольорова гірлянда із зірочок висить уздовж рядка меню над снігом."
+          }
+        },
+        {
+          "after": "tree",
+          "video": "/videos/christmas-tree.mp4",
+          "poster": "/videos/christmas-tree.jpg",
+          "caption": {
+            "en": "A decorated pixel-art tree stands at the bottom of a snowy desktop, next to the tool rack.",
+            "uk": "Прикрашена піксельна ялинка стоїть унизу засніженого робочого столу, поруч зі стійкою для інструментів."
+          }
+        },
+        {
+          "after": "santa",
+          "video": "/videos/santa-flyover.mp4",
+          "poster": "/videos/santa-flyover.jpg",
+          "caption": {
+            "en": "Santa and his reindeer fly under the lights while the Settings window is open.",
+            "uk": "Санта з оленями пролітає під гірляндою, поки відкрито вікно налаштувань."
           }
         },
         {
@@ -228,21 +255,12 @@
           }
         },
         {
-          "after": "snow",
-          "video": "/videos/weather-settings.mp4",
-          "poster": "/videos/weather-settings.jpg",
-          "caption": {
-            "en": "Pick a theme and a preset, then fine-tune intensity, flake size, speed and wind.",
-            "uk": "Оберіть тему й пресет, а потім підлаштуйте інтенсивність, розмір сніжинок, швидкість і вітер."
-          }
-        },
-        {
           "after": "new-year",
           "video": "/videos/lights-scenes.mp4",
           "poster": "/videos/lights-scenes.jpg",
           "caption": {
             "en": "Scenes switch the whole string at once; Celebration ends the clip with star bulbs.",
-            "uk": "Сцени змінюють усю гірлянду одразу; наприкінці увімкнено Celebration із зірками."
+            "uk": "Сцени змінюють усю гірлянду одразу; наприкінці увімкнено «Свято» із зірками."
           }
         }
       ]
