@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "let-it-snow-google-mac",
+      "status": "published",
+      "published": "2026-11-20",
+      "updated": "2026-11-20",
+      "en": {
+        "title": "Google “Let It Snow” Not Working? What We Found, and How to Get Snow on Your Whole Mac Screen",
+        "footer_label": "Google “let it snow” not working",
+        "meta_title": "Google “Let It Snow” Not Working? What We Found | Wonderfall",
+        "description": "We tried Google’s “let it snow” on November 20, 2026: no snow. What the Easter egg did, why sources disagree and how to get snow on your whole Mac screen.",
+        "summary": "What we found when we searched Google’s “let it snow” in November 2026, and how to make snow fall over every window on your Mac"
+      },
+      "uk": {
+        "title": "Google «Let It Snow» не працює? Що ми з’ясували і як зробити сніг на весь екран Mac",
+        "footer_label": "Google «let it snow» не працює",
+        "meta_title": "Google «Let It Snow» не працює? Що ми з’ясували | Wonderfall",
+        "description": "20 листопада 2026 року пасхалка Google «let it snow» не показала снігу. Що вона робила, чому джерела сперечаються і як зробити сніг на весь екран Mac.",
+        "summary": "Що ми побачили, коли шукали «let it snow» у Google в листопаді 2026 року, і як зробити, щоб сніг падав поверх усіх вікон на Mac"
+      },
+      "cover": {
+        "video": "/videos/window-snow.mp4",
+        "poster": "/videos/window-snow.jpg",
+        "alt": {
+          "en": "Snow resting on top of a window slides off when the window moves",
+          "uk": "Сніг на верхньому краю вікна обсипається, коли вікно рухають"
+        }
+      },
+      "inline": [
+        {
+          "after": "whole-screen",
+          "video": "/videos/placement-over-windows.mp4",
+          "poster": "/videos/placement-over-windows.jpg",
+          "caption": {
+            "en": "In Wonderfall, snow falls in front of your open windows while you keep working.",
+            "uk": "У Wonderfall сніг падає перед відкритими вікнами, поки ви працюєте."
+          }
+        },
+        {
+          "after": "start",
+          "video": "/videos/snow-christmas-1440p.mp4",
+          "poster": "/videos/snow-christmas-1440p.jpg",
+          "caption": {
+            "en": "Snow lies on the tops of open windows, with lights, Santa and a Christmas tree added.",
+            "uk": "Сніг лежить на верхніх краях відкритих вікон, а поруч гірлянда, Санта й різдвяна ялинка."
+          }
+        }
+      ]
+    },
+    {
       "slug": "christmas-screensaver-mac",
       "status": "published",
       "published": "2026-11-19",
