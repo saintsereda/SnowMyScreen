@@ -1,6 +1,63 @@
 {
   "articles": [
     {
+      "slug": "festivitas-alternative-mac",
+      "status": "published",
+      "published": "2026-11-21",
+      "updated": "2026-11-21",
+      "en": {
+        "title": "Festivitas Alternatives for Mac in 2026: Christmas Lights, Snow and More",
+        "footer_label": "Festivitas alternatives for Mac",
+        "meta_title": "Festivitas Alternatives for Mac in 2026 | Wonderfall",
+        "description": "Festivitas is not on the Mac App Store. Compare six alternatives for Christmas lights and snow, see which are free, and how to switch to Wonderfall.",
+        "summary": "What Festivitas does, how it is sold and how six other holiday apps for Mac compare, checked in November 2026"
+      },
+      "uk": {
+        "title": "Альтернативи Festivitas для Mac 2026: гірлянда, сніг і не лише",
+        "footer_label": "Альтернативи Festivitas для Mac",
+        "meta_title": "Альтернативи Festivitas для Mac 2026 | Wonderfall",
+        "description": "Festivitas немає в Mac App Store. Порівнюємо шість альтернатив із гірляндою та снігом, показуємо безкоштовні варіанти й як перейти на Wonderfall.",
+        "summary": "Що вміє Festivitas, як його продають і чим від нього відрізняються шість інших святкових застосунків для Mac, перевірено в листопаді 2026 року"
+      },
+      "cover": {
+        "video": "/videos/garland-showcase.mp4",
+        "poster": "/videos/garland-showcase.jpg",
+        "alt": {
+          "en": "Colorful star-shaped lights hang along the menu bar while snow falls below",
+          "uk": "Різнокольорова гірлянда із зірочок висить уздовж рядка меню, а під нею падає сніг"
+        }
+      },
+      "inline": [
+        {
+          "after": "wonderfall",
+          "video": "/videos/lights-scenes.mp4",
+          "poster": "/videos/lights-scenes.jpg",
+          "caption": {
+            "en": "Scenes change the whole string at once: here Cozy Evening, Spring Bloom and Celebration.",
+            "uk": "Сцени одразу змінюють усю гірлянду: тут «Затишний вечір», «Весняний цвіт» і «Свято» (на записі англійський інтерфейс)."
+          }
+        },
+        {
+          "after": "snow",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow builds a drift along the bottom of the screen, and the shovel digs it out.",
+            "uk": "Сніг наростає кучугурою внизу екрана, а лопата її розкопує."
+          }
+        },
+        {
+          "after": "tree",
+          "video": "/videos/santa-flyover.mp4",
+          "poster": "/videos/santa-flyover.jpg",
+          "caption": {
+            "en": "Santa and his reindeer fly under the lights while the Settings window is open.",
+            "uk": "Санта з оленями пролітає під гірляндою, поки відкрито вікно налаштувань."
+          }
+        }
+      ]
+    },
+    {
       "slug": "let-it-snow-google-mac",
       "status": "published",
       "published": "2026-11-20",
