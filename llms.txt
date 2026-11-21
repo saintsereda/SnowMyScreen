@@ -24,6 +24,7 @@
 
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
+- [Festivitas Alternatives for Mac in 2026: Christmas Lights, Snow and More](https://getwonderfall.com/blog/festivitas-alternative-mac/): Festivitas is not on the Mac App Store. Compare six alternatives for Christmas lights and snow, see which are free, and how to switch to Wonderfall.
 - [Google “Let It Snow” Not Working? What We Found, and How to Get Snow on Your Whole Mac Screen](https://getwonderfall.com/blog/let-it-snow-google-mac/): We tried Google’s “let it snow” on November 20, 2026: no snow. What the Easter egg did, why sources disagree and how to get snow on your whole Mac screen.
 - [Christmas Screensaver for Mac: Built-in Options and a Festive Desktop While You Work](https://getwonderfall.com/blog/christmas-screensaver-mac/): Make a Christmas screensaver on your Mac from your own photos, check old downloads before you open them, and keep snow and lights on screen while you work.
 - [Wonderfall 1.6: Penguins, a Snowman Wardrobe and More Christmas Trees](https://getwonderfall.com/blog/wonderfall-1-6-penguins-snowman-wardrobe/): Wonderfall 1.6 brings penguins to your Mac desktop, a wardrobe to dress up your snowman, and more Christmas trees you decorate in place.
@@ -41,6 +42,7 @@
 ## Українською
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)
 - [Посібники](https://getwonderfall.com/uk/blog/)
+- [Альтернативи Festivitas для Mac 2026: гірлянда, сніг і не лише](https://getwonderfall.com/uk/blog/festivitas-alternative-mac/): Festivitas немає в Mac App Store. Порівнюємо шість альтернатив із гірляндою та снігом, показуємо безкоштовні варіанти й як перейти на Wonderfall.
 - [Google «Let It Snow» не працює? Що ми з’ясували і як зробити сніг на весь екран Mac](https://getwonderfall.com/uk/blog/let-it-snow-google-mac/): 20 листопада 2026 року пасхалка Google «let it snow» не показала снігу. Що вона робила, чому джерела сперечаються і як зробити сніг на весь екран Mac.
 - [Різдвяна заставка для Mac: вбудовані варіанти й святковий робочий стіл під час роботи](https://getwonderfall.com/uk/blog/christmas-screensaver-mac/): Зробіть різдвяну заставку на Mac із власних фото, перевірте старі завантажені файли й залиште сніг і гірлянду на екрані, поки ви працюєте.
 - [Wonderfall 1.6: пінгвіни, гардероб сніговика й більше ялинок](https://getwonderfall.com/uk/blog/wonderfall-1-6-penguins-snowman-wardrobe/): У Wonderfall 1.6 робочим столом Mac ковзають пінгвіни, сніговика можна вбрати в гардеробі, а ялинок стало більше, і кожну можна прикрасити на місці.
