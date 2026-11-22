@@ -471,20 +471,20 @@
       "status": "published",
       "featured": true,
       "published": "2026-10-05",
-      "updated": "2026-11-10",
+      "updated": "2026-11-22",
       "en": {
         "title": "How to Add Snow to Your Mac Desktop (and Other Seasonal Effects)",
         "footer_label": "Add snow to your Mac desktop",
         "meta_title": "How to Add Snow to Your Mac Desktop | Wonderfall",
-        "description": "Set up falling snow on your Mac, customize the motion and your own images, and explore Wonderfall’s seasonal effects without changing your wallpaper.",
-        "summary": "A practical guide to desktop overlays, seasonal effects and finding a setup that stays out of your way"
+        "description": "Set up falling snow on your Mac, let it pile up and settle on your windows, shovel it away, and try Wonderfall’s other seasonal effects over your wallpaper.",
+        "summary": "Falling snow, drifts you can shovel, snow on your windows and other seasonal effects that stay out of your way"
       },
       "uk": {
         "title": "Як додати сніг на робочий стіл Mac та інші сезонні ефекти",
         "footer_label": "Як додати сніг на робочий стіл",
         "meta_title": "Як додати сніг на робочий стіл Mac | Wonderfall",
-        "description": "Увімкніть сніг на робочому столі Mac, налаштуйте анімацію й власні зображення та спробуйте сезонні ефекти Wonderfall, зберігши свої шпалери.",
-        "summary": "Практичний посібник із сезонних ефектів: як усе налаштувати та знайти атмосферу, яка не заважає працювати"
+        "description": "Увімкніть сніг на робочому столі Mac: він накопичується внизу й на вікнах, його можна розкопати лопатою, а ще є інші сезонні ефекти поверх шпалер.",
+        "summary": "Сніг, що падає, кучугури, які можна розкопати, сніг на вікнах та інші сезонні ефекти, що не заважають працювати"
       },
       "cover": {
         "video": "/videos/snow-demo-1440p.mp4",
@@ -547,6 +547,24 @@
           "caption": {
             "en": "Pick a theme and a preset, then fine-tune intensity, flake size, speed and wind.",
             "uk": "Оберіть тему й пресет, а потім підлаштуйте інтенсивність, розмір сніжинок, швидкість і вітер."
+          }
+        },
+        {
+          "after": "piles",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow builds a drift along the bottom of the screen, and the shovel digs it out.",
+            "uk": "Сніг наростає кучугурою внизу екрана, а лопата її розкопує."
+          }
+        },
+        {
+          "after": "windows",
+          "video": "/videos/window-snow.mp4",
+          "poster": "/videos/window-snow.jpg",
+          "caption": {
+            "en": "Snow settles on top of a window and slides off when you move it.",
+            "uk": "Сніг лягає на верхній край вікна й обсипається, коли вікно рухають."
           }
         }
       ]
