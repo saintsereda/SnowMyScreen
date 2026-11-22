@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "koiart-cozymac-alternative-mac",
+      "status": "published",
+      "published": "2026-11-22",
+      "updated": "2026-11-22",
+      "en": {
+        "title": "KoiArt vs CozyMac vs Wonderfall: Snow Apps for Mac Compared",
+        "footer_label": "KoiArt and CozyMac alternative",
+        "meta_title": "KoiArt vs CozyMac vs Wonderfall for Mac | Wonderfall",
+        "description": "KoiArt and CozyMac aren’t in the US Mac App Store. Compare their snow, trees and extras with Wonderfall, the App Store alternative, checked November 2026.",
+        "summary": "What KoiArt and CozyMac do, how they are sold and what Wonderfall adds, checked in November 2026"
+      },
+      "uk": {
+        "title": "KoiArt, CozyMac чи Wonderfall: порівняння застосунків зі снігом для Mac",
+        "footer_label": "Альтернатива KoiArt і CozyMac",
+        "meta_title": "KoiArt чи CozyMac: альтернатива для Mac | Wonderfall",
+        "description": "KoiArt і CozyMac немає в американському Mac App Store. Порівнюємо їхній сніг, ялинки й можливості з Wonderfall, альтернативою з App Store, листопад 2026.",
+        "summary": "Що вміють KoiArt і CozyMac, як їх продають і що додає Wonderfall, перевірено в листопаді 2026 року"
+      },
+      "cover": {
+        "video": "/videos/snow-christmas-1440p.mp4",
+        "poster": "/videos/snow-christmas-1440p.jpg",
+        "alt": {
+          "en": "Menu bar lights, Santa’s sleigh, snow on top of open windows, a Christmas tree and two snowmen on a winter desktop",
+          "uk": "Гірлянда в рядку меню, сани Санти, сніг на верхніх краях вікон, ялинка й двоє сніговиків на зимовому робочому столі"
+        }
+      },
+      "inline": [
+        {
+          "after": "wonderfall",
+          "video": "/videos/snowman-building.mp4",
+          "poster": "/videos/snowman-building.jpg",
+          "caption": {
+            "en": "The mitten rolls snowballs along the drift and stacks them into snowmen.",
+            "uk": "Рукавичка котить сніжки вздовж кучугури й складає з них сніговиків."
+          }
+        },
+        {
+          "after": "snow",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow builds a drift along the bottom of the screen, and the shovel digs it out.",
+            "uk": "Сніг наростає кучугурою внизу екрана, а лопата її розкопує."
+          }
+        }
+      ]
+    },
+    {
       "slug": "christmas-tree-mac-desktop",
       "status": "published",
       "published": "2026-11-22",
