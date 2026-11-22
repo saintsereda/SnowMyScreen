@@ -201,8 +201,14 @@ def with_media(article, a, lang):
     for m in a.get('inline',[]):
         start=article.index(f'<h2 id="{m["after"]}"')
         end=article.index('</p>',start)+len('</p>')
-        caption=m['caption'][lang]
-        article=article[:end]+media_figure(m,caption,caption)+article[end:]
+        if 'pair' in m:
+            # Two square clips sit side by side, each with its own caption.
+            figures=''.join(media_figure(p,p['caption'][lang],p['caption'][lang]) for p in m['pair'])
+            html=f'<div class="article-media-pair">{figures}</div>'
+        else:
+            caption=m['caption'][lang]
+            html=media_figure(m,caption,caption)
+        article=article[:end]+html+article[end:]
     return article
 
 def post_row(c, a):
