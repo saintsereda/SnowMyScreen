@@ -30,21 +30,66 @@
       "inline": [
         {
           "after": "wonderfall",
-          "video": "/videos/snowman-building.mp4",
-          "poster": "/videos/snowman-building.jpg",
-          "caption": {
-            "en": "The mitten rolls snowballs along the drift and stacks them into snowmen.",
-            "uk": "Рукавичка котить сніжки вздовж кучугури й складає з них сніговиків."
-          }
+          "pair": [
+            {
+              "video": "/videos/penguins-square.mp4",
+              "poster": "/videos/penguins-square.jpg",
+              "caption": {
+                "en": "Penguins slide across the snow at the bottom of the screen.",
+                "uk": "Пінгвіни ковзають снігом унизу екрана."
+              }
+            },
+            {
+              "video": "/videos/snowman-wardrobe-square.mp4",
+              "poster": "/videos/snowman-wardrobe-square.jpg",
+              "caption": {
+                "en": "In the Snowman Wardrobe, a new hat and buttons show on the snowman right away.",
+                "uk": "У гардеробі сніговика нова шапка й ґудзики одразу з’являються на ньому."
+              }
+            }
+          ]
         },
         {
           "after": "snow",
-          "video": "/videos/cleaning-snow.mp4",
-          "poster": "/videos/cleaning-snow.jpg",
-          "caption": {
-            "en": "Snow builds a drift along the bottom of the screen, and the shovel digs it out.",
-            "uk": "Сніг наростає кучугурою внизу екрана, а лопата її розкопує."
-          }
+          "pair": [
+            {
+              "video": "/videos/shovel-dock-square.mp4",
+              "poster": "/videos/shovel-dock-square.jpg",
+              "caption": {
+                "en": "The shovel digs the Dock out of the drift.",
+                "uk": "Лопата відкопує Dock із кучугури."
+              }
+            },
+            {
+              "video": "/videos/snowplow-square.mp4",
+              "poster": "/videos/snowplow-square.jpg",
+              "caption": {
+                "en": "Cleanup time! sends a snowplow along the bottom of the screen.",
+                "uk": "«Час прибирати!»: снігоочисник їде вздовж низу екрана."
+              }
+            }
+          ]
+        },
+        {
+          "after": "holiday",
+          "pair": [
+            {
+              "video": "/videos/santa-square.mp4",
+              "poster": "/videos/santa-square.jpg",
+              "caption": {
+                "en": "Santa and his reindeer fly across the screen.",
+                "uk": "Санта з оленями пролітає екраном."
+              }
+            },
+            {
+              "video": "/videos/lights-snow-square.mp4",
+              "poster": "/videos/lights-snow-square.jpg",
+              "caption": {
+                "en": "Lights hang along the menu bar while snow falls over open windows.",
+                "uk": "Гірлянда висить уздовж рядка меню, а над відкритими вікнами падає сніг."
+              }
+            }
+          ]
         }
       ]
     },
