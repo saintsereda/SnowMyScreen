@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "christmas-tree-mac-desktop",
+      "status": "published",
+      "published": "2026-11-22",
+      "updated": "2026-11-22",
+      "en": {
+        "title": "How to Put a Christmas Tree on Your Mac Desktop (and Let Santa Fly By)",
+        "footer_label": "Christmas tree on your desktop",
+        "meta_title": "Animated Christmas Tree for Your Mac Desktop | Wonderfall",
+        "description": "Put an animated Christmas tree on your Mac desktop, decorate it, place more trees with Wonderfall 1.6 and let Santa and his reindeer fly across the screen.",
+        "summary": "Turn on a decorated tree, dress it up, add more trees and choose how often Santa flies past"
+      },
+      "uk": {
+        "title": "Як поставити новорічну ялинку на робочий стіл Mac (і покликати Санту)",
+        "footer_label": "Новорічна ялинка на робочий стіл",
+        "meta_title": "Новорічна ялинка на робочий стіл Mac | Wonderfall",
+        "description": "Жива новорічна ялинка на робочому столі Mac: прикраси, кілька ялинок у Wonderfall 1.6 і Санта з оленями над екраном. Не шпалери й не скринсейвер.",
+        "summary": "Увімкнути прикрашену ялинку, вбрати її, поставити ще кілька й обрати, як часто пролітає Санта"
+      },
+      "cover": {
+        "video": "/videos/christmas-tree.mp4",
+        "poster": "/videos/christmas-tree.jpg",
+        "alt": {
+          "en": "A pixel-art Christmas tree with a red bow on top stands on the snow at the bottom of a winter desktop while snow falls",
+          "uk": "Піксельна ялинка з червоним бантиком на верхівці стоїть на снігу внизу зимового робочого столу, падає сніг"
+        }
+      },
+      "inline": [
+        {
+          "after": "santa",
+          "video": "/videos/santa-flyover.mp4",
+          "poster": "/videos/santa-flyover.jpg",
+          "caption": {
+            "en": "Santa and his reindeer fly under the menu bar lights while snow falls and the Settings window is open.",
+            "uk": "Санта з оленями пролітає під гірляндою, падає сніг, відкрито вікно налаштувань (на записі англійський інтерфейс)."
+          }
+        },
+        {
+          "after": "snow",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow builds a drift along the bottom of the screen, and the shovel digs it out.",
+            "uk": "Сніг наростає кучугурою внизу екрана, а лопата її розкопує."
+          }
+        }
+      ]
+    },
+    {
       "slug": "festivitas-alternative-mac",
       "status": "published",
       "published": "2026-11-21",
