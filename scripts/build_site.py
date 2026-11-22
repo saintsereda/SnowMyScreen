@@ -451,7 +451,7 @@ def write_blog(c):
         updated=f' · {E(c["updated_label"])} <time datetime="{a["updated"]}">{E(human_date(lang,a["updated"]))}</time>' if a['updated']!=a['published'] else ''
         cover=media_figure(a['cover'],a['cover']['alt'][lang],cover=True) if a.get('cover') else ''
         header=(f'<header class="article-header"><p class="post-meta"><time datetime="{a["published"]}">{E(human_date(lang,a["published"]))}</time> · {read_minutes(a,lang)}{updated}</p>'
-                f'<h1>{E(text["title"])}</h1><p class="article-summary">{E(text["description"])}</p><p class="byline">{E(c["author"])}</p>'
+                f'<h1>{E(text["title"])}</h1><p class="article-summary">{E(text["description"])}</p>'
                 f'<a class="button" href="{STORE}">{E(c["download"])}</a></header>')
         crumbs=f'<nav class="breadcrumbs" aria-label="{E(c["breadcrumb_label"])}"><a href="{url(lang,"blog/")}">{c["nav"][3]}</a> / <span>{E(text["title"])}</span></nav>'
         body=f'<article class="article-page"><div class="article-top wrap">{crumbs}{other_language(lang,suffix)}</div>{header}{cover}<div class="prose article-body wrap">{article}<p><a class="text-link" href="{url(lang,"blog/")}">← {E(c["all_posts"])}</a></p></div></article>'+closing_screen(c,'rain')

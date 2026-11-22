@@ -24,7 +24,7 @@
 
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
-- [KoiArt vs CozyMac vs Wonderfall: Snow Apps for Mac Compared](https://getwonderfall.com/blog/koiart-cozymac-alternative-mac/): KoiArt and CozyMac aren’t in the US Mac App Store. Compare their snow, trees and extras with Wonderfall, the App Store alternative, checked November 2026.
+- [KoiArt vs CozyMac vs Wonderfall: Snow Apps for Mac Compared](https://getwonderfall.com/blog/koiart-cozymac-alternative-mac/): KoiArt (US$9) and CozyMac (US$9.99) aren’t in the US Mac App Store. Compare them with Wonderfall, the US$3.99 App Store alternative, checked November 2026.
 - [How to Put a Christmas Tree on Your Mac Desktop (and Let Santa Fly By)](https://getwonderfall.com/blog/christmas-tree-mac-desktop/): Put an animated Christmas tree on your Mac desktop, decorate it, place more trees with Wonderfall 1.6 and let Santa and his reindeer fly across the screen.
 - [Festivitas Alternatives for Mac in 2026: Christmas Lights, Snow and More](https://getwonderfall.com/blog/festivitas-alternative-mac/): Festivitas is not on the Mac App Store. Compare six alternatives for Christmas lights and snow, see which are free, and how to switch to Wonderfall.
 - [Google “Let It Snow” Not Working? What We Found, and How to Get Snow on Your Whole Mac Screen](https://getwonderfall.com/blog/let-it-snow-google-mac/): We tried Google’s “let it snow” on November 20, 2026: no snow. What the Easter egg did, why sources disagree and how to get snow on your whole Mac screen.
@@ -44,7 +44,7 @@
 ## Українською
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)
 - [Посібники](https://getwonderfall.com/uk/blog/)
-- [KoiArt, CozyMac чи Wonderfall: порівняння застосунків зі снігом для Mac](https://getwonderfall.com/uk/blog/koiart-cozymac-alternative-mac/): KoiArt і CozyMac немає в американському Mac App Store. Порівнюємо їхній сніг, ялинки й можливості з Wonderfall, альтернативою з App Store, листопад 2026.
+- [KoiArt, CozyMac чи Wonderfall: порівняння застосунків зі снігом для Mac](https://getwonderfall.com/uk/blog/koiart-cozymac-alternative-mac/): KoiArt і CozyMac продаються лише на своїх сайтах, за 9 і 9,99 долара. Що вміють вони і що є у Wonderfall з Mac App Store: сніг, ялинка, гірлянда, ціни.
 - [Як поставити новорічну ялинку на робочий стіл Mac (і покликати Санту)](https://getwonderfall.com/uk/blog/christmas-tree-mac-desktop/): Жива новорічна ялинка на робочому столі Mac: прикраси, кілька ялинок у Wonderfall 1.6 і Санта з оленями над екраном. Не шпалери й не скринсейвер.
 - [Альтернативи Festivitas для Mac 2026: гірлянда, сніг і не лише](https://getwonderfall.com/uk/blog/festivitas-alternative-mac/): Festivitas немає в Mac App Store. Порівнюємо шість альтернатив із гірляндою та снігом, показуємо безкоштовні варіанти й як перейти на Wonderfall.
 - [Google «Let It Snow» не працює? Що ми з’ясували і як зробити сніг на весь екран Mac](https://getwonderfall.com/uk/blog/let-it-snow-google-mac/): 20 листопада 2026 року пасхалка Google «let it snow» не показала снігу. Що вона робила, чому джерела сперечаються і як зробити сніг на весь екран Mac.
