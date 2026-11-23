@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "new-year-mac-desktop",
+      "status": "published",
+      "published": "2026-11-23",
+      "updated": "2026-11-23",
+      "en": {
+        "title": "New Year Live Wallpaper for Mac? Add 2027 Lights and Snow Over Your Own",
+        "footer_label": "New Year desktop for Mac",
+        "meta_title": "New Year Live Wallpaper for Your Mac Desktop | Wonderfall",
+        "description": "Give your Mac an animated New Year desktop without a new wallpaper: the New Year light scene, 2027 digit bulbs and gentle snow on top of your own picture.",
+        "summary": "Turn on the New Year light scene and 2027 bulbs, add snow, and let the lights switch to Midnight Gold by themselves"
+      },
+      "uk": {
+        "title": "Новорічна заставка на робочий стіл Mac: гірлянда «Новий рік», цифри 2027 і сніг",
+        "footer_label": "Новорічна заставка на робочий стіл",
+        "meta_title": "Новорічна заставка на робочий стіл Mac | Wonderfall",
+        "description": "Новорічна заставка на робочий стіл Mac чи MacBook без нових шпалер: сцена гірлянди «Новий рік», лампочки-цифри 2027 і легкий сніг поверх ваших шпалер.",
+        "summary": "Сцена «Новий рік», лампочки-цифри 2027 і сніг, а на свята гірлянда сама переходить на «Опівнічне золото»"
+      },
+      "cover": {
+        "video": "/videos/garland-showcase.mp4",
+        "poster": "/videos/garland-showcase.jpg",
+        "alt": {
+          "en": "Lights along the menu bar cycle through bulb shapes, including stars and 2027 digits, while snow falls over a dark blue desktop",
+          "uk": "Гірлянда уздовж рядка меню перебирає форми лампочок, серед них зірки й цифри 2027, а над темно-синім робочим столом падає сніг"
+        }
+      },
+      "inline": [
+        {
+          "after": "setup",
+          "video": "/videos/lights-scenes.mp4",
+          "poster": "/videos/lights-scenes.jpg",
+          "caption": {
+            "en": "The Scenes grid in Settings > Lights: the clip switches through Winter Night, Cozy Evening, Spring Bloom and Celebration, and New Year sits in the bottom row.",
+            "uk": "Сцени в розділі «Гірлянда»: на записі по черзі вмикаються «Зимова ніч», «Затишний вечір», «Весняний цвіт» і «Свято», а «Новий рік» стоїть у нижньому ряду (на записі англійський інтерфейс)."
+          }
+        },
+        {
+          "after": "snow",
+          "video": "/videos/snow-1440p.mp4",
+          "poster": "/videos/snow-1440p.jpg",
+          "caption": {
+            "en": "Snow falls over a blue wallpaper; the wallpaper itself stays as it is.",
+            "uk": "Сніг падає поверх синіх шпалер, а самі шпалери лишаються як були."
+          }
+        }
+      ]
+    },
+    {
       "slug": "koiart-cozymac-alternative-mac",
       "status": "published",
       "published": "2026-11-22",
