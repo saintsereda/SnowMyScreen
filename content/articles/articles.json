@@ -780,27 +780,27 @@
       "slug": "snowman-mac-desktop",
       "status": "published",
       "published": "2026-11-10",
-      "updated": "2026-11-10",
+      "updated": "2026-11-23",
       "en": {
-        "title": "How to Build a Snowman on Your Mac Desktop",
+        "title": "How to Build a Snowman on Your Mac Desktop (and Dress It Up)",
         "footer_label": "Build a snowman on your desktop",
-        "meta_title": "Build a Snowman on Your Mac Desktop | Wonderfall",
-        "description": "Let snow pile up at the bottom of your Mac screen, roll snowballs, stack a snowman, throw snowballs at your windows and call a snowplow to clean up.",
-        "summary": "Roll, stack and throw: playing with the snow that piles up on your screen"
+        "meta_title": "Build and Dress a Snowman on Your Mac Desktop | Wonderfall",
+        "description": "Let snow pile up on your Mac screen, roll snowballs, stack a snowman and dress it in the Snowman Wardrobe of Wonderfall 1.6, then clear the snow.",
+        "summary": "Roll, stack, dress and throw: playing with the snow that piles up on your screen"
       },
       "uk": {
-        "title": "Як зліпити сніговика на робочому столі Mac",
+        "title": "Як зліпити сніговика на робочому столі Mac (і вбрати його)",
         "footer_label": "Сніговик на робочому столі",
-        "meta_title": "Сніговик на робочому столі Mac | Wonderfall",
-        "description": "Нехай сніг накопичується внизу екрана Mac: качайте сніжки, ліпіть сніговика, кидайте сніжки у вікна й викликайте снігоочисник, щоб прибрати.",
-        "summary": "Качати, складати й кидати: гра зі снігом, що накопичується на екрані"
+        "meta_title": "Сніговик на робочому столі Mac: зліпити й вбрати | Wonderfall",
+        "description": "Хай сніг накопичується внизу екрана Mac: накатайте сніжки, зліпіть сніговика, вберіть його в гардеробі Wonderfall 1.6, а потім приберіть сніг.",
+        "summary": "Котити, ліпити, вбирати й кидати: гра зі снігом, що накопичується на екрані"
       },
       "cover": {
         "video": "/videos/snowman-building.mp4",
         "poster": "/videos/snowman-building.jpg",
         "alt": {
           "en": "Two snowmen built from rolled snowballs at the bottom of a desktop",
-          "uk": "Два сніговики зі скачаних куль унизу робочого столу"
+          "uk": "Два сніговики з накатаних куль унизу робочого столу"
         }
       },
       "inline": [
