@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "penguins-mac-desktop",
+      "status": "published",
+      "published": "2026-11-24",
+      "updated": "2026-11-24",
+      "en": {
+        "title": "Penguins on Your Mac Desktop: Call a Penguin Parade Across the Snow",
+        "footer_label": "Penguins on your desktop",
+        "meta_title": "Penguins on Your Mac Desktop: Call a Parade | Wonderfall",
+        "description": "Call three penguins onto your Mac desktop with Wonderfall: they run in, belly-slide across the snow, step up onto the Dock, wave and run off by themselves.",
+        "summary": "Call three penguins, give them a snow bank and the Dock to climb, and see what they do and don’t do"
+      },
+      "uk": {
+        "title": "Пінгвіни на робочому столі Mac: покличте їх покататися снігом",
+        "footer_label": "Пінгвіни на робочому столі",
+        "meta_title": "Пінгвіни на робочому столі Mac | Wonderfall",
+        "description": "Покличте трьох пінгвінів на робочий стіл Mac у Wonderfall: вони вибіжать, проковзають на пузі снігом, вилізуть на Dock, помахають і втечуть самі.",
+        "summary": "Покликати трьох пінгвінів, насипати їм кучугуру, пустити на Dock і знати, чого від них чекати"
+      },
+      "cover": {
+        "video": "/videos/penguins-parade.mp4",
+        "poster": "/videos/penguins-parade.jpg",
+        "alt": {
+          "en": "Three penguins run in from the left, belly-slide across the snow and step up onto the Dock, then stand and wave next to a snowman, below an open music app on a snowy Christmas desktop",
+          "uk": "Троє пінгвінів вибігають зліва, ковзають на пузі снігом і вилазять на Dock, а потім стоять і махають біля сніговика під відкритим музичним застосунком на засніженому різдвяному робочому столі"
+        }
+      },
+      "inline": [
+        {
+          "after": "snow",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow lies in a bank along the bottom of the screen, and the shovel digs it away.",
+            "uk": "Унизу екрана лежить кучугура снігу, а лопата її розкопує."
+          }
+        },
+        {
+          "after": "scene",
+          "video": "/videos/snowman-building.mp4",
+          "poster": "/videos/snowman-building.jpg",
+          "caption": {
+            "en": "The mitten rolls snowballs and stacks them into a snowman at the bottom of the desktop, then starts a second one.",
+            "uk": "Рукавичка накатує сніжки й складає з них сніговика внизу робочого столу, а потім береться за другого."
+          }
+        }
+      ]
+    },
+    {
       "slug": "new-year-mac-desktop",
       "status": "published",
       "published": "2026-11-23",
