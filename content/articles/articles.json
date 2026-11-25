@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "cozy-winter-mac-desktop",
+      "status": "published",
+      "published": "2026-11-25",
+      "updated": "2026-11-25",
+      "en": {
+        "title": "Cozy Winter Desktop for Mac: Snow and Warm Lights Over Your Own Wallpaper",
+        "footer_label": "Cozy winter desktop for Mac",
+        "meta_title": "Cozy Winter Desktop for Mac: Snow and Lights | Wonderfall",
+        "description": "Make a cozy winter desktop on your Mac without a new wallpaper: warm Cozy Evening lights, gentle snow behind your windows and three recipes to start from.",
+        "summary": "Keep your wallpaper, add warm lights and soft snow on top, and pick one of three cozy winter recipes"
+      },
+      "uk": {
+        "title": "Затишна зимова заставка на ноутбук Mac: сніг і тепла гірлянда поверх ваших шпалер",
+        "footer_label": "Затишний зимовий робочий стіл",
+        "meta_title": "Затишна зимова заставка на ноутбук Mac | Wonderfall",
+        "description": "Зимова заставка на ноутбук Mac без нових шпалер: тепла гірлянда «Затишний вечір», легкий сніг за вікнами і три готові затишні поєднання для зими.",
+        "summary": "Лишити свої шпалери, додати теплу гірлянду й легкий сніг і обрати одне з трьох затишних поєднань"
+      },
+      "cover": {
+        "video": "/videos/snow-demo-1440p.mp4",
+        "poster": "/videos/snow-demo-1440p.jpg",
+        "alt": {
+          "en": "Snow falls over a wallpaper that fades from deep purple at the top to warm orange at the bottom",
+          "uk": "Сніг падає поверх шпалер, що переходять від темно-фіолетового вгорі до теплого помаранчевого внизу"
+        }
+      },
+      "inline": [
+        {
+          "after": "recipes",
+          "video": "/videos/lights-scenes.mp4",
+          "poster": "/videos/lights-scenes.jpg",
+          "caption": {
+            "en": "Scenes in Settings > Lights change the whole string at once: cool white for Winter Night, amber for Cozy Evening, then Spring Bloom and Celebration.",
+            "uk": "Сцени в розділі «Гірлянда» змінюють усю гірлянду одразу: холодні білі вогники «Зимової ночі», бурштинові «Затишного вечора», далі «Весняний цвіт» і «Свято» (на записі англійський інтерфейс)."
+          }
+        },
+        {
+          "after": "calm",
+          "video": "/videos/placement-desktop.mp4",
+          "poster": "/videos/placement-desktop.jpg",
+          "caption": {
+            "en": "Desktop only: the snow falls behind the browser window, in front of your own wallpaper.",
+            "uk": "«Тільки на робочому столі»: сніг падає позаду вікна браузера, перед вашими шпалерами."
+          }
+        }
+      ]
+    },
+    {
       "slug": "penguins-mac-desktop",
       "status": "published",
       "published": "2026-11-24",
