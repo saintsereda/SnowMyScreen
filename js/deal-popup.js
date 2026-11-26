@@ -1,18 +1,18 @@
-// Black Friday card in the bottom right corner of every page. It shows only from the start of
-// 27 November to the end of 29 November in the visitor's own time zone, the way App Store
-// Connect starts a scheduled price at the beginning of the day in each country.
+// Black Friday card in the bottom right corner of every page. It shows from 27 November
+// 00:00 UTC to 30 November 00:00 UTC: App Store Connect switches scheduled prices at
+// 00:00 UTC, the same moment everywhere.
 // After the end date it never renders, so the file can stay until it is removed.
 // ?deal=preview shows it on any date for checking.
 (function () {
     'use strict';
 
-    var START = [2026, 10, 27]; // year, month (0-based), day: local midnight
-    var END = [2026, 10, 30];   // first local day after the deal
+    var START = Date.UTC(2026, 10, 27); // 27 November 00:00 UTC
+    var END = Date.UTC(2026, 10, 30);   // 30 November 00:00 UTC
     var STORE = 'https://apps.apple.com/app/apple-store/id6755106853?pt=127454389&ct=black-friday-2026&mt=8';
 
     var preview = /[?&]deal=preview\b/.test(location.search);
-    var now = new Date();
-    if (!preview && (now < new Date(START[0], START[1], START[2]) || now >= new Date(END[0], END[1], END[2]))) return;
+    var now = Date.now();
+    if (!preview && (now < START || now >= END)) return;
 
     var TEXT = {
         en: { eyebrow: 'Black Friday', title: 'Wonderfall', line: 'Only 27–29 November. Pay once, no subscription, every season of effects stays yours.', cta: 'Get the deal' },
