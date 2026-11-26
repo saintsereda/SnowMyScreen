@@ -11,7 +11,7 @@
 - Controls include intensity, size, speed and wind. Snow can pile up at the bottom of the screen and be cleared with a shovel.
 - Optional weather matching uses location permission and Apple WeatherKit.
 - Rain is a visual effect without ambient rain audio.
-- US store price checked on 2026-11-19: US$3.99. Prices depend on the region and may change; the App Store is the source of pricing.
+- US store price checked on 2026-11-26: US$3.99. Prices depend on the region and may change; the App Store is the source of pricing.
 - The app is a desktop overlay, not a replacement for wallpaper or the macOS screensaver.
 
 ## Official product sources
