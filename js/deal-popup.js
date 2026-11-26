@@ -9,16 +9,14 @@
     var START = [2026, 10, 27]; // year, month (0-based), day: local midnight
     var END = [2026, 10, 30];   // first local day after the deal
     var STORE = 'https://apps.apple.com/app/apple-store/id6755106853?pt=127454389&ct=black-friday-2026&mt=8';
-    var KEY = 'wonderfall_bf2026_closed';
 
     var preview = /[?&]deal=preview\b/.test(location.search);
     var now = new Date();
     if (!preview && (now < new Date(START[0], START[1], START[2]) || now >= new Date(END[0], END[1], END[2]))) return;
-    try { if (!preview && localStorage.getItem(KEY)) return; } catch (e) {}
 
     var TEXT = {
-        en: { eyebrow: 'Black Friday', title: 'Wonderfall', line: 'Only 27–29 November. Pay once, no subscription, every season of effects stays yours.', cta: 'Get the deal', close: 'Close' },
-        uk: { eyebrow: 'Чорна п’ятниця', title: 'Wonderfall', line: 'Лише 27–29 листопада. Платиш один раз, без підписки, і всі сезони ефектів залишаються з тобою.', cta: 'Забрати знижку', close: 'Закрити' }
+        en: { eyebrow: 'Black Friday', title: 'Wonderfall', line: 'Only 27–29 November. Pay once, no subscription, every season of effects stays yours.', cta: 'Get the deal' },
+        uk: { eyebrow: 'Чорна п’ятниця', title: 'Wonderfall', line: 'Лише 27–29 листопада. Платиш один раз, без підписки, і всі сезони ефектів залишаються з тобою.', cta: 'Забрати знижку' }
     };
     var t = TEXT[(document.documentElement.lang || 'en').slice(0, 2).toLowerCase()] || TEXT.en;
 
@@ -51,16 +49,13 @@
         'border-radius:999px;background:#111;color:#fff;font-size:16px;font-weight:600;text-decoration:none;transition:transform .15s ease,background .2s ease}' +
         '.bf-deal__cta:hover{background:#2a2f3a}.bf-deal__cta:active{transform:scale(.97)}' +
         '.bf-deal__apple{width:15px;height:18px;margin-top:-2px}' +
-        '.bf-deal__close{position:absolute;top:14px;right:84px;width:30px;height:30px;border:0;border-radius:50%;' +
-        'background:transparent;color:#8a92a3;font-size:18px;line-height:1;cursor:pointer}' +
-        '.bf-deal__close:hover{background:#f1f3f7;color:#1d2433}' +
         '.bf-deal :focus-visible{outline:2px solid #1d2433;outline-offset:2px}' +
         '@keyframes bf-spin{to{transform:rotate(360deg)}}' +
         '@keyframes bf-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}' +
         '@media (max-width:600px){.bf-deal{left:16px;right:16px;bottom:var(--bf-bottom,16px);width:auto;padding:18px 18px 16px;border-radius:24px}' +
         '.bf-deal__sticker{top:-26px;right:-6px;width:80px;height:80px}.bf-deal__sticker span{font-size:20px}' +
         '.bf-deal__eyebrow{margin-bottom:10px;padding:6px 12px;font-size:13px}.bf-deal__title{font-size:22px;margin-bottom:6px}' +
-        '.bf-deal__line{font-size:14px;margin-bottom:14px}.bf-deal__cta{min-height:46px}.bf-deal__close{right:72px;top:12px}}' +
+        '.bf-deal__line{font-size:14px;margin-bottom:14px}.bf-deal__cta{min-height:46px}}' +
         '@media (prefers-reduced-motion:reduce){.bf-deal,.bf-deal__sticker svg{animation:none}}';
 
     function render() {
@@ -73,15 +68,10 @@
         card.setAttribute('aria-label', t.eyebrow + ' −30%');
         card.innerHTML =
             '<div class="bf-deal__sticker" aria-hidden="true"><svg viewBox="0 0 100 100"><path fill="#e0352b" d="' + stickerPath() + '"/></svg><span>−30%</span></div>' +
-            '<button type="button" class="bf-deal__close" aria-label="' + t.close + '">×</button>' +
             '<p class="bf-deal__eyebrow">' + t.eyebrow + '</p>' +
             '<p class="bf-deal__title">' + t.title + '</p>' +
             '<p class="bf-deal__line">' + t.line + '</p>' +
             '<a class="bf-deal__cta" href="' + STORE + '" target="_blank" rel="noopener">' + APPLE + '<span>' + t.cta + '</span></a>';
-        card.querySelector('.bf-deal__close').addEventListener('click', function () {
-            card.remove();
-            try { localStorage.setItem(KEY, '1'); } catch (e) {}
-        });
         document.body.appendChild(card);
 
         // Sit above the cookie banner while it is on screen.
