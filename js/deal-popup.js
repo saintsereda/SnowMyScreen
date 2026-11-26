@@ -1,9 +1,8 @@
-// Black Friday card on the right side of every page. It shows only from the start of
+// Black Friday card in the bottom right corner of every page. It shows only from the start of
 // 27 November to the end of 29 November in the visitor's own time zone, the way App Store
 // Connect starts a scheduled price at the beginning of the day in each country.
 // After the end date it never renders, so the file can stay until it is removed.
 // ?deal=preview shows it on any date for checking.
-// The look follows the site: white card like .hero-update, Nunito headings, the site .button.
 (function () {
     'use strict';
 
@@ -18,38 +17,51 @@
     try { if (!preview && localStorage.getItem(KEY)) return; } catch (e) {}
 
     var TEXT = {
-        en: { eyebrow: 'Black Friday', title: 'Wonderfall is 30% off', dates: 'Only 27–29 November', cta: 'Get it on the App Store', close: 'Close' },
-        uk: { eyebrow: 'Black Friday', title: 'Wonderfall зі знижкою 30%', dates: 'Лише 27–29 листопада', cta: 'Завантажити в App Store', close: 'Закрити' }
+        en: { eyebrow: 'Black Friday', title: 'Wonderfall', line: 'Only 27–29 November. Pay once, no subscription, every season of effects stays yours.', cta: 'Get the deal', close: 'Close' },
+        uk: { eyebrow: 'Чорна п’ятниця', title: 'Wonderfall', line: 'Лише 27–29 листопада. Платиш один раз, без підписки, і всі сезони ефектів залишаються з тобою.', cta: 'Забрати знижку', close: 'Закрити' }
     };
     var t = TEXT[(document.documentElement.lang || 'en').slice(0, 2).toLowerCase()] || TEXT.en;
 
+    // A wavy "sale sticker" outline: a circle whose radius ripples 14 times.
+    function stickerPath() {
+        var d = '', n = 14, steps = 168;
+        for (var i = 0; i <= steps; i++) {
+            var a = (i / steps) * Math.PI * 2;
+            var r = 46 + 3.2 * Math.cos(n * a);
+            d += (i ? 'L' : 'M') + (50 + r * Math.cos(a)).toFixed(2) + ' ' + (50 + r * Math.sin(a)).toFixed(2);
+        }
+        return d + 'Z';
+    }
+    var APPLE = '<svg class="bf-deal__apple" viewBox="0 0 814 1000" aria-hidden="true"><path fill="currentColor" d="M788 341c-6 4-108 62-108 190 0 148 130 200 134 202-1 3-21 72-69 142-43 62-88 124-156 124s-86-40-165-40c-77 0-104 41-166 41s-106-57-156-127C44 791 0 669 0 553c0-186 121-285 240-285 63 0 116 42 155 42 38 0 97-44 169-44 27 0 126 2 191 75zM552 158c30-35 51-84 51-133 0-7-1-14-2-19-49 2-107 33-142 73-27 31-53 80-53 130 0 8 1 15 2 18 3 1 9 2 14 2 44 0 99-29 130-71z"/></svg>';
+
     var css = '' +
-        '.bf-deal{position:fixed;right:24px;bottom:var(--bf-bottom,24px);z-index:110;width:300px;box-sizing:border-box;padding:30px 24px 22px;' +
-        'border-radius:28px;background:#fff;color:#283251;font-family:var(--font-body,inherit);text-align:left;' +
-        'box-shadow:0 18px 44px #0b287b40,0 0 0 1px #3f66d614;transition:bottom .25s ease;animation:bf-in .4s cubic-bezier(.2,.8,.2,1)}' +
+        '.bf-deal{position:fixed;right:24px;bottom:var(--bf-bottom,24px);z-index:110;width:320px;box-sizing:border-box;' +
+        'padding:24px 24px 22px;border-radius:28px;background:#fff;color:#1d2433;font-family:var(--font-body,inherit);text-align:left;' +
+        'box-shadow:0 20px 50px #0b1a4a2e,0 0 0 1px #0b1a4a0f;transition:bottom .25s ease;animation:bf-in .4s cubic-bezier(.2,.8,.2,1)}' +
         '.bf-deal *{box-sizing:border-box}' +
-        '.bf-deal__tag{position:absolute;top:-22px;left:-14px;display:grid;place-items:center;width:84px;height:84px;border-radius:50%;' +
-        'background:radial-gradient(70% 70% at 30% 25%,#ff8ad8 0%,#ff4fae 55%,#e0338f 100%);color:#fff;' +
-        'font-family:var(--font-display,Nunito,sans-serif);font-size:25px;font-weight:900;letter-spacing:-.03em;' +
-        'transform:rotate(-12deg);box-shadow:0 10px 22px #e0338f59,inset 0 1px 0 #ffffff80}' +
-        '.bf-deal__tag::after{content:"";position:absolute;inset:5px;border-radius:50%;border:1.5px dashed #ffffffa6}' +
-        '.bf-deal__eyebrow{margin:0 0 6px 64px;color:#e0338f;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}' +
-        '.bf-deal__title{margin:14px 0 6px;font-family:var(--font-display,Nunito,sans-serif);font-size:25px;font-weight:900;' +
-        'line-height:1.12;letter-spacing:-.02em;color:#124aab;text-wrap:balance}' +
-        '.bf-deal__dates{margin:0 0 18px;color:#283251b8;font-size:15px;font-weight:600}' +
-        '.bf-deal .bf-deal__cta{display:flex;width:100%;min-height:50px;padding:12px 18px;font-size:16px}' +
-        '.bf-deal__close{position:absolute;top:12px;right:12px;width:32px;height:32px;border:0;border-radius:50%;' +
-        'background:#eef2fb;color:#283251;font-size:18px;line-height:1;cursor:pointer}' +
-        '.bf-deal__close:hover{background:#dfe7f8}.bf-deal__close:focus-visible{outline:2px solid #124aab;outline-offset:2px}' +
-        '@keyframes bf-in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}' +
-        '@media (max-width:600px){.bf-deal{bottom:var(--bf-bottom,16px);left:16px;right:16px;width:auto;padding:16px 48px 16px 92px;' +
-        'border-radius:24px;transform:none;animation:bf-up .35s ease-out}' +
-        '.bf-deal__tag{top:14px;left:14px;width:64px;height:64px;font-size:20px}' +
-        '.bf-deal__eyebrow{margin:0 0 2px;font-size:11px}.bf-deal__title{margin:0 0 2px;font-size:18px}' +
-        '.bf-deal__dates{margin:0 0 10px;font-size:13px}.bf-deal .bf-deal__cta{min-height:42px;padding:9px 14px;font-size:15px;margin-left:-76px;width:calc(100% + 76px + 32px)}' +
-        '.bf-deal__close{top:10px;right:10px;width:28px;height:28px;font-size:16px}' +
-        '@keyframes bf-up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}}' +
-        '@media (prefers-reduced-motion:reduce){.bf-deal{animation:none}}';
+        '.bf-deal__sticker{position:absolute;top:-30px;right:-18px;width:96px;height:96px;display:grid;place-items:center;pointer-events:none}' +
+        '.bf-deal__sticker svg{position:absolute;inset:0;width:100%;height:100%;animation:bf-spin 14s linear infinite;' +
+        'filter:drop-shadow(0 8px 16px #d6302347)}' +
+        '.bf-deal__sticker span{position:relative;color:#fff;font-size:24px;font-weight:700;letter-spacing:-.03em}' +
+        '.bf-deal__eyebrow{display:inline-block;margin:0 0 14px;padding:7px 14px;border-radius:999px;background:#f1f3f7;' +
+        'color:#3a4254;font-size:14px;font-weight:600}' +
+        '.bf-deal__title{margin:0 0 8px;font-size:28px;font-weight:600;line-height:1.1;letter-spacing:-.02em;color:#1d2433}' +
+        '.bf-deal__line{margin:0 0 20px;color:#6b7383;font-size:15px;line-height:1.45}' +
+        '.bf-deal__cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:52px;padding:12px 18px;' +
+        'border-radius:999px;background:#111;color:#fff;font-size:16px;font-weight:600;text-decoration:none;transition:transform .15s ease,background .2s ease}' +
+        '.bf-deal__cta:hover{background:#2a2f3a}.bf-deal__cta:active{transform:scale(.97)}' +
+        '.bf-deal__apple{width:15px;height:18px;margin-top:-2px}' +
+        '.bf-deal__close{position:absolute;top:14px;right:84px;width:30px;height:30px;border:0;border-radius:50%;' +
+        'background:transparent;color:#8a92a3;font-size:18px;line-height:1;cursor:pointer}' +
+        '.bf-deal__close:hover{background:#f1f3f7;color:#1d2433}' +
+        '.bf-deal :focus-visible{outline:2px solid #1d2433;outline-offset:2px}' +
+        '@keyframes bf-spin{to{transform:rotate(360deg)}}' +
+        '@keyframes bf-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}' +
+        '@media (max-width:600px){.bf-deal{left:16px;right:16px;bottom:var(--bf-bottom,16px);width:auto;padding:18px 18px 16px;border-radius:24px}' +
+        '.bf-deal__sticker{top:-26px;right:-6px;width:80px;height:80px}.bf-deal__sticker span{font-size:20px}' +
+        '.bf-deal__eyebrow{margin-bottom:10px;padding:6px 12px;font-size:13px}.bf-deal__title{font-size:22px;margin-bottom:6px}' +
+        '.bf-deal__line{font-size:14px;margin-bottom:14px}.bf-deal__cta{min-height:46px}.bf-deal__close{right:72px;top:12px}}' +
+        '@media (prefers-reduced-motion:reduce){.bf-deal,.bf-deal__sticker svg{animation:none}}';
 
     function render() {
         var style = document.createElement('style');
@@ -58,14 +70,14 @@
 
         var card = document.createElement('aside');
         card.className = 'bf-deal';
-        card.setAttribute('aria-label', t.eyebrow + ': ' + t.title);
+        card.setAttribute('aria-label', t.eyebrow + ' −30%');
         card.innerHTML =
-            '<span class="bf-deal__tag" aria-hidden="true">−30%</span>' +
+            '<div class="bf-deal__sticker" aria-hidden="true"><svg viewBox="0 0 100 100"><path fill="#e0352b" d="' + stickerPath() + '"/></svg><span>−30%</span></div>' +
             '<button type="button" class="bf-deal__close" aria-label="' + t.close + '">×</button>' +
             '<p class="bf-deal__eyebrow">' + t.eyebrow + '</p>' +
             '<p class="bf-deal__title">' + t.title + '</p>' +
-            '<p class="bf-deal__dates">' + t.dates + '</p>' +
-            '<a class="button bf-deal__cta" href="' + STORE + '" target="_blank" rel="noopener">' + t.cta + '</a>';
+            '<p class="bf-deal__line">' + t.line + '</p>' +
+            '<a class="bf-deal__cta" href="' + STORE + '" target="_blank" rel="noopener">' + APPLE + '<span>' + t.cta + '</span></a>';
         card.querySelector('.bf-deal__close').addEventListener('click', function () {
             card.remove();
             try { localStorage.setItem(KEY, '1'); } catch (e) {}
