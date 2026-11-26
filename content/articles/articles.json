@@ -996,19 +996,19 @@
       "slug": "snowman-mac-desktop",
       "status": "published",
       "published": "2026-11-10",
-      "updated": "2026-11-23",
+      "updated": "2026-11-26",
       "en": {
         "title": "How to Build a Snowman on Your Mac Desktop (and Dress It Up)",
         "footer_label": "Build a snowman on your desktop",
         "meta_title": "Build and Dress a Snowman on Your Mac Desktop | Wonderfall",
-        "description": "Let snow pile up on your Mac screen, roll snowballs, stack a snowman and dress it in the Snowman Wardrobe of Wonderfall 1.6, then clear the snow.",
+        "description": "Let snow pile up on your Mac screen, roll snowballs, stack a snowman, dress it in the Snowman Wardrobe and set it on a window with Wonderfall 1.6.1.",
         "summary": "Roll, stack, dress and throw: playing with the snow that piles up on your screen"
       },
       "uk": {
         "title": "Як зліпити сніговика на робочому столі Mac (і вбрати його)",
         "footer_label": "Сніговик на робочому столі",
         "meta_title": "Сніговик на робочому столі Mac: зліпити й вбрати | Wonderfall",
-        "description": "Хай сніг накопичується внизу екрана Mac: накатайте сніжки, зліпіть сніговика, вберіть його в гардеробі Wonderfall 1.6, а потім приберіть сніг.",
+        "description": "Хай сніг накопичується внизу екрана Mac: накатайте сніжки, зліпіть сніговика, вберіть його в гардеробі й поставте на вікно у Wonderfall 1.6.1.",
         "summary": "Котити, ліпити, вбирати й кидати: гра зі снігом, що накопичується на екрані"
       },
       "cover": {
@@ -1020,6 +1020,15 @@
         }
       },
       "inline": [
+        {
+          "after": "wardrobe",
+          "video": "/videos/snowman-wardrobe-square.mp4",
+          "poster": "/videos/snowman-wardrobe-square.jpg",
+          "caption": {
+            "en": "In the Snowman Wardrobe, a new hat and buttons show on the 3D snowman right away; Santa Hat is second in the Hat tab.",
+            "uk": "У гардеробі сніговика нова шапка й ґудзики одразу з’являються на об’ємному сніговику, а шапка Санти друга на вкладці «Головний убір»."
+          }
+        },
         {
           "after": "windows",
           "video": "/videos/window-snow.mp4",
