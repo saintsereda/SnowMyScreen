@@ -24,6 +24,7 @@
 
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
+- [Wonderfall 1.6.1: 3D Santa, Penguins and Snowmen, and Christmas Trees That Ride on Your Windows](https://getwonderfall.com/blog/wonderfall-1-6-1-3d-window-trees/): Wonderfall 1.6.1 brings 3D Santa, penguins, snowmen and Christmas trees to your Mac desktop, and lets a tree or a snowman ride on top of a window.
 - [Cozy Winter Desktop for Mac: Snow and Warm Lights Over Your Own Wallpaper](https://getwonderfall.com/blog/cozy-winter-mac-desktop/): Make a cozy winter desktop on your Mac without a new wallpaper: warm Cozy Evening lights, gentle snow behind your windows and three recipes to start from.
 - [Penguins on Your Mac Desktop: Call a Penguin Parade Across the Snow](https://getwonderfall.com/blog/penguins-mac-desktop/): Call three penguins onto your Mac desktop with Wonderfall: they run in, belly-slide across the snow, step up onto the Dock, wave and run off by themselves.
 - [New Year Live Wallpaper for Mac? Add 2027 Lights and Snow Over Your Own](https://getwonderfall.com/blog/new-year-mac-desktop/): Give your Mac an animated New Year desktop without a new wallpaper: the New Year light scene, 2027 digit bulbs and gentle snow on top of your own picture.
@@ -47,6 +48,7 @@
 ## Українською
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)
 - [Посібники](https://getwonderfall.com/uk/blog/)
+- [Wonderfall 1.6.1: Санта, пінгвіни й сніговики в 3D, а ялинки їздять на ваших вікнах](https://getwonderfall.com/uk/blog/wonderfall-1-6-1-3d-window-trees/): У Wonderfall 1.6.1 Санта, пінгвіни, сніговики й ялинки стали об’ємними, а ялинку чи сніговика можна поставити на вікно на робочому столі Mac.
 - [Затишна зимова заставка на ноутбук Mac: сніг і тепла гірлянда поверх ваших шпалер](https://getwonderfall.com/uk/blog/cozy-winter-mac-desktop/): Зимова заставка на ноутбук Mac без нових шпалер: тепла гірлянда «Затишний вечір», легкий сніг за вікнами і три готові затишні поєднання для зими.
 - [Пінгвіни на робочому столі Mac: покличте їх покататися снігом](https://getwonderfall.com/uk/blog/penguins-mac-desktop/): Покличте трьох пінгвінів на робочий стіл Mac у Wonderfall: вони вибіжать, проковзають на пузі снігом, вилізуть на Dock, помахають і втечуть самі.
 - [Новорічна заставка на робочий стіл Mac: гірлянда «Новий рік», цифри 2027 і сніг](https://getwonderfall.com/uk/blog/new-year-mac-desktop/): Новорічна заставка на робочий стіл Mac чи MacBook без нових шпалер: сцена гірлянди «Новий рік», лампочки-цифри 2027 і легкий сніг поверх ваших шпалер.
