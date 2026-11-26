@@ -1,6 +1,78 @@
 {
   "articles": [
     {
+      "slug": "wonderfall-1-6-1-3d-window-trees",
+      "status": "published",
+      "published": "2026-11-26",
+      "updated": "2026-11-26",
+      "en": {
+        "title": "Wonderfall 1.6.1: 3D Santa, Penguins and Snowmen, and Christmas Trees That Ride on Your Windows",
+        "footer_label": "What’s new in Wonderfall 1.6.1",
+        "meta_title": "Wonderfall 1.6.1: 3D Santa and Trees on Windows | Wonderfall",
+        "description": "Wonderfall 1.6.1 brings 3D Santa, penguins, snowmen and Christmas trees to your Mac desktop, and lets a tree or a snowman ride on top of a window.",
+        "summary": "Switch the characters to 3D, put a tree or a snowman on top of a window and give every tree its own decorations"
+      },
+      "uk": {
+        "title": "Wonderfall 1.6.1: Санта, пінгвіни й сніговики в 3D, а ялинки їздять на ваших вікнах",
+        "footer_label": "Що нового у Wonderfall 1.6.1",
+        "meta_title": "Wonderfall 1.6.1: 3D-персонажі й ялинки на вікнах | Wonderfall",
+        "description": "У Wonderfall 1.6.1 Санта, пінгвіни, сніговики й ялинки стали об’ємними, а ялинку чи сніговика можна поставити на вікно на робочому столі Mac.",
+        "summary": "Перемкніть персонажів у 3D, поставте ялинку чи сніговика на вікно й прикрасьте кожну ялинку по-своєму"
+      },
+      "cover": {
+        "video": "/videos/penguins-square.mp4",
+        "poster": "/videos/penguins-square.jpg",
+        "alt": {
+          "en": "Three 3D penguins slide across the snow at the bottom of a winter desktop, below open Finder and music app windows",
+          "uk": "Троє об’ємних пінгвінів ковзають снігом унизу зимового робочого столу під відкритими вікнами Finder і музичного застосунку"
+        }
+      },
+      "inline": [
+        {
+          "after": "character-style",
+          "pair": [
+            {
+              "video": "/videos/santa-square.mp4",
+              "poster": "/videos/santa-square.jpg",
+              "caption": {
+                "en": "Santa and his reindeer, now in 3D, fly over open windows.",
+                "uk": "Об’ємний Санта з оленями пролітає над відкритими вікнами."
+              }
+            },
+            {
+              "video": "/videos/snowplow-square.mp4",
+              "poster": "/videos/snowplow-square.jpg",
+              "caption": {
+                "en": "The snowplow, now in 3D, drives along the bottom of the screen.",
+                "uk": "Снігоочисник, тепер об’ємний, їде вздовж низу екрана."
+              }
+            }
+          ]
+        },
+        {
+          "after": "more",
+          "pair": [
+            {
+              "video": "/videos/snowman-wardrobe-square.mp4",
+              "poster": "/videos/snowman-wardrobe-square.jpg",
+              "caption": {
+                "en": "A 3D snowman in the Snowman Wardrobe, with Santa Hat second in the Hat tab.",
+                "uk": "Об’ємний сніговик у гардеробі, а Шапка Санти друга на вкладці з головними уборами."
+              }
+            },
+            {
+              "video": "/videos/shovel-dock-square.mp4",
+              "poster": "/videos/shovel-dock-square.jpg",
+              "caption": {
+                "en": "The shovel, in its 3D look, digs the Dock out of the drift.",
+                "uk": "Лопата в новому об’ємному вигляді відкопує Dock із кучугури."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "cozy-winter-mac-desktop",
       "status": "published",
       "published": "2026-11-25",
