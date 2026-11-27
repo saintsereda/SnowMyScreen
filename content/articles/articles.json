@@ -409,20 +409,20 @@
       "slug": "christmas-tree-mac-desktop",
       "status": "published",
       "published": "2026-11-22",
-      "updated": "2026-11-22",
+      "updated": "2026-11-27",
       "en": {
         "title": "How to Put a Christmas Tree on Your Mac Desktop (and Let Santa Fly By)",
         "footer_label": "Christmas tree on your desktop",
         "meta_title": "Animated Christmas Tree for Your Mac Desktop | Wonderfall",
-        "description": "Put an animated Christmas tree on your Mac desktop, decorate it, place more trees with Wonderfall 1.6 and let Santa and his reindeer fly across the screen.",
-        "summary": "Turn on a decorated tree, dress it up, add more trees and choose how often Santa flies past"
+        "description": "Put an animated Christmas tree on your Mac desktop, stand it on top of a window, give each tree its own decorations in Wonderfall 1.6.1 and let Santa fly by.",
+        "summary": "Turn on a decorated tree, stand it on a window, dress each tree its own way and choose how often Santa flies past"
       },
       "uk": {
         "title": "Як поставити новорічну ялинку на робочий стіл Mac (і покликати Санту)",
         "footer_label": "Новорічна ялинка на робочий стіл",
         "meta_title": "Новорічна ялинка на робочий стіл Mac | Wonderfall",
-        "description": "Жива новорічна ялинка на робочому столі Mac: прикраси, кілька ялинок у Wonderfall 1.6 і Санта з оленями над екраном. Не шпалери й не скринсейвер.",
-        "summary": "Увімкнути прикрашену ялинку, вбрати її, поставити ще кілька й обрати, як часто пролітає Санта"
+        "description": "Жива новорічна ялинка на робочому столі Mac: ялинка на вікні, власні прикраси для кожної у Wonderfall 1.6.1 і Санта з оленями над екраном.",
+        "summary": "Увімкнути прикрашену ялинку, поставити її на вікно, вбрати кожну по-своєму й обрати, як часто пролітає Санта"
       },
       "cover": {
         "video": "/videos/christmas-tree.mp4",
@@ -987,20 +987,20 @@
       "slug": "animated-snow-mac-desktop",
       "status": "published",
       "published": "2026-10-29",
-      "updated": "2026-10-29",
+      "updated": "2026-11-27",
       "en": {
-        "title": "Animated Snow on Your Mac: Wallpaper, Screensaver or Overlay?",
-        "footer_label": "Wallpaper, screensaver or overlay",
-        "meta_title": "Animated Snow on Your Mac Desktop | Wonderfall",
-        "description": "Moving wallpaper, snow screensaver or desktop overlay: what each option does on a Mac and how to keep snow falling over your own wallpaper while you work.",
-        "summary": "Three ways to get falling snow on a Mac, and which one stays visible while you work"
+        "title": "Animated Snow on Your Mac: Live Wallpaper, Screensaver or Overlay?",
+        "footer_label": "Live wallpaper, screensaver or overlay",
+        "meta_title": "Snow Live Wallpaper on Mac? Your 3 Options | Wonderfall",
+        "description": "Want a snow live wallpaper on your Mac? Compare moving wallpapers, snow screensavers and overlays that keep snow falling and piling up while you work.",
+        "summary": "What macOS offers, how snow live wallpapers, screensavers and overlays differ, and which one keeps snow on screen while you work"
       },
       "uk": {
-        "title": "Анімований сніг на Mac: шпалери, скринсейвер чи оверлей?",
-        "footer_label": "Шпалери, скринсейвер чи оверлей",
-        "meta_title": "Анімований сніг на робочому столі Mac | Wonderfall",
-        "description": "Рухомі шпалери, скринсейвер зі снігом чи оверлей: що робить кожен варіант на Mac і як залишити сніг поверх своїх шпалер під час роботи.",
-        "summary": "Три способи отримати сніг на Mac і який із них видно під час роботи"
+        "title": "Анімований сніг на Mac: живі шпалери, заставка чи оверлей?",
+        "footer_label": "Живі шпалери, заставка чи оверлей",
+        "meta_title": "Живі шпалери зі снігом на Mac: 3 варіанти | Wonderfall",
+        "description": "Хочете живі шпалери зі снігом на Mac? Порівнюємо рухомі шпалери, сніжну заставку й оверлей, у якому сніг падає й накопичується, поки ви працюєте.",
+        "summary": "Що є в самій macOS, чим відрізняються живі шпалери, заставка й оверлей і в якому з них сніг видно під час роботи"
       },
       "cover": {
         "video": "/videos/snow-1440p.mp4",
@@ -1021,12 +1021,21 @@
           }
         },
         {
-          "after": "setup",
+          "after": "pile",
+          "video": "/videos/window-snow.mp4",
+          "poster": "/videos/window-snow.jpg",
+          "caption": {
+            "en": "Snow settles on top of a window and slides off when you drag the window quickly.",
+            "uk": "Сніг лягає на верхній край вікна й зісковзує, коли вікно різко потягнути."
+          }
+        },
+        {
+          "after": "pile",
           "video": "/videos/cleaning-snow.mp4",
           "poster": "/videos/cleaning-snow.jpg",
           "caption": {
-            "en": "Snow settles along the bottom of the desktop, and the shovel clears it.",
-            "uk": "Сніг осідає внизу робочого столу, а лопата його прибирає."
+            "en": "Snow builds a drift along the bottom of the screen, and the shovel digs it out.",
+            "uk": "Сніг наростає кучугурою внизу екрана, а лопата її розкопує."
           }
         }
       ]
