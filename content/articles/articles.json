@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "macbook-christmas-update",
+      "status": "published",
+      "published": "2026-11-27",
+      "updated": "2026-11-27",
+      "en": {
+        "title": "Is There a MacBook Christmas Update? Where the Snow and Lights in Those Mac Videos Come From",
+        "footer_label": "MacBook Christmas update",
+        "meta_title": "Is There a MacBook Christmas Update? | Wonderfall",
+        "description": "Apple hasn’t released a Christmas update for macOS 27. Where the snow, lights and Santa in Mac videos come from, and how to get the look on your MacBook.",
+        "summary": "Why there is no Christmas update for the Mac, how real macOS updates arrive, and how to put snow, lights and Santa on your MacBook"
+      },
+      "uk": {
+        "title": "Чи є різдвяне оновлення для MacBook? Звідки сніг і гірлянда в тих відео з Mac",
+        "footer_label": "Різдвяне оновлення MacBook",
+        "meta_title": "Чи є різдвяне оновлення для MacBook? | Wonderfall",
+        "description": "Apple не випускала різдвяного оновлення для macOS 27. Звідки сніг, гірлянда й Санта у відео з Mac і як зробити так само на своєму MacBook.",
+        "summary": "Чому різдвяного оновлення для Mac немає, як насправді приходять оновлення macOS і як поставити на MacBook сніг, гірлянду й Санту"
+      },
+      "cover": {
+        "video": "/videos/lights-snow-square.mp4",
+        "poster": "/videos/lights-snow-square.jpg",
+        "alt": {
+          "en": "Christmas lights glow along the menu bar while snow falls over open Finder and Spotify windows",
+          "uk": "Гірлянда світиться вздовж рядка меню, а сніг падає на відкриті вікна Finder і Spotify"
+        }
+      },
+      "inline": [
+        {
+          "after": "videos",
+          "video": "/videos/christmas-tree.mp4",
+          "poster": "/videos/christmas-tree.jpg",
+          "caption": {
+            "en": "In Wonderfall, a Christmas tree with glowing lights stands at the bottom of the screen while snow falls.",
+            "uk": "У Wonderfall різдвяна ялинка з вогниками стоїть унизу екрана, а навколо падає сніг."
+          }
+        },
+        {
+          "after": "get",
+          "video": "/videos/santa-square.mp4",
+          "poster": "/videos/santa-square.jpg",
+          "caption": {
+            "en": "Santa and his reindeer fly over open windows.",
+            "uk": "Санта з оленями пролітає над відкритими вікнами."
+          }
+        }
+      ]
+    },
+    {
       "slug": "wonderfall-1-6-1-3d-window-trees",
       "status": "published",
       "published": "2026-11-26",
