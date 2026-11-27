@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "snow-apps-mac",
+      "status": "published",
+      "published": "2026-11-27",
+      "updated": "2026-11-27",
+      "en": {
+        "title": "Snow Apps for Mac in 2026: Which Ones Pile Snow on Your Windows",
+        "footer_label": "Snow apps for Mac",
+        "meta_title": "Snow Apps for Mac in 2026: Snow on Windows | Wonderfall",
+        "description": "Eleven snow apps for Mac compared on November 27, 2026: which pile snow on your windows, how you clear it, where to get them and what they cost.",
+        "summary": "Which Mac snow apps let snow settle on your windows, which let you shovel it away, and how they compare on price and where to get them"
+      },
+      "uk": {
+        "title": "Застосунки зі снігом для Mac у 2026 році: у яких сніг лягає на вікна",
+        "footer_label": "Застосунки зі снігом для Mac",
+        "meta_title": "Застосунки зі снігом для Mac: сніг на вікнах | Wonderfall",
+        "description": "Одинадцять застосунків зі снігом для Mac станом на 27 листопада 2026 року: у яких сніг лягає на вікна, як його прибрати, де їх узяти й скільки коштують.",
+        "summary": "У яких застосунках для Mac сніг лягає на вікна, де його можна розкопати лопатою і як вони відрізняються ціною та місцем покупки"
+      },
+      "cover": {
+        "video": "/videos/window-snow.mp4",
+        "poster": "/videos/window-snow.jpg",
+        "alt": {
+          "en": "Snow resting on top of a window slides off when the window moves",
+          "uk": "Сніг на верхньому краю вікна обсипається, коли вікно рухають"
+        }
+      },
+      "inline": [
+        {
+          "after": "clear",
+          "video": "/videos/snowplow-square.mp4",
+          "poster": "/videos/snowplow-square.jpg",
+          "caption": {
+            "en": "Cleanup time! sends a snowplow along the bottom of the screen.",
+            "uk": "«Час прибирати!» відправляє снігоочисник уздовж низу екрана."
+          }
+        },
+        {
+          "after": "wonderfall",
+          "video": "/videos/snowman-building.mp4",
+          "poster": "/videos/snowman-building.jpg",
+          "caption": {
+            "en": "The mitten rolls snowballs along the drift and stacks them into snowmen.",
+            "uk": "Рукавичка котить сніжки по кучугурі й складає з них сніговиків."
+          }
+        }
+      ]
+    },
+    {
       "slug": "macbook-christmas-update",
       "status": "published",
       "published": "2026-11-27",
