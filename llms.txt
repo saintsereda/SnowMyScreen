@@ -24,6 +24,7 @@
 
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
+- [Santa on Your Mac: Call His Sleigh Across the Desktop, Now in 3D](https://getwonderfall.com/blog/santa-on-mac/): How to get Santa and his reindeer flying across your Mac desktop: turn on Santa flyover, call him any time, make him 3D, and see other Mac apps with a Santa.
 - [Snowy and Let It Snow for Mac: An Alternative Where Snow Piles Up and You Can Shovel It](https://getwonderfall.com/blog/snowy-let-it-snow-alternative-mac/): Snowy! is free and Let It Snow costs US$4.99. What each does with snow, checked November 28, 2026, and Wonderfall: snow that piles up for you to shovel.
 - [CozyMac Alternative: Snow on Your Mac from the Mac App Store, No Activation Key](https://getwonderfall.com/blog/cozymac-alternative-mac/): Is CozyMac free, and do you need a key? What its website says on November 28, 2026, and Wonderfall: a US$3.99 Mac App Store alternative with no key.
 - [Snow Apps for Mac in 2026: Which Ones Pile Snow on Your Windows](https://getwonderfall.com/blog/snow-apps-mac/): Eleven snow apps for Mac compared on November 27, 2026: which pile snow on your windows, how you clear it, where to get them and what they cost.
@@ -52,6 +53,7 @@
 ## Українською
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)
 - [Посібники](https://getwonderfall.com/uk/blog/)
+- [Санта на Mac: як покликати його сани на робочий стіл, тепер в 3D](https://getwonderfall.com/uk/blog/santa-on-mac/): Як зробити, щоб Санта з оленями пролітав робочим столом Mac: Політ Санти, кнопка «Покликати Санту», об’ємний стиль і які ще застосунки для Mac мають Санту.
 - [Snowy і Let It Snow для Mac: альтернатива, де сніг накопичується і його можна розкопати](https://getwonderfall.com/uk/blog/snowy-let-it-snow-alternative-mac/): Snowy! безкоштовний, Let It Snow коштує 4,99 долара. Що кожен із них робить зі снігом станом на 28 листопада 2026 року і як сніг накопичується у Wonderfall.
 - [Альтернатива CozyMac: сніг на Mac з Mac App Store, без ключа активації](https://getwonderfall.com/uk/blog/cozymac-alternative-mac/): Чи є безкоштовна версія CozyMac і навіщо йому ключ? Що пише його сайт 28 листопада 2026 року і що дає Wonderfall з Mac App Store: без ключа, одна покупка.
 - [Застосунки зі снігом для Mac у 2026 році: у яких сніг лягає на вікна](https://getwonderfall.com/uk/blog/snow-apps-mac/): Одинадцять застосунків зі снігом для Mac станом на 27 листопада 2026 року: у яких сніг лягає на вікна, як його прибрати, де їх узяти й скільки коштують.

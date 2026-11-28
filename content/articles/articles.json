@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "santa-on-mac",
+      "status": "published",
+      "published": "2026-11-28",
+      "updated": "2026-11-28",
+      "en": {
+        "title": "Santa on Your Mac: Call His Sleigh Across the Desktop, Now in 3D",
+        "footer_label": "Santa on your Mac",
+        "meta_title": "Santa on Your Mac: Sleigh Across the Desktop | Wonderfall",
+        "description": "How to get Santa and his reindeer flying across your Mac desktop: turn on Santa flyover, call him any time, make him 3D, and see other Mac apps with a Santa.",
+        "summary": "How to make Santa fly across your Mac screen with Wonderfall, how often he comes, how to make him 3D or silent, and which other Mac apps have a Santa"
+      },
+      "uk": {
+        "title": "Санта на Mac: як покликати його сани на робочий стіл, тепер в 3D",
+        "footer_label": "Санта на Mac",
+        "meta_title": "Санта на робочому столі Mac: сани з оленями | Wonderfall",
+        "description": "Як зробити, щоб Санта з оленями пролітав робочим столом Mac: Політ Санти, кнопка «Покликати Санту», об’ємний стиль і які ще застосунки для Mac мають Санту.",
+        "summary": "Як зробити, щоб Санта пролітав екраном Mac у Wonderfall, як часто він прилітає, як зробити його об’ємним чи тихим і в яких ще застосунках для Mac є Санта"
+      },
+      "cover": {
+        "video": "/videos/santa-square.mp4",
+        "poster": "/videos/santa-square.jpg",
+        "alt": {
+          "en": "Santa and his reindeer, drawn in 3D, fly over open windows",
+          "uk": "Об’ємний Санта з оленями пролітає над відкритими вікнами"
+        }
+      },
+      "inline": [
+        {
+          "after": "how",
+          "video": "/videos/santa-flyover.mp4",
+          "poster": "/videos/santa-flyover.jpg",
+          "caption": {
+            "en": "Santa and his reindeer fly under the menu bar lights while snow falls and the Settings window is open.",
+            "uk": "Санта з оленями пролітає під гірляндою, падає сніг, відкрито вікно налаштувань (на записі англійський інтерфейс)."
+          }
+        },
+        {
+          "after": "scene",
+          "video": "/videos/penguins-square.mp4",
+          "poster": "/videos/penguins-square.jpg",
+          "caption": {
+            "en": "Three 3D penguins slide across the snow at the bottom of the screen.",
+            "uk": "Троє об’ємних пінгвінів ковзають снігом унизу екрана."
+          }
+        }
+      ]
+    },
+    {
       "slug": "snowy-let-it-snow-alternative-mac",
       "status": "published",
       "published": "2026-11-28",
