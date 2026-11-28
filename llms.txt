@@ -24,6 +24,7 @@
 
 ## Guides
 - [Mac desktop guides](https://getwonderfall.com/blog/)
+- [CozyMac Alternative: Snow on Your Mac from the Mac App Store, No Activation Key](https://getwonderfall.com/blog/cozymac-alternative-mac/): Is CozyMac free, and do you need a key? What its website says on November 28, 2026, and Wonderfall: a US$3.99 Mac App Store alternative with no key.
 - [Snow Apps for Mac in 2026: Which Ones Pile Snow on Your Windows](https://getwonderfall.com/blog/snow-apps-mac/): Eleven snow apps for Mac compared on November 27, 2026: which pile snow on your windows, how you clear it, where to get them and what they cost.
 - [Is There a MacBook Christmas Update? Where the Snow and Lights in Those Mac Videos Come From](https://getwonderfall.com/blog/macbook-christmas-update/): Apple hasn’t released a Christmas update for macOS 27. Where the snow, lights and Santa in Mac videos come from, and how to get the look on your MacBook.
 - [Wonderfall 1.6.1: 3D Santa, Penguins and Snowmen, and Christmas Trees That Ride on Your Windows](https://getwonderfall.com/blog/wonderfall-1-6-1-3d-window-trees/): Wonderfall 1.6.1 brings 3D Santa, penguins, snowmen and Christmas trees to your Mac desktop, and lets a tree or a snowman ride on top of a window.
@@ -50,6 +51,7 @@
 ## Українською
 - [Ефекти, відгуки та відповіді на питання](https://getwonderfall.com/uk/)
 - [Посібники](https://getwonderfall.com/uk/blog/)
+- [Альтернатива CozyMac: сніг на Mac з Mac App Store, без ключа активації](https://getwonderfall.com/uk/blog/cozymac-alternative-mac/): Чи є безкоштовна версія CozyMac і навіщо йому ключ? Що пише його сайт 28 листопада 2026 року і що дає Wonderfall з Mac App Store: без ключа, одна покупка.
 - [Застосунки зі снігом для Mac у 2026 році: у яких сніг лягає на вікна](https://getwonderfall.com/uk/blog/snow-apps-mac/): Одинадцять застосунків зі снігом для Mac станом на 27 листопада 2026 року: у яких сніг лягає на вікна, як його прибрати, де їх узяти й скільки коштують.
 - [Чи є різдвяне оновлення для MacBook? Звідки сніг і гірлянда в тих відео з Mac](https://getwonderfall.com/uk/blog/macbook-christmas-update/): Apple не випускала різдвяного оновлення для macOS 27. Звідки сніг, гірлянда й Санта у відео з Mac і як зробити так само на своєму MacBook.
 - [Wonderfall 1.6.1: Санта, пінгвіни й сніговики в 3D, а ялинки їздять на ваших вікнах](https://getwonderfall.com/uk/blog/wonderfall-1-6-1-3d-window-trees/): У Wonderfall 1.6.1 Санта, пінгвіни, сніговики й ялинки стали об’ємними, а ялинку чи сніговика можна поставити на вікно на робочому столі Mac.
