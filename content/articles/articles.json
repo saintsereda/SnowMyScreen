@@ -472,20 +472,20 @@
       "slug": "koiart-cozymac-alternative-mac",
       "status": "published",
       "published": "2026-11-22",
-      "updated": "2026-11-22",
+      "updated": "2026-11-28",
       "en": {
-        "title": "KoiArt vs CozyMac vs Wonderfall: Snow Apps for Mac Compared",
-        "footer_label": "KoiArt and CozyMac alternative",
-        "meta_title": "KoiArt vs CozyMac vs Wonderfall for Mac | Wonderfall",
-        "description": "KoiArt (US$9) and CozyMac (US$9.99) aren’t in the US Mac App Store. Compare them with Wonderfall, the US$3.99 App Store alternative, checked November 2026.",
-        "summary": "What KoiArt and CozyMac do, how they are sold and what Wonderfall adds, checked in November 2026"
+        "title": "KoiArt Alternative for Mac: Wonderfall on the Mac App Store",
+        "footer_label": "KoiArt alternative",
+        "meta_title": "KoiArt Alternative for Mac on the App Store | Wonderfall",
+        "description": "KoiArt sells a US$9 license with a key on its website. Wonderfall is the Mac App Store alternative: US$3.99 once, no key, 3D Santa and trees. November 2026.",
+        "summary": "What KoiArt’s website says about its price, license key and Windows version, and what Wonderfall offers on the Mac App Store, checked in November 2026"
       },
       "uk": {
-        "title": "KoiArt, CozyMac чи Wonderfall: порівняння застосунків зі снігом для Mac",
-        "footer_label": "Альтернатива KoiArt і CozyMac",
-        "meta_title": "KoiArt чи CozyMac: альтернатива для Mac | Wonderfall",
-        "description": "KoiArt і CozyMac продаються лише на своїх сайтах, за 9 і 9,99 долара. Що вміють вони і що є у Wonderfall з Mac App Store: сніг, ялинка, гірлянда, ціни.",
-        "summary": "Що вміють KoiArt і CozyMac, скільки коштують і що є у Wonderfall, перевірено в листопаді 2026 року"
+        "title": "Альтернатива KoiArt для Mac: Wonderfall у Mac App Store",
+        "footer_label": "Альтернатива KoiArt",
+        "meta_title": "Альтернатива KoiArt для Mac в App Store | Wonderfall",
+        "description": "KoiArt продає ліцензію з ключем за 9 доларів на своєму сайті. Wonderfall є в Mac App Store: без ключа, одна покупка, об’ємні Санта й ялинки. Листопад 2026.",
+        "summary": "Що сайт KoiArt пише про ціну, ключ ліцензії й версію для Windows і що пропонує Wonderfall у Mac App Store, перевірено в листопаді 2026 року"
       },
       "cover": {
         "video": "/videos/snow-christmas-1440p.mp4",
@@ -503,16 +503,16 @@
               "video": "/videos/penguins-square.mp4",
               "poster": "/videos/penguins-square.jpg",
               "caption": {
-                "en": "Penguins slide across the snow at the bottom of the screen.",
-                "uk": "Пінгвіни ковзають снігом унизу екрана."
+                "en": "Three 3D penguins slide across the snow at the bottom of the screen.",
+                "uk": "Троє об’ємних пінгвінів ковзають снігом унизу екрана."
               }
             },
             {
               "video": "/videos/snowman-wardrobe-square.mp4",
               "poster": "/videos/snowman-wardrobe-square.jpg",
               "caption": {
-                "en": "In the Snowman Wardrobe, a new hat and buttons show on the snowman right away.",
-                "uk": "У гардеробі сніговика нова шапка й ґудзики одразу з’являються на ньому."
+                "en": "In the Snowman Wardrobe, a new hat and buttons show on the 3D snowman right away; Santa Hat is second in the Hat tab.",
+                "uk": "У гардеробі сніговика нова шапка й ґудзики одразу з’являються на об’ємному сніговику, а Шапка Санти друга на вкладці «Головний убір»."
               }
             }
           ]
@@ -545,8 +545,8 @@
               "video": "/videos/santa-square.mp4",
               "poster": "/videos/santa-square.jpg",
               "caption": {
-                "en": "Santa and his reindeer fly across the screen.",
-                "uk": "Санта з оленями пролітає екраном."
+                "en": "Santa and his reindeer, now in 3D, fly over open windows.",
+                "uk": "Об’ємний Санта з оленями пролітає над відкритими вікнами."
               }
             },
             {
