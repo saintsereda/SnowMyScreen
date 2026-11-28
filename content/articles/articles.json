@@ -49,6 +49,66 @@
       ]
     },
     {
+      "slug": "cozymac-alternative-mac",
+      "status": "published",
+      "published": "2026-11-28",
+      "updated": "2026-11-28",
+      "en": {
+        "title": "CozyMac Alternative: Snow on Your Mac from the Mac App Store, No Activation Key",
+        "footer_label": "CozyMac alternative",
+        "meta_title": "CozyMac Alternative With No Activation Key | Wonderfall",
+        "description": "Is CozyMac free, and do you need a key? What its website says on November 28, 2026, and Wonderfall: a US$3.99 Mac App Store alternative with no key.",
+        "summary": "What CozyMac costs, how its activation key works and what Wonderfall offers on the Mac App Store instead, checked in November 2026"
+      },
+      "uk": {
+        "title": "Альтернатива CozyMac: сніг на Mac з Mac App Store, без ключа активації",
+        "footer_label": "Альтернатива CozyMac",
+        "meta_title": "Альтернатива CozyMac без ключа активації | Wonderfall",
+        "description": "Чи є безкоштовна версія CozyMac і навіщо йому ключ? Що пише його сайт 28 листопада 2026 року і що дає Wonderfall з Mac App Store: без ключа, одна покупка.",
+        "summary": "Скільки коштує CozyMac, як працює його ключ активації і що натомість пропонує Wonderfall у Mac App Store, перевірено в листопаді 2026 року"
+      },
+      "cover": {
+        "video": "/videos/window-snow.mp4",
+        "poster": "/videos/window-snow.jpg",
+        "alt": {
+          "en": "Snow resting on top of a window slides off when the window moves",
+          "uk": "Сніг на верхньому краю вікна обсипається, коли вікно рухають"
+        }
+      },
+      "inline": [
+        {
+          "after": "snow",
+          "video": "/videos/cleaning-snow.mp4",
+          "poster": "/videos/cleaning-snow.jpg",
+          "caption": {
+            "en": "Snow builds a drift along the bottom of the screen, and the shovel digs it out.",
+            "uk": "Сніг наростає кучугурою внизу екрана, а лопата її розкопує."
+          }
+        },
+        {
+          "after": "holiday",
+          "pair": [
+            {
+              "video": "/videos/santa-square.mp4",
+              "poster": "/videos/santa-square.jpg",
+              "caption": {
+                "en": "Santa and his reindeer, now in 3D, fly over open windows.",
+                "uk": "Об’ємний Санта з оленями пролітає над відкритими вікнами."
+              }
+            },
+            {
+              "video": "/videos/lights-snow-square.mp4",
+              "poster": "/videos/lights-snow-square.jpg",
+              "caption": {
+                "en": "Lights glow along the menu bar while snow falls over open windows.",
+                "uk": "Гірлянда світиться вздовж рядка меню, а сніг падає на відкриті вікна."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "snow-apps-mac",
       "status": "published",
       "published": "2026-11-27",
