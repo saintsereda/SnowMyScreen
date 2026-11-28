@@ -1,6 +1,54 @@
 {
   "articles": [
     {
+      "slug": "snowy-let-it-snow-alternative-mac",
+      "status": "published",
+      "published": "2026-11-28",
+      "updated": "2026-11-28",
+      "en": {
+        "title": "Snowy and Let It Snow for Mac: An Alternative Where Snow Piles Up and You Can Shovel It",
+        "footer_label": "Snowy and Let It Snow alternative",
+        "meta_title": "Let It Snow and Snowy Mac Apps: An Alternative | Wonderfall",
+        "description": "Snowy! is free and Let It Snow costs US$4.99. What each does with snow, checked November 28, 2026, and Wonderfall: snow that piles up for you to shovel.",
+        "summary": "What the Snowy! and Let It Snow apps do with snow, whether Let It Snow is still updated and how Wonderfall compares, checked in November 2026"
+      },
+      "uk": {
+        "title": "Snowy і Let It Snow для Mac: альтернатива, де сніг накопичується і його можна розкопати",
+        "footer_label": "Альтернатива Snowy і Let It Snow",
+        "meta_title": "Snowy і Let It Snow для Mac: альтернатива | Wonderfall",
+        "description": "Snowy! безкоштовний, Let It Snow коштує 4,99 долара. Що кожен із них робить зі снігом станом на 28 листопада 2026 року і як сніг накопичується у Wonderfall.",
+        "summary": "Що Snowy! і Let It Snow роблять зі снігом, чи оновлюється Let It Snow і чим від них відрізняється Wonderfall, перевірено в листопаді 2026 року"
+      },
+      "cover": {
+        "video": "/videos/cleaning-snow.mp4",
+        "poster": "/videos/cleaning-snow.jpg",
+        "alt": {
+          "en": "A shovel digs the snow bank out along the bottom of the screen",
+          "uk": "Лопата розкопує сніг унизу екрана"
+        }
+      },
+      "inline": [
+        {
+          "after": "pile",
+          "video": "/videos/window-snow.mp4",
+          "poster": "/videos/window-snow.jpg",
+          "caption": {
+            "en": "Snow settles on top of a window and slides off when you move it.",
+            "uk": "Сніг лягає на верхній край вікна й обсипається, коли вікно рухають."
+          }
+        },
+        {
+          "after": "play",
+          "video": "/videos/snowman-wardrobe-square.mp4",
+          "poster": "/videos/snowman-wardrobe-square.jpg",
+          "caption": {
+            "en": "In the Snowman Wardrobe, a new hat and buttons show on the 3D snowman right away; Santa Hat is second in the Hat tab.",
+            "uk": "У гардеробі сніговика нова шапка й ґудзики одразу з’являються на об’ємному сніговику, а Шапка Санти друга на вкладці «Головний убір»."
+          }
+        }
+      ]
+    },
+    {
       "slug": "cozymac-alternative-mac",
       "status": "published",
       "published": "2026-11-28",
